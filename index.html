@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#263F68">
+    <meta name="theme-color" content="#DCEBF5">
 
     <title>30 Días · Temple</title>
 
@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet"
     >
 
@@ -21,81 +21,53 @@
 
 <body>
 
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
-
-
     <main class="app">
 
-        <!-- =========================
-             HEADER / TEMPLE
-        ========================== -->
+        <!-- CABECERA -->
 
         <header class="topbar">
 
             <a href="#" class="temple-brand" onclick="goHome(event)">
-
-                <span class="temple-mark">T</span>
-
-                <span class="temple-name">
-                    Temple
-                </span>
-
+                <span class="temple-dot"></span>
+                <span>Temple</span>
             </a>
-
-            <span class="collection-label">
-                30 DÍAS
-            </span>
 
         </header>
 
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <!-- PRESENTACIÓN -->
 
         <section class="hero">
 
-            <div class="hero-kicker">
+            <p class="hero-label">
                 UNA COLECCIÓN DE EXPERIENCIAS
-            </div>
+            </p>
 
             <h1>
-                30 días para<br>
-                <span>hacer algo diferente.</span>
+                30 Días
             </h1>
 
             <p class="hero-description">
-                Cinco recorridos. Pequeñas experiencias.
-                Un espacio para pasar de la intención a la acción.
+                Cinco recorridos para comenzar a hacer,
+                explorar y experimentar de una manera diferente.
             </p>
 
         </section>
 
 
-        <!-- =========================
-             RECORRIDOS
-        ========================== -->
+        <!-- RECORRIDOS -->
 
         <section class="journeys-section">
 
-            <div class="section-header">
+            <div class="section-heading">
 
-                <div>
-
-                    <span class="section-number">
-                        01
-                    </span>
-
-                    <h2>
-                        Elige tu recorrido
-                    </h2>
-
-                </div>
+                <h2>
+                    ¿Qué quieres explorar hoy?
+                </h2>
 
                 <p>
-                    Puedes comenzar por el que<br class="desktop-only">
-                    más conecte contigo hoy.
+                    Elige un recorrido para comenzar.
+                    Puedes cambiar de recorrido cuando quieras.
                 </p>
 
             </div>
@@ -104,29 +76,15 @@
             <div class="journeys-grid">
 
 
-                <!-- =========================
-                     CONOCERME
-                ========================== -->
+                <!-- CONOCERME -->
 
-                <article
-                    class="journey-card conocerme"
-                    data-journey="conocerme"
-                >
+                <article class="journey-card conocerme">
 
-                    <div class="card-top">
-
-                        <div class="journey-symbol">
-                            <span>01</span>
-                        </div>
-
-                        <span class="journey-duration">
-                            30 DÍAS
-                        </span>
-
+                    <div class="journey-icon">
+                        🌱
                     </div>
 
-
-                    <div class="card-middle">
+                    <div class="journey-content">
 
                         <h3>
                             Conocerme
@@ -134,55 +92,32 @@
 
                         <p>
                             Experiencias para volver la mirada
-                            hacia ti y descubrir nuevas formas
-                            de encontrarte.
+                            hacia ti y descubrirte desde la acción.
                         </p>
 
                     </div>
-
 
                     <button
                         class="start-button"
                         onclick="openJourney('conocerme')"
                     >
-
-                        <span>
-                            Comenzar recorrido
-                        </span>
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        Comenzar
+                        <span>→</span>
                     </button>
 
                 </article>
 
 
 
-                <!-- =========================
-                     CONECTAR
-                ========================== -->
+                <!-- CONECTAR -->
 
-                <article
-                    class="journey-card conectar"
-                    data-journey="conectar"
-                >
+                <article class="journey-card conectar">
 
-                    <div class="card-top">
-
-                        <div class="journey-symbol">
-                            <span>02</span>
-                        </div>
-
-                        <span class="journey-duration">
-                            30 DÍAS
-                        </span>
-
+                    <div class="journey-icon">
+                        🤍
                     </div>
 
-
-                    <div class="card-middle">
+                    <div class="journey-content">
 
                         <h3>
                             Conectar
@@ -190,55 +125,32 @@
 
                         <p>
                             Experiencias para crear momentos
-                            diferentes y volver a encontrarse
-                            con alguien importante.
+                            diferentes y volver a encontrarse.
                         </p>
 
                     </div>
-
 
                     <button
                         class="start-button"
                         onclick="openJourney('conectar')"
                     >
-
-                        <span>
-                            Comenzar recorrido
-                        </span>
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        Comenzar
+                        <span>→</span>
                     </button>
 
                 </article>
 
 
 
-                <!-- =========================
-                     PONER LÍMITES
-                ========================== -->
+                <!-- PONER LÍMITES -->
 
-                <article
-                    class="journey-card limites"
-                    data-journey="limites"
-                >
+                <article class="journey-card limites">
 
-                    <div class="card-top">
-
-                        <div class="journey-symbol">
-                            <span>03</span>
-                        </div>
-
-                        <span class="journey-duration">
-                            30 DÍAS
-                        </span>
-
+                    <div class="journey-icon">
+                        🪴
                     </div>
 
-
-                    <div class="card-middle">
+                    <div class="journey-content">
 
                         <h3>
                             Poner límites
@@ -246,55 +158,32 @@
 
                         <p>
                             Experiencias para practicar nuevas
-                            formas de expresar lo que necesitas
-                            y cuidar tu espacio.
+                            formas de expresar lo que necesitas.
                         </p>
 
                     </div>
-
 
                     <button
                         class="start-button"
                         onclick="openJourney('limites')"
                     >
-
-                        <span>
-                            Comenzar recorrido
-                        </span>
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        Comenzar
+                        <span>→</span>
                     </button>
 
                 </article>
 
 
 
-                <!-- =========================
-                     ELEGIR
-                ========================== -->
+                <!-- ELEGIR -->
 
-                <article
-                    class="journey-card elegir"
-                    data-journey="elegir"
-                >
+                <article class="journey-card elegir">
 
-                    <div class="card-top">
-
-                        <div class="journey-symbol">
-                            <span>04</span>
-                        </div>
-
-                        <span class="journey-duration">
-                            30 DÍAS
-                        </span>
-
+                    <div class="journey-icon">
+                        🧭
                     </div>
 
-
-                    <div class="card-middle">
+                    <div class="journey-content">
 
                         <h3>
                             Elegir
@@ -302,82 +191,50 @@
 
                         <p>
                             Experiencias para darte espacio
-                            para decidir desde lo que piensas
-                            y quieres.
+                            para decidir desde lo que quieres.
                         </p>
 
                     </div>
-
 
                     <button
                         class="start-button"
                         onclick="openJourney('elegir')"
                     >
-
-                        <span>
-                            Comenzar recorrido
-                        </span>
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        Comenzar
+                        <span>→</span>
                     </button>
 
                 </article>
 
 
 
-                <!-- =========================
-                     SOLTAR
-                ========================== -->
+                <!-- SOLTAR -->
 
-                <article
-                    class="journey-card soltar"
-                    data-journey="soltar"
-                >
+                <article class="journey-card soltar">
 
-                    <div class="card-top">
-
-                        <div class="journey-symbol">
-                            <span>05</span>
-                        </div>
-
-                        <span class="journey-duration">
-                            30 DÍAS
-                        </span>
-
+                    <div class="journey-icon">
+                        🍃
                     </div>
 
-
-                    <div class="card-middle">
+                    <div class="journey-content">
 
                         <h3>
                             Soltar
                         </h3>
 
                         <p>
-                            Experiencias para dejar ir,
-                            cerrar ciclos y hacer espacio
-                            para algo nuevo.
+                            Experiencias para dejar ir y hacer
+                            espacio para algo nuevo.
                         </p>
 
                     </div>
-
 
                     <button
                         class="start-button"
                         onclick="openJourney('soltar')"
                     >
-
-                        <span>
-                            Comenzar recorrido
-                        </span>
-
-                        <span class="arrow">
-                            ↗
-                        </span>
-
+                        Comenzar
+                        <span>→</span>
                     </button>
 
                 </article>
@@ -389,44 +246,62 @@
 
 
 
-        <!-- =========================
-             MIS RECORRIDOS
-        ========================== -->
+        <!-- TUS RECORRIDOS -->
 
         <section class="my-journeys">
 
-            <div class="section-header">
+            <div class="section-heading">
 
-                <div>
+                <h2>
+                    Tus recorridos
+                </h2>
 
-                    <span class="section-number">
-                        02
-                    </span>
-
-                    <h2>
-                        Tus recorridos
-                    </h2>
-
-                </div>
+                <p>
+                    Aquí aparecerán los recorridos que hayas comenzado.
+                </p>
 
             </div>
 
 
             <div class="empty-state">
 
-                <div class="empty-icon">
-                    ○
+                <div class="empty-symbol">
+                    ✦
+                </div>
+
+                <div class="empty-content">
+
+                    <h3>
+                        Este espacio se irá llenando contigo.
+                    </h3>
+
+                    <p>
+                        A medida que completes experiencias,
+                        podrás volver aquí para ver cuánto has recorrido.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PEQUEÑA INFORMACIÓN -->
+
+            <div class="journey-note">
+
+                <div class="note-icon">
+                    ☁
                 </div>
 
                 <div>
 
-                    <h3>
-                        Tu recorrido comienza aquí.
-                    </h3>
+                    <strong>
+                        No tienes que hacerlo todo de una vez.
+                    </strong>
 
                     <p>
-                        Cuando completes una experiencia,
-                        podrás ver tu avance en este espacio.
+                        Puedes comenzar un recorrido, detenerte,
+                        volver cuando quieras y explorar otro.
                     </p>
 
                 </div>
@@ -437,21 +312,15 @@
 
 
 
-        <!-- =========================
-             FOOTER
-        ========================== -->
+        <!-- FOOTER -->
 
         <footer>
 
-            <div class="footer-brand">
-                Temple
-            </div>
+            <span>Temple</span>
 
-            <div class="footer-line"></div>
+            <span>·</span>
 
-            <div class="footer-text">
-                30 Días · Experiencias para pasar a la acción
-            </div>
+            <span>30 Días</span>
 
         </footer>
 
