@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+
+:root {
+
+    --background: #F8F7F3;
+    --text: #26342D;
+    --muted: #68736D;
+    --white: #FFFFFF;
+
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "DM Sans", sans-serif;
+
+    line-height: 1.5;
+
+}
+
+
+.app {
+
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+}
+
+
+
+/* -------------------------
+   HERO
+------------------------- */
+
+.hero {
+
+    padding: 32px 0 70px;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+.brand-symbol {
+
+    font-size: 18px;
+
+}
+
+
+.hero-content {
+
+    max-width: 720px;
+
+    margin-top: 80px;
+
+}
+
+
+.eyebrow {
+
+    font-size: 11px;
+
+    letter-spacing: 0.14em;
+
+    font-weight: 600;
+
+    color: var(--muted);
+
+    margin-bottom: 14px;
+
+}
+
+
+h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(52px, 8vw, 86px);
+
+    font-weight: 500;
+
+    line-height: 0.95;
+
+}
+
+
+.hero-text {
+
+    margin-top: 24px;
+
+    font-size: 19px;
+
+    color: var(--muted);
+
+    max-width: 520px;
+
+}
+
+
+
+/* -------------------------
+   SECTION
+------------------------- */
+
+.journeys-section {
+
+    padding-bottom: 90px;
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 30px;
+
+}
+
+
+h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 4vw, 44px);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+}
+
+
+
+/* -------------------------
+   CARDS
+------------------------- */
+
+.journeys-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.journey-card {
+
+    min-height: 330px;
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+}
+
+
+.journey-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.07);
+
+}
+
+
+.card-icon {
+
+    font-size: 30px;
+
+}
+
+
+.card-number {
+
+    font-size: 10px;
+
+    letter-spacing: 0.13em;
+
+    font-weight: 600;
+
+    opacity: 0.65;
+
+    margin-bottom: 8px;
+
+}
+
+
+.card-content h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 36px;
+
+    font-weight: 500;
+
+}
+
+
+.card-content p:not(.card-number) {
+
+    margin-top: 10px;
+
+    max-width: 340px;
+
+    opacity: 0.78;
+
+}
+
+
+.start-button {
+
+    margin-top: 25px;
+
+    width: fit-content;
+
+    border: none;
+
+    border-radius: 100px;
+
+    padding: 12px 18px;
+
+    background: rgba(255,255,255,0.75);
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: background 0.2s ease;
+
+}
+
+
+.start-button:hover {
+
+    background: rgba(255,255,255,1);
+
+}
+
+
+.start-button span {
+
+    font-size: 17px;
+
+}
+
+
+
+/* -------------------------
+   COLORES DE LOS RECORRIDOS
+------------------------- */
+
+.conocerme {
+
+    background: #DCE7D8;
+
+}
+
+
+.conectar {
+
+    background: #DDE5EE;
+
+}
+
+
+.limites {
+
+    background: #E9D9D0;
+
+}
+
+
+.elegir {
+
+    background: #D8E0EA;
+
+}
+
+
+.soltar {
+
+    background: #DCE2D9;
+
+}
+
+
+.journey-card:last-child {
+
+    grid-column: span 2;
+
+    min-height: 260px;
+
+}
+
+
+
+/* -------------------------
+   PROGRESO
+------------------------- */
+
+.progress-section {
+
+    padding: 30px 0 100px;
+
+}
+
+
+#progress-container {
+
+    margin-top: 28px;
+
+}
+
+
+.empty-state {
+
+    border: 1px dashed #C8CEC9;
+
+    border-radius: 22px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+}
+
+
+.empty-state span {
+
+    font-size: 28px;
+
+}
+
+
+.empty-state p {
+
+    margin-top: 12px;
+
+    font-size: 15px;
+
+}
+
+
+.empty-state small {
+
+    display: block;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* -------------------------
+   FOOTER
+------------------------- */
+
+footer {
+
+    padding: 35px 0;
+
+    border-top: 1px solid #DDE0DC;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+
+/* -------------------------
+   CELULAR
+------------------------- */
+
+@media (max-width: 700px) {
+
+
+    .hero {
+
+        padding-top: 24px;
+
+        padding-bottom: 55px;
+
+    }
+
+
+    .hero-content {
+
+        margin-top: 60px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 17px;
+
+    }
+
+
+    .journeys-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .journey-card {
+
+        min-height: 290px;
+
+        padding: 25px;
+
+        border-radius: 23px;
+
+    }
+
+
+    .journey-card:last-child {
+
+        grid-column: auto;
+
+        min-height: 290px;
+
+    }
+
+
+    .card-content h3 {
+
+        font-size: 31px;
+
+    }
+
+
+}
