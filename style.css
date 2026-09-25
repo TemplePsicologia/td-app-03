@@ -1,18 +1,10 @@
 /* =========================================================
    TEMPLE · 30 DÍAS
-   DASHBOARD
-========================================================= */
-
-
-/* =========================================================
-   VARIABLES
 ========================================================= */
 
 :root {
 
     --background: #F7F7F4;
-
-    --background-soft: #F0F2EF;
 
     --text: #293A49;
 
@@ -27,10 +19,6 @@
 
 }
 
-
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
 
@@ -65,9 +53,12 @@ body {
 }
 
 
-/* =========================================================
-   APP
-========================================================= */
+button {
+
+    font-family: inherit;
+
+}
+
 
 .app {
 
@@ -104,8 +95,6 @@ body {
     gap: 9px;
 
     color: var(--temple-blue);
-
-    font-family: inherit;
 
     font-size: 15px;
 
@@ -305,40 +294,40 @@ body {
 
 
 /* =========================================================
-   COLORES
+   COLORES DIFERENTES POR TOMO
 ========================================================= */
 
 .conocerme {
 
-    background: #DCEBDD;
+    background: #DDEBD8;
 
 }
 
 
 .conectar {
 
-    background: #DCE7F2;
+    background: #E7DDEB;
 
 }
 
 
 .limites {
 
-    background: #E9DDD6;
+    background: #EBDDD5;
 
 }
 
 
 .elegir {
 
-    background: #D9E4F0;
+    background: #D9E6F1;
 
 }
 
 
 .soltar {
 
-    background: #DFE7DE;
+    background: #E5E8D7;
 
 }
 
@@ -403,7 +392,7 @@ body {
 
 
 /* =========================================================
-   BOTÓN COMENZAR
+   BOTÓN
 ========================================================= */
 
 .start-button {
@@ -424,8 +413,6 @@ body {
         13px
         10px
         16px;
-
-    font-family: inherit;
 
     font-size: 11px;
 
@@ -459,13 +446,6 @@ body {
 /* =========================================================
    PARA HOY
 ========================================================= */
-
-.today-section {
-
-    padding-bottom: 86px;
-
-}
-
 
 .today-box {
 
@@ -546,8 +526,6 @@ body {
         13px
         17px;
 
-    font-family: inherit;
-
     font-size: 11px;
 
     font-weight: 600;
@@ -561,21 +539,6 @@ body {
     cursor: pointer;
 
     white-space: nowrap;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-
-}
-
-
-.surprise-button:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 7px 18px
-        rgba(76,103,137,.20);
 
 }
 
@@ -760,15 +723,8 @@ body {
 }
 
 
-.calendar-arrow:hover {
-
-    background: white;
-
-}
-
-
 /* =========================================================
-   DÍAS
+   SEMANA
 ========================================================= */
 
 .calendar-weekdays,
@@ -803,9 +759,13 @@ body {
 }
 
 
+/* =========================================================
+   DÍAS
+========================================================= */
+
 .calendar-day {
 
-    min-height: 63px;
+    min-height: 68px;
 
     position: relative;
 
@@ -822,8 +782,6 @@ body {
     background: transparent;
 
     color: var(--text);
-
-    font-family: inherit;
 
     font-size: 12px;
 
@@ -873,7 +831,8 @@ body {
 }
 
 
-.calendar-day.has-activity .day-number {
+.calendar-day.has-activity
+.day-number {
 
     font-weight: 600;
 
@@ -881,14 +840,14 @@ body {
 
 
 /* =========================================================
-   PUNTOS DE ACTIVIDAD
+   EMOJIS EN CALENDARIO
 ========================================================= */
 
-.activity-dots {
+.activity-emojis {
 
     position: absolute;
 
-    bottom: 7px;
+    bottom: 4px;
 
     left: 50%;
 
@@ -897,53 +856,22 @@ body {
 
     display: flex;
 
-    gap: 3px;
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1px;
+
+    white-space: nowrap;
 
 }
 
 
-.activity-dot {
+.activity-emoji {
 
-    width: 5px;
+    font-size: 12px;
 
-    height: 5px;
-
-    border-radius: 50%;
-
-}
-
-
-.dot-green {
-
-    background: #759C7B;
-
-}
-
-
-.dot-blue {
-
-    background: #708EAE;
-
-}
-
-
-.dot-orange {
-
-    background: #B58A73;
-
-}
-
-
-.dot-purple {
-
-    background: #8582A8;
-
-}
-
-
-.dot-sage {
-
-    background: #819580;
+    line-height: 1;
 
 }
 
@@ -977,57 +905,11 @@ body {
 
     align-items: center;
 
-    gap: 6px;
+    gap: 5px;
 
     color: var(--text-soft);
 
     font-size: 10px;
-
-}
-
-
-.legend-dot {
-
-    width: 6px;
-
-    height: 6px;
-
-    border-radius: 50%;
-
-}
-
-
-.legend-dot.green {
-
-    background: #759C7B;
-
-}
-
-
-.legend-dot.blue {
-
-    background: #708EAE;
-
-}
-
-
-.legend-dot.orange {
-
-    background: #B58A73;
-
-}
-
-
-.legend-dot.purple {
-
-    background: #8582A8;
-
-}
-
-
-.legend-dot.sage {
-
-    background: #819580;
 
 }
 
@@ -1040,16 +922,18 @@ body {
 
     margin-top: 12px;
 
-    min-height: 82px;
-
     padding:
-        19px
-        21px;
+        21px
+        22px;
 
-    border-radius: 18px;
+    border-radius: 19px;
 
     background:
-        rgba(255,255,255,.38);
+        rgba(255,255,255,.45);
+
+    border:
+        1px solid
+        rgba(71,106,145,.07);
 
 }
 
@@ -1076,39 +960,115 @@ body {
 }
 
 
-.day-detail-title {
+.day-detail-date {
 
-    font-size: 12px;
+    color: var(--temple-blue);
+
+    font-size: 10px;
 
     font-weight: 600;
+
+    letter-spacing: .09em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
 
 }
 
 
 .day-detail-item {
 
-    margin-top: 9px;
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding:
+        10px
+        0;
+
+}
+
+
+.day-detail-item + .day-detail-item {
+
+    border-top:
+        1px solid
+        var(--line);
+
+}
+
+
+.detail-emoji {
+
+    width: 32px;
+
+    height: 32px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.75);
 
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    justify-content: center;
 
-    color: var(--text-soft);
-
-    font-size: 11px;
+    font-size: 15px;
 
 }
 
 
-.detail-dot {
+.detail-info {
 
-    width: 7px;
+    display: flex;
 
-    height: 7px;
+    flex-direction: column;
 
-    border-radius: 50%;
+    gap: 3px;
+
+}
+
+
+.detail-journey {
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+}
+
+
+.detail-title {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+}
+
+
+.detail-day {
+
+    color: var(--text-soft);
+
+    font-size: 10px;
 
 }
 
@@ -1150,23 +1110,7 @@ body {
 
     text-align: left;
 
-    font-family: inherit;
-
     cursor: pointer;
-
-    transition:
-        background .2s ease,
-        transform .2s ease;
-
-}
-
-
-.experience-link:hover {
-
-    background:
-        rgba(255,255,255,.82);
-
-    transform: translateY(-2px);
 
 }
 
@@ -1327,61 +1271,7 @@ footer {
 
 
 /* =========================================================
-   MENSAJE TEMPORAL
-========================================================= */
-
-.temporary-message {
-
-    position: fixed;
-
-    left: 50%;
-
-    bottom: 25px;
-
-    transform:
-        translate(-50%, 20px);
-
-    opacity: 0;
-
-    pointer-events: none;
-
-    z-index: 100;
-
-    background: #304A62;
-
-    color: white;
-
-    padding:
-        12px
-        18px;
-
-    border-radius: 100px;
-
-    font-size: 11px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(30,50,70,.18);
-
-    transition:
-        opacity .25s ease,
-        transform .25s ease;
-
-}
-
-
-.temporary-message.show {
-
-    opacity: 1;
-
-    transform:
-        translate(-50%, 0);
-
-}
-
-
-/* =========================================================
-   TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 760px) {
@@ -1405,10 +1295,6 @@ footer {
 
 }
 
-
-/* =========================================================
-   MÓVIL
-========================================================= */
 
 @media (max-width: 650px) {
 
@@ -1480,7 +1366,14 @@ footer {
 
     .calendar-day {
 
-        min-height: 52px;
+        min-height: 55px;
+
+    }
+
+
+    .activity-emoji {
+
+        font-size: 11px;
 
     }
 
@@ -1498,19 +1391,8 @@ footer {
 
     }
 
-
-    .closing-message {
-
-        padding-bottom: 55px;
-
-    }
-
 }
 
-
-/* =========================================================
-   MÓVIL PEQUEÑO
-========================================================= */
 
 @media (max-width: 390px) {
 
@@ -1523,7 +1405,7 @@ footer {
 
     .calendar-day {
 
-        min-height: 47px;
+        min-height: 49px;
 
     }
 
@@ -1531,13 +1413,6 @@ footer {
     .calendar-weekdays span {
 
         font-size: 9px;
-
-    }
-
-
-    .calendar-month strong {
-
-        font-size: 15px;
 
     }
 
