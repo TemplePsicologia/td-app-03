@@ -1,75 +1,68 @@
 /* =========================================================
    TEMPLE · 30 DÍAS
-   APP PRINCIPAL
-========================================================= */
+   App principal
+   ========================================================= */
 
 
 /* =========================================================
-   TOMOS
-========================================================= */
+   DATOS DE LOS TOMOS
+   ========================================================= */
 
 const journeys = {
-
     conocerme: {
-        name: "Conocerme",
         emoji: "🌱",
-        color: "#759C7B",
-        description:
-            "Experiencias para volver la mirada hacia ti y descubrirte desde la acción."
+        name: "30 Días para Conocerme",
+        shortName: "Conocerme",
+        color: "#759C7B"
     },
 
     conectar: {
-        name: "Conectar",
         emoji: "🤍",
-        color: "#A785B0",
-        description:
-            "Experiencias para crear momentos diferentes y volver a encontrarse."
+        name: "30 Días para Conectar",
+        shortName: "Conectar",
+        color: "#A785B0"
     },
 
     limites: {
-        name: "Poner límites",
         emoji: "🪴",
-        color: "#B58A73",
-        description:
-            "Experiencias para practicar nuevas formas de expresar lo que necesitas."
+        name: "30 Días para Poner Límites",
+        shortName: "Poner límites",
+        color: "#B58A73"
     },
 
     elegir: {
-        name: "Elegir",
         emoji: "🧭",
-        color: "#708EAE",
-        description:
-            "Experiencias para darte espacio para decidir desde lo que quieres."
+        name: "30 Días para Elegir",
+        shortName: "Elegir",
+        color: "#708EAE"
     },
 
     soltar: {
-        name: "Soltar",
         emoji: "🍃",
-        color: "#819580",
-        description:
-            "Experiencias para dejar ir y hacer espacio para algo nuevo."
+        name: "30 Días para Soltar",
+        shortName: "Soltar",
+        color: "#819580"
     }
-
 };
 
 
 /* =========================================================
-   10 EXPERIENCIAS DE PRUEBA
-========================================================= */
+   LAS 10 EXPERIENCIAS REALES
+   ========================================================= */
 
 const experiences = [
 
-    /* =====================================================
-       🌱 CONOCERME
-    ===================================================== */
+    /* -----------------------------------------------------
+       CONOCERME
+       ----------------------------------------------------- */
 
     {
         id: "conocerme-1",
         journey: "conocerme",
         day: 1,
-        title: "Una cita conmigo",
+        title: "UNA CITA CONMIGO",
         duration: "30–60 min",
-        place: "En un lugar que te resulte agradable y en un momento que puedas reservar para ti.",
+        moment: "En un lugar que te resulte agradable y en un momento que puedas reservar para ti",
         description:
             "Hoy vas a tener una cita contigo. La propuesta es salir de la rutina y dedicar un momento a hacer algo que realmente quieras hacer, sin esperar a que alguien más pueda acompañarte.",
 
@@ -105,14 +98,13 @@ const experiences = [
             "¿Qué descubriste sobre ti al compartir este tiempo contigo?"
     },
 
-
     {
         id: "conocerme-2",
         journey: "conocerme",
         day: 2,
-        title: "Elegir por mí",
+        title: "ELEGIR POR MI",
         duration: "15–30 min",
-        place: "En un momento cotidiano en el que tengas varias opciones para elegir.",
+        moment: "En un momento cotidiano en el que tengas varias opciones para elegir.",
         description:
             "Hoy vas a prestar atención a tus elecciones cotidianas. No se trata de tomar decisiones importantes, sino de observar cuánto espacio das a lo que realmente quieres.",
 
@@ -144,17 +136,17 @@ const experiences = [
     },
 
 
-    /* =====================================================
-       🤍 CONECTAR
-    ===================================================== */
+    /* -----------------------------------------------------
+       CONECTAR
+       ----------------------------------------------------- */
 
     {
         id: "conectar-1",
         journey: "conectar",
         day: 1,
-        title: "Volver a mirarnos",
+        title: "VOLVER A MIRARNOS",
         duration: "10–15 min",
-        place: "En un momento tranquilo, cuando puedan estar juntos sin interrupciones.",
+        moment: "En un momento tranquilo, cuando puedan estar juntos sin interrupciones.",
         description:
             "A veces compartimos tanto tiempo con nuestra pareja que dejamos de mirarnos realmente. Hoy van a hacer una pausa para volver a encontrarse a través de la mirada y observar qué ocurre cuando se prestan atención de una manera diferente.",
 
@@ -185,14 +177,13 @@ const experiences = [
             "¿Qué descubriste sobre lo que ocurre entre ustedes cuando se detienen a mirarse realmente?"
     },
 
-
     {
         id: "conectar-2",
         journey: "conectar",
         day: 2,
-        title: "Una conversación sin pantallas",
+        title: "UNA CONVERSACIÓN SIN PANTALLAS",
         duration: "15–20 min",
-        place: "En casa o en un lugar tranquilo, durante un momento en el que puedan estar juntos sin interrupciones.",
+        moment: "En casa o en un lugar tranquilo, durante un momento en el que puedan estar juntos sin interrupciones.",
         description:
             "A veces estamos juntos, pero nuestra atención está en diferentes lugares. Hoy van a crear un espacio para estar realmente presentes en la conversación, dejando fuera aquello que suele interponerse entre ustedes.",
 
@@ -224,17 +215,17 @@ const experiences = [
     },
 
 
-    /* =====================================================
-       🪴 PONER LÍMITES
-    ===================================================== */
+    /* -----------------------------------------------------
+       LÍMITES
+       ----------------------------------------------------- */
 
     {
         id: "limites-1",
         journey: "limites",
         day: 1,
-        title: "Decir no a algo pequeño",
+        title: "DECIR NO A ALGO PEQUEÑO",
         duration: "10–20 min",
-        place: "En una situación cotidiana en la que puedas rechazar algo sin poner en riesgo tu bienestar ni el de otra persona.",
+        moment: "En una situación cotidiana en la que puedas rechazar algo sin poner en riesgo tu bienestar ni el de otra persona.",
         description:
             "Hoy vas a experimentar qué ocurre cuando reconoces que no quieres algo y lo expresas de manera clara.",
 
@@ -252,7 +243,7 @@ const experiences = [
             {
                 emoji: "💬",
                 title: "Di que no",
-                text: "Si la situación lo permite, responde con un “no” claro y respetuoso. No necesitas dar una explicación extensa."
+                text: "Si la situación lo permite, responde con un ‘no’ claro y respetuoso. No necesitas dar una explicación extensa."
             },
             {
                 emoji: "🧭",
@@ -262,23 +253,22 @@ const experiences = [
         ],
 
         question:
-            "¿Qué descubriste al expresar un “no” en una situación pequeña?"
+            "¿Qué descubriste al expresar un ‘no’ en una situación pequeña?"
     },
-
 
     {
         id: "limites-2",
         journey: "limites",
         day: 2,
-        title: "Elegir sin adaptarme",
+        title: "ELEGIR SIN ADAPTARME",
         duration: "10–20 min",
-        place: "En un momento del día en el que otra persona pueda proponerte qué hacer.",
+        moment: "En un momento del día en el que otra persona pueda proponerte qué hacer.",
         description:
             "Hoy vas a prestar atención a tus propias preferencias antes de adaptarte automáticamente a lo que otra persona quiere.",
 
         steps: [
             {
-                emoji: "🔎",
+                emoji: "🔎👀",
                 title: "Observa",
                 text: "Identifica una situación cotidiana en la que tengas la posibilidad de elegir qué hacer: qué comer, qué ver, dónde ir o cómo pasar un momento libre."
             },
@@ -304,17 +294,17 @@ const experiences = [
     },
 
 
-    /* =====================================================
-       🧭 ELEGIR
-    ===================================================== */
+    /* -----------------------------------------------------
+       ELEGIR
+       ----------------------------------------------------- */
 
     {
         id: "elegir-1",
         journey: "elegir",
         day: 1,
-        title: "Elegir sin consultar",
+        title: "ELEGIR SIN CONSULTAR",
         duration: "10–20 min",
-        place: "En un momento cotidiano en el que tengas que tomar una decisión sencilla.",
+        moment: "En un momento cotidiano en el que tengas que tomar una decisión sencilla.",
         description:
             "Hoy vas a observar qué ocurre cuando tomas una decisión sin buscar primero la opinión, aprobación o confirmación de otra persona. No se trata de decidir algo importante, sino de darte la oportunidad de elegir por ti en una situación cotidiana.",
 
@@ -345,14 +335,13 @@ const experiences = [
             "¿Qué descubriste sobre ti al tomar una decisión sin buscar primero la opinión de otra persona?"
     },
 
-
     {
         id: "elegir-2",
         journey: "elegir",
         day: 2,
-        title: "Elegir cuando ambas opciones me convienen",
+        title: "ELEGIR CUANDO AMBAS OPCIONES ME CONVIENEN",
         duration: "10–20 min",
-        place: "En un momento cotidiano en el que tengas que elegir entre dos opciones que te resulten igualmente aceptables.",
+        moment: "En un momento cotidiano en el que tengas que elegir entre dos opciones que te resulten igualmente aceptables.",
         description:
             "A veces no resulta difícil elegir porque una opción sea mala, sino porque varias alternativas pueden parecernos igualmente buenas. Hoy vas a experimentar qué ocurre cuando decides sin necesitar encontrar una opción claramente superior.",
 
@@ -384,17 +373,17 @@ const experiences = [
     },
 
 
-    /* =====================================================
-       🍃 SOLTAR
-    ===================================================== */
+    /* -----------------------------------------------------
+       SOLTAR
+       ----------------------------------------------------- */
 
     {
         id: "soltar-1",
         journey: "soltar",
         day: 1,
-        title: "Dejar algo sin terminar",
+        title: "DEJAR ALGO SIN TERMINAR",
         duration: "10–20 min",
-        place: "En casa, en el trabajo o en cualquier lugar donde estés realizando una actividad que puedas detener sin consecuencias.",
+        moment: "En casa, en el trabajo o en cualquier lugar donde estés realizando una actividad que puedas detener sin consecuencias.",
         description:
             "A veces sentimos que algo tiene que quedar terminado antes de poder pasar a otra cosa. Hoy vas a experimentar qué ocurre cuando eliges detener una actividad aunque todavía quede algo por hacer.",
 
@@ -425,14 +414,13 @@ const experiences = [
             "¿Qué descubriste al permitir que algo quedara sin terminar?"
     },
 
-
     {
         id: "soltar-2",
         journey: "soltar",
         day: 2,
-        title: "Dejar de revisar",
+        title: "DEJAR DE REVISAR",
         duration: "10–20 min",
-        place: "En un momento del día en el que puedas dejar de comprobar algo que sueles revisar repetidamente.",
+        moment: "En un momento del día en el que puedas dejar de comprobar algo que sueles revisar repetidamente.",
         description:
             "A veces volvemos una y otra vez a algo para comprobar si cambió, si llegó una respuesta o si todo sigue igual. Hoy vas a experimentar qué ocurre cuando dejas de comprobarlo durante un tiempo.",
 
@@ -462,2005 +450,738 @@ const experiences = [
         question:
             "¿Qué ocurrió cuando dejaste de comprobar algo que normalmente vuelves a revisar?"
     }
-
 ];
 
 
 /* =========================================================
-   ESTADO
-========================================================= */
+   ESTADO DE LA APLICACIÓN
+   ========================================================= */
 
-let calendarDate = new Date(2026, 8, 1);
-
+let calendarDate = new Date();
 let currentExperience = null;
-
 let currentJourney = null;
+let returnView = "dashboard";
 
 let completedExperiences = [];
-
 let ratings = {};
+let completionDates = {};
 
 
 /* =========================================================
-   CARGAR DATOS GUARDADOS
-========================================================= */
+   LOCAL STORAGE
+   ========================================================= */
 
-try {
+const STORAGE_COMPLETED = "temple30_completed";
+const STORAGE_RATINGS = "temple30_ratings";
+const STORAGE_DATES = "temple30_completion_dates";
 
-    completedExperiences =
-        JSON.parse(
-            localStorage.getItem("temple30_completed") || "[]"
-        );
 
-} catch (error) {
+function loadState() {
+    try {
+        const savedCompleted =
+            localStorage.getItem(STORAGE_COMPLETED);
 
-    completedExperiences = [];
+        const savedRatings =
+            localStorage.getItem(STORAGE_RATINGS);
 
+        const savedDates =
+            localStorage.getItem(STORAGE_DATES);
+
+        completedExperiences =
+            savedCompleted
+                ? JSON.parse(savedCompleted)
+                : [];
+
+        ratings =
+            savedRatings
+                ? JSON.parse(savedRatings)
+                : {};
+
+        completionDates =
+            savedDates
+                ? JSON.parse(savedDates)
+                : {};
+
+        if (!Array.isArray(completedExperiences)) {
+            completedExperiences = [];
+        }
+
+        if (!ratings || typeof ratings !== "object") {
+            ratings = {};
+        }
+
+        if (!completionDates || typeof completionDates !== "object") {
+            completionDates = {};
+        }
+
+    } catch (error) {
+        console.warn("No se pudo cargar el progreso:", error);
+
+        completedExperiences = [];
+        ratings = {};
+        completionDates = {};
+    }
 }
 
 
-try {
+function saveState() {
+    localStorage.setItem(
+        STORAGE_COMPLETED,
+        JSON.stringify(completedExperiences)
+    );
 
-    ratings =
-        JSON.parse(
-            localStorage.getItem("temple30_ratings") || "{}"
-        );
+    localStorage.setItem(
+        STORAGE_RATINGS,
+        JSON.stringify(ratings)
+    );
 
-} catch (error) {
-
-    ratings = {};
-
+    localStorage.setItem(
+        STORAGE_DATES,
+        JSON.stringify(completionDates)
+    );
 }
 
 
 /* =========================================================
-   ESTILOS PARA LA VISTA DE TOMO
-   Se generan desde JS para que funcione sin modificar
-   todavía el style.css.
-========================================================= */
+   INICIO
+   ========================================================= */
 
-function injectJourneyStyles() {
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (
-        document.getElementById(
-            "temple-journey-dynamic-styles"
-        )
-    ) {
+    loadState();
+
+    injectJourneyStyles();
+
+    renderCalendar();
+
+    setupRatingButtons();
+
+    hideExperienceView();
+
+});
+
+
+/* =========================================================
+   UTILIDADES
+   ========================================================= */
+
+function getExperience(id) {
+    return experiences.find(
+        experience => experience.id === id
+    );
+}
+
+
+function getJourneyExperience(journey, day) {
+    return experiences.find(
+        experience =>
+            experience.journey === journey &&
+            experience.day === day
+    );
+}
+
+
+function isCompleted(id) {
+    return completedExperiences.includes(id);
+}
+
+
+function getTodayKey() {
+    const today = new Date();
+
+    return formatDateKey(today);
+}
+
+
+function formatDateKey(date) {
+    const year = date.getFullYear();
+
+    const month =
+        String(date.getMonth() + 1).padStart(2, "0");
+
+    const day =
+        String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
+
+
+function getJourneyCompletedCount(journey) {
+    return experiences.filter(
+        experience =>
+            experience.journey === journey &&
+            isCompleted(experience.id)
+    ).length;
+}
+
+
+/* =========================================================
+   VISTA DE TOMO
+   ========================================================= */
+
+function openJourney(journey) {
+
+    if (!journeys[journey]) {
         return;
     }
 
+    currentJourney = journey;
+    returnView = "journey";
 
-    const style =
-        document.createElement("style");
+    hideDashboard();
 
+    createJourneyView();
 
-    style.id =
-        "temple-journey-dynamic-styles";
+    renderJourneyView(journey);
 
-
-    style.textContent = `
-
-        .journey-view {
-            min-height: 100vh;
-            background: #F7F7F4;
-            padding: 0 20px 60px;
-        }
-
-        .journey-view-inner {
-            width: 100%;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .journey-view-topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 22px 0 34px;
-        }
-
-        .journey-view-back {
-            border: 0;
-            background: transparent;
-            padding: 8px 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #71808B;
-            font: 500 13px/1 "Inter", sans-serif;
-            cursor: pointer;
-        }
-
-        .journey-view-back:hover {
-            color: #293A49;
-        }
-
-        .journey-view-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #293A49;
-            font: 600 13px/1 "Inter", sans-serif;
-        }
-
-        .journey-view-hero {
-            text-align: center;
-            padding: 18px 0 30px;
-        }
-
-        .journey-view-emoji {
-            width: 66px;
-            height: 66px;
-            margin: 0 auto 18px;
-            border-radius: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--journey-soft, #E8EEE8);
-            font-size: 29px;
-        }
-
-        .journey-view-label {
-            margin: 0 0 7px;
-            color: var(--journey-color, #759C7B);
-            font: 600 10px/1.2 "Inter", sans-serif;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-        }
-
-        .journey-view-title {
-            margin: 0;
-            color: #293A49;
-            font: 700 clamp(27px, 6vw, 38px)/1.1 "Inter", sans-serif;
-            letter-spacing: -.04em;
-        }
-
-        .journey-view-description {
-            max-width: 510px;
-            margin: 13px auto 0;
-            color: #71808B;
-            font: 400 14px/1.65 "Inter", sans-serif;
-        }
-
-        .journey-progress-card {
-            margin: 8px 0 30px;
-            padding: 21px;
-            border-radius: 22px;
-            background: #FFFFFF;
-            border: 1px solid rgba(41,58,73,.07);
-            box-shadow: 0 8px 28px rgba(41,58,73,.045);
-        }
-
-        .journey-progress-top {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 15px;
-            margin-bottom: 12px;
-        }
-
-        .journey-progress-label {
-            color: #71808B;
-            font: 600 10px/1.2 "Inter", sans-serif;
-            letter-spacing: .11em;
-            text-transform: uppercase;
-        }
-
-        .journey-progress-count {
-            color: #293A49;
-            font: 600 13px/1.2 "Inter", sans-serif;
-        }
-
-        .journey-progress-count strong {
-            font-size: 20px;
-        }
-
-        .journey-progress-track {
-            height: 7px;
-            border-radius: 99px;
-            overflow: hidden;
-            background: #EDF0EC;
-        }
-
-        .journey-progress-fill {
-            height: 100%;
-            width: 0;
-            border-radius: inherit;
-            background: var(--journey-color, #759C7B);
-            transition: width .35s ease;
-        }
-
-        .journey-progress-footer {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-            color: #8A969E;
-            font: 400 10px/1.3 "Inter", sans-serif;
-        }
-
-        .journey-continue {
-            width: 100%;
-            min-height: 51px;
-            margin-top: 17px;
-            border: 0;
-            border-radius: 15px;
-            background: var(--journey-color, #759C7B);
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            cursor: pointer;
-            font: 600 13px/1 "Inter", sans-serif;
-            transition: transform .15s ease, opacity .15s ease;
-        }
-
-        .journey-continue:hover {
-            transform: translateY(-1px);
-        }
-
-        .journey-continue:active {
-            transform: translateY(0);
-        }
-
-        .journey-days-heading {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 15px;
-            margin-bottom: 14px;
-        }
-
-        .journey-days-heading h2 {
-            margin: 0;
-            color: #293A49;
-            font: 600 17px/1.25 "Inter", sans-serif;
-            letter-spacing: -.02em;
-        }
-
-        .journey-days-heading p {
-            margin: 4px 0 0;
-            color: #8A969E;
-            font: 400 11px/1.4 "Inter", sans-serif;
-        }
-
-        .journey-days-legend {
-            color: #8A969E;
-            font: 400 10px/1.3 "Inter", sans-serif;
-            white-space: nowrap;
-        }
-
-        .journey-days-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 9px;
-        }
-
-        .journey-day {
-            min-height: 69px;
-            padding: 9px 7px;
-            border: 1px solid #E7EAE6;
-            border-radius: 15px;
-            background: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            cursor: pointer;
-            color: #293A49;
-            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-        }
-
-        .journey-day:hover:not(.locked) {
-            transform: translateY(-1px);
-            border-color: var(--journey-color, #759C7B);
-            box-shadow: 0 6px 18px rgba(41,58,73,.06);
-        }
-
-        .journey-day-number {
-            font: 600 13px/1 "Inter", sans-serif;
-        }
-
-        .journey-day-status {
-            min-height: 12px;
-            color: #8A969E;
-            font: 400 9px/1.2 "Inter", sans-serif;
-        }
-
-        .journey-day.available {
-            border-color: color-mix(
-                in srgb,
-                var(--journey-color, #759C7B) 25%,
-                #FFFFFF
-            );
-        }
-
-        .journey-day.completed {
-            background: var(--journey-soft, #EEF3ED);
-            border-color: transparent;
-        }
-
-        .journey-day.completed .journey-day-status {
-            color: var(--journey-color, #759C7B);
-            font-weight: 600;
-        }
-
-        .journey-day.current {
-            box-shadow: inset 0 0 0 1.5px var(--journey-color, #759C7B);
-        }
-
-        .journey-day.locked {
-            background: #F2F3F1;
-            color: #A5ADB2;
-            cursor: default;
-        }
-
-        .journey-day.locked .journey-day-status {
-            color: #B0B7BB;
-        }
-
-        .journey-available-note {
-            margin: 17px 0 0;
-            padding: 13px 15px;
-            border-radius: 14px;
-            background: #EFF2EE;
-            color: #71808B;
-            font: 400 11px/1.55 "Inter", sans-serif;
-        }
-
-        .journey-available-note strong {
-            color: #52636D;
-            font-weight: 600;
-        }
-
-        .journey-footer-note {
-            margin: 38px 0 0;
-            padding-top: 24px;
-            border-top: 1px solid #E4E7E3;
-            text-align: center;
-            color: #8A969E;
-            font: 400 11px/1.6 "Inter", sans-serif;
-        }
-
-        @media (max-width: 480px) {
-
-            .journey-view {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-
-            .journey-view-topbar {
-                padding-top: 18px;
-                padding-bottom: 24px;
-            }
-
-            .journey-view-hero {
-                padding-top: 10px;
-            }
-
-            .journey-progress-card {
-                padding: 18px;
-                border-radius: 19px;
-            }
-
-            .journey-days-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 7px;
-            }
-
-            .journey-day {
-                min-height: 62px;
-                border-radius: 13px;
-            }
-
-            .journey-days-heading {
-                display: block;
-            }
-
-            .journey-days-legend {
-                display: block;
-                margin-top: 5px;
-            }
-
-        }
-
-    `;
-
-
-    document.head.appendChild(style);
-
+    showJourneyView();
 }
 
-
-/* =========================================================
-   CREAR VISTA DE TOMO
-========================================================= */
 
 function createJourneyView() {
 
-    if (
-        document.getElementById(
-            "journey-view"
-        )
-    ) {
+    let view = document.getElementById("journey-view");
+
+    if (view) {
         return;
     }
 
+    view = document.createElement("div");
 
-    const app =
-        document.querySelector(".app");
+    view.id = "journey-view";
+
+    view.setAttribute("aria-hidden", "true");
+
+    document.querySelector(".app").appendChild(view);
+}
 
 
-    if (!app) {
-        return;
-    }
-
+function showJourneyView() {
 
     const view =
-        document.createElement("div");
+        document.getElementById("journey-view");
+
+    if (!view) {
+        return;
+    }
+
+    view.setAttribute("aria-hidden", "false");
+
+    view.style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 
 
-    view.id =
-        "journey-view";
+function hideJourneyView() {
+
+    const view =
+        document.getElementById("journey-view");
+
+    if (!view) {
+        return;
+    }
+
+    view.setAttribute("aria-hidden", "true");
+
+    view.style.display = "none";
+}
 
 
-    view.className =
-        "journey-view";
+function renderJourneyView(journey) {
+
+    const view =
+        document.getElementById("journey-view");
+
+    if (!view || !journeys[journey]) {
+        return;
+    }
+
+    const data = journeys[journey];
+
+    const completedCount =
+        getJourneyCompletedCount(journey);
+
+    const progress =
+        Math.round((completedCount / 30) * 100);
+
+    const availableExperiences =
+        experiences.filter(
+            experience => experience.journey === journey
+        );
+
+    const nextExperience =
+        availableExperiences.find(
+            experience => !isCompleted(experience.id)
+        );
+
+    let daysHTML = "";
+
+    for (let day = 1; day <= 30; day++) {
+
+        const experience =
+            getJourneyExperience(journey, day);
+
+        if (experience) {
+
+            const completed =
+                isCompleted(experience.id);
+
+            daysHTML += `
+                <button
+                    type="button"
+                    class="journey-day-card ${completed ? "is-completed" : ""}"
+                    onclick="openExperienceFromJourney('${experience.id}')"
+                    style="--journey-color:${data.color};"
+                >
+                    <div class="journey-day-number">
+                        Día ${day}
+                    </div>
+
+                    <div class="journey-day-emoji">
+                        ${data.emoji}
+                    </div>
+
+                    <div class="journey-day-content">
+                        <div class="journey-day-title">
+                            ${experience.title}
+                        </div>
+
+                        <div class="journey-day-status">
+                            ${
+                                completed
+                                    ? "✓ Completado"
+                                    : "Disponible"
+                            }
+                        </div>
+                    </div>
+
+                    <div class="journey-day-arrow">
+                        →
+                    </div>
+                </button>
+            `;
+
+        } else {
+
+            daysHTML += `
+                <div
+                    class="journey-day-card journey-day-locked"
+                    style="--journey-color:${data.color};"
+                >
+                    <div class="journey-day-number">
+                        Día ${day}
+                    </div>
+
+                    <div class="journey-day-emoji">
+                        ${data.emoji}
+                    </div>
+
+                    <div class="journey-day-content">
+                        <div class="journey-day-title">
+                            Próximamente
+                        </div>
+
+                        <div class="journey-day-status">
+                            Esta experiencia todavía no está disponible
+                        </div>
+                    </div>
+
+                    <div class="journey-day-lock">
+                        •
+                    </div>
+                </div>
+            `;
+        }
+    }
 
 
-    view.style.display =
-        "none";
+    const continueHTML = nextExperience
+        ? `
+            <button
+                type="button"
+                class="journey-continue-button"
+                onclick="openExperienceFromJourney('${nextExperience.id}')"
+                style="--journey-color:${data.color};"
+            >
+                <span>
+                    Continuar recorrido
+                </span>
 
-
-    view.setAttribute(
-        "aria-hidden",
-        "true"
-    );
+                <strong>
+                    Día ${nextExperience.day} →
+                </strong>
+            </button>
+        `
+        : `
+            <div class="journey-finished-message">
+                <strong>Has recorrido todas las experiencias disponibles.</strong>
+                <span>Puedes volver a hacerlas cuando quieras.</span>
+            </div>
+        `;
 
 
     view.innerHTML = `
+        <main class="journey-browser">
 
-        <div class="journey-view-inner">
-
-            <header class="journey-view-topbar">
+            <header class="journey-browser-header">
 
                 <button
                     type="button"
-                    class="journey-view-back"
-                    id="journey-view-back"
+                    class="journey-back-button"
+                    onclick="closeJourneyView()"
                 >
-                    <span>←</span>
+                    ←
                     <span>Volver</span>
                 </button>
 
-                <div class="journey-view-brand">
-                    <span class="temple-symbol"></span>
-                    <span>Temple</span>
-                </div>
+                <button
+                    type="button"
+                    class="journey-temple-button"
+                    onclick="goHome()"
+                >
+                    Temple
+                </button>
 
             </header>
 
 
-            <section class="journey-view-hero">
+            <section
+                class="journey-browser-hero"
+                style="--journey-color:${data.color};"
+            >
 
-                <div
-                    class="journey-view-emoji"
-                    id="journey-view-emoji"
-                >
-                    🌱
+                <div class="journey-browser-identity">
+
+                    <div class="journey-browser-emoji">
+                        ${data.emoji}
+                    </div>
+
+                    <div>
+
+                        <div class="journey-browser-label">
+                            RECORRIDO
+                        </div>
+
+                        <h1>
+                            ${data.name}
+                        </h1>
+
+                    </div>
+
                 </div>
 
-                <p
-                    class="journey-view-label"
-                    id="journey-view-label"
-                >
-                    TU RECORRIDO
+
+                <p class="journey-browser-intro">
+                    Treinta días para comenzar a explorar
+                    esta parte de ti a través de pequeñas
+                    experiencias.
                 </p>
 
-                <h1
-                    class="journey-view-title"
-                    id="journey-view-title"
-                >
-                    Conocerme
-                </h1>
 
-                <p
-                    class="journey-view-description"
-                    id="journey-view-description"
-                ></p>
+                <div class="journey-progress-card">
 
-            </section>
+                    <div class="journey-progress-top">
 
+                        <span>
+                            Tu progreso
+                        </span>
 
-            <section class="journey-progress-card">
+                        <strong>
+                            ${completedCount} de 30
+                        </strong>
 
-                <div class="journey-progress-top">
-
-                    <div class="journey-progress-label">
-                        TU PROGRESO
                     </div>
 
-                    <div
-                        class="journey-progress-count"
-                        id="journey-progress-count"
-                    >
-                        <strong>0</strong> de 30
+                    <div class="journey-progress-track">
+
+                        <div
+                            class="journey-progress-fill"
+                            style="
+                                width:${progress}%;
+                                background:${data.color};
+                            "
+                        ></div>
+
+                    </div>
+
+                    <div class="journey-progress-bottom">
+                        ${completedCount === 0
+                            ? "Aún no has comenzado este recorrido."
+                            : completedCount === 1
+                                ? "Has avanzado 1 día."
+                                : `Has avanzado ${completedCount} días.`
+                        }
                     </div>
 
                 </div>
-
-
-                <div class="journey-progress-track">
-
-                    <div
-                        class="journey-progress-fill"
-                        id="journey-progress-fill"
-                    ></div>
-
-                </div>
-
-
-                <div class="journey-progress-footer">
-
-                    <span id="journey-progress-message">
-                        Comienza cuando quieras.
-                    </span>
-
-                    <span id="journey-progress-percent">
-                        0%
-                    </span>
-
-                </div>
-
-
-                <button
-                    type="button"
-                    class="journey-continue"
-                    id="journey-continue"
-                >
-                    <span id="journey-continue-text">
-                        Comenzar recorrido
-                    </span>
-                    <span>→</span>
-                </button>
 
             </section>
 
 
             <section class="journey-days-section">
 
-                <div class="journey-days-heading">
+                <div class="journey-section-heading">
 
                     <div>
 
+                        <span>
+                            TU RECORRIDO
+                        </span>
+
                         <h2>
-                            Tus 30 días
+                            Elige qué quieres hacer hoy
                         </h2>
 
-                        <p>
-                            Puedes elegir el día que quieras.
-                        </p>
-
                     </div>
-
-                    <span class="journey-days-legend">
-                        ✓ completado
-                    </span>
 
                 </div>
 
 
-                <div
-                    class="journey-days-grid"
-                    id="journey-days-grid"
-                ></div>
+                ${continueHTML}
 
 
-                <div
-                    class="journey-available-note"
-                    id="journey-available-note"
-                ></div>
+                <div class="journey-days-grid">
+                    ${daysHTML}
+                </div>
 
             </section>
 
 
-            <p class="journey-footer-note">
-                No necesitas avanzar en orden. Puedes elegir
-                una experiencia según el momento en el que estés.
-            </p>
+            <section class="journey-note">
 
-        </div>
+                <span>🌿</span>
 
+                <p>
+                    No tienes que empezar por el Día 1.
+                    Puedes elegir cualquier experiencia
+                    disponible y avanzar a tu propio ritmo.
+                </p>
+
+            </section>
+
+
+            <footer class="journey-browser-footer">
+                Temple · 30 Días
+            </footer>
+
+        </main>
     `;
 
-
-    app.appendChild(view);
-
-
-    document
-        .getElementById("journey-view-back")
-        .addEventListener(
-            "click",
-            closeJourney
-        );
-
-
-    document
-        .getElementById("journey-continue")
-        .addEventListener(
-            "click",
-            continueJourney
-        );
-
+    showJourneyView();
 }
 
 
-/* =========================================================
-   ABRIR TOMO
-========================================================= */
-
-function openJourney(journeyKey) {
-
-    const journey =
-        journeys[journeyKey];
-
-
-    if (!journey) {
-        return;
-    }
-
-
-    const availableExperiences =
-        experiences
-            .filter(
-                function (experience) {
-                    return experience.journey === journeyKey;
-                }
-            )
-            .sort(
-                function (a, b) {
-                    return a.day - b.day;
-                }
-            );
-
-
-    if (
-        availableExperiences.length === 0
-    ) {
-        return;
-    }
-
+function openExperienceFromJourney(id) {
 
     currentJourney =
-        journeyKey;
+        getExperience(id)?.journey || currentJourney;
 
+    returnView = "journey";
 
-    createJourneyView();
-
-
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    const experienceView =
-        document.getElementById(
-            "experience-view"
-        );
-
-
-    if (
-        !dashboard ||
-        !journeyView
-    ) {
-        return;
-    }
-
-
-    const emoji =
-        document.getElementById(
-            "journey-view-emoji"
-        );
-
-
-    const label =
-        document.getElementById(
-            "journey-view-label"
-        );
-
-
-    const title =
-        document.getElementById(
-            "journey-view-title"
-        );
-
-
-    const description =
-        document.getElementById(
-            "journey-view-description"
-        );
-
-
-    if (emoji) {
-        emoji.textContent =
-            journey.emoji;
-    }
-
-
-    if (label) {
-
-        label.textContent =
-            "RECORRIDO · 30 DÍAS";
-
-        label.style.color =
-            journey.color;
-
-    }
-
-
-    if (title) {
-
-        title.textContent =
-            journey.name;
-
-        title.style.color =
-            "#293A49";
-
-    }
-
-
-    if (description) {
-
-        description.textContent =
-            journey.description;
-
-    }
-
-
-    dashboard.style.display =
-        "none";
-
-
-    if (experienceView) {
-
-        experienceView.style.display =
-            "none";
-
-        experienceView.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-    }
-
-
-    journeyView.style.display =
-        "block";
-
-
-    journeyView.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-
-    document.body.classList.add(
-        "journey-open"
-    );
-
-
-    renderJourneyProgress(
-        journeyKey
-    );
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "auto"
-    });
-
+    openExperience(id);
 }
 
 
-/* =========================================================
-   CERRAR TOMO
-========================================================= */
-
-function closeJourney() {
-
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (!dashboard || !journeyView) {
-        return;
-    }
-
-
-    journeyView.style.display =
-        "none";
-
-
-    journeyView.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-
-    dashboard.style.display =
-        "block";
-
-
-    document.body.classList.remove(
-        "journey-open"
-    );
-
+function closeJourneyView() {
 
     currentJourney = null;
 
+    hideJourneyView();
 
-    renderCalendar();
-
+    showDashboard();
 
     window.scrollTo({
         top: 0,
-        behavior: "auto"
+        behavior: "smooth"
     });
-
 }
 
 
 /* =========================================================
-   RENDERIZAR PROGRESO DEL TOMO
-========================================================= */
-
-function renderJourneyProgress(journeyKey) {
-
-    const journey =
-        journeys[journeyKey];
-
-
-    if (!journey) {
-        return;
-    }
-
-
-    const journeyExperiences =
-        experiences
-            .filter(
-                function (experience) {
-                    return experience.journey === journeyKey;
-                }
-            )
-            .sort(
-                function (a, b) {
-                    return a.day - b.day;
-                }
-            );
-
-
-    const completedCount =
-        journeyExperiences.filter(
-            function (experience) {
-
-                return completedExperiences.includes(
-                    experience.id
-                );
-
-            }
-        ).length;
-
-
-    /*
-       El progreso siempre se calcula sobre 30.
-       Así, cuando carguemos las 30 experiencias,
-       no será necesario modificar esta función.
-    */
-
-    const totalDays =
-        30;
-
-
-    const percentage =
-        Math.round(
-            (completedCount / totalDays) * 100
-        );
-
-
-    const countElement =
-        document.getElementById(
-            "journey-progress-count"
-        );
-
-
-    const fillElement =
-        document.getElementById(
-            "journey-progress-fill"
-        );
-
-
-    const percentElement =
-        document.getElementById(
-            "journey-progress-percent"
-        );
-
-
-    const messageElement =
-        document.getElementById(
-            "journey-progress-message"
-        );
-
-
-    const continueText =
-        document.getElementById(
-            "journey-continue-text"
-        );
-
-
-    const continueButton =
-        document.getElementById(
-            "journey-continue"
-        );
-
-
-    if (countElement) {
-
-        countElement.innerHTML =
-            `<strong>${completedCount}</strong> de ${totalDays}`;
-
-    }
-
-
-    if (fillElement) {
-
-        fillElement.style.width =
-            `${percentage}%`;
-
-        fillElement.style.background =
-            journey.color;
-
-    }
-
-
-    if (percentElement) {
-
-        percentElement.textContent =
-            `${percentage}%`;
-
-    }
-
-
-    if (messageElement) {
-
-        if (completedCount === 0) {
-
-            messageElement.textContent =
-                "Comienza cuando quieras.";
-
-        } else if (completedCount === 30) {
-
-            messageElement.textContent =
-                "Has completado este recorrido.";
-
-        } else {
-
-            messageElement.textContent =
-                `${completedCount} ${completedCount === 1 ? "día realizado" : "días realizados"}.`;
-
-        }
-
-    }
-
-
-    /*
-       Buscar la primera experiencia disponible
-       que todavía no esté completada.
-    */
-
-    const nextExperience =
-        journeyExperiences.find(
-            function (experience) {
-
-                return !completedExperiences.includes(
-                    experience.id
-                );
-
-            }
-        );
-
-
-    if (continueButton) {
-
-        continueButton.style.background =
-            journey.color;
-
-    }
-
-
-    if (continueText) {
-
-        if (!nextExperience) {
-
-            continueText.textContent =
-                "Volver a recorrer";
-
-        } else if (completedCount === 0) {
-
-            continueText.textContent =
-                "Comenzar recorrido";
-
-        } else {
-
-            continueText.textContent =
-                `Continuar · Día ${nextExperience.day}`;
-
-        }
-
-    }
-
-
-    renderJourneyDays(
-        journeyKey,
-        journeyExperiences
-    );
-
-
-    const availableNote =
-        document.getElementById(
-            "journey-available-note"
-        );
-
-
-    if (availableNote) {
-
-        const availableDays =
-            journeyExperiences.length;
-
-
-        const remaining =
-            totalDays - availableDays;
-
-
-        if (remaining > 0) {
-
-            availableNote.innerHTML = `
-                <strong>${availableDays} de 30 días disponibles.</strong>
-                Los demás aparecerán aquí a medida que se incorporen
-                nuevas experiencias.
-            `;
-
-        } else {
-
-            availableNote.innerHTML = `
-                <strong>Los 30 días están disponibles.</strong>
-                Puedes recorrerlos en el orden que prefieras.
-            `;
-
-        }
-
-    }
-
-}
-
-
-/* =========================================================
-   RENDERIZAR LOS 30 DÍAS DEL TOMO
-========================================================= */
-
-function renderJourneyDays(
-    journeyKey,
-    journeyExperiences
-) {
-
-    const grid =
-        document.getElementById(
-            "journey-days-grid"
-        );
-
-
-    if (!grid) {
-        return;
-    }
-
-
-    const journey =
-        journeys[journeyKey];
-
-
-    grid.innerHTML = "";
-
-
-    for (
-        let day = 1;
-        day <= 30;
-        day++
-    ) {
-
-        const experience =
-            journeyExperiences.find(
-                function (item) {
-                    return item.day === day;
-                }
-            );
-
-
-        const button =
-            document.createElement("button");
-
-
-        button.type =
-            "button";
-
-
-        button.className =
-            "journey-day";
-
-
-        button.style.setProperty(
-            "--journey-color",
-            journey.color
-        );
-
-
-        /*
-           Fondo suave del color del tomo.
-        */
-
-        button.style.setProperty(
-            "--journey-soft",
-            hexToSoftColor(
-                journey.color
-            )
-        );
-
-
-        const number =
-            document.createElement("span");
-
-
-        number.className =
-            "journey-day-number";
-
-
-        number.textContent =
-            `Día ${day}`;
-
-
-        const status =
-            document.createElement("span");
-
-
-        status.className =
-            "journey-day-status";
-
-
-        if (!experience) {
-
-            /*
-               Días que todavía no tienen experiencia
-               cargada.
-            */
-
-            button.classList.add(
-                "locked"
-            );
-
-
-            button.disabled =
-                true;
-
-
-            status.textContent =
-                "Próximamente";
-
-        } else {
-
-            const completed =
-                completedExperiences.includes(
-                    experience.id
-                );
-
-
-            button.classList.add(
-                "available"
-            );
-
-
-            if (completed) {
-
-                button.classList.add(
-                    "completed"
-                );
-
-
-                status.textContent =
-                    "✓ Completado";
-
-            } else {
-
-                status.textContent =
-                    "Disponible";
-
-            }
-
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    openExperience(
-                        experience.id
-                    );
-
-                }
-            );
-
-        }
-
-
-        button.appendChild(
-            number
-        );
-
-
-        button.appendChild(
-            status
-        );
-
-
-        grid.appendChild(
-            button
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   CONTINUAR TOMO
-========================================================= */
-
-function continueJourney() {
-
-    if (!currentJourney) {
-        return;
-    }
-
-
-    const journeyExperiences =
-        experiences
-            .filter(
-                function (experience) {
-
-                    return (
-                        experience.journey ===
-                        currentJourney
-                    );
-
-                }
-            )
-            .sort(
-                function (a, b) {
-
-                    return a.day - b.day;
-
-                }
-            );
-
-
-    if (
-        journeyExperiences.length === 0
-    ) {
-        return;
-    }
-
-
-    let nextExperience =
-        journeyExperiences.find(
-            function (experience) {
-
-                return !completedExperiences.includes(
-                    experience.id
-                );
-
-            }
-        );
-
-
-    /*
-       Si todas las experiencias actualmente
-       disponibles están completadas,
-       volvemos a abrir la primera.
-    */
-
-    if (!nextExperience) {
-
-        nextExperience =
-            journeyExperiences[0];
-
-    }
-
-
-    openExperience(
-        nextExperience.id
-    );
-
-}
-
-
-/* =========================================================
-   COLOR SUAVE
-========================================================= */
-
-function hexToSoftColor(hex) {
-
-    const clean =
-        hex.replace(
-            "#",
-            ""
-        );
-
-
-    if (clean.length !== 6) {
-        return "#EEF2EE";
-    }
-
-
-    const r =
-        parseInt(
-            clean.substring(0, 2),
-            16
-        );
-
-
-    const g =
-        parseInt(
-            clean.substring(2, 4),
-            16
-        );
-
-
-    const b =
-        parseInt(
-            clean.substring(4, 6),
-            16
-        );
-
-
-    const mix =
-        function (value) {
-
-            return Math.round(
-                value +
-                (255 - value) * 0.88
-            );
-
-        };
-
-
-    return `rgb(${mix(r)}, ${mix(g)}, ${mix(b)})`;
-
-}
-
-
-/* =========================================================
-   INICIO
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        injectJourneyStyles();
-
-        createJourneyView();
-
-        renderCalendar();
-
-        setupRatingButtons();
-
-        hideExperienceView();
-
-        hideJourneyView();
-
-    }
-);
-
-
-/* =========================================================
-   BUSCAR EXPERIENCIA
-========================================================= */
-
-function getExperience(id) {
-
-    return experiences.find(
-        function (experience) {
-
-            return experience.id === id;
-
-        }
-    );
-
-}
-
-
-/* =========================================================
-   SORPRÉNDEME
-========================================================= */
-
-function surpriseMe() {
-
-    if (
-        experiences.length === 0
-    ) {
-        return;
-    }
-
-
-    const randomIndex =
-        Math.floor(
-            Math.random() *
-            experiences.length
-        );
-
-
-    const randomExperience =
-        experiences[randomIndex];
-
-
-    openExperience(
-        randomExperience.id
-    );
-
-}
-
-
-/* =========================================================
-   ABRIR EXPERIENCIA
-========================================================= */
+   EXPERIENCIA
+   ========================================================= */
 
 function openExperience(id) {
 
     const experience =
         getExperience(id);
 
-
     if (!experience) {
-
-        console.error(
-            "No se encontró la experiencia:",
-            id
-        );
-
         return;
-
     }
 
-
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
+    currentExperience = experience;
 
 
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    const experienceView =
-        document.getElementById(
-            "experience-view"
-        );
-
-
-    if (
-        !dashboard ||
-        !experienceView
-    ) {
-
-        console.error(
-            "No se encontró una de las vistas necesarias."
-        );
-
-        return;
-
-    }
-
-
-    currentExperience =
-        experience;
-
+    /* Identidad */
 
     const journey =
-        journeys[
-            experience.journey
-        ];
+        journeys[experience.journey];
 
 
-    /*
-       Si venimos desde un tomo,
-       mantenemos el tomo actual.
-    */
+    document.getElementById("experience-emoji").textContent =
+        journey.emoji;
 
-    if (
-        !currentJourney ||
-        currentJourney !== experience.journey
-    ) {
+    document.getElementById("experience-journey").textContent =
+        journey.shortName;
 
-        currentJourney =
-            experience.journey;
+    document.getElementById("experience-day").textContent =
+        `Día ${experience.day} de 30`;
 
-    }
+    document.getElementById("experience-title").textContent =
+        experience.title;
 
+    document.getElementById("experience-duration").textContent =
+        experience.duration;
 
-    /* =====================================================
-       IDENTIDAD DEL TOMO
-    ===================================================== */
+    document.getElementById("experience-moment").textContent =
+        experience.moment;
 
-    const emoji =
-        document.getElementById(
-            "experience-emoji"
-        );
+    document.getElementById("experience-description-text").textContent =
+        experience.description;
 
 
-    const journeyName =
-        document.getElementById(
-            "experience-journey"
-        );
-
-
-    if (emoji) {
-
-        emoji.textContent =
-            journey.emoji;
-
-    }
-
-
-    if (journeyName) {
-
-        journeyName.textContent =
-            journey.name.toUpperCase();
-
-        journeyName.style.color =
-            journey.color;
-
-    }
-
-
-    /* =====================================================
-       DÍA
-    ===================================================== */
-
-    const dayElement =
-        document.getElementById(
-            "experience-day"
-        );
-
-
-    if (dayElement) {
-
-        dayElement.textContent =
-            `Día ${experience.day} de 30`;
-
-    }
-
-
-    /* =====================================================
-       TÍTULO
-    ===================================================== */
-
-    const titleElement =
-        document.getElementById(
-            "experience-title"
-        );
-
-
-    if (titleElement) {
-
-        titleElement.textContent =
-            experience.title;
-
-    }
-
-
-    /* =====================================================
-       DURACIÓN
-    ===================================================== */
-
-    const durationElement =
-        document.getElementById(
-            "experience-duration"
-        );
-
-
-    if (durationElement) {
-
-        durationElement.textContent =
-            experience.duration;
-
-    }
-
-
-    /* =====================================================
-       MOMENTO
-    ===================================================== */
-
-    const momentElement =
-        document.getElementById(
-            "experience-moment"
-        );
-
-
-    if (momentElement) {
-
-        momentElement.textContent =
-            experience.place;
-
-    }
-
-
-    /* =====================================================
-       DESCRIPCIÓN
-    ===================================================== */
-
-    const descriptionElement =
-        document.getElementById(
-            "experience-description-text"
-        );
-
-
-    if (descriptionElement) {
-
-        descriptionElement.textContent =
-            experience.description;
-
-    }
-
-
-    /* =====================================================
-       PASOS
-    ===================================================== */
+    /* Pasos */
 
     const stepsContainer =
-        document.getElementById(
-            "experience-steps"
-        );
+        document.getElementById("experience-steps");
 
+    stepsContainer.innerHTML =
+        experience.steps.map((step, index) => `
+            <div class="experience-step">
 
-    if (stepsContainer) {
+                <div class="step-number">
+                    ${index + 1}
+                </div>
 
-        stepsContainer.innerHTML =
-            "";
+                <div class="step-content">
 
-
-        experience.steps.forEach(
-            function (step) {
-
-                const stepElement =
-                    document.createElement(
-                        "article"
-                    );
-
-
-                stepElement.className =
-                    "experience-step";
-
-
-                stepElement.innerHTML = `
-
-                    <div class="step-number">
-                        ${step.emoji}
+                    <div class="step-title">
+                        <span>${step.emoji}</span>
+                        ${step.title}
                     </div>
 
-                    <div class="step-body">
+                    <p>
+                        ${step.text}
+                    </p>
 
-                        <h3>
-                            ${step.title}
-                        </h3>
+                </div>
 
-                        <p>
-                            ${step.text}
-                        </p>
-
-                    </div>
-
-                `;
+            </div>
+        `).join("");
 
 
-                stepsContainer.appendChild(
-                    stepElement
-                );
+    /* Pregunta final */
 
-            }
-        );
-
-    }
+    document.getElementById("experience-question").textContent =
+        experience.question;
 
 
-    /* =====================================================
-       PREGUNTA FINAL
-    ===================================================== */
+    /* Valoración */
 
-    const questionElement =
-        document.getElementById(
-            "experience-question"
-        );
+    updateRatingUI();
 
 
-    if (questionElement) {
-
-        questionElement.textContent =
-            experience.question;
-
-    }
-
-
-    /* =====================================================
-       VALORACIÓN
-    ===================================================== */
-
-    updateRatingStars();
-
-
-    /* =====================================================
-       ESTADO COMPLETADA
-    ===================================================== */
+    /* Estado completado */
 
     updateCompleteButton();
 
 
-    /* =====================================================
-       MOSTRAR EXPERIENCIA
-    ===================================================== */
+    /* Cambiar vista */
 
-    dashboard.style.display =
-        "none";
+    hideDashboard();
 
+    hideJourneyView();
 
-    if (journeyView) {
-
-        journeyView.style.display =
-            "none";
-
-        journeyView.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-    }
-
-
-    experienceView.style.display =
-        "block";
-
+    const experienceView =
+        document.getElementById("experience-view");
 
     experienceView.setAttribute(
         "aria-hidden",
         "false"
     );
 
-
-    document.body.classList.remove(
-        "journey-open"
-    );
-
-
-    document.body.classList.add(
+    experienceView.classList.add(
         "experience-open"
     );
 
-
-    /*
-       Transición.
-    */
-
-    experienceView.classList.remove(
-        "experience-enter"
-    );
-
-
-    void experienceView.offsetWidth;
-
-
-    experienceView.classList.add(
-        "experience-enter"
-    );
-
-
     window.scrollTo({
         top: 0,
-        behavior: "auto"
+        behavior: "smooth"
     });
-
 }
 
 
-/* =========================================================
-   CERRAR EXPERIENCIA
-========================================================= */
-
 function closeExperience() {
 
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
-
-
     const experienceView =
-        document.getElementById(
-            "experience-view"
-        );
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (
-        !dashboard ||
-        !experienceView
-    ) {
-        return;
-    }
-
-
-    experienceView.style.display =
-        "none";
-
+        document.getElementById("experience-view");
 
     experienceView.setAttribute(
         "aria-hidden",
         "true"
     );
 
-
     experienceView.classList.remove(
-        "experience-enter"
-    );
-
-
-    document.body.classList.remove(
         "experience-open"
     );
 
 
-    currentExperience =
-        null;
-
-
-    /*
-       Si la experiencia fue abierta desde
-       un tomo, volvemos al tomo.
-    */
-
     if (
-        currentJourney &&
-        journeyView
+        returnView === "journey" &&
+        currentJourney
     ) {
 
-        dashboard.style.display =
-            "none";
+        renderJourneyView(currentJourney);
 
+        hideDashboard();
 
-        journeyView.style.display =
-            "block";
-
-
-        journeyView.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-
-        document.body.classList.add(
-            "journey-open"
-        );
-
-
-        renderJourneyProgress(
-            currentJourney
-        );
+        showJourneyView();
 
     } else {
 
-        dashboard.style.display =
-            "block";
+        currentJourney = null;
 
+        showDashboard();
+
+        renderCalendar();
     }
 
 
     window.scrollTo({
         top: 0,
-        behavior: "auto"
+        behavior: "smooth"
     });
-
 }
 
-
-/* =========================================================
-   OCULTAR EXPERIENCIA
-========================================================= */
 
 function hideExperienceView() {
 
     const experienceView =
-        document.getElementById(
-            "experience-view"
-        );
-
+        document.getElementById("experience-view");
 
     if (!experienceView) {
         return;
     }
 
-
-    experienceView.style.display =
-        "none";
-
-
     experienceView.setAttribute(
         "aria-hidden",
         "true"
     );
 
-}
-
-
-/* =========================================================
-   OCULTAR VISTA DE TOMO
-========================================================= */
-
-function hideJourneyView() {
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (!journeyView) {
-        return;
-    }
-
-
-    journeyView.style.display =
-        "none";
-
-
-    journeyView.setAttribute(
-        "aria-hidden",
-        "true"
+    experienceView.classList.remove(
+        "experience-open"
     );
-
 }
 
 
 /* =========================================================
-   CONFIGURAR ESTRELLAS
-========================================================= */
+   VALORACIÓN
+   ========================================================= */
 
 function setupRatingButtons() {
 
@@ -2469,139 +1190,106 @@ function setupRatingButtons() {
             "#rating-stars button"
         );
 
+    stars.forEach(star => {
 
-    stars.forEach(
-        function (star) {
+        star.addEventListener(
+            "click",
+            () => {
 
-            star.addEventListener(
-                "click",
-                function () {
+                if (!currentExperience) {
+                    return;
+                }
 
-                    const rating =
-                        Number(
-                            star.dataset.rating
-                        );
-
-
-                    rateExperience(
-                        rating
+                const value =
+                    Number(
+                        star.dataset.rating ||
+                        star.getAttribute("data-rating")
                     );
 
+                if (!value) {
+                    return;
                 }
-            );
 
-        }
-    );
+                ratings[currentExperience.id] =
+                    value;
 
-}
+                saveState();
 
-
-/* =========================================================
-   VALORAR EXPERIENCIA
-========================================================= */
-
-function rateExperience(rating) {
-
-    if (!currentExperience) {
-        return;
-    }
-
-
-    ratings[
-        currentExperience.id
-    ] = rating;
-
-
-    localStorage.setItem(
-        "temple30_ratings",
-        JSON.stringify(
-            ratings
-        )
-    );
-
-
-    updateRatingStars();
-
-
-    const message =
-        document.getElementById(
-            "rating-message"
+                updateRatingUI();
+            }
         );
-
-
-    if (message) {
-
-        message.textContent =
-            `Has valorado esta experiencia con ${rating} de 5.`;
-
-    }
-
+    });
 }
 
 
-/* =========================================================
-   ACTUALIZAR ESTRELLAS
-========================================================= */
-
-function updateRatingStars() {
+function updateRatingUI() {
 
     if (!currentExperience) {
         return;
     }
-
 
     const currentRating =
-        ratings[
-            currentExperience.id
-        ] || 0;
-
+        ratings[currentExperience.id] || 0;
 
     const stars =
         document.querySelectorAll(
             "#rating-stars button"
         );
 
+    stars.forEach(star => {
 
-    stars.forEach(
-        function (star) {
+        const value =
+            Number(
+                star.dataset.rating ||
+                star.getAttribute("data-rating")
+            );
 
-            const value =
-                Number(
-                    star.dataset.rating
-                );
+        star.classList.toggle(
+            "selected",
+            value <= currentRating
+        );
+
+        star.setAttribute(
+            "aria-pressed",
+            value === currentRating
+                ? "true"
+                : "false"
+        );
+    });
 
 
-            if (
-                value <= currentRating
-            ) {
+    const message =
+        document.getElementById("rating-message");
 
-                star.textContent =
-                    "★";
+    if (!message) {
+        return;
+    }
 
-                star.classList.add(
-                    "active"
-                );
+    if (currentRating === 0) {
 
-            } else {
+        message.textContent =
+            "¿Cómo fue esta experiencia para ti?";
 
-                star.textContent =
-                    "☆";
+    } else {
 
-                star.classList.remove(
-                    "active"
-                );
+        const messages = {
+            1: "Gracias por registrarlo.",
+            2: "Gracias por registrar cómo fue.",
+            3: "Gracias por compartir cómo fue.",
+            4: "Parece que fue una experiencia significativa.",
+            5: "Gracias por registrar tu experiencia."
+        };
 
-            }
-
-        }
-    );
-
+        message.textContent =
+            messages[currentRating] ||
+            "Gracias por registrar tu experiencia.";
+    }
 }
 
 
 /* =========================================================
    COMPLETAR EXPERIENCIA
-========================================================= */
+   ========================================================= */
 
 function toggleComplete() {
 
@@ -2609,22 +1297,19 @@ function toggleComplete() {
         return;
     }
 
-
     const id =
         currentExperience.id;
 
-
     const index =
-        completedExperiences.indexOf(
-            id
-        );
+        completedExperiences.indexOf(id);
 
 
     if (index === -1) {
 
-        completedExperiences.push(
-            id
-        );
+        completedExperiences.push(id);
+
+        completionDates[id] =
+            getTodayKey();
 
     } else {
 
@@ -2633,42 +1318,25 @@ function toggleComplete() {
             1
         );
 
+        delete completionDates[id];
     }
 
 
-    localStorage.setItem(
-        "temple30_completed",
-        JSON.stringify(
-            completedExperiences
-        )
-    );
-
+    saveState();
 
     updateCompleteButton();
-
 
     renderCalendar();
 
 
-    /*
-       Si estamos trabajando dentro de un tomo,
-       actualizamos también su progreso.
-    */
-
-    if (currentJourney) {
-
-        renderJourneyProgress(
-            currentJourney
-        );
-
+    if (
+        returnView === "journey" &&
+        currentJourney
+    ) {
+        renderJourneyView(currentJourney);
     }
-
 }
 
-
-/* =========================================================
-   ACTUALIZAR BOTÓN COMPLETAR
-========================================================= */
 
 function updateCompleteButton() {
 
@@ -2676,140 +1344,92 @@ function updateCompleteButton() {
         return;
     }
 
-
     const button =
-        document.getElementById(
-            "complete-button"
-        );
-
+        document.getElementById("complete-button");
 
     const icon =
-        document.getElementById(
-            "complete-icon"
-        );
-
+        document.getElementById("complete-icon");
 
     const text =
-        document.getElementById(
-            "complete-text"
-        );
+        document.getElementById("complete-text");
 
-
-    if (
-        !button ||
-        !icon ||
-        !text
-    ) {
+    if (!button) {
         return;
     }
 
-
     const completed =
-        completedExperiences.includes(
-            currentExperience.id
-        );
+        isCompleted(currentExperience.id);
 
 
-    if (completed) {
+    button.classList.toggle(
+        "is-completed",
+        completed
+    );
 
-        button.classList.add(
-            "completed"
-        );
 
-
+    if (icon) {
         icon.textContent =
-            "✓";
-
-
-        text.textContent =
-            "Experiencia completada";
-
-    } else {
-
-        button.classList.remove(
-            "completed"
-        );
-
-
-        icon.textContent =
-            "○";
-
-
-        text.textContent =
-            "Marcar como completada";
-
+            completed ? "✓" : "○";
     }
 
+
+    if (text) {
+        text.textContent =
+            completed
+                ? "Experiencia realizada"
+                : "Marcar como realizada";
+    }
+
+
+    button.setAttribute(
+        "aria-pressed",
+        completed ? "true" : "false"
+    );
 }
 
 
 /* =========================================================
    CALENDARIO
-========================================================= */
+   ========================================================= */
 
 function renderCalendar() {
 
     const daysContainer =
-        document.getElementById(
-            "calendar-days"
-        );
+        document.getElementById("calendar-days");
 
-
-    const monthElement =
-        document.getElementById(
-            "calendar-month"
-        );
-
-
-    const yearElement =
-        document.getElementById(
-            "calendar-year"
-        );
-
-
-    if (
-        !daysContainer ||
-        !monthElement ||
-        !yearElement
-    ) {
+    if (!daysContainer) {
         return;
     }
-
-
-    daysContainer.innerHTML =
-        "";
 
 
     const year =
         calendarDate.getFullYear();
 
-
     const month =
         calendarDate.getMonth();
 
 
-    const monthNames = [
-        "Enero",
-        "Febrero",
-        "Marzo",
-        "Abril",
-        "Mayo",
-        "Junio",
-        "Julio",
-        "Agosto",
-        "Septiembre",
-        "Octubre",
-        "Noviembre",
-        "Diciembre"
-    ];
+    const monthTitle =
+        document.getElementById("calendar-month");
+
+    if (monthTitle) {
+
+        const formatted =
+            calendarDate.toLocaleDateString(
+                "es-PE",
+                {
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+        monthTitle.textContent =
+            formatted.charAt(0).toUpperCase() +
+            formatted.slice(1);
+    }
 
 
-    monthElement.textContent =
-        monthNames[month];
-
-
-    yearElement.textContent =
-        year;
+    daysContainer.innerHTML = "";
 
 
     const firstDay =
@@ -2820,7 +1440,7 @@ function renderCalendar() {
         ).getDay();
 
 
-    const adjustedFirstDay =
+    const mondayOffset =
         firstDay === 0
             ? 6
             : firstDay - 1;
@@ -2834,36 +1454,27 @@ function renderCalendar() {
         ).getDate();
 
 
-    /* =====================================================
-       ESPACIOS ANTES DEL PRIMER DÍA
-    ===================================================== */
-
     for (
         let i = 0;
-        i < adjustedFirstDay;
+        i < mondayOffset;
         i++
     ) {
 
         const empty =
-            document.createElement(
-                "div"
-            );
-
+            document.createElement("div");
 
         empty.className =
-            "calendar-day empty";
-
+            "calendar-day calendar-empty";
 
         daysContainer.appendChild(
             empty
         );
-
     }
 
 
-    /* =====================================================
-       DÍAS
-    ===================================================== */
+    const todayKey =
+        getTodayKey();
+
 
     for (
         let day = 1;
@@ -2871,45 +1482,15 @@ function renderCalendar() {
         day++
     ) {
 
-        const dayElement =
-            document.createElement(
-                "button"
-            );
-
-
-        dayElement.type =
-            "button";
-
-
-        dayElement.className =
-            "calendar-day";
-
-
-        const number =
-            document.createElement(
-                "span"
-            );
-
-
-        number.className =
-            "day-number";
-
-
-        number.textContent =
-            day;
-
-
-        dayElement.appendChild(
-            number
-        );
-
-
-        const dateKey =
-            createDateKey(
+        const date =
+            new Date(
                 year,
                 month,
                 day
             );
+
+        const dateKey =
+            formatDateKey(date);
 
 
         const activities =
@@ -2918,87 +1499,59 @@ function renderCalendar() {
             );
 
 
+        const dayElement =
+            document.createElement("button");
+
+        dayElement.type = "button";
+
+        dayElement.className =
+            "calendar-day";
+
+
         if (
+            dateKey === todayKey
+        ) {
+            dayElement.classList.add(
+                "calendar-today"
+            );
+        }
+
+
+        if (activities.length > 0) {
+            dayElement.classList.add(
+                "calendar-has-activity"
+            );
+        }
+
+
+        const emoji =
             activities.length > 0
-        ) {
-
-            dayElement.classList.add(
-                "has-activity"
-            );
-
-
-            const emojis =
-                document.createElement(
-                    "div"
-                );
+                ? journeys[
+                    activities[0].journey
+                  ].emoji
+                : "";
 
 
-            emojis.className =
-                "activity-emojis";
+        dayElement.innerHTML = `
+            <span class="calendar-number">
+                ${day}
+            </span>
 
-
-            activities.forEach(
-                function (activity) {
-
-                    const journey =
-                        journeys[
-                            activity.journey
-                        ];
-
-
-                    const emoji =
-                        document.createElement(
-                            "span"
-                        );
-
-
-                    emoji.className =
-                        "activity-emoji";
-
-
-                    emoji.textContent =
-                        journey.emoji;
-
-
-                    emojis.appendChild(
-                        emoji
-                    );
-
-                }
-            );
-
-
-            dayElement.appendChild(
-                emojis
-            );
-
-        }
-
-
-        if (
-            year === 2026 &&
-            month === 8 &&
-            day === 25
-        ) {
-
-            dayElement.classList.add(
-                "today"
-            );
-
-        }
+            ${
+                emoji
+                    ? `<span class="calendar-emoji">${emoji}</span>`
+                    : ""
+            }
+        `;
 
 
         dayElement.addEventListener(
             "click",
-            function () {
-
+            () => {
                 showDayActivities(
                     dateKey,
-                    day,
-                    month,
-                    year
+                    activities
                 );
-
             }
         );
 
@@ -3006,113 +1559,24 @@ function renderCalendar() {
         daysContainer.appendChild(
             dayElement
         );
-
     }
-
 }
 
 
-/* =========================================================
-   EXPERIENCIAS DEL CALENDARIO
-========================================================= */
+function getActivitiesForDate(dateKey) {
 
-function getActivitiesForDate(
-    dateKey
-) {
-
-    /*
-       Por ahora mantenemos las fechas de prueba.
-       Más adelante podemos hacer que estas fechas
-       se creen automáticamente cuando el usuario
-       complete una experiencia.
-    */
-
-    const demoDates = {
-
-        "2026-09-03": "conocerme-1",
-        "2026-09-05": "conectar-1",
-        "2026-09-09": "elegir-1",
-        "2026-09-14": "conocerme-2",
-        "2026-09-16": "limites-2",
-        "2026-09-18": "conectar-2",
-        "2026-09-25": "elegir-2"
-
-    };
-
-
-    const activities = [];
-
-
-    const demoExperienceId =
-        demoDates[
-            dateKey
-        ];
-
-
-    if (demoExperienceId) {
-
-        const experience =
-            getExperience(
-                demoExperienceId
-            );
-
-
-        if (experience) {
-
-            activities.push(
-                experience
-            );
-
-        }
-
-    }
-
-
-    return activities;
-
+    return experiences.filter(
+        experience =>
+            completionDates[
+                experience.id
+            ] === dateKey
+    );
 }
 
-
-/* =========================================================
-   CREAR CLAVE DE FECHA
-========================================================= */
-
-function createDateKey(
-    year,
-    month,
-    day
-) {
-
-    const formattedMonth =
-        String(
-            month + 1
-        ).padStart(
-            2,
-            "0"
-        );
-
-
-    const formattedDay =
-        String(day).padStart(
-            2,
-            "0"
-        );
-
-
-    return `${year}-${formattedMonth}-${formattedDay}`;
-
-}
-
-
-/* =========================================================
-   DETALLE DEL DÍA
-========================================================= */
 
 function showDayActivities(
     dateKey,
-    day,
-    month,
-    year
+    activities
 ) {
 
     const detail =
@@ -3120,49 +1584,45 @@ function showDayActivities(
             "day-detail"
         );
 
-
     if (!detail) {
         return;
     }
 
 
-    const activities =
-        getActivitiesForDate(
-            dateKey
+    const date =
+        new Date(
+            `${dateKey}T12:00:00`
         );
 
 
-    const monthNames = [
-        "enero",
-        "febrero",
-        "marzo",
-        "abril",
-        "mayo",
-        "junio",
-        "julio",
-        "agosto",
-        "septiembre",
-        "octubre",
-        "noviembre",
-        "diciembre"
-    ];
+    const formattedDate =
+        date.toLocaleDateString(
+            "es-PE",
+            {
+                weekday: "long",
+                day: "numeric",
+                month: "long"
+            }
+        );
 
 
-    const dateText =
-        `${day} de ${monthNames[month]} ${year}`;
+    const dateTitle =
+        formattedDate.charAt(0).toUpperCase() +
+        formattedDate.slice(1);
 
 
-    if (
-        activities.length === 0
-    ) {
+    if (!activities.length) {
 
         detail.innerHTML = `
+            <div class="day-detail-empty">
 
-            <div class="day-detail-placeholder">
+                <div class="day-detail-empty-icon">
+                    ✦
+                </div>
 
-                <span>
-                    ${dateText}
-                </span>
+                <strong>
+                    ${dateTitle}
+                </strong>
 
                 <p>
                     No hay experiencias registradas
@@ -3170,288 +1630,875 @@ function showDayActivities(
                 </p>
 
             </div>
-
         `;
 
-
         return;
-
     }
 
 
-    let html = `
+    detail.innerHTML = `
+        <div class="day-detail-header">
+            <span>
+                ${dateTitle}
+            </span>
 
-        <div>
+            <strong>
+                ${activities.length}
+                ${
+                    activities.length === 1
+                        ? " experiencia"
+                        : " experiencias"
+                }
+            </strong>
+        </div>
 
-            <div class="day-detail-date">
-                ${dateText}
-            </div>
+        <div class="day-detail-list">
 
-    `;
+            ${activities.map(activity => {
 
+                const journey =
+                    journeys[
+                        activity.journey
+                    ];
 
-    activities.forEach(
-        function (activity) {
+                return `
+                    <button
+                        type="button"
+                        class="day-detail-item"
+                        onclick="openExperienceFromCalendar('${activity.id}')"
+                    >
 
-            const journey =
-                journeys[
-                    activity.journey
-                ];
+                        <div
+                            class="detail-emoji"
+                            style="
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                width:43px;
+                                height:43px;
+                                border-radius:14px;
+                                background:${journey.color}18;
+                                font-size:20px;
+                            "
+                        >
+                            ${journey.emoji}
+                        </div>
 
+                        <div class="detail-info">
 
-            const completed =
-                completedExperiences.includes(
-                    activity.id
-                );
+                            <span class="detail-journey">
+                                ${journey.shortName}
+                            </span>
 
+                            <span class="detail-title">
+                                ${activity.title}
+                            </span>
 
-            html += `
+                            <span class="detail-day">
+                                Día ${activity.day} de 30
+                            </span>
 
-                <button
-                    type="button"
-                    class="day-detail-item"
-                    onclick="openExperience('${activity.id}')"
-                >
+                        </div>
 
-                    <div class="detail-emoji">
-                        ${journey.emoji}
-                    </div>
+                        <div class="detail-check">
+                            ✓
+                        </div>
 
-                    <div class="detail-info">
+                    </button>
+                `;
 
-                        <span class="detail-journey">
-                            ${journey.name}
-                        </span>
+            }).join("")}
 
-                        <span class="detail-title">
-                            ${activity.title}
-                        </span>
-
-                        <span class="detail-day">
-                            Día ${activity.day} de 30
-                        </span>
-
-                    </div>
-
-                    <div class="detail-check">
-                        ${completed ? "✓" : "→"}
-                    </div>
-
-                </button>
-
-            `;
-
-        }
-    );
-
-
-    html += `
         </div>
     `;
-
-
-    detail.innerHTML =
-        html;
-
 }
 
 
-/* =========================================================
-   CAMBIAR MES
-========================================================= */
+function openExperienceFromCalendar(id) {
 
-function changeMonth(
-    direction
-) {
+    currentJourney = null;
+
+    returnView = "dashboard";
+
+    openExperience(id);
+}
+
+
+function changeMonth(offset) {
 
     calendarDate.setMonth(
-        calendarDate.getMonth() +
-        direction
+        calendarDate.getMonth() + offset
     );
 
-
     renderCalendar();
-
 
     const detail =
         document.getElementById(
             "day-detail"
         );
 
-
     if (detail) {
-
-        detail.innerHTML = `
-
-            <div class="day-detail-placeholder">
-
-                <span>
-                    Selecciona un día
-                </span>
-
-                <p>
-                    Aquí podrás ver las experiencias
-                    realizadas en esa fecha.
-                </p>
-
-            </div>
-
-        `;
-
+        detail.innerHTML = "";
     }
-
 }
 
 
 /* =========================================================
-   GUARDADAS / REALIZADAS
-========================================================= */
+   SORPRÉNDEME
+   ========================================================= */
 
-function showFeature(type) {
+function surpriseMe() {
 
-    if (
-        type === "guardadas"
-    ) {
-
-        showTemporaryMessage(
-            "Aquí aparecerán las experiencias que guardes."
-        );
-
+    if (!experiences.length) {
         return;
-
     }
 
-
-    if (
-        type === "realizadas"
-    ) {
-
-        showTemporaryMessage(
-            "Aquí aparecerán las experiencias que completes."
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            experiences.length
         );
 
-    }
+    const randomExperience =
+        experiences[randomIndex];
 
+    currentJourney = null;
+
+    returnView = "dashboard";
+
+    openExperience(
+        randomExperience.id
+    );
 }
 
 
 /* =========================================================
-   VOLVER AL INICIO
-========================================================= */
+   NAVEGACIÓN PRINCIPAL
+   ========================================================= */
+
+function hideDashboard() {
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+    if (!dashboard) {
+        return;
+    }
+
+    dashboard.style.display =
+        "none";
+}
+
+
+function showDashboard() {
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+    if (!dashboard) {
+        return;
+    }
+
+    dashboard.style.display =
+        "";
+}
+
 
 function goHome() {
 
-    const experienceView =
-        document.getElementById(
-            "experience-view"
-        );
+    currentExperience = null;
 
+    currentJourney = null;
 
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
+    returnView = "dashboard";
 
+    hideExperienceView();
 
-    /*
-       Si estamos dentro de una experiencia,
-       primero volvemos al tomo.
-    */
+    hideJourneyView();
 
-    if (
-        experienceView &&
-        experienceView.style.display !== "none"
-    ) {
+    showDashboard();
 
-        closeExperience();
-
-        return;
-
-    }
-
-
-    /*
-       Si estamos dentro de un tomo,
-       volvemos al dashboard.
-    */
-
-    if (
-        journeyView &&
-        journeyView.style.display !== "none"
-    ) {
-
-        closeJourney();
-
-        return;
-
-    }
-
+    renderCalendar();
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
 }
 
 
 /* =========================================================
-   MENSAJE TEMPORAL
-========================================================= */
+   FUNCIONES DE SECCIONES EXISTENTES
+   ========================================================= */
 
-function showTemporaryMessage(
-    message
-) {
+function showFeature(feature) {
 
-    let messageElement =
-        document.querySelector(
-            ".temporary-message"
-        );
+    if (feature === "realizadas") {
 
-
-    if (!messageElement) {
-
-        messageElement =
-            document.createElement(
-                "div"
+        const completed =
+            experiences.filter(
+                experience =>
+                    isCompleted(
+                        experience.id
+                    )
             );
 
+        if (!completed.length) {
 
-        messageElement.className =
-            "temporary-message";
+            showTemporaryMessage(
+                "Todavía no has realizado ninguna experiencia."
+            );
 
+            return;
+        }
 
-        document.body.appendChild(
-            messageElement
+        const names =
+            completed
+                .map(
+                    experience =>
+                        `• ${experience.title}`
+                )
+                .join("\n");
+
+        showTemporaryMessage(
+            `Tus experiencias realizadas:\n\n${names}`
         );
 
+        return;
     }
 
 
-    messageElement.textContent =
+    if (feature === "guardadas") {
+
+        showTemporaryMessage(
+            "Todavía no tienes experiencias guardadas."
+        );
+
+        return;
+    }
+
+
+    showTemporaryMessage(
+        "Esta sección estará disponible próximamente."
+    );
+}
+
+
+function showTemporaryMessage(message) {
+
+    const existing =
+        document.getElementById(
+            "temporary-message"
+        );
+
+    if (existing) {
+        existing.remove();
+    }
+
+
+    const box =
+        document.createElement("div");
+
+    box.id =
+        "temporary-message";
+
+    box.textContent =
         message;
 
 
-    messageElement.classList.add(
-        "show"
+    box.style.position =
+        "fixed";
+
+    box.style.left =
+        "50%";
+
+    box.style.bottom =
+        "24px";
+
+    box.style.transform =
+        "translateX(-50%)";
+
+    box.style.width =
+        "min(90%, 420px)";
+
+    box.style.padding =
+        "16px 18px";
+
+    box.style.borderRadius =
+        "16px";
+
+    box.style.background =
+        "#293A49";
+
+    box.style.color =
+        "#FFFFFF";
+
+    box.style.fontFamily =
+        '"Inter", sans-serif';
+
+    box.style.fontSize =
+        "13px";
+
+    box.style.lineHeight =
+        "1.5";
+
+    box.style.whiteSpace =
+        "pre-line";
+
+    box.style.textAlign =
+        "center";
+
+    box.style.zIndex =
+        "9999";
+
+    box.style.boxShadow =
+        "0 12px 35px rgba(41,58,73,.18)";
+
+
+    document.body.appendChild(
+        box
     );
 
 
-    clearTimeout(
-        window.templeMessageTimer
-    );
+    setTimeout(() => {
 
+        box.style.opacity =
+            "0";
 
-    window.templeMessageTimer =
+        box.style.transition =
+            "opacity .3s ease";
+
         setTimeout(
-            function () {
-
-                messageElement.classList.remove(
-                    "show"
-                );
-
-            },
-            2500
+            () => box.remove(),
+            300
         );
 
+    }, 3000);
+}
+
+
+/* =========================================================
+   ESTILOS DE LA VISTA DE TOMOS
+   Se inyectan desde JS para no tocar style.css todavía.
+   ========================================================= */
+
+function injectJourneyStyles() {
+
+    if (
+        document.getElementById(
+            "journey-browser-styles"
+        )
+    ) {
+        return;
+    }
+
+
+    const style =
+        document.createElement("style");
+
+    style.id =
+        "journey-browser-styles";
+
+
+    style.textContent = `
+
+        #journey-view {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            background: #F7F7F4;
+        }
+
+
+        #journey-view[aria-hidden="false"] {
+            display: block;
+        }
+
+
+        .journey-browser {
+            width: min(100%, 900px);
+            margin: 0 auto;
+            padding: 0 20px 50px;
+            box-sizing: border-box;
+            color: #293A49;
+            font-family: "Inter", sans-serif;
+        }
+
+
+        .journey-browser-header {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .journey-back-button,
+        .journey-temple-button {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+        }
+
+
+        .journey-back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #71808B;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+
+
+        .journey-back-button:hover {
+            color: #293A49;
+        }
+
+
+        .journey-temple-button {
+            color: #4C6789;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: -.02em;
+        }
+
+
+        .journey-browser-hero {
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            padding: 28px;
+            background: #FFFFFF;
+            border: 1px solid rgba(41,58,73,.07);
+            box-shadow: 0 10px 35px rgba(41,58,73,.045);
+        }
+
+
+        .journey-browser-hero::after {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            right: -70px;
+            top: -80px;
+            border-radius: 50%;
+            background: var(--journey-color);
+            opacity: .08;
+        }
+
+
+        .journey-browser-identity {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+
+        .journey-browser-emoji {
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 19px;
+            background: color-mix(
+                in srgb,
+                var(--journey-color) 13%,
+                white
+            );
+            font-size: 27px;
+        }
+
+
+        .journey-browser-label {
+            margin-bottom: 5px;
+            color: var(--journey-color);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .13em;
+        }
+
+
+        .journey-browser-hero h1 {
+            margin: 0;
+            max-width: 580px;
+            color: #293A49;
+            font-size: clamp(23px, 4vw, 34px);
+            line-height: 1.15;
+            letter-spacing: -.035em;
+        }
+
+
+        .journey-browser-intro {
+            position: relative;
+            z-index: 1;
+            max-width: 620px;
+            margin: 21px 0 25px;
+            color: #71808B;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+
+        .journey-progress-card {
+            position: relative;
+            z-index: 1;
+            padding: 17px 18px;
+            border-radius: 18px;
+            background: #F7F7F4;
+        }
+
+
+        .journey-progress-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 11px;
+            font-size: 11px;
+            color: #71808B;
+        }
+
+
+        .journey-progress-top strong {
+            color: #293A49;
+            font-size: 12px;
+        }
+
+
+        .journey-progress-track {
+            width: 100%;
+            height: 7px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #E8EAE7;
+        }
+
+
+        .journey-progress-fill {
+            height: 100%;
+            border-radius: inherit;
+            transition: width .35s ease;
+        }
+
+
+        .journey-progress-bottom {
+            margin-top: 9px;
+            color: #8A969E;
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+
+        .journey-days-section {
+            padding-top: 34px;
+        }
+
+
+        .journey-section-heading > div > span {
+            color: #8A969E;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: .13em;
+        }
+
+
+        .journey-section-heading h2 {
+            margin: 6px 0 19px;
+            color: #293A49;
+            font-size: 20px;
+            line-height: 1.25;
+            letter-spacing: -.025em;
+        }
+
+
+        .journey-continue-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 14px;
+            padding: 17px 19px;
+            border: 0;
+            border-radius: 17px;
+            background: var(--journey-color);
+            color: white;
+            cursor: pointer;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            box-shadow: 0 7px 20px color-mix(
+                in srgb,
+                var(--journey-color) 20%,
+                transparent
+            );
+        }
+
+
+        .journey-continue-button span {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+
+        .journey-continue-button strong {
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+
+        .journey-days-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+
+        .journey-day-card {
+            position: relative;
+            min-height: 112px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-template-rows: auto 1fr;
+            column-gap: 12px;
+            align-items: center;
+            padding: 14px;
+            border: 1px solid rgba(41,58,73,.07);
+            border-radius: 18px;
+            background: #FFFFFF;
+            cursor: pointer;
+            text-align: left;
+            font-family: "Inter", sans-serif;
+            transition:
+                transform .18s ease,
+                box-shadow .18s ease,
+                border-color .18s ease;
+        }
+
+
+        .journey-day-card:hover {
+            transform: translateY(-2px);
+            border-color: color-mix(
+                in srgb,
+                var(--journey-color) 28%,
+                #FFFFFF
+            );
+            box-shadow: 0 8px 25px rgba(41,58,73,.07);
+        }
+
+
+        .journey-day-card:active {
+            transform: translateY(0);
+        }
+
+
+        .journey-day-number {
+            grid-column: 1 / -1;
+            margin-bottom: 8px;
+            color: #8A969E;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+
+        .journey-day-emoji {
+            width: 39px;
+            height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 13px;
+            background: color-mix(
+                in srgb,
+                var(--journey-color) 11%,
+                white
+            );
+            font-size: 18px;
+        }
+
+
+        .journey-day-content {
+            min-width: 0;
+        }
+
+
+        .journey-day-title {
+            color: #293A49;
+            font-size: 11px;
+            line-height: 1.4;
+            font-weight: 650;
+        }
+
+
+        .journey-day-status {
+            margin-top: 4px;
+            color: #8A969E;
+            font-size: 9px;
+            line-height: 1.3;
+        }
+
+
+        .journey-day-card.is-completed
+        .journey-day-status {
+            color: var(--journey-color);
+            font-weight: 600;
+        }
+
+
+        .journey-day-arrow {
+            color: #9AA4AA;
+            font-size: 15px;
+        }
+
+
+        .journey-day-lock {
+            color: #B4BCBF;
+            font-size: 18px;
+        }
+
+
+        .journey-day-locked {
+            cursor: default;
+            opacity: .64;
+            background: #FBFBF9;
+        }
+
+
+        .journey-day-locked:hover {
+            transform: none;
+            border-color: rgba(41,58,73,.07);
+            box-shadow: none;
+        }
+
+
+        .journey-finished-message {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 14px;
+            padding: 17px 18px;
+            border-radius: 17px;
+            background: #EAF0E9;
+            color: #638269;
+            font-size: 11px;
+            line-height: 1.45;
+        }
+
+
+        .journey-finished-message strong {
+            font-size: 12px;
+        }
+
+
+        .journey-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 30px;
+            padding: 17px 18px;
+            border-radius: 17px;
+            background: #EEEFEA;
+        }
+
+
+        .journey-note span {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+
+        .journey-note p {
+            margin: 0;
+            color: #71808B;
+            font-size: 11px;
+            line-height: 1.6;
+        }
+
+
+        .journey-browser-footer {
+            padding-top: 35px;
+            color: #A0A8AC;
+            font-size: 10px;
+            text-align: center;
+        }
+
+
+        @media (max-width: 600px) {
+
+            .journey-browser {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+            .journey-browser-header {
+                height: 68px;
+            }
+
+
+            .journey-browser-hero {
+                padding: 22px 18px;
+                border-radius: 23px;
+            }
+
+
+            .journey-browser-identity {
+                gap: 12px;
+            }
+
+
+            .journey-browser-emoji {
+                width: 50px;
+                height: 50px;
+                border-radius: 16px;
+                font-size: 23px;
+            }
+
+
+            .journey-browser-hero h1 {
+                font-size: 23px;
+            }
+
+
+            .journey-browser-intro {
+                font-size: 13px;
+                margin-top: 17px;
+            }
+
+
+            .journey-days-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+
+            .journey-day-card {
+                min-height: 94px;
+                grid-template-columns: auto 1fr auto;
+                padding: 13px;
+            }
+
+
+            .journey-section-heading h2 {
+                font-size: 19px;
+            }
+        }
+
+    `;
+
+
+    document.head.appendChild(
+        style
+    );
 }
