@@ -12,39 +12,54 @@ const journeys = {
 
     conocerme: {
         name: "Conocerme",
+        fullName: "30 Días para Conocerme",
         emoji: "🌱",
-        color: "#759C7B"
+        color: "#759C7B",
+        description:
+            "Un recorrido para comenzar a explorar quién eres, qué quieres y cómo te relacionas contigo."
     },
 
     conectar: {
         name: "Conectar",
+        fullName: "30 Días para Conectar",
         emoji: "🤍",
-        color: "#A785B0"
+        color: "#A785B0",
+        description:
+            "Un recorrido para crear momentos de presencia, atención y conexión con tu pareja."
     },
 
     limites: {
         name: "Poner límites",
+        fullName: "30 Días para Poner Límites",
         emoji: "🪴",
-        color: "#B58A73"
+        color: "#B58A73",
+        description:
+            "Un recorrido para explorar tus necesidades, preferencias y la manera en que expresas tus límites."
     },
 
     elegir: {
         name: "Elegir",
+        fullName: "30 Días para Elegir",
         emoji: "🧭",
-        color: "#708EAE"
+        color: "#708EAE",
+        description:
+            "Un recorrido para experimentar diferentes formas de tomar decisiones y darte espacio para elegir por ti."
     },
 
     soltar: {
         name: "Soltar",
+        fullName: "30 Días para Soltar",
         emoji: "🍃",
-        color: "#819580"
+        color: "#819580",
+        description:
+            "Un recorrido para experimentar qué ocurre cuando permites que algunas cosas dejen de ocupar tanto espacio."
     }
 
 };
 
 
 /* =========================================================
-   10 EXPERIENCIAS DE PRUEBA
+   10 EXPERIENCIAS REALES
 ========================================================= */
 
 const experiences = [
@@ -461,8 +476,13 @@ const experiences = [
 ========================================================= */
 
 let calendarDate = new Date(2026, 8, 1);
+
 let currentExperience = null;
+
+let currentJourney = null;
+
 let completedExperiences = [];
+
 let ratings = {};
 
 
@@ -512,6 +532,8 @@ document.addEventListener(
 
         hideExperienceView();
 
+        hideJourneyView();
+
     }
 );
 
@@ -532,31 +554,644 @@ function getExperience(id) {
 
 
 /* =========================================================
-   ABRIR UN TOMO
+   OBTENER EXPERIENCIAS DE UN TOMO
 ========================================================= */
 
-function openJourney(journey) {
+function getJourneyExperiences(journeyId) {
 
-    const experience =
-        experiences.find(
-            function (item) {
-                return item.journey === journey;
+    return experiences
+        .filter(
+            function (experience) {
+                return experience.journey === journeyId;
+            }
+        )
+        .sort(
+            function (a, b) {
+                return a.day - b.day;
             }
         );
-
-
-    if (!experience) {
-        return;
-    }
-
-
-    openExperience(experience.id);
 
 }
 
 
 /* =========================================================
-   SORPRÉNDEME
+   CONTAR PROGRESO DE UN TOMO
+========================================================= */
+
+function getJourneyProgress(journeyId) {
+
+    const journeyExperiences =
+        getJourneyExperiences(journeyId);
+
+
+    let completed = 0;
+
+
+    journeyExperiences.forEach(
+        function (experience) {
+
+            if (
+                completedExperiences.includes(
+                    experience.id
+                )
+            ) {
+
+                completed++;
+
+            }
+
+        }
+    );
+
+
+    return {
+        completed: completed,
+        total: 30,
+        percentage:
+            Math.round(
+                (completed / 30) * 100
+            )
+    };
+
+}
+
+
+/* =========================================================
+   ENCONTRAR PRIMER DÍA PENDIENTE
+========================================================= */
+
+function getNextJourneyExperience(journeyId) {
+
+    const journeyExperiences =
+        getJourneyExperiences(journeyId);
+
+
+    const nextExperience =
+        journeyExperiences.find(
+            function (experience) {
+
+                return !completedExperiences.includes(
+                    experience.id
+                );
+
+            }
+        );
+
+
+    return nextExperience || null;
+
+}
+
+
+/* =========================================================
+   ABRIR UN TOMO
+========================================================= */
+
+function openJourney(journey) {
+
+    if (!journeys[journey]) {
+        return;
+    }
+
+
+    currentJourney = journey;
+
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (!journeyView) {
+
+        /*
+           Mientras añadimos el nuevo HTML,
+           mantenemos compatibilidad con la versión anterior.
+        */
+
+        const firstExperience =
+            getJourneyExperiences(journey)[0];
+
+
+        if (firstExperience) {
+
+            openExperience(
+                firstExperience.id
+            );
+
+        }
+
+        return;
+
+    }
+
+
+    renderJourneyView(journey);
+
+
+    if (dashboard) {
+
+        dashboard.style.display =
+            "none";
+
+    }
+
+
+    hideExperienceView();
+
+
+    journeyView.style.display =
+        "block";
+
+
+    journeyView.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "journey-open"
+    );
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================================================
+   RENDERIZAR PANTALLA DEL TOMO
+========================================================= */
+
+function renderJourneyView(journeyId) {
+
+    const journey =
+        journeys[journeyId];
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (!journey || !journeyView) {
+        return;
+    }
+
+
+    const progress =
+        getJourneyProgress(
+            journeyId
+        );
+
+
+    const journeyExperiences =
+        getJourneyExperiences(
+            journeyId
+        );
+
+
+    const nextExperience =
+        getNextJourneyExperience(
+            journeyId
+        );
+
+
+    /* =====================================================
+       IDENTIDAD
+    ===================================================== */
+
+    const emoji =
+        document.getElementById(
+            "journey-view-emoji"
+        );
+
+
+    const name =
+        document.getElementById(
+            "journey-view-name"
+        );
+
+
+    const description =
+        document.getElementById(
+            "journey-view-description"
+        );
+
+
+    if (emoji) {
+
+        emoji.textContent =
+            journey.emoji;
+
+    }
+
+
+    if (name) {
+
+        name.textContent =
+            journey.fullName;
+
+        name.style.color =
+            journey.color;
+
+    }
+
+
+    if (description) {
+
+        description.textContent =
+            journey.description;
+
+    }
+
+
+    /* =====================================================
+       PROGRESO
+    ===================================================== */
+
+    const progressNumber =
+        document.getElementById(
+            "journey-progress-number"
+        );
+
+
+    const progressText =
+        document.getElementById(
+            "journey-progress-text"
+        );
+
+
+    const progressBar =
+        document.getElementById(
+            "journey-progress-bar"
+        );
+
+
+    if (progressNumber) {
+
+        progressNumber.textContent =
+            `${progress.completed} / 30`;
+
+    }
+
+
+    if (progressText) {
+
+        if (progress.completed === 0) {
+
+            progressText.textContent =
+                "Aún no has realizado experiencias";
+
+        } else if (
+            progress.completed === 30
+        ) {
+
+            progressText.textContent =
+                "Has completado este recorrido";
+
+        } else {
+
+            progressText.textContent =
+                `Has explorado ${progress.completed} de 30 experiencias`;
+
+        }
+
+    }
+
+
+    if (progressBar) {
+
+        progressBar.style.width =
+            `${progress.percentage}%`;
+
+    }
+
+
+    /* =====================================================
+       BOTÓN CONTINUAR
+    ===================================================== */
+
+    const continueButton =
+        document.getElementById(
+            "journey-continue-button"
+        );
+
+
+    const continueDay =
+        document.getElementById(
+            "journey-continue-day"
+        );
+
+
+    if (continueButton) {
+
+        if (nextExperience) {
+
+            continueButton.style.display =
+                "flex";
+
+            continueButton.onclick =
+                function () {
+
+                    openExperience(
+                        nextExperience.id
+                    );
+
+                };
+
+        } else {
+
+            continueButton.style.display =
+                "none";
+
+        }
+
+    }
+
+
+    if (continueDay) {
+
+        if (nextExperience) {
+
+            continueDay.textContent =
+                `Día ${nextExperience.day} · ${nextExperience.title}`;
+
+        } else {
+
+            continueDay.textContent =
+                "Recorrido completado";
+
+        }
+
+    }
+
+
+    /* =====================================================
+       BOTÓN SORPRÉNDEME
+    ===================================================== */
+
+    const surpriseButton =
+        document.getElementById(
+            "journey-surprise-button"
+        );
+
+
+    if (surpriseButton) {
+
+        surpriseButton.onclick =
+            function () {
+
+                surpriseJourney(
+                    journeyId
+                );
+
+            };
+
+    }
+
+
+    /* =====================================================
+       LOS 30 DÍAS
+    ===================================================== */
+
+    const daysContainer =
+        document.getElementById(
+            "journey-days"
+        );
+
+
+    if (!daysContainer) {
+        return;
+    }
+
+
+    daysContainer.innerHTML = "";
+
+
+    for (
+        let day = 1;
+        day <= 30;
+        day++
+    ) {
+
+        const experience =
+            journeyExperiences.find(
+                function (item) {
+                    return item.day === day;
+                }
+            );
+
+
+        const completed =
+            experience
+                ? completedExperiences.includes(
+                    experience.id
+                )
+                : false;
+
+
+        const dayButton =
+            document.createElement(
+                "button"
+            );
+
+
+        dayButton.type =
+            "button";
+
+
+        dayButton.className =
+            "journey-day";
+
+
+        if (completed) {
+
+            dayButton.classList.add(
+                "completed"
+            );
+
+        }
+
+
+        if (
+            experience &&
+            experience.id ===
+                (
+                    nextExperience
+                        ? nextExperience.id
+                        : null
+                )
+        ) {
+
+            dayButton.classList.add(
+                "next"
+            );
+
+        }
+
+
+        if (!experience) {
+
+            dayButton.classList.add(
+                "unavailable"
+            );
+
+        }
+
+
+        const dayNumber =
+            document.createElement(
+                "span"
+            );
+
+
+        dayNumber.className =
+            "journey-day-number";
+
+
+        dayNumber.textContent =
+            String(day).padStart(
+                2,
+                "0"
+            );
+
+
+        dayButton.appendChild(
+            dayNumber
+        );
+
+
+        const status =
+            document.createElement(
+                "span"
+            );
+
+
+        status.className =
+            "journey-day-status";
+
+
+        if (completed) {
+
+            status.textContent =
+                "✓";
+
+        } else if (experience) {
+
+            status.textContent =
+                "○";
+
+        } else {
+
+            status.textContent =
+                "·";
+
+        }
+
+
+        dayButton.appendChild(
+            status
+        );
+
+
+        if (experience) {
+
+            dayButton.addEventListener(
+                "click",
+                function () {
+
+                    openExperience(
+                        experience.id
+                    );
+
+                }
+            );
+
+        } else {
+
+            dayButton.addEventListener(
+                "click",
+                function () {
+
+                    showTemporaryMessage(
+                        `El Día ${day} estará disponible próximamente.`
+                    );
+
+                }
+            );
+
+        }
+
+
+        daysContainer.appendChild(
+            dayButton
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   SORPRÉNDEME DENTRO DE UN TOMO
+========================================================= */
+
+function surpriseJourney(journeyId) {
+
+    const journeyExperiences =
+        getJourneyExperiences(
+            journeyId
+        );
+
+
+    if (
+        journeyExperiences.length === 0
+    ) {
+
+        showTemporaryMessage(
+            "Todavía no hay experiencias disponibles en este recorrido."
+        );
+
+        return;
+
+    }
+
+
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            journeyExperiences.length
+        );
+
+
+    const randomExperience =
+        journeyExperiences[
+            randomIndex
+        ];
+
+
+    openExperience(
+        randomExperience.id
+    );
+
+}
+
+
+/* =========================================================
+   SORPRÉNDEME GENERAL
 ========================================================= */
 
 function surpriseMe() {
@@ -568,7 +1203,8 @@ function surpriseMe() {
 
     const randomIndex =
         Math.floor(
-            Math.random() * experiences.length
+            Math.random() *
+            experiences.length
         );
 
 
@@ -576,7 +1212,9 @@ function surpriseMe() {
         experiences[randomIndex];
 
 
-    openExperience(randomExperience.id);
+    openExperience(
+        randomExperience.id
+    );
 
 }
 
@@ -604,17 +1242,27 @@ function openExperience(id) {
 
 
     const dashboard =
-        document.getElementById("dashboard-view");
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
 
 
     const experienceView =
-        document.getElementById("experience-view");
+        document.getElementById(
+            "experience-view"
+        );
 
 
-    if (!dashboard || !experienceView) {
+    if (!experienceView) {
 
         console.error(
-            "No se encontró dashboard-view o experience-view."
+            "No se encontró experience-view."
         );
 
         return;
@@ -622,11 +1270,18 @@ function openExperience(id) {
     }
 
 
-    currentExperience = experience;
+    currentExperience =
+        experience;
+
+
+    currentJourney =
+        experience.journey;
 
 
     const journey =
-        journeys[experience.journey];
+        journeys[
+            experience.journey
+        ];
 
 
     /* =====================================================
@@ -634,14 +1289,22 @@ function openExperience(id) {
     ===================================================== */
 
     const emoji =
-        document.getElementById("experience-emoji");
+        document.getElementById(
+            "experience-emoji"
+        );
+
 
     const journeyName =
-        document.getElementById("experience-journey");
+        document.getElementById(
+            "experience-journey"
+        );
 
 
     if (emoji) {
-        emoji.textContent = journey.emoji;
+
+        emoji.textContent =
+            journey.emoji;
+
     }
 
 
@@ -661,7 +1324,9 @@ function openExperience(id) {
     ===================================================== */
 
     const dayElement =
-        document.getElementById("experience-day");
+        document.getElementById(
+            "experience-day"
+        );
 
 
     if (dayElement) {
@@ -677,7 +1342,9 @@ function openExperience(id) {
     ===================================================== */
 
     const titleElement =
-        document.getElementById("experience-title");
+        document.getElementById(
+            "experience-title"
+        );
 
 
     if (titleElement) {
@@ -693,7 +1360,9 @@ function openExperience(id) {
     ===================================================== */
 
     const durationElement =
-        document.getElementById("experience-duration");
+        document.getElementById(
+            "experience-duration"
+        );
 
 
     if (durationElement) {
@@ -709,7 +1378,9 @@ function openExperience(id) {
     ===================================================== */
 
     const momentElement =
-        document.getElementById("experience-moment");
+        document.getElementById(
+            "experience-moment"
+        );
 
 
     if (momentElement) {
@@ -750,14 +1421,17 @@ function openExperience(id) {
 
     if (stepsContainer) {
 
-        stepsContainer.innerHTML = "";
+        stepsContainer.innerHTML =
+            "";
 
 
         experience.steps.forEach(
             function (step) {
 
                 const stepElement =
-                    document.createElement("article");
+                    document.createElement(
+                        "article"
+                    );
 
 
                 stepElement.className =
@@ -821,20 +1495,43 @@ function openExperience(id) {
 
 
     /* =====================================================
-       ESTADO COMPLETADA
+       COMPLETADA
     ===================================================== */
 
     updateCompleteButton();
 
 
     /* =====================================================
+       OCULTAR OTRAS VISTAS
+    ===================================================== */
+
+    if (dashboard) {
+
+        dashboard.style.display =
+            "none";
+
+    }
+
+
+    if (journeyView) {
+
+        journeyView.style.display =
+            "none";
+
+        journeyView.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+    }
+
+
+    /* =====================================================
        MOSTRAR EXPERIENCIA
     ===================================================== */
 
-    dashboard.style.display = "none";
-
-
-    experienceView.style.display = "block";
+    experienceView.style.display =
+        "block";
 
 
     experienceView.setAttribute(
@@ -848,9 +1545,10 @@ function openExperience(id) {
     );
 
 
-    /*
-       Pequeña transición de entrada.
-    */
+    document.body.classList.remove(
+        "journey-open"
+    );
+
 
     experienceView.classList.remove(
         "experience-enter"
@@ -885,13 +1583,19 @@ function closeExperience() {
         );
 
 
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
     const experienceView =
         document.getElementById(
             "experience-view"
         );
 
 
-    if (!dashboard || !experienceView) {
+    if (!experienceView) {
         return;
     }
 
@@ -911,16 +1615,131 @@ function closeExperience() {
     );
 
 
-    dashboard.style.display =
-        "block";
-
-
     document.body.classList.remove(
         "experience-open"
     );
 
 
     currentExperience = null;
+
+
+    /*
+       Si veníamos de un tomo,
+       volvemos al tomo.
+    */
+
+    if (
+        currentJourney &&
+        journeyView
+    ) {
+
+        renderJourneyView(
+            currentJourney
+        );
+
+
+        if (dashboard) {
+
+            dashboard.style.display =
+                "none";
+
+        }
+
+
+        journeyView.style.display =
+            "block";
+
+
+        journeyView.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.classList.add(
+            "journey-open"
+        );
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+
+        return;
+
+    }
+
+
+    /*
+       Si no había un tomo,
+       volvemos al dashboard.
+    */
+
+    if (dashboard) {
+
+        dashboard.style.display =
+            "block";
+
+    }
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+
+/* =========================================================
+   CERRAR TOMO
+========================================================= */
+
+function closeJourney() {
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (!journeyView) {
+        return;
+    }
+
+
+    journeyView.style.display =
+        "none";
+
+
+    journeyView.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    document.body.classList.remove(
+        "journey-open"
+    );
+
+
+    currentJourney = null;
+
+
+    if (dashboard) {
+
+        dashboard.style.display =
+            "block";
+
+    }
 
 
     window.scrollTo({
@@ -961,6 +1780,35 @@ function hideExperienceView() {
 
 
 /* =========================================================
+   OCULTAR TOMO AL INICIAR
+========================================================= */
+
+function hideJourneyView() {
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (!journeyView) {
+        return;
+    }
+
+
+    journeyView.style.display =
+        "none";
+
+
+    journeyView.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+}
+
+
+/* =========================================================
    CONFIGURAR ESTRELLAS
 ========================================================= */
 
@@ -985,7 +1833,9 @@ function setupRatingButtons() {
                         );
 
 
-                    rateExperience(rating);
+                    rateExperience(
+                        rating
+                    );
 
                 }
             );
@@ -1007,13 +1857,16 @@ function rateExperience(rating) {
     }
 
 
-    ratings[currentExperience.id] =
-        rating;
+    ratings[
+        currentExperience.id
+    ] = rating;
 
 
     localStorage.setItem(
         "temple30_ratings",
-        JSON.stringify(ratings)
+        JSON.stringify(
+            ratings
+        )
     );
 
 
@@ -1048,7 +1901,9 @@ function updateRatingStars() {
 
 
     const currentRating =
-        ratings[currentExperience.id] || 0;
+        ratings[
+            currentExperience.id
+        ] || 0;
 
 
     const stars =
@@ -1066,17 +1921,25 @@ function updateRatingStars() {
                 );
 
 
-            if (value <= currentRating) {
+            if (
+                value <= currentRating
+            ) {
 
-                star.textContent = "★";
+                star.textContent =
+                    "★";
 
-                star.classList.add("active");
+                star.classList.add(
+                    "active"
+                );
 
             } else {
 
-                star.textContent = "☆";
+                star.textContent =
+                    "☆";
 
-                star.classList.remove("active");
+                star.classList.remove(
+                    "active"
+                );
 
             }
 
@@ -1102,12 +1965,16 @@ function toggleComplete() {
 
 
     const index =
-        completedExperiences.indexOf(id);
+        completedExperiences.indexOf(
+            id
+        );
 
 
     if (index === -1) {
 
-        completedExperiences.push(id);
+        completedExperiences.push(
+            id
+        );
 
     } else {
 
@@ -1164,7 +2031,11 @@ function updateCompleteButton() {
         );
 
 
-    if (!button || !icon || !text) {
+    if (
+        !button ||
+        !icon ||
+        !text
+    ) {
         return;
     }
 
@@ -1177,18 +2048,24 @@ function updateCompleteButton() {
 
     if (completed) {
 
-        button.classList.add("completed");
+        button.classList.add(
+            "completed"
+        );
 
-        icon.textContent = "✓";
+        icon.textContent =
+            "✓";
 
         text.textContent =
             "Experiencia completada";
 
     } else {
 
-        button.classList.remove("completed");
+        button.classList.remove(
+            "completed"
+        );
 
-        icon.textContent = "○";
+        icon.textContent =
+            "○";
 
         text.textContent =
             "Marcar como completada";
@@ -1231,7 +2108,8 @@ function renderCalendar() {
     }
 
 
-    daysContainer.innerHTML = "";
+    daysContainer.innerHTML =
+        "";
 
 
     const year =
@@ -1299,7 +2177,9 @@ function renderCalendar() {
     ) {
 
         const empty =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
 
         empty.className =
@@ -1324,10 +2204,13 @@ function renderCalendar() {
     ) {
 
         const dayElement =
-            document.createElement("button");
+            document.createElement(
+                "button"
+            );
 
 
-        dayElement.type = "button";
+        dayElement.type =
+            "button";
 
 
         dayElement.className =
@@ -1335,7 +2218,9 @@ function renderCalendar() {
 
 
         const number =
-            document.createElement("span");
+            document.createElement(
+                "span"
+            );
 
 
         number.className =
@@ -1365,7 +2250,9 @@ function renderCalendar() {
             );
 
 
-        if (activities.length > 0) {
+        if (
+            activities.length > 0
+        ) {
 
             dayElement.classList.add(
                 "has-activity"
@@ -1373,7 +2260,9 @@ function renderCalendar() {
 
 
             const emojis =
-                document.createElement("div");
+                document.createElement(
+                    "div"
+                );
 
 
             emojis.className =
@@ -1459,7 +2348,9 @@ function renderCalendar() {
    EXPERIENCIAS DEL CALENDARIO
 ========================================================= */
 
-function getActivitiesForDate(dateKey) {
+function getActivitiesForDate(
+    dateKey
+) {
 
     const demoDates = {
 
@@ -1478,7 +2369,9 @@ function getActivitiesForDate(dateKey) {
 
 
     const demoExperienceId =
-        demoDates[dateKey];
+        demoDates[
+            dateKey
+        ];
 
 
     if (demoExperienceId) {
@@ -1500,6 +2393,13 @@ function getActivitiesForDate(dateKey) {
     }
 
 
+    /*
+       Cuando carguemos las 150 experiencias,
+       aquí podremos conectar automáticamente
+       las experiencias completadas con sus fechas.
+    */
+
+
     return activities;
 
 }
@@ -1518,7 +2418,10 @@ function createDateKey(
     const formattedMonth =
         String(
             month + 1
-        ).padStart(2, "0");
+        ).padStart(
+            2,
+            "0"
+        );
 
 
     const formattedDay =
@@ -1581,7 +2484,9 @@ function showDayActivities(
         `${day} de ${monthNames[month]} ${year}`;
 
 
-    if (activities.length === 0) {
+    if (
+        activities.length === 0
+    ) {
 
         detail.innerHTML = `
 
@@ -1686,10 +2591,13 @@ function showDayActivities(
    CAMBIAR MES
 ========================================================= */
 
-function changeMonth(direction) {
+function changeMonth(
+    direction
+) {
 
     calendarDate.setMonth(
-        calendarDate.getMonth() + direction
+        calendarDate.getMonth() +
+        direction
     );
 
 
@@ -1730,9 +2638,13 @@ function changeMonth(direction) {
    GUARDADAS / REALIZADAS
 ========================================================= */
 
-function showFeature(type) {
+function showFeature(
+    type
+) {
 
-    if (type === "guardadas") {
+    if (
+        type === "guardadas"
+    ) {
 
         showTemporaryMessage(
             "Aquí aparecerán las experiencias que guardes."
@@ -1743,7 +2655,9 @@ function showFeature(type) {
     }
 
 
-    if (type === "realizadas") {
+    if (
+        type === "realizadas"
+    ) {
 
         showTemporaryMessage(
             "Aquí aparecerán las experiencias que completes."
@@ -1766,12 +2680,32 @@ function goHome() {
         );
 
 
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
     if (
         experienceView &&
-        experienceView.style.display !== "none"
+        experienceView.style.display !==
+            "none"
     ) {
 
         closeExperience();
+
+        return;
+
+    }
+
+
+    if (
+        journeyView &&
+        journeyView.style.display !==
+            "none"
+    ) {
+
+        closeJourney();
 
         return;
 
@@ -1790,7 +2724,9 @@ function goHome() {
    MENSAJE TEMPORAL
 ========================================================= */
 
-function showTemporaryMessage(message) {
+function showTemporaryMessage(
+    message
+) {
 
     let messageElement =
         document.querySelector(
