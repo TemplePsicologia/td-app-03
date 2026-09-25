@@ -810,285 +810,386 @@
 
             <article class="experience-page">
 
+```html
+<!-- =================================================
+     CABECERA DE LA EXPERIENCIA
+================================================== -->
 
-                <!-- =================================================
-                     IDENTIDAD DEL RECORRIDO
-                ================================================== -->
+<div class="experience-route">
 
-                <div class="experience-route">
+    <span
+        class="experience-route-emoji"
+        id="experience-emoji"
+    >
+        🌱
+    </span>
 
-                    <span
-                        class="experience-route-emoji"
-                        id="experience-emoji"
-                    >
-                        🌱
-                    </span>
+    <span
+        class="experience-route-name"
+        id="experience-journey"
+    >
+        CONOCERME
+    </span>
 
-                    <span
-                        class="experience-route-name"
-                        id="experience-journey"
-                    >
-                        CONOCERME
-                    </span>
+</div>
 
-                </div>
 
+<div
+    class="experience-day"
+    id="experience-day"
+>
+    Día 1 de 30
+</div>
 
-                <!-- =================================================
-                     DÍA
-                ================================================== -->
 
-                <div
-                    class="experience-day"
-                    id="experience-day"
-                >
-                    Día 1 de 30
-                </div>
+<!-- =================================================
+     TÍTULO Y ENTRADA
+================================================== -->
 
+<div class="experience-intro">
 
-                <!-- =================================================
-                     TÍTULO
-                ================================================== -->
+    <h1
+        class="experience-title"
+        id="experience-title"
+    >
+        Una cita conmigo
+    </h1>
 
-                <h1
-                    class="experience-title"
-                    id="experience-title"
-                >
-                    Una cita conmigo
-                </h1>
+    <p
+        class="experience-description"
+        id="experience-description-text"
+    ></p>
 
+</div>
 
-                <!-- =================================================
-                     DATOS RÁPIDOS
-                ================================================== -->
 
-                <div class="experience-meta">
+<!-- =================================================
+     INFORMACIÓN PRÁCTICA
+================================================== -->
 
+<div class="experience-meta">
 
-                    <!-- DURACIÓN -->
+    <div class="experience-meta-item">
 
-                    <div class="experience-meta-item">
+        <span class="meta-icon">
+            ◷
+        </span>
 
-                        <span class="meta-icon">
-                            ◷
-                        </span>
+        <div>
 
-                        <div>
+            <span class="meta-label">
+                DURACIÓN
+            </span>
 
-                            <span class="meta-label">
-                                DURACIÓN
-                            </span>
-
-                            <strong id="experience-duration">
-                                30–60 min
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- MOMENTO -->
-
-                    <div class="experience-meta-item">
-
-                        <span class="meta-icon">
-                            ⌖
-                        </span>
-
-                        <div>
-
-                            <span class="meta-label">
-                                MOMENTO
-                            </span>
-
-                            <strong id="experience-moment">
-                                Un momento para ti
-                            </strong>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================================
-                     DESCRIPCIÓN
-                ================================================== -->
-
-                <div class="experience-description">
-
-                    <p id="experience-description-text"></p>
-
-                </div>
-
-
-                <!-- =================================================
-                     PASOS
-                ================================================== -->
-
-                <section class="experience-steps-section">
-
-                    <span class="experience-section-label">
-                        LA EXPERIENCIA
-                    </span>
-
-                    <div
-                        class="experience-steps"
-                        id="experience-steps"
-                    ></div>
-
-                </section>
-
-
-                <!-- =================================================
-                     PREGUNTA FINAL
-                ================================================== -->
-
-                <section class="experience-reflection">
-
-                    <span class="experience-section-label">
-                        AL TERMINAR
-                    </span>
-
-                    <div class="reflection-card">
-
-                        <span class="reflection-symbol">
-                            ✦
-                        </span>
-
-                        <p id="experience-question"></p>
-
-                    </div>
-
-                </section>
-
-
-                <!-- =================================================
-                     VALORACIÓN
-                ================================================== -->
-
-                <section class="experience-rating">
-
-                    <span class="experience-section-label">
-                        ¿CÓMO FUE PARA TI?
-                    </span>
-
-
-                    <div
-                        class="rating-stars"
-                        id="rating-stars"
-                        aria-label="Valorar experiencia"
-                    >
-
-                        <button
-                            type="button"
-                            data-rating="1"
-                            aria-label="1 estrella"
-                        >
-                            ☆
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="2"
-                            aria-label="2 estrellas"
-                        >
-                            ☆
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="3"
-                            aria-label="3 estrellas"
-                        >
-                            ☆
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="4"
-                            aria-label="4 estrellas"
-                        >
-                            ☆
-                        </button>
-
-                        <button
-                            type="button"
-                            data-rating="5"
-                            aria-label="5 estrellas"
-                        >
-                            ☆
-                        </button>
-
-                    </div>
-
-
-                    <p
-                        class="rating-message"
-                        id="rating-message"
-                    >
-                        Puedes valorar la experiencia cuando termines.
-                    </p>
-
-                </section>
-
-
-                <!-- =================================================
-                     COMPLETAR
-                ================================================== -->
-
-                <div class="experience-complete">
-
-                    <button
-                        type="button"
-                        class="complete-button"
-                        id="complete-button"
-                        onclick="toggleComplete()"
-                    >
-
-                        <span id="complete-icon">
-                            ○
-                        </span>
-
-                        <span id="complete-text">
-                            Marcar como completada
-                        </span>
-
-                    </button>
-
-                </div>
-
-
-            </article>
-
-
-            <!-- =================================================
-                 FOOTER DE EXPERIENCIA
-            ================================================== -->
-
-            <footer class="experience-footer">
-
-                <span>
-                    Temple
-                </span>
-
-                <span>
-                    ·
-                </span>
-
-                <span>
-                    30 Días
-                </span>
-
-            </footer>
-
+            <strong id="experience-duration">
+                30–60 min
+            </strong>
 
         </div>
 
+    </div>
 
-    </main>
+
+    <div class="experience-meta-item">
+
+        <span class="meta-icon">
+            ⌖
+        </span>
+
+        <div>
+
+            <span class="meta-label">
+                MOMENTO
+            </span>
+
+            <strong id="experience-moment">
+                Un momento para ti
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     RECORRIDO
+================================================== -->
+
+<section class="experience-journey-section">
+
+    <div class="experience-section-heading">
+
+        <span class="experience-section-label">
+            TU RECORRIDO
+        </span>
+
+        <h2>
+            Vamos paso a paso
+        </h2>
+
+        <p>
+            No tienes que hacerlo todo de una vez.
+            Avanza a tu ritmo.
+        </p>
+
+    </div>
+
+
+    <div
+        class="experience-steps"
+        id="experience-steps"
+    ></div>
+
+</section>
+
+
+<!-- =================================================
+     CIERRE DE LA EXPERIENCIA
+================================================== -->
+
+<section class="experience-reflection">
+
+    <span class="experience-section-label">
+        AL TERMINAR
+    </span>
+
+    <div class="reflection-card">
+
+        <span class="reflection-symbol">
+            ✦
+        </span>
+
+        <div>
+
+            <h3>
+                Quédate un momento
+            </h3>
+
+            <p id="experience-question"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     ¿CÓMO SE SINTIÓ?
+================================================== -->
+
+<section class="experience-feeling">
+
+    <div class="experience-section-heading">
+
+        <span class="experience-section-label">
+            DESPUÉS DE HACERLO
+        </span>
+
+        <h2>
+            ¿Cómo se sintió para ti?
+        </h2>
+
+        <p>
+            No hay una respuesta correcta.
+            Elige lo que más se acerque a tu experiencia.
+        </p>
+
+    </div>
+
+
+    <div class="feeling-options">
+
+        <button type="button" class="feeling-option">
+            <span>🌿</span>
+            <strong>Tranquilo/a</strong>
+        </button>
+
+        <button type="button" class="feeling-option">
+            <span>✨</span>
+            <strong>Bien</strong>
+        </button>
+
+        <button type="button" class="feeling-option">
+            <span>🌱</span>
+            <strong>Diferente</strong>
+        </button>
+
+        <button type="button" class="feeling-option">
+            <span>💭</span>
+            <strong>Me hizo pensar</strong>
+        </button>
+
+        <button type="button" class="feeling-option">
+            <span>🤍</span>
+            <strong>Me costó</strong>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+     VALORACIÓN
+================================================== -->
+
+<section class="experience-rating">
+
+    <div class="experience-section-heading">
+
+        <span class="experience-section-label">
+            SI QUIERES
+        </span>
+
+        <h2>
+            ¿Qué tanto disfrutaste esta experiencia?
+        </h2>
+
+    </div>
+
+
+    <div
+        class="rating-stars"
+        id="rating-stars"
+        aria-label="Valorar experiencia"
+    >
+
+        <button
+            type="button"
+            data-rating="1"
+            aria-label="1 estrella"
+        >
+            ☆
+        </button>
+
+        <button
+            type="button"
+            data-rating="2"
+            aria-label="2 estrellas"
+        >
+            ☆
+        </button>
+
+        <button
+            type="button"
+            data-rating="3"
+            aria-label="3 estrellas"
+        >
+            ☆
+        </button>
+
+        <button
+            type="button"
+            data-rating="4"
+            aria-label="4 estrellas"
+        >
+            ☆
+        </button>
+
+        <button
+            type="button"
+            data-rating="5"
+            aria-label="5 estrellas"
+        >
+            ☆
+        </button>
+
+    </div>
+
+
+    <p
+        class="rating-message"
+        id="rating-message"
+    >
+        Tu valoración es solo para ti.
+    </p>
+
+</section>
+
+
+<!-- =================================================
+     COMPLETAR
+================================================== -->
+
+<div class="experience-complete">
+
+    <button
+        type="button"
+        class="complete-button"
+        id="complete-button"
+        onclick="toggleComplete()"
+    >
+
+        <span id="complete-icon">
+            ○
+        </span>
+
+        <span id="complete-text">
+            Marcar como completada
+        </span>
+
+    </button>
+
+</div>
+
+
+<!-- =================================================
+     NAVEGACIÓN ENTRE DÍAS
+================================================== -->
+
+<nav class="experience-navigation">
+
+    <button
+        type="button"
+        class="experience-nav-button"
+        id="previous-experience-button"
+    >
+
+        <span>
+            ←
+        </span>
+
+        <div>
+            <small>
+                ANTERIOR
+            </small>
+
+            <strong>
+                Día anterior
+            </strong>
+        </div>
+
+    </button>
+
+
+    <button
+        type="button"
+        class="experience-nav-button experience-nav-next"
+        id="next-experience-button"
+    >
+
+        <div>
+            <small>
+                SIGUIENTE
+            </small>
+
+            <strong>
+                Día siguiente
+            </strong>
+        </div>
+
+        <span>
+            →
+        </span>
+
+    </button>
+
+</nav>
+```
+
 
 
     <!-- =====================================================
