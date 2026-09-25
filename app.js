@@ -1,85 +1,66 @@
-/* =========================================================
+/* =========================================
    TEMPLE · 30 DÍAS
-   JAVASCRIPT
-========================================================= */
+========================================= */
 
-
-/*
-    Datos básicos de los recorridos.
-
-    Más adelante aquí conectaremos la verdadera
-    base de datos de las 150 experiencias.
-*/
 
 const journeys = {
 
     conocerme: {
-        name: "Conocerme",
-        number: "01"
+        name: "Conocerme"
     },
 
     conectar: {
-        name: "Conectar",
-        number: "02"
+        name: "Conectar"
     },
 
     limites: {
-        name: "Poner límites",
-        number: "03"
+        name: "Poner límites"
     },
 
     elegir: {
-        name: "Elegir",
-        number: "04"
+        name: "Elegir"
     },
 
     soltar: {
-        name: "Soltar",
-        number: "05"
+        name: "Soltar"
     }
 
 };
 
 
-/*
-    Cuando la persona pulse "Comenzar recorrido".
-*/
+/* =========================================
+   ABRIR RECORRIDO
+========================================= */
 
 function openJourney(journey) {
 
-    const selectedJourney = journeys[journey];
+    const selected = journeys[journey];
 
-    if (!selectedJourney) {
+    if (!selected) {
         return;
     }
 
-
-    /*
-        Por ahora mostramos una pequeña confirmación.
-
-        En la siguiente etapa reemplazaremos esto
-        por la verdadera pantalla del recorrido.
-    */
-
     alert(
-        `Has elegido "${selectedJourney.name}".\n\n` +
-        `Estamos preparando este recorrido.`
+        `Has elegido el recorrido "${selected.name}".`
     );
 
 }
 
 
-/*
-    Permite volver al inicio.
-*/
+/* =========================================
+   VOLVER AL INICIO
+========================================= */
 
 function goHome(event) {
 
     event.preventDefault();
 
     window.scrollTo({
+
         top: 0,
+
         behavior: "smooth"
+
     });
 
 }
