@@ -5,34 +5,63 @@
 
 
 /* =========================================================
-   RECORRIDOS
+   INFORMACIÓN DE LOS TOMOS
 ========================================================= */
 
 const journeys = {
 
     conocerme: {
+
         name: "Conocerme",
-        color: "green"
+
+        emoji: "🌱",
+
+        color: "#759C7B"
+
     },
+
 
     conectar: {
+
         name: "Conectar",
-        color: "blue"
+
+        emoji: "🤍",
+
+        color: "#A785B0"
+
     },
+
 
     limites: {
+
         name: "Poner límites",
-        color: "orange"
+
+        emoji: "🪴",
+
+        color: "#B58A73"
+
     },
+
 
     elegir: {
+
         name: "Elegir",
-        color: "purple"
+
+        emoji: "🧭",
+
+        color: "#708EAE"
+
     },
 
+
     soltar: {
+
         name: "Soltar",
-        color: "sage"
+
+        emoji: "🍃",
+
+        color: "#819580"
+
     }
 
 };
@@ -41,66 +70,123 @@ const journeys = {
 /* =========================================================
    DATOS DE DEMOSTRACIÓN
    -----------------------------------------------
-   Estos datos solamente sirven para visualizar
-   cómo funcionará el calendario.
+   Estos datos solamente sirven para comprobar
+   visualmente cómo funcionará el calendario.
 ========================================================= */
 
 const demoActivities = {
 
+
     "2026-09-03": [
+
         {
+
             journey: "conocerme",
-            title: "Experiencia de Conocerme"
+
+            day: 1,
+
+            title: "Volver a mirarme"
+
         }
+
     ],
+
 
     "2026-09-05": [
+
         {
+
             journey: "conectar",
-            title: "Experiencia de Conectar"
+
+            day: 1,
+
+            title: "Volver a mirarnos"
+
         }
+
     ],
+
 
     "2026-09-09": [
+
         {
+
             journey: "elegir",
-            title: "Experiencia de Elegir"
+
+            day: 1,
+
+            title: "Elegir sin consultar"
+
         }
+
     ],
+
 
     "2026-09-14": [
+
         {
+
             journey: "conocerme",
-            title: "Experiencia de Conocerme"
+
+            day: 4,
+
+            title: "Una pausa para observarme"
+
         }
+
     ],
 
+
     "2026-09-16": [
+
         {
+
             journey: "limites",
-            title: "Experiencia de Poner límites"
+
+            day: 2,
+
+            title: "Reconocer lo que necesito"
+
         }
+
     ],
+
 
     "2026-09-18": [
 
         {
+
             journey: "conectar",
-            title: "Experiencia de Conectar"
+
+            day: 3,
+
+            title: "Decir lo que normalmente callamos"
+
         },
 
         {
+
             journey: "elegir",
-            title: "Experiencia de Elegir"
+
+            day: 4,
+
+            title: "Elegir desde lo que quiero"
+
         }
 
     ],
 
+
     "2026-09-25": [
 
         {
+
             journey: "elegir",
-            title: "Experiencia de Elegir"
+
+            day: 7,
+
+            title: "Tomar una decisión propia"
+
         }
 
     ]
@@ -109,7 +195,7 @@ const demoActivities = {
 
 
 /* =========================================================
-   ESTADO DEL CALENDARIO
+   ESTADO
 ========================================================= */
 
 let calendarDate =
@@ -131,7 +217,7 @@ document.addEventListener(
 
 
 /* =========================================================
-   ABRIR RECORRIDO
+   ABRIR TOMO
 ========================================================= */
 
 function openJourney(journey) {
@@ -141,12 +227,16 @@ function openJourney(journey) {
 
 
     if (!selected) {
+
         return;
+
     }
 
 
     showTemporaryMessage(
+
         `Aquí comenzará tu recorrido de ${selected.name}.`
+
     );
 
 }
@@ -175,6 +265,8 @@ function surpriseMe() {
 
                         journey: activity.journey,
 
+                        day: activity.day,
+
                         title: activity.title
 
                     });
@@ -186,7 +278,9 @@ function surpriseMe() {
     );
 
 
-    if (allActivities.length === 0) {
+    if (
+        allActivities.length === 0
+    ) {
 
         showTemporaryMessage(
             "Pronto podrás descubrir una experiencia."
@@ -207,7 +301,9 @@ function surpriseMe() {
 
 
     const selected =
-        journeys[random.journey];
+        journeys[
+            random.journey
+        ];
 
 
     const result =
@@ -225,11 +321,13 @@ function surpriseMe() {
             </small>
 
             <h3>
+                ${selected.emoji}
                 ${random.title}
             </h3>
 
             <p>
-                Recorrido · ${selected.name}
+                ${selected.name}
+                · Día ${random.day}
             </p>
 
         </div>
@@ -245,7 +343,7 @@ function surpriseMe() {
 
 
 /* =========================================================
-   RENDERIZAR CALENDARIO
+   CALENDARIO
 ========================================================= */
 
 function renderCalendar() {
@@ -269,7 +367,9 @@ function renderCalendar() {
 
 
     if (!daysContainer) {
+
         return;
+
     }
 
 
@@ -312,15 +412,15 @@ function renderCalendar() {
 
 
     /*
-        JavaScript devuelve:
+        JavaScript:
 
         Domingo = 0
         Lunes = 1
         ...
         Sábado = 6
 
-        Como nuestro calendario comienza
-        en lunes, hacemos el ajuste.
+        Nuestro calendario comienza
+        en lunes.
     */
 
     const firstDay =
@@ -345,7 +445,7 @@ function renderCalendar() {
         ).getDate();
 
 
-    /* ESPACIOS ANTES DEL PRIMER DÍA */
+    /* ESPACIOS INICIALES */
 
     for (
         let i = 0;
@@ -358,8 +458,10 @@ function renderCalendar() {
                 "div"
             );
 
+
         empty.className =
             "calendar-day empty";
+
 
         daysContainer.appendChild(
             empty
@@ -368,7 +470,7 @@ function renderCalendar() {
     }
 
 
-    /* CREAR CADA DÍA */
+    /* CREAR DÍAS */
 
     for (
         let day = 1;
@@ -423,7 +525,7 @@ function renderCalendar() {
             ];
 
 
-        /* ACTIVIDADES DEL DÍA */
+        /* ACTIVIDADES */
 
         if (
             activities &&
@@ -435,37 +537,45 @@ function renderCalendar() {
             );
 
 
-            const dots =
+            const emojis =
                 document.createElement(
                     "div"
                 );
 
 
-            dots.className =
-                "activity-dots";
+            emojis.className =
+                "activity-emojis";
 
 
             activities.forEach(
                 activity => {
 
-                    const dot =
+                    const selected =
+                        journeys[
+                            activity.journey
+                        ];
+
+
+                    const emoji =
                         document.createElement(
                             "span"
                         );
 
 
-                    const color =
-                        journeys[
-                            activity.journey
-                        ]?.color;
+                    emoji.className =
+                        "activity-emoji";
 
 
-                    dot.className =
-                        `activity-dot dot-${color}`;
+                    emoji.textContent =
+                        selected.emoji;
 
 
-                    dots.appendChild(
-                        dot
+                    emoji.title =
+                        `${selected.name} · Día ${activity.day}`;
+
+
+                    emojis.appendChild(
+                        emoji
                     );
 
                 }
@@ -473,13 +583,13 @@ function renderCalendar() {
 
 
             dayElement.appendChild(
-                dots
+                emojis
             );
 
         }
 
 
-        /* DÍA ACTUAL DE LA DEMOSTRACIÓN */
+        /* DÍA ACTUAL DE DEMOSTRACIÓN */
 
         if (
             year === 2026 &&
@@ -521,7 +631,7 @@ function renderCalendar() {
 
 
 /* =========================================================
-   CREAR CLAVE DE FECHA
+   FECHA
 ========================================================= */
 
 function createDateKey(
@@ -552,7 +662,7 @@ function createDateKey(
 
 
 /* =========================================================
-   MOSTRAR ACTIVIDADES DE UN DÍA
+   DETALLE DEL DÍA
 ========================================================= */
 
 function showDayActivities(
@@ -593,8 +703,10 @@ function showDayActivities(
 
 
     const dateText =
-        `${day} de ${monthNames[month]}`;
+        `${day} de ${monthNames[month]} ${year}`;
 
+
+    /* SIN ACTIVIDAD */
 
     if (
         !activities ||
@@ -627,7 +739,7 @@ function showDayActivities(
 
         <div>
 
-            <div class="day-detail-title">
+            <div class="day-detail-date">
                 ${dateText}
             </div>
 
@@ -647,14 +759,26 @@ function showDayActivities(
 
                 <div class="day-detail-item">
 
-                    <span
-                        class="detail-dot"
-                        style="background:${getColor(selected.color)}"
-                    ></span>
+                    <div class="detail-emoji">
+                        ${selected.emoji}
+                    </div>
 
-                    <span>
-                        ${selected.name}
-                    </span>
+
+                    <div class="detail-info">
+
+                        <span class="detail-journey">
+                            ${selected.name}
+                        </span>
+
+                        <span class="detail-title">
+                            ${activity.title}
+                        </span>
+
+                        <span class="detail-day">
+                            Día ${activity.day} de 30
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -665,7 +789,9 @@ function showDayActivities(
 
 
     html += `
+
         </div>
+
     `;
 
 
@@ -676,43 +802,19 @@ function showDayActivities(
 
 
 /* =========================================================
-   COLORES
-========================================================= */
-
-function getColor(color) {
-
-    const colors = {
-
-        green: "#759C7B",
-
-        blue: "#708EAE",
-
-        orange: "#B58A73",
-
-        purple: "#8582A8",
-
-        sage: "#819580"
-
-    };
-
-
-    return (
-        colors[color] ||
-        "#708EAE"
-    );
-
-}
-
-
-/* =========================================================
    CAMBIAR MES
 ========================================================= */
 
-function changeMonth(direction) {
+function changeMonth(
+    direction
+) {
 
     calendarDate.setMonth(
-        calendarDate.getMonth() +
+
+        calendarDate.getMonth()
+        +
         direction
+
     );
 
 
@@ -745,9 +847,13 @@ function changeMonth(direction) {
    GUARDADAS / REALIZADAS
 ========================================================= */
 
-function showFeature(type) {
+function showFeature(
+    type
+) {
 
-    if (type === "guardadas") {
+    if (
+        type === "guardadas"
+    ) {
 
         showTemporaryMessage(
             "Aquí aparecerán las experiencias que guardes."
@@ -756,7 +862,9 @@ function showFeature(type) {
     }
 
 
-    if (type === "realizadas") {
+    if (
+        type === "realizadas"
+    ) {
 
         showTemporaryMessage(
             "Aquí aparecerán las experiencias que completes."
@@ -780,5 +888,67 @@ function goHome() {
         behavior: "smooth"
 
     });
+
+}
+
+
+/* =========================================================
+   MENSAJE TEMPORAL
+========================================================= */
+
+function showTemporaryMessage(
+    message
+) {
+
+    let messageElement =
+        document.querySelector(
+            ".temporary-message"
+        );
+
+
+    if (!messageElement) {
+
+        messageElement =
+            document.createElement(
+                "div"
+            );
+
+
+        messageElement.className =
+            "temporary-message";
+
+
+        document.body.appendChild(
+            messageElement
+        );
+
+    }
+
+
+    messageElement.textContent =
+        message;
+
+
+    messageElement.classList.add(
+        "show"
+    );
+
+
+    clearTimeout(
+        window.temporaryMessageTimer
+    );
+
+
+    window.temporaryMessageTimer =
+        setTimeout(
+            () => {
+
+                messageElement.classList.remove(
+                    "show"
+                );
+
+            },
+            2600
+        );
 
 }
