@@ -1496,23 +1496,22 @@ footer {
    --------------------------------------------------------- */
 
 .experience-title {
-    margin: 0;
+    margin: 0 0 24px;
 
-    max-width: 720px;
+    max-width: 620px;
 
     color: #29332E;
 
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Inter", sans-serif;
 
-    font-size: clamp(43px, 7vw, 68px);
+    font-size: clamp(30px, 4vw, 42px);
 
-    line-height: 1.02;
+    line-height: 1.12;
 
-    letter-spacing: -.035em;
+    letter-spacing: -0.025em;
 
-    font-weight: 500;
+    font-weight: 600;
 }
-
 
 /* ---------------------------------------------------------
    DATOS RÁPIDOS
