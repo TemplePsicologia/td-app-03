@@ -1010,105 +1010,178 @@ function closeJourneyView() {
    ========================================================= */
 
 function openExperience(id) {
-     alert("ABRIENDO: " + id);
 
-    const experience =
-        getExperience(id);
+    const experience = getExperience(id);
 
     if (!experience) {
+        alert("No se encontró la experiencia: " + id);
         return;
     }
 
     currentExperience = experience;
 
+    /* =========================================
+       DATOS DEL RECORRIDO
+    ========================================= */
 
-    /* Identidad */
+    const journey = journeys[experience.journey];
 
-    const journey =
-        journeys[experience.journey];
-
-
-    document.getElementById("experience-emoji").textContent =
-        journey.emoji;
-
-    document.getElementById("experience-journey").textContent =
-        journey.shortName;
-
-    document.getElementById("experience-day").textContent =
-        `Día ${experience.day} de 30`;
-
-    document.getElementById("experience-title").textContent =
-        experience.title;
-
-    document.getElementById("experience-duration").textContent =
-        experience.duration;
-
-    document.getElementById("experience-moment").textContent =
-        experience.moment;
-
-    document.getElementById("experience-description-text").textContent =
-        experience.description;
+    if (!journey) {
+        alert("No se encontró el recorrido: " + experience.journey);
+        return;
+    }
 
 
-    /* Pasos */
+    /* =========================================
+       IDENTIDAD
+    ========================================= */
+
+    const emojiElement =
+        document.getElementById("experience-emoji");
+
+    const journeyElement =
+        document.getElementById("experience-journey");
+
+    const dayElement =
+        document.getElementById("experience-day");
+
+    const titleElement =
+        document.getElementById("experience-title");
+
+    const durationElement =
+        document.getElementById("experience-duration");
+
+    const momentElement =
+        document.getElementById("experience-moment");
+
+    const descriptionElement =
+        document.getElementById("experience-description-text");
+
+
+    if (emojiElement) {
+        emojiElement.textContent = journey.emoji;
+    }
+
+    if (journeyElement) {
+        journeyElement.textContent =
+            journey.shortName || journey.name;
+    }
+
+    if (dayElement) {
+        dayElement.textContent =
+            `Día ${experience.day} de 30`;
+    }
+
+    if (titleElement) {
+        titleElement.textContent =
+            experience.title;
+    }
+
+    if (durationElement) {
+        durationElement.textContent =
+            experience.duration;
+    }
+
+    if (momentElement) {
+        momentElement.textContent =
+            experience.moment;
+    }
+
+    if (descriptionElement) {
+        descriptionElement.textContent =
+            experience.description;
+    }
+
+
+    /* =========================================
+       PASOS
+    ========================================= */
 
     const stepsContainer =
         document.getElementById("experience-steps");
 
-    stepsContainer.innerHTML =
-        experience.steps.map((step, index) => `
-            <div class="experience-step">
+    if (stepsContainer) {
 
-                <div class="step-number">
-                    ${index + 1}
-                </div>
+        const steps =
+            Array.isArray(experience.steps)
+                ? experience.steps
+                : [];
 
-                <div class="step-content">
+        stepsContainer.innerHTML =
+            steps.map((step, index) => `
+                <div class="experience-step">
 
-                    <div class="step-title">
-                        <span>${step.emoji}</span>
-                        ${step.title}
+                    <div class="step-number">
+                        ${index + 1}
                     </div>
 
-                    <p>
-                        ${step.text}
-                    </p>
+                    <div class="step-content">
+
+                        <div class="step-title">
+                            <span>${step.emoji || ""}</span>
+                            ${step.title || ""}
+                        </div>
+
+                        <p>
+                            ${step.text || ""}
+                        </p>
+
+                    </div>
 
                 </div>
-
-            </div>
-        `).join("");
-
-
-    /* Pregunta final */
-
-    document.getElementById("experience-question").textContent =
-        experience.question;
+            `).join("");
+    }
 
 
-    /* Valoración */
+    /* =========================================
+       PREGUNTA FINAL
+    ========================================= */
+
+    const questionElement =
+        document.getElementById("experience-question");
+
+    if (questionElement) {
+        questionElement.textContent =
+            experience.question || "";
+    }
+
+
+    /* =========================================
+       VALORACIÓN
+    ========================================= */
 
     updateRatingUI();
 
 
-    /* Estado completado */
+    /* =========================================
+       ESTADO COMPLETADO
+    ========================================= */
 
     updateCompleteButton();
 
 
-/* Cambiar vista */
+    /* =========================================
+       CAMBIAR DE VISTA
+    ========================================= */
 
-hideDashboard();
+    hideDashboard();
 
-/* Quitar el foco del botón antes de ocultar el recorrido */
-if (document.activeElement) {
-    document.activeElement.blur();
-}
+    /* Quitar el foco antes de ocultar el recorrido */
+    if (document.activeElement) {
+        document.activeElement.blur();
+    }
 
-hideJourneyView();
+    hideJourneyView();
 
-const experienceView =
-    document.getElementById("experience-view");
+
+    const experienceView =
+        document.getElementById("experience-view");
+
+    if (!experienceView) {
+        alert("No se encontró #experience-view");
+        return;
+    }
+
 
     experienceView.setAttribute(
         "aria-hidden",
@@ -1119,12 +1192,13 @@ const experienceView =
         "experience-open"
     );
 
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-}
 
+}
 
 function closeExperience() {
 
