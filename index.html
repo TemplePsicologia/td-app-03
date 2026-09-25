@@ -50,671 +50,966 @@
 
 
     <!-- =========================================
-         ENCABEZADO
+         DASHBOARD
     ========================================== -->
 
-    <header class="topbar">
+    <div id="dashboard-view">
 
-        <button
-            class="temple-brand"
-            onclick="goHome()"
-            aria-label="Volver al inicio"
-        >
 
-            <span class="temple-symbol"></span>
+        <!-- TOPBAR -->
 
-            <span class="temple-name">
-                Temple
-            </span>
+        <header class="topbar">
 
-        </button>
+            <button
+                class="temple-brand"
+                onclick="goHome()"
+                aria-label="Volver al inicio"
+            >
 
-    </header>
+                <span class="temple-symbol"></span>
 
-
-
-    <!-- =========================================
-         HERO
-    ========================================== -->
-
-    <section class="hero">
-
-        <p class="hero-label">
-            UNA COLECCIÓN DE EXPERIENCIAS
-        </p>
-
-        <h1>
-            30 Días
-        </h1>
-
-        <p class="hero-description">
-
-            Cinco recorridos para comenzar a hacer,
-            explorar y experimentar de una manera diferente.
-
-        </p>
-
-    </section>
-
-
-
-    <!-- =========================================
-         RECORRIDOS
-    ========================================== -->
-
-    <section
-        class="section journeys-section"
-        id="recorridos"
-    >
-
-        <div class="section-heading">
-
-            <h2>
-                ¿Qué quieres explorar hoy?
-            </h2>
-
-            <p>
-                Elige un recorrido para comenzar.
-            </p>
-
-        </div>
-
-
-        <div class="journeys-grid">
-
-
-            <!-- CONOCERME -->
-
-            <article class="journey-card conocerme">
-
-                <div class="journey-top">
-
-                    <div class="journey-icon">
-                        🌱
-                    </div>
-
-                </div>
-
-
-                <div class="journey-bottom">
-
-                    <div>
-
-                        <h3>
-                            Conocerme
-                        </h3>
-
-                        <p>
-                            Experiencias para volver la mirada
-                            hacia ti y descubrirte desde la acción.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="start-button"
-                        onclick="openJourney('conocerme')"
-                    >
-
-                        <span>
-                            Comenzar
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CONECTAR -->
-
-            <article class="journey-card conectar">
-
-                <div class="journey-top">
-
-                    <div class="journey-icon">
-                        🤍
-                    </div>
-
-                </div>
-
-
-                <div class="journey-bottom">
-
-                    <div>
-
-                        <h3>
-                            Conectar
-                        </h3>
-
-                        <p>
-                            Experiencias para crear momentos
-                            diferentes y volver a encontrarse.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="start-button"
-                        onclick="openJourney('conectar')"
-                    >
-
-                        <span>
-                            Comenzar
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PONER LÍMITES -->
-
-            <article class="journey-card limites">
-
-                <div class="journey-top">
-
-                    <div class="journey-icon">
-                        🪴
-                    </div>
-
-                </div>
-
-
-                <div class="journey-bottom">
-
-                    <div>
-
-                        <h3>
-                            Poner límites
-                        </h3>
-
-                        <p>
-                            Experiencias para practicar nuevas
-                            formas de expresar lo que necesitas.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="start-button"
-                        onclick="openJourney('limites')"
-                    >
-
-                        <span>
-                            Comenzar
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- ELEGIR -->
-
-            <article class="journey-card elegir">
-
-                <div class="journey-top">
-
-                    <div class="journey-icon">
-                        🧭
-                    </div>
-
-                </div>
-
-
-                <div class="journey-bottom">
-
-                    <div>
-
-                        <h3>
-                            Elegir
-                        </h3>
-
-                        <p>
-                            Experiencias para darte espacio
-                            para decidir desde lo que quieres.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="start-button"
-                        onclick="openJourney('elegir')"
-                    >
-
-                        <span>
-                            Comenzar
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- SOLTAR -->
-
-            <article class="journey-card soltar">
-
-                <div class="journey-top">
-
-                    <div class="journey-icon">
-                        🍃
-                    </div>
-
-                </div>
-
-
-                <div class="journey-bottom">
-
-                    <div>
-
-                        <h3>
-                            Soltar
-                        </h3>
-
-                        <p>
-                            Experiencias para dejar ir y hacer
-                            espacio para algo nuevo.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        class="start-button"
-                        onclick="openJourney('soltar')"
-                    >
-
-                        <span>
-                            Comenzar
-                        </span>
-
-                        <span>
-                            →
-                        </span>
-
-                    </button>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         PARA HOY
-    ========================================== -->
-
-    <section
-        class="section today-section"
-        id="para-hoy"
-    >
-
-        <div class="today-box">
-
-            <div class="today-text">
-
-                <span class="today-label">
-                    PARA HOY
+                <span class="temple-name">
+                    Temple
                 </span>
 
+            </button>
+
+        </header>
+
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <p class="hero-label">
+                UNA COLECCIÓN DE EXPERIENCIAS
+            </p>
+
+            <h1>
+                30 Días
+            </h1>
+
+            <p class="hero-description">
+
+                Cinco recorridos para comenzar a hacer,
+                explorar y experimentar de una manera diferente.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- RECORRIDOS -->
+
+        <section
+            class="section journeys-section"
+            id="recorridos"
+        >
+
+            <div class="section-heading">
+
                 <h2>
-                    ¿No sabes por dónde empezar?
+                    ¿Qué quieres explorar hoy?
                 </h2>
 
                 <p>
-                    Deja que 30 Días elija una experiencia
-                    para ti.
+                    Elige un recorrido para comenzar.
                 </p>
 
             </div>
 
 
-            <button
-                class="surprise-button"
-                onclick="surpriseMe()"
-            >
-
-                <span class="surprise-symbol">
-                    ✦
-                </span>
-
-                <span>
-                    Sorpréndeme
-                </span>
-
-                <span class="surprise-arrow">
-                    →
-                </span>
-
-            </button>
-
-        </div>
+            <div class="journeys-grid">
 
 
-        <div
-            class="surprise-result"
-            id="surprise-result"
-        ></div>
+                <!-- CONOCERME -->
 
-    </section>
+                <article class="journey-card conocerme">
 
+                    <div class="journey-top">
 
+                        <div class="journey-icon">
+                            🌱
+                        </div>
 
-    <!-- =========================================
-         ACTIVIDAD
-    ========================================== -->
-
-    <section
-        class="section activity-section"
-        id="actividad"
-    >
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                TU ACTIVIDAD
-            </span>
-
-            <h2>
-                Tu recorrido, día a día.
-            </h2>
-
-            <p>
-                Mira lo que has ido haciendo a lo largo del mes.
-            </p>
-
-        </div>
+                    </div>
 
 
-        <div class="calendar-container">
+                    <div class="journey-bottom">
+
+                        <div>
+
+                            <h3>
+                                Conocerme
+                            </h3>
+
+                            <p>
+                                Experiencias para volver la mirada
+                                hacia ti y descubrirte desde la acción.
+                            </p>
+
+                        </div>
 
 
-            <!-- CABECERA -->
+                        <button
+                            class="start-button"
+                            onclick="openJourney('conocerme')"
+                        >
 
-            <div class="calendar-header">
+                            <span>
+                                Comenzar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- CONECTAR -->
+
+                <article class="journey-card conectar">
+
+                    <div class="journey-top">
+
+                        <div class="journey-icon">
+                            🤍
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-bottom">
+
+                        <div>
+
+                            <h3>
+                                Conectar
+                            </h3>
+
+                            <p>
+                                Experiencias para crear momentos
+                                diferentes y volver a encontrarse.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="start-button"
+                            onclick="openJourney('conectar')"
+                        >
+
+                            <span>
+                                Comenzar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PONER LÍMITES -->
+
+                <article class="journey-card limites">
+
+                    <div class="journey-top">
+
+                        <div class="journey-icon">
+                            🪴
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-bottom">
+
+                        <div>
+
+                            <h3>
+                                Poner límites
+                            </h3>
+
+                            <p>
+                                Experiencias para practicar nuevas
+                                formas de expresar lo que necesitas.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="start-button"
+                            onclick="openJourney('limites')"
+                        >
+
+                            <span>
+                                Comenzar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- ELEGIR -->
+
+                <article class="journey-card elegir">
+
+                    <div class="journey-top">
+
+                        <div class="journey-icon">
+                            🧭
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-bottom">
+
+                        <div>
+
+                            <h3>
+                                Elegir
+                            </h3>
+
+                            <p>
+                                Experiencias para darte espacio
+                                para decidir desde lo que quieres.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="start-button"
+                            onclick="openJourney('elegir')"
+                        >
+
+                            <span>
+                                Comenzar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SOLTAR -->
+
+                <article class="journey-card soltar">
+
+                    <div class="journey-top">
+
+                        <div class="journey-icon">
+                            🍃
+                        </div>
+
+                    </div>
+
+
+                    <div class="journey-bottom">
+
+                        <div>
+
+                            <h3>
+                                Soltar
+                            </h3>
+
+                            <p>
+                                Experiencias para dejar ir y hacer
+                                espacio para algo nuevo.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="start-button"
+                            onclick="openJourney('soltar')"
+                        >
+
+                            <span>
+                                Comenzar
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PARA HOY -->
+
+        <section
+            class="section today-section"
+            id="para-hoy"
+        >
+
+            <div class="today-box">
+
+                <div class="today-text">
+
+                    <span class="today-label">
+                        PARA HOY
+                    </span>
+
+                    <h2>
+                        ¿No sabes por dónde empezar?
+                    </h2>
+
+                    <p>
+                        Deja que 30 Días elija una experiencia
+                        para ti.
+                    </p>
+
+                </div>
+
 
                 <button
-                    class="calendar-arrow"
-                    onclick="changeMonth(-1)"
-                    aria-label="Mes anterior"
+                    class="surprise-button"
+                    onclick="surpriseMe()"
                 >
-                    ‹
+
+                    <span class="surprise-symbol">
+                        ✦
+                    </span>
+
+                    <span>
+                        Sorpréndeme
+                    </span>
+
+                    <span class="surprise-arrow">
+                        →
+                    </span>
+
                 </button>
 
+            </div>
 
-                <div class="calendar-month">
+        </section>
 
-                    <strong id="calendar-month">
-                        Septiembre
-                    </strong>
 
-                    <span id="calendar-year">
-                        2026
+
+        <!-- ACTIVIDAD -->
+
+        <section
+            class="section activity-section"
+            id="actividad"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    TU ACTIVIDAD
+                </span>
+
+                <h2>
+                    Tu recorrido, día a día.
+                </h2>
+
+                <p>
+                    Mira lo que has ido haciendo a lo largo del mes.
+                </p>
+
+            </div>
+
+
+            <div class="calendar-container">
+
+
+                <!-- CABECERA -->
+
+                <div class="calendar-header">
+
+                    <button
+                        class="calendar-arrow"
+                        onclick="changeMonth(-1)"
+                        aria-label="Mes anterior"
+                    >
+                        ‹
+                    </button>
+
+
+                    <div class="calendar-month">
+
+                        <strong id="calendar-month">
+                            Septiembre
+                        </strong>
+
+                        <span id="calendar-year">
+                            2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="calendar-arrow"
+                        onclick="changeMonth(1)"
+                        aria-label="Mes siguiente"
+                    >
+                        ›
+                    </button>
+
+                </div>
+
+
+
+                <!-- SEMANA -->
+
+                <div class="calendar-weekdays">
+
+                    <span>L</span>
+                    <span>M</span>
+                    <span>X</span>
+                    <span>J</span>
+                    <span>V</span>
+                    <span>S</span>
+                    <span>D</span>
+
+                </div>
+
+
+
+                <!-- DÍAS -->
+
+                <div
+                    class="calendar-days"
+                    id="calendar-days"
+                ></div>
+
+
+
+                <!-- LEYENDA -->
+
+                <div class="calendar-legend">
+
+                    <span>
+                        🌱 Conocerme
+                    </span>
+
+                    <span>
+                        🤍 Conectar
+                    </span>
+
+                    <span>
+                        🪴 Poner límites
+                    </span>
+
+                    <span>
+                        🧭 Elegir
+                    </span>
+
+                    <span>
+                        🍃 Soltar
                     </span>
 
                 </div>
 
+            </div>
+
+
+
+            <!-- DETALLE -->
+
+            <div
+                class="day-detail"
+                id="day-detail"
+            >
+
+                <div class="day-detail-placeholder">
+
+                    <span>
+                        Selecciona un día
+                    </span>
+
+                    <p>
+                        Aquí podrás ver las experiencias
+                        realizadas en esa fecha.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EXPERIENCIAS -->
+
+        <section
+            class="section experiences-section"
+            id="experiencias"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    TUS EXPERIENCIAS
+                </span>
+
+                <h2>
+                    Lo que vas descubriendo.
+                </h2>
+
+            </div>
+
+
+            <div class="experience-links">
+
 
                 <button
-                    class="calendar-arrow"
-                    onclick="changeMonth(1)"
-                    aria-label="Mes siguiente"
+                    class="experience-link"
+                    onclick="showFeature('guardadas')"
                 >
-                    ›
+
+                    <span class="experience-icon">
+                        ♡
+                    </span>
+
+                    <span class="experience-text">
+
+                        <strong>
+                            Guardadas
+                        </strong>
+
+                        <small>
+                            Para volver cuando quieras
+                        </small>
+
+                    </span>
+
+                    <span class="experience-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="experience-link"
+                    onclick="showFeature('realizadas')"
+                >
+
+                    <span class="experience-icon">
+                        ✓
+                    </span>
+
+                    <span class="experience-text">
+
+                        <strong>
+                            Realizadas
+                        </strong>
+
+                        <small>
+                            Las experiencias que ya hiciste
+                        </small>
+
+                    </span>
+
+                    <span class="experience-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CIERRE -->
+
+        <section class="closing-message">
+
+            <div class="closing-line"></div>
+
+            <p>
+                No hay una forma correcta de recorrer
+                estos 30 días.
+            </p>
+
+            <span>
+                Puedes avanzar a tu ritmo, cambiar de
+                recorrido o volver a una experiencia.
+            </span>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                Temple
+            </span>
+
+            <span>
+                ·
+            </span>
+
+            <span>
+                30 Días
+            </span>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         VISTA DE EXPERIENCIA
+    ========================================== -->
+
+    <div
+        id="experience-view"
+        class="experience-view"
+        aria-hidden="true"
+    >
+
+        <header class="experience-topbar">
+
+            <button
+                class="experience-back"
+                onclick="closeExperience()"
+            >
+
+                <span>
+                    ←
+                </span>
+
+                <span>
+                    Volver
+                </span>
+
+            </button>
+
+
+            <button
+                class="experience-temple"
+                onclick="goHome()"
+            >
+
+                <span class="temple-symbol"></span>
+
+                <span>
+                    Temple
+                </span>
+
+            </button>
+
+        </header>
+
+
+
+        <article class="experience-page">
+
+
+            <!-- IDENTIDAD DEL RECORRIDO -->
+
+            <div class="experience-route">
+
+                <span
+                    class="experience-route-emoji"
+                    id="experience-emoji"
+                >
+                    🌱
+                </span>
+
+                <span
+                    class="experience-route-name"
+                    id="experience-journey"
+                >
+                    CONOCERME
+                </span>
+
+            </div>
+
+
+
+            <!-- DÍA -->
+
+            <div
+                class="experience-day"
+                id="experience-day"
+            >
+                Día 1 de 30
+            </div>
+
+
+
+            <!-- TÍTULO -->
+
+            <h1
+                class="experience-title"
+                id="experience-title"
+            >
+                Una cita conmigo
+            </h1>
+
+
+
+            <!-- DATOS RÁPIDOS -->
+
+            <div class="experience-meta">
+
+                <div class="experience-meta-item">
+
+                    <span class="meta-icon">
+                        ◷
+                    </span>
+
+                    <div>
+
+                        <span class="meta-label">
+                            DURACIÓN
+                        </span>
+
+                        <strong id="experience-duration">
+                            30–60 min
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-meta-item">
+
+                    <span class="meta-icon">
+                        ⌖
+                    </span>
+
+                    <div>
+
+                        <span class="meta-label">
+                            MOMENTO
+                        </span>
+
+                        <strong id="experience-moment">
+                            Un momento para ti
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="experience-description">
+
+                <p id="experience-description-text"></p>
+
+            </div>
+
+
+
+            <!-- PASOS -->
+
+            <section class="experience-steps-section">
+
+                <span class="experience-section-label">
+                    LA EXPERIENCIA
+                </span>
+
+                <div
+                    class="experience-steps"
+                    id="experience-steps"
+                ></div>
+
+            </section>
+
+
+
+            <!-- PREGUNTA FINAL -->
+
+            <section class="experience-reflection">
+
+                <span class="experience-section-label">
+                    AL TERMINAR
+                </span>
+
+                <div class="reflection-card">
+
+                    <span class="reflection-symbol">
+                        ✦
+                    </span>
+
+                    <p id="experience-question"></p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- VALORACIÓN -->
+
+            <section class="experience-rating">
+
+                <span class="experience-section-label">
+                    ¿CÓMO FUE PARA TI?
+                </span>
+
+                <div
+                    class="rating-stars"
+                    id="rating-stars"
+                    aria-label="Valorar experiencia"
+                >
+
+                    <button
+                        type="button"
+                        data-rating="1"
+                        aria-label="1 estrella"
+                    >
+                        ☆
+                    </button>
+
+                    <button
+                        type="button"
+                        data-rating="2"
+                        aria-label="2 estrellas"
+                    >
+                        ☆
+                    </button>
+
+                    <button
+                        type="button"
+                        data-rating="3"
+                        aria-label="3 estrellas"
+                    >
+                        ☆
+                    </button>
+
+                    <button
+                        type="button"
+                        data-rating="4"
+                        aria-label="4 estrellas"
+                    >
+                        ☆
+                    </button>
+
+                    <button
+                        type="button"
+                        data-rating="5"
+                        aria-label="5 estrellas"
+                    >
+                        ☆
+                    </button>
+
+                </div>
+
+                <p
+                    class="rating-message"
+                    id="rating-message"
+                >
+                    Puedes valorar la experiencia cuando termines.
+                </p>
+
+            </section>
+
+
+
+            <!-- COMPLETAR -->
+
+            <div class="experience-complete">
+
+                <button
+                    class="complete-button"
+                    id="complete-button"
+                    onclick="toggleComplete()"
+                >
+
+                    <span
+                        id="complete-icon"
+                    >
+                        ○
+                    </span>
+
+                    <span
+                        id="complete-text"
+                    >
+                        Marcar como completada
+                    </span>
+
                 </button>
 
             </div>
 
 
-
-            <!-- SEMANA -->
-
-            <div class="calendar-weekdays">
-
-                <span>L</span>
-                <span>M</span>
-                <span>X</span>
-                <span>J</span>
-                <span>V</span>
-                <span>S</span>
-                <span>D</span>
-
-            </div>
+        </article>
 
 
+        <footer class="experience-footer">
 
-            <!-- DÍAS -->
-
-            <div
-                class="calendar-days"
-                id="calendar-days"
-            ></div>
-
-
-
-            <!-- LEYENDA -->
-
-            <div class="calendar-legend">
-
-                <span>
-                    🌱 Conocerme
-                </span>
-
-                <span>
-                    🤍 Conectar
-                </span>
-
-                <span>
-                    🪴 Poner límites
-                </span>
-
-                <span>
-                    🧭 Elegir
-                </span>
-
-                <span>
-                    🍃 Soltar
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- DETALLE -->
-
-        <div
-            class="day-detail"
-            id="day-detail"
-        >
-
-            <div class="day-detail-placeholder">
-
-                <span>
-                    Selecciona un día
-                </span>
-
-                <p>
-                    Aquí podrás ver las experiencias
-                    realizadas en esa fecha.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         EXPERIENCIAS
-    ========================================== -->
-
-    <section
-        class="section experiences-section"
-        id="experiencias"
-    >
-
-        <div class="section-heading">
-
-            <span class="section-label">
-                TUS EXPERIENCIAS
+            <span>
+                Temple
             </span>
 
-            <h2>
-                Lo que vas descubriendo.
-            </h2>
+            <span>
+                ·
+            </span>
 
-        </div>
+            <span>
+                30 Días
+            </span>
 
+        </footer>
 
-        <div class="experience-links">
-
-
-            <button
-                class="experience-link"
-                onclick="showFeature('guardadas')"
-            >
-
-                <span class="experience-icon">
-                    ♡
-                </span>
-
-                <span class="experience-text">
-
-                    <strong>
-                        Guardadas
-                    </strong>
-
-                    <small>
-                        Para volver cuando quieras
-                    </small>
-
-                </span>
-
-                <span class="experience-arrow">
-                    →
-                </span>
-
-            </button>
-
-
-
-            <button
-                class="experience-link"
-                onclick="showFeature('realizadas')"
-            >
-
-                <span class="experience-icon">
-                    ✓
-                </span>
-
-                <span class="experience-text">
-
-                    <strong>
-                        Realizadas
-                    </strong>
-
-                    <small>
-                        Las experiencias que ya hiciste
-                    </small>
-
-                </span>
-
-                <span class="experience-arrow">
-                    →
-                </span>
-
-            </button>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================================
-         CIERRE
-    ========================================== -->
-
-    <section class="closing-message">
-
-        <div class="closing-line"></div>
-
-        <p>
-            No hay una forma correcta de recorrer
-            estos 30 días.
-        </p>
-
-        <span>
-            Puedes avanzar a tu ritmo, cambiar de
-            recorrido o volver a una experiencia.
-        </span>
-
-    </section>
-
-
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer>
-
-        <span>
-            Temple
-        </span>
-
-        <span>
-            ·
-        </span>
-
-        <span>
-            30 Días
-        </span>
-
-    </footer>
+    </div>
 
 
 </main>
