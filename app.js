@@ -5,7 +5,7 @@
 
 
 /* =========================================================
-   INFORMACIÓN DE LOS TOMOS
+   TOMOS
 ========================================================= */
 
 const journeys = {
@@ -44,51 +44,61 @@ const journeys = {
 
 
 /* =========================================================
-   LAS 10 EXPERIENCIAS DE PRUEBA
+   10 EXPERIENCIAS DE PRUEBA
 ========================================================= */
 
 const experiences = [
 
     /* =====================================================
-       CONOCERME
+       🌱 CONOCERME
     ===================================================== */
 
     {
         id: "conocerme-1",
         journey: "conocerme",
         day: 1,
+
         title: "Una cita conmigo",
+
         duration: "30–60 min",
+
         place: "En un lugar que te resulte agradable y en un momento que puedas reservar para ti.",
+
         description:
             "Hoy vas a tener una cita contigo. La propuesta es salir de la rutina y dedicar un momento a hacer algo que realmente quieras hacer, sin esperar a que alguien más pueda acompañarte.",
 
         steps: [
+
             {
                 emoji: "🎯",
                 title: "Elige",
                 text: "Una actividad que te gustaría compartir con alguien o que llevas tiempo queriendo hacer."
             },
+
             {
                 emoji: "🧭",
                 title: "Decide",
                 text: "Elige dónde ir, qué hacer y cuánto tiempo quieres quedarte."
             },
+
             {
                 emoji: "🚶",
                 title: "Hazlo",
                 text: "Ve, hazlo y disfruta de la experiencia a tu propio ritmo."
             },
+
             {
                 emoji: "📵",
                 title: "Desconecta",
                 text: "Deja el teléfono a un lado durante algunos momentos."
             },
+
             {
                 emoji: "👀",
                 title: "Observa",
                 text: "Fíjate en tus elecciones: qué te apetece, qué disfrutas, qué te incomoda o qué despierta tu interés."
             }
+
         ],
 
         question:
@@ -100,33 +110,42 @@ const experiences = [
         id: "conocerme-2",
         journey: "conocerme",
         day: 2,
+
         title: "Elegir por mí",
+
         duration: "15–30 min",
+
         place: "En un momento cotidiano en el que tengas varias opciones para elegir.",
+
         description:
             "Hoy vas a prestar atención a tus elecciones cotidianas. No se trata de tomar decisiones importantes, sino de observar cuánto espacio das a lo que realmente quieres.",
 
         steps: [
+
             {
                 emoji: "👀",
                 title: "Observa",
                 text: "Identifica una situación cotidiana en la que tengas varias opciones: qué comer, qué escuchar, qué hacer en tu tiempo libre, qué ropa ponerte o dónde ir."
             },
+
             {
                 emoji: "💭",
                 title: "Pregúntate",
                 text: "Antes de elegir, nota qué opción te apetece realmente."
             },
+
             {
                 emoji: "🎯",
                 title: "Elige",
                 text: "Esta vez, toma la decisión teniendo en cuenta tu propia preferencia."
             },
+
             {
                 emoji: "🧭",
                 title: "Observa",
                 text: "Después de elegir, fíjate en cómo te sientes con esa decisión. Nota si aparece satisfacción, duda, culpa, indiferencia u otra sensación."
             }
+
         ],
 
         question:
@@ -135,40 +154,49 @@ const experiences = [
 
 
     /* =====================================================
-       CONECTAR
+       🤍 CONECTAR
     ===================================================== */
 
     {
         id: "conectar-1",
         journey: "conectar",
         day: 1,
+
         title: "Volver a mirarnos",
+
         duration: "10–15 min",
+
         place: "En un momento tranquilo, cuando puedan estar juntos sin interrupciones.",
+
         description:
             "A veces compartimos tanto tiempo con nuestra pareja que dejamos de mirarnos realmente. Hoy van a hacer una pausa para volver a encontrarse a través de la mirada y observar qué ocurre cuando se prestan atención de una manera diferente.",
 
         steps: [
+
             {
                 emoji: "👀",
                 title: "Mirarse",
                 text: "Siéntense frente a frente y mírense durante un minuto en silencio. No necesitan mantener una expresión determinada ni intentar provocar una reacción."
             },
+
             {
                 emoji: "🌿",
                 title: "Permanecer",
                 text: "Continúen durante unos minutos. Si aparecen risas, incomodidad, pensamientos o ganas de apartar la mirada, simplemente reconózcanlo y vuelvan a prestar atención a la persona que tienen delante."
             },
+
             {
                 emoji: "💬",
                 title: "Compartir",
                 text: "Después, cada persona puede compartir brevemente qué experimentó durante el ejercicio y qué notó de sí misma al estar frente a su pareja."
             },
+
             {
                 emoji: "🤍",
                 title: "Cerrar",
                 text: "Terminen el momento con un gesto que ambos elijan: un abrazo, tomarse de las manos, sonreírse o simplemente permanecer juntos unos instantes."
             }
+
         ],
 
         question:
@@ -180,33 +208,42 @@ const experiences = [
         id: "conectar-2",
         journey: "conectar",
         day: 2,
+
         title: "Una conversación sin pantallas",
+
         duration: "15–20 min",
+
         place: "En casa o en un lugar tranquilo, durante un momento en el que puedan estar juntos sin interrupciones.",
+
         description:
             "A veces estamos juntos, pero nuestra atención está en diferentes lugares. Hoy van a crear un espacio para estar realmente presentes en la conversación, dejando fuera aquello que suele interponerse entre ustedes.",
 
         steps: [
+
             {
                 emoji: "📵",
                 title: "Apartar",
                 text: "Dejen los teléfonos y otros dispositivos fuera de su alcance. Durante estos minutos, no necesitan atender nada más."
             },
+
             {
                 emoji: "💬",
                 title: "Conversar",
                 text: "Siéntense frente a frente y comiencen una conversación sobre algo cotidiano que ambos tengan ganas de compartir. No necesitan buscar un tema profundo; simplemente hablen y estén presentes."
             },
+
             {
                 emoji: "👀",
                 title: "Observar",
                 text: "Mientras conversan, presta atención a la persona que tienes delante: su manera de hablar, sus expresiones, sus pausas y aquello que comparte contigo."
             },
+
             {
                 emoji: "🤍",
                 title: "Cerrar",
                 text: "Cuando terminen, permanezcan unos instantes juntos y observen cómo se sintió compartir ese tiempo sin otras distracciones."
             }
+
         ],
 
         question:
@@ -215,40 +252,49 @@ const experiences = [
 
 
     /* =====================================================
-       PONER LÍMITES
+       🪴 PONER LÍMITES
     ===================================================== */
 
     {
         id: "limites-1",
         journey: "limites",
         day: 1,
+
         title: "Decir no a algo pequeño",
+
         duration: "10–20 min",
+
         place: "En una situación cotidiana en la que puedas rechazar algo sin poner en riesgo tu bienestar ni el de otra persona.",
+
         description:
             "Hoy vas a experimentar qué ocurre cuando reconoces que no quieres algo y lo expresas de manera clara.",
 
         steps: [
+
             {
                 emoji: "👀",
                 title: "Detecta",
                 text: "Durante el día, presta atención a alguna situación sencilla en la que te propongan algo que realmente no quieras hacer, aceptar o elegir."
             },
+
             {
                 emoji: "⏸️",
                 title: "Pausa",
                 text: "Antes de responder, detente unos segundos y observa qué quieres tú."
             },
+
             {
                 emoji: "💬",
                 title: "Di que no",
                 text: "Si la situación lo permite, responde con un “no” claro y respetuoso. No necesitas dar una explicación extensa."
             },
+
             {
                 emoji: "🧭",
                 title: "Observa",
                 text: "Después de responder, fíjate en qué ocurre en ti: qué sientes, qué piensas y qué ganas aparecen. Observa también si aparece la necesidad de cambiar tu respuesta."
             }
+
         ],
 
         question:
@@ -260,33 +306,42 @@ const experiences = [
         id: "limites-2",
         journey: "limites",
         day: 2,
+
         title: "Elegir sin adaptarme",
+
         duration: "10–20 min",
+
         place: "En un momento del día en el que otra persona pueda proponerte qué hacer.",
+
         description:
             "Hoy vas a prestar atención a tus propias preferencias antes de adaptarte automáticamente a lo que otra persona quiere.",
 
         steps: [
+
             {
                 emoji: "🔎",
                 title: "Observa",
                 text: "Identifica una situación cotidiana en la que tengas la posibilidad de elegir qué hacer: qué comer, qué ver, dónde ir o cómo pasar un momento libre."
             },
+
             {
                 emoji: "💭",
                 title: "Pregúntate",
                 text: "Antes de preguntar qué prefiere la otra persona, pregúntate qué quieres tú."
             },
+
             {
                 emoji: "🎯",
                 title: "Elige",
                 text: "Si es posible, toma en cuenta tu propia preferencia al decidir."
             },
+
             {
                 emoji: "🧭",
                 title: "Observa",
                 text: "Después de elegir, fíjate en qué aparece: satisfacción, duda, incomodidad, culpa, tranquilidad u otra sensación."
             }
+
         ],
 
         question:
@@ -295,40 +350,49 @@ const experiences = [
 
 
     /* =====================================================
-       ELEGIR
+       🧭 ELEGIR
     ===================================================== */
 
     {
         id: "elegir-1",
         journey: "elegir",
         day: 1,
+
         title: "Elegir sin consultar",
+
         duration: "10–20 min",
+
         place: "En un momento cotidiano en el que tengas que tomar una decisión sencilla.",
+
         description:
             "Hoy vas a observar qué ocurre cuando tomas una decisión sin buscar primero la opinión, aprobación o confirmación de otra persona. No se trata de decidir algo importante, sino de darte la oportunidad de elegir por ti en una situación cotidiana.",
 
         steps: [
+
             {
                 emoji: "👀",
                 title: "Encuentra",
                 text: "Identifica una decisión sencilla que tengas que tomar hoy. Puede ser qué hacer, qué comprar, qué comer, qué plan elegir o cómo resolver algo cotidiano."
             },
+
             {
                 emoji: "📵",
                 title: "No consultes",
                 text: "Si normalmente preguntarías a alguien qué haría, qué elegiría o si tu decisión está bien, esta vez intenta decidir sin consultar."
             },
+
             {
                 emoji: "🎯",
                 title: "Elige",
                 text: "Toma la decisión considerando lo que tú piensas y quieres hacer en esa situación."
             },
+
             {
                 emoji: "🧭",
                 title: "Observa",
                 text: "Después de elegir, presta atención a lo que aparece: seguridad, duda, incomodidad, alivio, ganas de confirmar tu decisión o cualquier otra reacción."
             }
+
         ],
 
         question:
@@ -340,33 +404,42 @@ const experiences = [
         id: "elegir-2",
         journey: "elegir",
         day: 2,
+
         title: "Elegir cuando ambas opciones me convienen",
+
         duration: "10–20 min",
+
         place: "En un momento cotidiano en el que tengas que elegir entre dos opciones que te resulten igualmente aceptables.",
+
         description:
             "A veces no resulta difícil elegir porque una opción sea mala, sino porque varias alternativas pueden parecernos igualmente buenas. Hoy vas a experimentar qué ocurre cuando decides sin necesitar encontrar una opción claramente superior.",
 
         steps: [
+
             {
                 emoji: "🎯",
                 title: "Elige",
                 text: "Busca una situación cotidiana con dos opciones que realmente puedas elegir: qué comer, qué actividad hacer, qué comprar o cómo organizar un momento del día."
             },
+
             {
                 emoji: "⚖️",
                 title: "Compara",
                 text: "Observa brevemente qué te ofrece cada alternativa. No necesitas analizar todas sus consecuencias."
             },
+
             {
                 emoji: "🧭",
                 title: "Decide",
                 text: "Elige una de las dos y permite que sea suficiente, aunque la otra también te pareciera una buena opción."
             },
+
             {
                 emoji: "👀",
                 title: "Observa",
                 text: "Después de decidir, nota qué aparece: satisfacción, duda, ganas de cambiar, alivio, indiferencia o cualquier otra reacción."
             }
+
         ],
 
         question:
@@ -375,40 +448,49 @@ const experiences = [
 
 
     /* =====================================================
-       SOLTAR
+       🍃 SOLTAR
     ===================================================== */
 
     {
         id: "soltar-1",
         journey: "soltar",
         day: 1,
+
         title: "Dejar algo sin terminar",
+
         duration: "10–20 min",
+
         place: "En casa, en el trabajo o en cualquier lugar donde estés realizando una actividad que puedas detener sin consecuencias.",
+
         description:
             "A veces sentimos que algo tiene que quedar terminado antes de poder pasar a otra cosa. Hoy vas a experimentar qué ocurre cuando eliges detener una actividad aunque todavía quede algo por hacer.",
 
         steps: [
+
             {
                 emoji: "🔎",
                 title: "Elige",
                 text: "Busca una actividad sencilla que estés realizando y que puedas dejar para después sin que esto genere un problema. Puede ser ordenar algo, terminar una tarea, responder un mensaje o cualquier otra actividad cotidiana."
             },
+
             {
                 emoji: "⏸️",
                 title: "Detente",
                 text: "En un momento en el que normalmente continuarías hasta terminar, haz una pausa y deja la actividad tal como está."
             },
+
             {
                 emoji: "👀",
                 title: "Observa",
                 text: "Durante unos minutos, nota qué aparece al dejarla sin terminar: ganas de volver, incomodidad, alivio, pensamientos sobre lo que falta o cualquier otra experiencia."
             },
+
             {
                 emoji: "🌿",
                 title: "Continúa",
                 text: "Haz otra cosa durante un momento y permite que aquello que dejaste pendiente permanezca así. No necesitas resolverlo inmediatamente."
             }
+
         ],
 
         question:
@@ -420,33 +502,42 @@ const experiences = [
         id: "soltar-2",
         journey: "soltar",
         day: 2,
+
         title: "Dejar de revisar",
+
         duration: "10–20 min",
+
         place: "En un momento del día en el que puedas dejar de comprobar algo que sueles revisar repetidamente.",
+
         description:
             "A veces volvemos una y otra vez a algo para comprobar si cambió, si llegó una respuesta o si todo sigue igual. Hoy vas a experimentar qué ocurre cuando dejas de comprobarlo durante un tiempo.",
 
         steps: [
+
             {
                 emoji: "🔎",
                 title: "Detecta",
                 text: "Identifica algo que suelas revisar más de una vez y que puedas dejar de comprobar durante un tiempo sin que esto genere un problema."
             },
+
             {
                 emoji: "⏸️",
                 title: "Detén",
                 text: "Cuando aparezca el impulso de volver a revisarlo, reconoce que está presente y decide no hacerlo durante el tiempo que hayas elegido."
             },
+
             {
                 emoji: "👀",
                 title: "Observa",
                 text: "Presta atención a lo que aparece mientras no compruebas: ganas de volver, inquietud, curiosidad, pensamientos o cualquier otra experiencia."
             },
+
             {
                 emoji: "🌿",
                 title: "Continúa",
                 text: "Haz otra cosa y permite que aquello que dejaste de revisar permanezca fuera de tu atención durante ese tiempo."
             }
+
         ],
 
         question:
@@ -460,19 +551,50 @@ const experiences = [
    ESTADO
 ========================================================= */
 
-let calendarDate = new Date(2026, 8, 1);
+let calendarDate =
+    new Date(2026, 8, 1);
 
 let currentExperience = null;
 
-let completedExperiences =
-    JSON.parse(
-        localStorage.getItem("temple30_completed") || "[]"
-    );
+let completedExperiences = [];
 
-let ratings =
-    JSON.parse(
-        localStorage.getItem("temple30_ratings") || "{}"
-    );
+let ratings = [];
+
+
+/* =========================================================
+   CARGAR DATOS GUARDADOS
+========================================================= */
+
+try {
+
+    completedExperiences =
+        JSON.parse(
+            localStorage.getItem(
+                "temple30_completed"
+            ) || "[]"
+        );
+
+} catch (error) {
+
+    completedExperiences = [];
+
+}
+
+
+try {
+
+    ratings =
+        JSON.parse(
+            localStorage.getItem(
+                "temple30_ratings"
+            ) || "{}"
+        );
+
+} catch (error) {
+
+    ratings = {};
+
+}
 
 
 /* =========================================================
@@ -481,84 +603,64 @@ let ratings =
 
 document.addEventListener(
     "DOMContentLoaded",
-    () => {
+    function () {
 
         renderCalendar();
 
-        createExperienceView();
+        setupRatingButtons();
+
+        hideExperienceView();
 
     }
 );
 
 
 /* =========================================================
-   CREAR VISTA DE EXPERIENCIA
+   BUSCAR EXPERIENCIA
 ========================================================= */
 
-function createExperienceView() {
+function getExperience(
+    id
+) {
 
-    const view =
-        document.createElement("section");
+    return experiences.find(
+        function (experience) {
 
-    view.id =
-        "experience-view";
+            return experience.id === id;
 
-    view.className =
-        "experience-view";
-
-    view.innerHTML = `
-
-        <div class="experience-page">
-
-            <button
-                class="experience-back"
-                type="button"
-                onclick="closeExperience()"
-            >
-                ← Volver
-            </button>
-
-
-            <div
-                class="experience-header"
-                id="experience-header"
-            ></div>
-
-
-            <div
-                class="experience-content"
-                id="experience-content"
-            ></div>
-
-        </div>
-
-    `;
-
-    document.querySelector(".app").appendChild(view);
+        }
+    );
 
 }
 
 
 /* =========================================================
-   ABRIR TOMO
+   ABRIR UN TOMO
 ========================================================= */
 
-function openJourney(journey) {
+function openJourney(
+    journey
+) {
 
-    const firstExperience =
+    const experience =
         experiences.find(
-            experience =>
-                experience.journey === journey
+            function (item) {
+
+                return item.journey === journey;
+
+            }
         );
 
-    if (!firstExperience) {
+
+    if (!experience) {
 
         return;
 
     }
 
+
     openExperience(
-        firstExperience.id
+        experience.id
     );
 
 }
@@ -578,13 +680,17 @@ function surpriseMe() {
 
     }
 
+
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            experiences.length
+        );
+
+
     const randomExperience =
-        experiences[
-            Math.floor(
-                Math.random() *
-                experiences.length
-            )
-        ];
+        experiences[randomIndex];
+
 
     openExperience(
         randomExperience.id
@@ -597,19 +703,51 @@ function surpriseMe() {
    ABRIR EXPERIENCIA
 ========================================================= */
 
-function openExperience(id) {
+function openExperience(
+    id
+) {
 
     const experience =
-        experiences.find(
-            item =>
-                item.id === id
-        );
+        getExperience(id);
+
 
     if (!experience) {
+
+        console.error(
+            "No se encontró la experiencia:",
+            id
+        );
 
         return;
 
     }
+
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const experienceView =
+        document.getElementById(
+            "experience-view"
+        );
+
+
+    if (
+        !dashboard ||
+        !experienceView
+    ) {
+
+        console.error(
+            "No se encontró dashboard-view o experience-view."
+        );
+
+        return;
+
+    }
+
 
     currentExperience =
         experience;
@@ -621,205 +759,178 @@ function openExperience(id) {
         ];
 
 
-    const view =
+    /* =====================================================
+       IDENTIDAD DEL TOMO
+    ===================================================== */
+
+    const emoji =
         document.getElementById(
-            "experience-view"
+            "experience-emoji"
         );
 
-
-    const header =
+    const journeyName =
         document.getElementById(
-            "experience-header"
+            "experience-journey"
         );
 
 
-    const content =
+    emoji.textContent =
+        journey.emoji;
+
+
+    journeyName.textContent =
+        journey.name.toUpperCase();
+
+
+    journeyName.style.color =
+        journey.color;
+
+
+    /* =====================================================
+       DÍA
+    ===================================================== */
+
+    document.getElementById(
+        "experience-day"
+    ).textContent =
+        `Día ${experience.day} de 30`;
+
+
+    /* =====================================================
+       TÍTULO
+    ===================================================== */
+
+    document.getElementById(
+        "experience-title"
+    ).textContent =
+        experience.title;
+
+
+    /* =====================================================
+       DURACIÓN
+    ===================================================== */
+
+    document.getElementById(
+        "experience-duration"
+    ).textContent =
+        experience.duration;
+
+
+    /* =====================================================
+       MOMENTO
+    ===================================================== */
+
+    document.getElementById(
+        "experience-moment"
+    ).textContent =
+        experience.place;
+
+
+    /* =====================================================
+       DESCRIPCIÓN
+    ===================================================== */
+
+    document.getElementById(
+        "experience-description-text"
+    ).textContent =
+        experience.description;
+
+
+    /* =====================================================
+       PASOS
+    ===================================================== */
+
+    const stepsContainer =
         document.getElementById(
-            "experience-content"
+            "experience-steps"
         );
 
 
-    const isCompleted =
-        completedExperiences.includes(
-            experience.id
-        );
-
-
-    const currentRating =
-        ratings[
-            experience.id
-        ] || 0;
-
-
-    header.innerHTML = `
-
-        <div
-            class="experience-route"
-            style="--route-color:${journey.color}"
-        >
-
-            <span class="experience-route-emoji">
-                ${journey.emoji}
-            </span>
-
-            <span>
-                ${journey.name}
-            </span>
-
-        </div>
-
-
-        <div class="experience-day">
-            Día ${experience.day} de 30
-        </div>
-
-
-        <h1>
-            ${experience.title}
-        </h1>
-
-
-        <div class="experience-meta">
-
-            <span>
-                ⏱ ${experience.duration}
-            </span>
-
-            <span>
-                📍 ${experience.place}
-            </span>
-
-        </div>
-
-    `;
-
-
-    let stepsHTML = "";
+    stepsContainer.innerHTML = "";
 
 
     experience.steps.forEach(
-        (step, index) => {
+        function (step, index) {
 
-            stepsHTML += `
+            const stepElement =
+                document.createElement(
+                    "article"
+                );
 
-                <article class="experience-step">
 
-                    <div class="step-number">
-                        ${index + 1}
-                    </div>
+            stepElement.className =
+                "experience-step";
 
-                    <div class="step-body">
 
-                        <h3>
-                            ${step.emoji}
-                            ${step.title}
-                        </h3>
+            stepElement.innerHTML = `
 
-                        <p>
-                            ${step.text}
-                        </p>
+                <div class="step-number">
+                    ${index + 1}
+                </div>
 
-                    </div>
+                <div class="step-body">
 
-                </article>
+                    <h3>
+                        ${step.emoji}
+                        ${step.title}
+                    </h3>
+
+                    <p>
+                        ${step.text}
+                    </p>
+
+                </div>
 
             `;
+
+
+            stepsContainer.appendChild(
+                stepElement
+            );
 
         }
     );
 
 
-    let starsHTML = "";
+    /* =====================================================
+       PREGUNTA FINAL
+    ===================================================== */
+
+    document.getElementById(
+        "experience-question"
+    ).textContent =
+        experience.question;
 
 
-    for (
-        let i = 1;
-        i <= 5;
-        i++
-    ) {
+    /* =====================================================
+       VALORACIÓN
+    ===================================================== */
 
-        starsHTML += `
-
-            <button
-                type="button"
-                class="rating-star ${i <= currentRating ? "active" : ""}"
-                onclick="rateExperience(${i})"
-                aria-label="Valorar con ${i} estrellas"
-            >
-                ★
-            </button>
-
-        `;
-
-    }
+    updateRatingStars();
 
 
-    content.innerHTML = `
+    /* =====================================================
+       ESTADO COMPLETADA
+    ===================================================== */
 
-        <div class="experience-description">
-
-            <p>
-                ${experience.description}
-            </p>
-
-        </div>
+    updateCompleteButton();
 
 
-        <div class="experience-steps">
+    /* =====================================================
+       MOSTRAR EXPERIENCIA
+    ===================================================== */
 
-            <div class="experience-section-label">
-                LA EXPERIENCIA
-            </div>
-
-            ${stepsHTML}
-
-        </div>
+    dashboard.style.display =
+        "none";
 
 
-        <div class="experience-reflection">
-
-            <span>
-                PARA CERRAR
-            </span>
-
-            <h2>
-                ${experience.question}
-            </h2>
-
-        </div>
+    experienceView.style.display =
+        "block";
 
 
-        <div class="experience-rating">
-
-            <span>
-                ¿Cómo fue para ti?
-            </span>
-
-            <div class="rating-stars">
-                ${starsHTML}
-            </div>
-
-        </div>
-
-
-        <button
-            type="button"
-            class="complete-experience-button ${isCompleted ? "completed" : ""}"
-            onclick="toggleComplete()"
-        >
-
-            ${isCompleted
-                ? "✓ Experiencia realizada"
-                : "Marcar como realizada"
-            }
-
-        </button>
-
-    `;
-
-
-    view.classList.add(
-        "visible"
+    experienceView.setAttribute(
+        "aria-hidden",
+        "false"
     );
 
 
@@ -828,10 +939,10 @@ function openExperience(id) {
     );
 
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
@@ -842,34 +953,139 @@ function openExperience(id) {
 
 function closeExperience() {
 
-    const view =
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const experienceView =
         document.getElementById(
             "experience-view"
         );
 
-    view.classList.remove(
-        "visible"
+
+    if (
+        !dashboard ||
+        !experienceView
+    ) {
+
+        return;
+
+    }
+
+
+    experienceView.style.display =
+        "none";
+
+
+    experienceView.setAttribute(
+        "aria-hidden",
+        "true"
     );
+
+
+    dashboard.style.display =
+        "block";
+
 
     document.body.classList.remove(
         "experience-open"
     );
 
+
     currentExperience =
         null;
+
+
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
 
 /* =========================================================
-   VALORACIÓN
+   OCULTAR EXPERIENCIA AL INICIAR
+========================================================= */
+
+function hideExperienceView() {
+
+    const experienceView =
+        document.getElementById(
+            "experience-view"
+        );
+
+
+    if (!experienceView) {
+
+        return;
+
+    }
+
+
+    experienceView.style.display =
+        "none";
+
+
+    experienceView.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+}
+
+
+/* =========================================================
+   CONFIGURAR ESTRELLAS
+========================================================= */
+
+function setupRatingButtons() {
+
+    const stars =
+        document.querySelectorAll(
+            "#rating-stars button"
+        );
+
+
+    stars.forEach(
+        function (star) {
+
+            star.addEventListener(
+                "click",
+                function () {
+
+                    const rating =
+                        Number(
+                            star.dataset.rating
+                        );
+
+
+                    rateExperience(
+                        rating
+                    );
+
+                }
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   VALORAR EXPERIENCIA
 ========================================================= */
 
 function rateExperience(
     rating
 ) {
 
-    if (!currentExperience) {
+    if (
+        !currentExperience
+    ) {
 
         return;
 
@@ -883,12 +1099,90 @@ function rateExperience(
 
     localStorage.setItem(
         "temple30_ratings",
-        JSON.stringify(ratings)
+        JSON.stringify(
+            ratings
+        )
     );
 
 
-    openExperience(
-        currentExperience.id
+    updateRatingStars();
+
+
+    const message =
+        document.getElementById(
+            "rating-message"
+        );
+
+
+    if (message) {
+
+        message.textContent =
+            `Has valorado esta experiencia con ${rating} de 5.`;
+
+    }
+
+}
+
+
+/* =========================================================
+   ACTUALIZAR ESTRELLAS
+========================================================= */
+
+function updateRatingStars() {
+
+    if (
+        !currentExperience
+    ) {
+
+        return;
+
+    }
+
+
+    const currentRating =
+        ratings[
+            currentExperience.id
+        ] || 0;
+
+
+    const stars =
+        document.querySelectorAll(
+            "#rating-stars button"
+        );
+
+
+    stars.forEach(
+        function (star) {
+
+            const value =
+                Number(
+                    star.dataset.rating
+                );
+
+
+            if (
+                value <= currentRating
+            ) {
+
+                star.textContent =
+                    "★";
+
+                star.classList.add(
+                    "active"
+                );
+
+            } else {
+
+                star.textContent =
+                    "☆";
+
+                star.classList.remove(
+                    "active"
+                );
+
+            }
+
+        }
     );
 
 }
@@ -900,7 +1194,9 @@ function rateExperience(
 
 function toggleComplete() {
 
-    if (!currentExperience) {
+    if (
+        !currentExperience
+    ) {
 
         return;
 
@@ -917,7 +1213,9 @@ function toggleComplete() {
         );
 
 
-    if (index === -1) {
+    if (
+        index === -1
+    ) {
 
         completedExperiences.push(
             id
@@ -941,12 +1239,89 @@ function toggleComplete() {
     );
 
 
-    openExperience(
-        id
-    );
+    updateCompleteButton();
 
 
     renderCalendar();
+
+}
+
+
+/* =========================================================
+   ACTUALIZAR BOTÓN COMPLETAR
+========================================================= */
+
+function updateCompleteButton() {
+
+    if (
+        !currentExperience
+    ) {
+
+        return;
+
+    }
+
+
+    const button =
+        document.getElementById(
+            "complete-button"
+        );
+
+
+    const icon =
+        document.getElementById(
+            "complete-icon"
+        );
+
+
+    const text =
+        document.getElementById(
+            "complete-text"
+        );
+
+
+    if (
+        !button ||
+        !icon ||
+        !text
+    ) {
+
+        return;
+
+    }
+
+
+    const completed =
+        completedExperiences.includes(
+            currentExperience.id
+        );
+
+
+    if (completed) {
+
+        button.classList.add(
+            "completed"
+        );
+
+        icon.textContent =
+            "✓";
+
+        text.textContent =
+            "Experiencia completada";
+
+    } else {
+
+        button.classList.remove(
+            "completed"
+        );
+
+        icon.textContent =
+            "○";
+
+        text.textContent =
+            "Marcar como completada";
+
+    }
 
 }
 
@@ -962,10 +1337,12 @@ function renderCalendar() {
             "calendar-days"
         );
 
+
     const monthElement =
         document.getElementById(
             "calendar-month"
         );
+
 
     const yearElement =
         document.getElementById(
@@ -973,7 +1350,11 @@ function renderCalendar() {
         );
 
 
-    if (!daysContainer) {
+    if (
+        !daysContainer ||
+        !monthElement ||
+        !yearElement
+    ) {
 
         return;
 
@@ -986,6 +1367,7 @@ function renderCalendar() {
 
     const year =
         calendarDate.getFullYear();
+
 
     const month =
         calendarDate.getMonth();
@@ -1011,6 +1393,7 @@ function renderCalendar() {
 
     monthElement.textContent =
         monthNames[month];
+
 
     yearElement.textContent =
         year;
@@ -1038,6 +1421,10 @@ function renderCalendar() {
         ).getDate();
 
 
+    /* =====================================================
+       ESPACIOS ANTES DEL PRIMER DÍA
+    ===================================================== */
+
     for (
         let i = 0;
         i < adjustedFirstDay;
@@ -1049,8 +1436,10 @@ function renderCalendar() {
                 "div"
             );
 
+
         empty.className =
             "calendar-day empty";
+
 
         daysContainer.appendChild(
             empty
@@ -1058,6 +1447,10 @@ function renderCalendar() {
 
     }
 
+
+    /* =====================================================
+       DÍAS
+    ===================================================== */
 
     for (
         let day = 1;
@@ -1106,14 +1499,14 @@ function renderCalendar() {
             );
 
 
-        const dayActivities =
+        const activities =
             getActivitiesForDate(
                 dateKey
             );
 
 
         if (
-            dayActivities.length > 0
+            activities.length > 0
         ) {
 
             dayElement.classList.add(
@@ -1131,12 +1524,12 @@ function renderCalendar() {
                 "activity-emojis";
 
 
-            dayActivities.forEach(
-                experience => {
+            activities.forEach(
+                function (activity) {
 
                     const journey =
                         journeys[
-                            experience.journey
+                            activity.journey
                         ];
 
 
@@ -1154,10 +1547,6 @@ function renderCalendar() {
                         journey.emoji;
 
 
-                    emoji.title =
-                        `${journey.name} · Día ${experience.day}`;
-
-
                     emojis.appendChild(
                         emoji
                     );
@@ -1172,6 +1561,11 @@ function renderCalendar() {
 
         }
 
+
+        /*
+           25 de septiembre se mantiene
+           como día de prueba actual.
+        */
 
         if (
             year === 2026 &&
@@ -1188,7 +1582,7 @@ function renderCalendar() {
 
         dayElement.addEventListener(
             "click",
-            () => {
+            function () {
 
                 showDayActivities(
                     dateKey,
@@ -1211,52 +1605,60 @@ function renderCalendar() {
 
 
 /* =========================================================
-   ACTIVIDADES DEL CALENDARIO
+   EXPERIENCIAS DEL CALENDARIO
 ========================================================= */
 
 function getActivitiesForDate(
     dateKey
 ) {
 
-    const result = [];
-
-
     /*
-       Para la prueba usamos algunas experiencias
-       distribuidas en septiembre.
+       Datos de prueba para poder comprobar
+       visualmente el calendario y abrir experiencias.
 
-       Más adelante esto se sustituirá por el
-       historial real de experiencias completadas.
+       Luego estos datos serán reemplazados por
+       el historial real del usuario.
     */
 
     const demoDates = {
 
         "2026-09-03": "conocerme-1",
+
         "2026-09-05": "conectar-1",
+
         "2026-09-09": "elegir-1",
+
         "2026-09-14": "conocerme-2",
+
         "2026-09-16": "limites-2",
+
         "2026-09-18": "conectar-2",
+
         "2026-09-25": "elegir-2"
 
     };
 
 
+    const activities = [];
+
+
+    const demoExperienceId =
+        demoDates[dateKey];
+
+
     if (
-        demoDates[dateKey]
+        demoExperienceId
     ) {
 
         const experience =
-            experiences.find(
-                item =>
-                    item.id ===
-                    demoDates[dateKey]
+            getExperience(
+                demoExperienceId
             );
 
 
         if (experience) {
 
-            result.push(
+            activities.push(
                 experience
             );
 
@@ -1265,13 +1667,20 @@ function getActivitiesForDate(
     }
 
 
-    return result;
+    /*
+       Si una experiencia fue completada
+       y coincide con una fecha real,
+       también podrá aparecer aquí
+       cuando conectemos el historial.
+    */
+
+    return activities;
 
 }
 
 
 /* =========================================================
-   FECHA
+   CREAR CLAVE DE FECHA
 ========================================================= */
 
 function createDateKey(
@@ -1290,7 +1699,9 @@ function createDateKey(
 
 
     const formattedDay =
-        String(day).padStart(
+        String(
+            day
+        ).padStart(
             2,
             "0"
         );
@@ -1316,6 +1727,13 @@ function showDayActivities(
         document.getElementById(
             "day-detail"
         );
+
+
+    if (!detail) {
+
+        return;
+
+    }
 
 
     const activities =
@@ -1384,9 +1802,9 @@ function showDayActivities(
 
 
     activities.forEach(
-        activity => {
+        function (activity) {
 
-            const selected =
+            const journey =
                 journeys[
                     activity.journey
                 ];
@@ -1404,17 +1822,16 @@ function showDayActivities(
                     type="button"
                     class="day-detail-item"
                     onclick="openExperience('${activity.id}')"
-                    style="text-align:left; width:100%; border:none; cursor:pointer;"
                 >
 
                     <div class="detail-emoji">
-                        ${selected.emoji}
+                        ${journey.emoji}
                     </div>
 
                     <div class="detail-info">
 
                         <span class="detail-journey">
-                            ${selected.name}
+                            ${journey.name}
                         </span>
 
                         <span class="detail-title">
@@ -1440,9 +1857,7 @@ function showDayActivities(
 
 
     html += `
-
         </div>
-
     `;
 
 
@@ -1461,35 +1876,41 @@ function changeMonth(
 ) {
 
     calendarDate.setMonth(
-
         calendarDate.getMonth()
         +
         direction
-
     );
 
 
     renderCalendar();
 
 
-    document.getElementById(
-        "day-detail"
-    ).innerHTML = `
+    const detail =
+        document.getElementById(
+            "day-detail"
+        );
 
-        <div class="day-detail-placeholder">
 
-            <span>
-                Selecciona un día
-            </span>
+    if (detail) {
 
-            <p>
-                Aquí podrás ver las experiencias
-                realizadas en esa fecha.
-            </p>
+        detail.innerHTML = `
 
-        </div>
+            <div class="day-detail-placeholder">
 
-    `;
+                <span>
+                    Selecciona un día
+                </span>
+
+                <p>
+                    Aquí podrás ver las experiencias
+                    realizadas en esa fecha.
+                </p>
+
+            </div>
+
+        `;
+
+    }
 
 }
 
@@ -1510,6 +1931,8 @@ function showFeature(
             "Aquí aparecerán las experiencias que guardes."
         );
 
+        return;
+
     }
 
 
@@ -1527,20 +1950,33 @@ function showFeature(
 
 
 /* =========================================================
-   VOLVER ARRIBA
+   VOLVER AL INICIO
 ========================================================= */
 
 function goHome() {
 
-    closeExperience();
+    const experienceView =
+        document.getElementById(
+            "experience-view"
+        );
 
-    window.scrollTo({
 
-        top: 0,
+    if (
+        experienceView &&
+        experienceView.style.display !== "none"
+    ) {
 
-        behavior: "smooth"
+        closeExperience();
 
-    });
+        return;
+
+    }
+
+
+    window.scrollTo(
+        0,
+        0
+    );
 
 }
 
@@ -1588,20 +2024,20 @@ function showTemporaryMessage(
 
 
     clearTimeout(
-        window.temporaryMessageTimer
+        window.templeMessageTimer
     );
 
 
-    window.temporaryMessageTimer =
+    window.templeMessageTimer =
         setTimeout(
-            () => {
+            function () {
 
                 messageElement.classList.remove(
                     "show"
                 );
 
             },
-            2600
+            2500
         );
 
 }
