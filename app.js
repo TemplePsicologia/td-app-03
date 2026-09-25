@@ -1096,14 +1096,19 @@ function openExperience(id) {
     updateCompleteButton();
 
 
-    /* Cambiar vista */
+/* Cambiar vista */
 
-    hideDashboard();
+hideDashboard();
 
-    hideJourneyView();
+/* Quitar el foco del botón antes de ocultar el recorrido */
+if (document.activeElement) {
+    document.activeElement.blur();
+}
 
-    const experienceView =
-        document.getElementById("experience-view");
+hideJourneyView();
+
+const experienceView =
+    document.getElementById("experience-view");
 
     experienceView.setAttribute(
         "aria-hidden",
