@@ -1172,77 +1172,19 @@ function openExperience(id) {
             experience.question || "";
     }
 
-   /* =========================================================
-   CÓMO SE SINTIÓ
-   ========================================================= */
+      /* =========================================
+       CÓMO SE SINTIÓ
+    ========================================= */
 
-function setupFeelingButtons() {
+    setupFeelingButtons();
+    updateFeelingUI();
 
-    const buttons =
-        document.querySelectorAll(".feeling-option");
-
-    buttons.forEach(button => {
-
-        button.onclick = () => {
-
-            if (!currentExperience) {
-                return;
-            }
-
-            const feeling =
-                button.dataset.feeling;
-
-            if (!feeling) {
-                return;
-            }
-
-            feelings[currentExperience.id] =
-                feeling;
-
-            localStorage.setItem(
-                STORAGE_FEELINGS,
-                JSON.stringify(feelings)
-            );
-
-            updateFeelingUI();
-        };
-    });
-}
-
-
-function updateFeelingUI() {
-
-    if (!currentExperience) {
-        return;
-    }
-
-    const selectedFeeling =
-        feelings[currentExperience.id];
-
-    const buttons =
-        document.querySelectorAll(".feeling-option");
-
-    buttons.forEach(button => {
-
-        const selected =
-            button.dataset.feeling === selectedFeeling;
-
-        button.classList.toggle(
-            "is-selected",
-            selected
-        );
-
-        button.setAttribute(
-            "aria-pressed",
-            selected ? "true" : "false"
-        );
-    });
-}
 
     /* =========================================
        VALORACIÓN
     ========================================= */
 
+    setupRatingButtons();
     updateRatingUI();
 
 
@@ -1251,7 +1193,6 @@ function updateFeelingUI() {
     ========================================= */
 
     updateCompleteButton();
-
 
     /* =========================================
        CAMBIAR DE VISTA
@@ -1291,6 +1232,70 @@ function updateFeelingUI() {
         behavior: "smooth"
     });
 
+}
+
+/* =========================================================
+   CÓMO SE SINTIÓ
+   ========================================================= */
+
+function setupFeelingButtons() {
+
+    const buttons =
+        document.querySelectorAll(".feeling-option");
+
+    buttons.forEach(button => {
+
+        button.onclick = () => {
+
+            if (!currentExperience) {
+                return;
+            }
+
+            const feeling =
+                button.dataset.feeling;
+
+            if (!feeling) {
+                return;
+            }
+
+            feelings[currentExperience.id] =
+                feeling;
+
+            saveState();
+
+            updateFeelingUI();
+        };
+    });
+}
+
+
+function updateFeelingUI() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const selectedFeeling =
+        feelings[currentExperience.id];
+
+    const buttons =
+        document.querySelectorAll(".feeling-option");
+
+    buttons.forEach(button => {
+
+        const selected =
+            button.dataset.feeling === selectedFeeling;
+
+        button.classList.toggle(
+            "is-selected",
+            selected
+        );
+
+        button.setAttribute(
+            "aria-pressed",
+            selected ? "true" : "false"
+        );
+    });
 }
 
 function closeExperience() {
