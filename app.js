@@ -1,6 +1,6 @@
 /* =========================================================
    TEMPLE · 30 DÍAS
-   DASHBOARD VISUAL
+   DASHBOARD
 ========================================================= */
 
 
@@ -39,7 +39,10 @@ const journeys = {
 
 
 /* =========================================================
-   DATOS VISUALES DE DEMOSTRACIÓN
+   DATOS DE DEMOSTRACIÓN
+   -----------------------------------------------
+   Estos datos solamente sirven para visualizar
+   cómo funcionará el calendario.
 ========================================================= */
 
 const demoActivities = {
@@ -47,35 +50,35 @@ const demoActivities = {
     "2026-09-03": [
         {
             journey: "conocerme",
-            title: "Una experiencia de Conocerme"
+            title: "Experiencia de Conocerme"
         }
     ],
 
     "2026-09-05": [
         {
             journey: "conectar",
-            title: "Una experiencia de Conectar"
+            title: "Experiencia de Conectar"
         }
     ],
 
     "2026-09-09": [
         {
             journey: "elegir",
-            title: "Una experiencia de Elegir"
+            title: "Experiencia de Elegir"
         }
     ],
 
     "2026-09-14": [
         {
             journey: "conocerme",
-            title: "Una experiencia de Conocerme"
+            title: "Experiencia de Conocerme"
         }
     ],
 
     "2026-09-16": [
         {
             journey: "limites",
-            title: "Una experiencia de Poner límites"
+            title: "Experiencia de Poner límites"
         }
     ],
 
@@ -83,28 +86,30 @@ const demoActivities = {
 
         {
             journey: "conectar",
-            title: "Una experiencia de Conectar"
+            title: "Experiencia de Conectar"
         },
 
         {
             journey: "elegir",
-            title: "Una experiencia de Elegir"
+            title: "Experiencia de Elegir"
         }
 
     ],
 
     "2026-09-25": [
+
         {
             journey: "elegir",
-            title: "Una experiencia de Elegir"
+            title: "Experiencia de Elegir"
         }
+
     ]
 
 };
 
 
 /* =========================================================
-   CALENDARIO
+   ESTADO DEL CALENDARIO
 ========================================================= */
 
 let calendarDate =
@@ -126,10 +131,10 @@ document.addEventListener(
 
 
 /* =========================================================
-   SELECCIONAR RECORRIDO
+   ABRIR RECORRIDO
 ========================================================= */
 
-function selectJourney(journey) {
+function openJourney(journey) {
 
     const selected =
         journeys[journey];
@@ -148,107 +153,93 @@ function selectJourney(journey) {
 
 
 /* =========================================================
-   OPCIONES PARA HOY
-========================================================= */
-
-function todayChoice(journey) {
-
-    const selected =
-        journeys[journey];
-
-
-    if (!selected) {
-        return;
-    }
-
-
-    showTemporaryMessage(
-        `Aquí podrás comenzar una experiencia de ${selected.name}.`
-    );
-
-}
-
-
-/* =========================================================
    SORPRÉNDEME
 ========================================================= */
 
 function surpriseMe() {
 
-    const keys =
-        Object.keys(journeys);
+    const allActivities = [];
 
 
-    const randomKey =
-        keys[
+    Object.entries(
+        demoActivities
+    ).forEach(
+        ([date, activities]) => {
+
+            activities.forEach(
+                activity => {
+
+                    allActivities.push({
+
+                        date: date,
+
+                        journey: activity.journey,
+
+                        title: activity.title
+
+                    });
+
+                }
+            );
+
+        }
+    );
+
+
+    if (allActivities.length === 0) {
+
+        showTemporaryMessage(
+            "Pronto podrás descubrir una experiencia."
+        );
+
+        return;
+
+    }
+
+
+    const random =
+        allActivities[
             Math.floor(
-                Math.random() * keys.length
+                Math.random() *
+                allActivities.length
             )
         ];
 
 
     const selected =
-        journeys[randomKey];
+        journeys[random.journey];
 
 
-    const message =
+    const result =
         document.getElementById(
-            "surprise-message"
+            "surprise-result"
         );
 
 
-    message.textContent =
-        `Hoy podrías explorar una experiencia de ${selected.name}.`;
+    result.innerHTML = `
 
-}
+        <div class="surprise-card">
 
+            <small>
+                UNA SUGERENCIA PARA TI
+            </small>
 
-/* =========================================================
-   MENSAJE TEMPORAL
-========================================================= */
+            <h3>
+                ${random.title}
+            </h3>
 
-function showTemporaryMessage(text) {
+            <p>
+                Recorrido · ${selected.name}
+            </p>
 
-    let message =
-        document.getElementById(
-            "temporary-message"
-        );
+        </div>
 
-
-    if (!message) {
-
-        message =
-            document.createElement("div");
-
-        message.id =
-            "temporary-message";
-
-        message.className =
-            "temporary-message";
-
-        document.body.appendChild(
-            message
-        );
-
-    }
+    `;
 
 
-    message.textContent =
-        text;
-
-
-    requestAnimationFrame(() => {
-
-        message.classList.add("show");
-
-    });
-
-
-    setTimeout(() => {
-
-        message.classList.remove("show");
-
-    }, 2500);
+    result.classList.add(
+        "visible"
+    );
 
 }
 
@@ -320,6 +311,18 @@ function renderCalendar() {
         year;
 
 
+    /*
+        JavaScript devuelve:
+
+        Domingo = 0
+        Lunes = 1
+        ...
+        Sábado = 6
+
+        Como nuestro calendario comienza
+        en lunes, hacemos el ajuste.
+    */
+
     const firstDay =
         new Date(
             year,
@@ -342,7 +345,7 @@ function renderCalendar() {
         ).getDate();
 
 
-    /* ESPACIOS ANTERIORES */
+    /* ESPACIOS ANTES DEL PRIMER DÍA */
 
     for (
         let i = 0;
@@ -365,7 +368,7 @@ function renderCalendar() {
     }
 
 
-    /* DÍAS */
+    /* CREAR CADA DÍA */
 
     for (
         let day = 1;
@@ -420,10 +423,17 @@ function renderCalendar() {
             ];
 
 
+        /* ACTIVIDADES DEL DÍA */
+
         if (
             activities &&
             activities.length > 0
         ) {
+
+            dayElement.classList.add(
+                "has-activity"
+            );
+
 
             const dots =
                 document.createElement(
@@ -469,7 +479,7 @@ function renderCalendar() {
         }
 
 
-        /* DÍA ACTUAL DE LA DEMO */
+        /* DÍA ACTUAL DE LA DEMOSTRACIÓN */
 
         if (
             year === 2026 &&
@@ -484,13 +494,17 @@ function renderCalendar() {
         }
 
 
+        /* CLICK */
+
         dayElement.addEventListener(
             "click",
             () => {
 
                 showDayActivities(
                     dateKey,
-                    day
+                    day,
+                    month,
+                    year
                 );
 
             }
@@ -507,7 +521,7 @@ function renderCalendar() {
 
 
 /* =========================================================
-   CLAVE DE FECHA
+   CREAR CLAVE DE FECHA
 ========================================================= */
 
 function createDateKey(
@@ -538,12 +552,14 @@ function createDateKey(
 
 
 /* =========================================================
-   ACTIVIDADES DEL DÍA
+   MOSTRAR ACTIVIDADES DE UN DÍA
 ========================================================= */
 
 function showDayActivities(
     dateKey,
-    day
+    day,
+    month,
+    year
 ) {
 
     const detail =
@@ -558,6 +574,28 @@ function showDayActivities(
         ];
 
 
+    const monthNames = [
+
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre"
+
+    ];
+
+
+    const dateText =
+        `${day} de ${monthNames[month]}`;
+
+
     if (
         !activities ||
         activities.length === 0
@@ -568,7 +606,7 @@ function showDayActivities(
             <div class="day-detail-placeholder">
 
                 <span>
-                    ${day} de septiembre
+                    ${dateText}
                 </span>
 
                 <p>
@@ -590,7 +628,7 @@ function showDayActivities(
         <div>
 
             <div class="day-detail-title">
-                ${day} de septiembre
+                ${dateText}
             </div>
 
     `;
@@ -712,7 +750,7 @@ function showFeature(type) {
     if (type === "guardadas") {
 
         showTemporaryMessage(
-            "Aquí aparecerán tus experiencias guardadas."
+            "Aquí aparecerán las experiencias que guardes."
         );
 
     }
@@ -721,7 +759,7 @@ function showFeature(type) {
     if (type === "realizadas") {
 
         showTemporaryMessage(
-            "Aquí aparecerán tus experiencias realizadas."
+            "Aquí aparecerán las experiencias que completes."
         );
 
     }
@@ -730,13 +768,10 @@ function showFeature(type) {
 
 
 /* =========================================================
-   VOLVER AL INICIO
+   VOLVER ARRIBA
 ========================================================= */
 
-function goHome(event) {
-
-    event.preventDefault();
-
+function goHome() {
 
     window.scrollTo({
 
