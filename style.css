@@ -721,8 +721,12 @@ footer {
     padding: 0 0 70px;
 }
 
+.experience-view[aria-hidden="true"] {
+    display: none;
+}
+
 .experience-view[aria-hidden="false"] {
-    display: block;
+    display: block !important;
 }
 
 
