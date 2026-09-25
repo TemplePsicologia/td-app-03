@@ -1,728 +1,1544 @@
-<!DOCTYPE html>
-<html lang="es">
+/* =========================================================
+   TEMPLE · 30 DÍAS
+   DASHBOARD
+========================================================= */
 
-<head>
-    <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+/* =========================================================
+   VARIABLES
+========================================================= */
 
-    <meta
-        name="theme-color"
-        content="#F7F7F4"
-    >
+:root {
 
-    <meta
-        name="description"
-        content="30 Días · Temple"
-    >
+    --background: #F7F7F4;
 
-    <title>30 Días · Temple</title>
+    --background-soft: #F0F2EF;
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    --text: #293A49;
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    --text-soft: #71808B;
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    --temple-blue: #4C6789;
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-</head>
+    --line: rgba(71, 106, 145, 0.11);
 
+    --shadow:
+        0 8px 28px rgba(65, 82, 95, 0.06);
 
-<body>
+}
 
-<main class="app">
 
+/* =========================================================
+   RESET
+========================================================= */
 
-    <!-- ==============================
-         ENCABEZADO
-    =============================== -->
+* {
 
-    <header class="topbar">
+    margin: 0;
 
-        <button
-            class="temple-brand"
-            onclick="goHome()"
-            aria-label="Volver al inicio"
-        >
+    padding: 0;
 
-            <span class="temple-symbol"></span>
+    box-sizing: border-box;
 
-            <span class="temple-name">
-                Temple
-            </span>
+}
 
-        </button>
 
-    </header>
+html {
 
+    scroll-behavior: smooth;
 
+}
 
-    <!-- ==============================
-         PRESENTACIÓN
-    =============================== -->
 
-    <section class="hero">
+body {
 
-        <p class="hero-label">
-            UNA COLECCIÓN DE EXPERIENCIAS
-        </p>
+    min-height: 100vh;
 
-        <h1>
-            30 Días
-        </h1>
+    background: var(--background);
 
-        <p class="hero-description">
-            Cinco recorridos para comenzar a hacer,
-            explorar y experimentar de una manera diferente.
-        </p>
+    color: var(--text);
 
-    </section>
+    font-family: "Inter", sans-serif;
 
+    -webkit-font-smoothing: antialiased;
 
+}
 
-    <!-- ==============================
-         RECORRIDOS
-    =============================== -->
 
-    <section
-        class="section journeys-section"
-        id="recorridos"
-    >
+/* =========================================================
+   APP
+========================================================= */
 
-        <div class="section-heading">
+.app {
 
-            <h2>
-                ¿Qué quieres explorar hoy?
-            </h2>
+    width: min(1040px, 90%);
 
-            <p>
-                Elige un recorrido para comenzar.
-            </p>
+    margin: 0 auto;
 
-        </div>
+}
 
 
-        <div class="journeys-grid">
+/* =========================================================
+   TOPBAR
+========================================================= */
 
+.topbar {
 
-            <!-- CONOCERME -->
+    padding-top: 28px;
 
-            <article class="journey-card conocerme">
+}
 
-                <div class="journey-top">
 
-                    <div class="journey-icon">
-                        🌱
-                    </div>
+.temple-brand {
 
-                </div>
+    border: none;
 
+    background: transparent;
 
-                <div class="journey-bottom">
+    padding: 0;
 
-                    <div>
+    display: inline-flex;
 
-                        <h3>
-                            Conocerme
-                        </h3>
+    align-items: center;
 
-                        <p>
-                            Experiencias para volver la mirada
-                            hacia ti y descubrirte desde la acción.
-                        </p>
+    gap: 9px;
 
-                    </div>
+    color: var(--temple-blue);
 
+    font-family: inherit;
 
-                    <button
-                        class="start-button"
-                        onclick="openJourney('conocerme')"
-                    >
+    font-size: 15px;
 
-                        <span>
-                            Comenzar
-                        </span>
+    font-weight: 600;
 
-                        <span>
-                            →
-                        </span>
+    cursor: pointer;
 
-                    </button>
+}
 
-                </div>
 
-            </article>
+.temple-symbol {
 
+    width: 9px;
 
+    height: 9px;
 
-            <!-- CONECTAR -->
+    border-radius: 50%;
 
-            <article class="journey-card conectar">
+    background: var(--temple-blue);
 
-                <div class="journey-top">
+}
 
-                    <div class="journey-icon">
-                        🤍
-                    </div>
 
-                </div>
+/* =========================================================
+   HERO
+========================================================= */
 
+.hero {
 
-                <div class="journey-bottom">
+    padding:
+        82px
+        0
+        75px;
 
-                    <div>
+    max-width: 700px;
 
-                        <h3>
-                            Conectar
-                        </h3>
+}
 
-                        <p>
-                            Experiencias para crear momentos
-                            diferentes y volver a encontrarse.
-                        </p>
 
-                    </div>
+.hero-label {
 
+    color: var(--temple-blue);
 
-                    <button
-                        class="start-button"
-                        onclick="openJourney('conectar')"
-                    >
+    font-size: 10px;
 
-                        <span>
-                            Comenzar
-                        </span>
+    font-weight: 600;
 
-                        <span>
-                            →
-                        </span>
+    letter-spacing: .14em;
 
-                    </button>
+    margin-bottom: 17px;
 
-                </div>
+}
 
-            </article>
 
+.hero h1 {
 
+    font-size:
+        clamp(52px, 8vw, 74px);
 
-            <!-- PONER LÍMITES -->
+    line-height: .98;
 
-            <article class="journey-card limites">
+    letter-spacing: -.055em;
 
-                <div class="journey-top">
+    font-weight: 600;
 
-                    <div class="journey-icon">
-                        🪴
-                    </div>
+}
 
-                </div>
 
+.hero-description {
 
-                <div class="journey-bottom">
+    margin-top: 24px;
 
-                    <div>
+    max-width: 560px;
 
-                        <h3>
-                            Poner límites
-                        </h3>
+    color: var(--text-soft);
 
-                        <p>
-                            Experiencias para practicar nuevas
-                            formas de expresar lo que necesitas.
-                        </p>
+    font-size: 15px;
 
-                    </div>
+    line-height: 1.7;
 
+}
 
-                    <button
-                        class="start-button"
-                        onclick="openJourney('limites')"
-                    >
 
-                        <span>
-                            Comenzar
-                        </span>
+/* =========================================================
+   SECCIONES
+========================================================= */
 
-                        <span>
-                            →
-                        </span>
+.section {
 
-                    </button>
+    padding-bottom: 82px;
 
-                </div>
+}
 
-            </article>
 
+.section-heading {
 
+    margin-bottom: 25px;
 
-            <!-- ELEGIR -->
+}
 
-            <article class="journey-card elegir">
 
-                <div class="journey-top">
+.section-label {
 
-                    <div class="journey-icon">
-                        🧭
-                    </div>
+    display: block;
 
-                </div>
+    margin-bottom: 8px;
 
+    color: var(--temple-blue);
 
-                <div class="journey-bottom">
+    font-size: 10px;
 
-                    <div>
+    font-weight: 600;
 
-                        <h3>
-                            Elegir
-                        </h3>
+    letter-spacing: .13em;
 
-                        <p>
-                            Experiencias para darte espacio
-                            para decidir desde lo que quieres.
-                        </p>
+}
 
-                    </div>
 
+.section-heading h2 {
 
-                    <button
-                        class="start-button"
-                        onclick="openJourney('elegir')"
-                    >
+    font-size: 26px;
 
-                        <span>
-                            Comenzar
-                        </span>
+    line-height: 1.2;
 
-                        <span>
-                            →
-                        </span>
+    letter-spacing: -.035em;
 
-                    </button>
+    font-weight: 600;
 
-                </div>
+}
 
-            </article>
 
+.section-heading p {
 
+    margin-top: 8px;
 
-            <!-- SOLTAR -->
+    color: var(--text-soft);
 
-            <article class="journey-card soltar">
+    font-size: 13px;
 
-                <div class="journey-top">
+    line-height: 1.65;
 
-                    <div class="journey-icon">
-                        🍃
-                    </div>
+}
 
-                </div>
 
+/* =========================================================
+   RECORRIDOS
+========================================================= */
 
-                <div class="journey-bottom">
+.journeys-grid {
 
-                    <div>
+    display: grid;
 
-                        <h3>
-                            Soltar
-                        </h3>
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-                        <p>
-                            Experiencias para dejar ir y hacer
-                            espacio para algo nuevo.
-                        </p>
+    gap: 17px;
 
-                    </div>
+}
 
 
-                    <button
-                        class="start-button"
-                        onclick="openJourney('soltar')"
-                    >
+.journey-card {
 
-                        <span>
-                            Comenzar
-                        </span>
+    min-height: 325px;
 
-                        <span>
-                            →
-                        </span>
+    padding: 27px;
 
-                    </button>
+    border-radius: 24px;
 
-                </div>
+    display: flex;
 
-            </article>
+    flex-direction: column;
 
+    justify-content: space-between;
 
-        </div>
+    border:
+        1px solid
+        rgba(255,255,255,.8);
 
-    </section>
+    box-shadow: var(--shadow);
 
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 
+}
 
-    <!-- ==============================
-         PARA HOY
-    =============================== -->
 
-    <section
-        class="section today-section"
-        id="para-hoy"
-    >
+.journey-card:hover {
 
-        <div class="today-box">
+    transform: translateY(-3px);
 
-            <div class="today-text">
+    box-shadow:
+        0 15px 34px
+        rgba(63,88,110,.10);
 
-                <span class="today-label">
-                    PARA HOY
-                </span>
+}
 
-                <h2>
-                    ¿No sabes por dónde empezar?
-                </h2>
 
-                <p>
-                    Deja que 30 Días elija una experiencia
-                    para ti.
-                </p>
+/* =========================================================
+   COLORES
+========================================================= */
 
-            </div>
+.conocerme {
 
+    background: #DCEBDD;
 
-            <button
-                class="surprise-button"
-                onclick="surpriseMe()"
-            >
+}
 
-                <span class="surprise-symbol">
-                    ✦
-                </span>
 
-                <span>
-                    Sorpréndeme
-                </span>
+.conectar {
 
-                <span class="surprise-arrow">
-                    →
-                </span>
+    background: #DCE7F2;
 
-            </button>
+}
 
-        </div>
 
+.limites {
 
-        <div
-            class="surprise-result"
-            id="surprise-result"
-        ></div>
+    background: #E9DDD6;
 
-    </section>
+}
 
 
+.elegir {
 
-    <!-- ==============================
-         ACTIVIDAD
-    =============================== -->
+    background: #D9E4F0;
 
-    <section
-        class="section activity-section"
-        id="actividad"
-    >
+}
 
-        <div class="section-heading">
 
-            <span class="section-label">
-                TU ACTIVIDAD
-            </span>
+.soltar {
 
-            <h2>
-                Tu recorrido, día a día.
-            </h2>
+    background: #DFE7DE;
 
-            <p>
-                Cada punto representa una experiencia
-                que hayas realizado.
-            </p>
+}
 
-        </div>
 
+/* =========================================================
+   ICONOS
+========================================================= */
 
-        <div class="calendar-container">
+.journey-icon {
 
+    width: 43px;
 
-            <!-- CABECERA DEL CALENDARIO -->
+    height: 43px;
 
-            <div class="calendar-header">
+    border-radius: 50%;
 
-                <button
-                    class="calendar-arrow"
-                    onclick="changeMonth(-1)"
-                    aria-label="Mes anterior"
-                >
-                    ‹
-                </button>
+    background:
+        rgba(255,255,255,.62);
 
+    display: flex;
 
-                <div class="calendar-month">
+    align-items: center;
 
-                    <strong id="calendar-month">
-                        Septiembre
-                    </strong>
+    justify-content: center;
 
-                    <span id="calendar-year">
-                        2026
-                    </span>
+    font-size: 20px;
 
-                </div>
+}
 
 
-                <button
-                    class="calendar-arrow"
-                    onclick="changeMonth(1)"
-                    aria-label="Mes siguiente"
-                >
-                    ›
-                </button>
+/* =========================================================
+   CONTENIDO
+========================================================= */
 
-            </div>
+.journey-bottom h3 {
 
+    font-size: 29px;
 
+    line-height: 1.1;
 
-            <!-- DÍAS DE LA SEMANA -->
+    letter-spacing: -.045em;
 
-            <div class="calendar-weekdays">
+    font-weight: 600;
 
-                <span>L</span>
-                <span>M</span>
-                <span>X</span>
-                <span>J</span>
-                <span>V</span>
-                <span>S</span>
-                <span>D</span>
+}
 
-            </div>
 
+.journey-bottom p {
 
+    max-width: 410px;
 
-            <!-- DÍAS -->
+    margin-top: 10px;
 
-            <div
-                class="calendar-days"
-                id="calendar-days"
-            ></div>
+    color:
+        rgba(41,61,78,.68);
 
+    font-size: 12px;
 
+    line-height: 1.7;
 
-            <!-- LEYENDA -->
+}
 
-            <div class="calendar-legend">
 
-                <span>
-                    <i class="legend-dot green"></i>
-                    Conocerme
-                </span>
+/* =========================================================
+   BOTÓN COMENZAR
+========================================================= */
 
-                <span>
-                    <i class="legend-dot blue"></i>
-                    Conectar
-                </span>
+.start-button {
 
-                <span>
-                    <i class="legend-dot orange"></i>
-                    Poner límites
-                </span>
+    margin-top: 20px;
 
-                <span>
-                    <i class="legend-dot purple"></i>
-                    Elegir
-                </span>
+    border: none;
 
-                <span>
-                    <i class="legend-dot sage"></i>
-                    Soltar
-                </span>
+    background:
+        rgba(255,255,255,.70);
 
-            </div>
+    color: #304A62;
 
-        </div>
+    border-radius: 100px;
 
+    padding:
+        10px
+        13px
+        10px
+        16px;
 
+    font-family: inherit;
 
-        <!-- DETALLE DEL DÍA -->
+    font-size: 11px;
 
-        <div
-            class="day-detail"
-            id="day-detail"
-        >
+    font-weight: 600;
 
-            <div class="day-detail-placeholder">
+    display: flex;
 
-                <span>
-                    Selecciona un día
-                </span>
+    align-items: center;
 
-                <p>
-                    Aquí podrás ver las experiencias
-                    realizadas en esa fecha.
-                </p>
+    gap: 18px;
 
-            </div>
+    cursor: pointer;
 
-        </div>
+    transition:
+        background .2s ease,
+        transform .2s ease;
 
-    </section>
+}
 
 
+.start-button:hover {
 
-    <!-- ==============================
-         EXPERIENCIAS
-    =============================== -->
+    background:
+        rgba(255,255,255,.96);
 
-    <section
-        class="section experiences-section"
-        id="experiencias"
-    >
+    transform: translateX(2px);
 
-        <div class="section-heading">
+}
 
-            <span class="section-label">
-                TUS EXPERIENCIAS
-            </span>
 
-            <h2>
-                Lo que vas descubriendo.
-            </h2>
+/* =========================================================
+   PARA HOY
+========================================================= */
 
-        </div>
+.today-section {
 
+    padding-bottom: 86px;
 
-        <div class="experience-links">
+}
 
 
-            <button
-                class="experience-link"
-                onclick="showFeature('guardadas')"
-            >
+.today-box {
 
-                <span class="experience-icon">
-                    ♡
-                </span>
+    padding:
+        29px
+        30px;
 
-                <span class="experience-text">
+    border-radius: 23px;
 
-                    <strong>
-                        Guardadas
-                    </strong>
+    background:
+        rgba(255,255,255,.46);
 
-                    <small>
-                        Para volver cuando quieras
-                    </small>
+    border:
+        1px solid
+        rgba(71,106,145,.08);
 
-                </span>
+    display: flex;
 
-                <span class="experience-arrow">
-                    →
-                </span>
+    align-items: center;
 
-            </button>
+    justify-content: space-between;
 
+    gap: 30px;
 
+}
 
-            <button
-                class="experience-link"
-                onclick="showFeature('realizadas')"
-            >
 
-                <span class="experience-icon">
-                    ✓
-                </span>
+.today-label {
 
-                <span class="experience-text">
+    display: block;
 
-                    <strong>
-                        Realizadas
-                    </strong>
+    color: var(--temple-blue);
 
-                    <small>
-                        Las experiencias que ya hiciste
-                    </small>
+    font-size: 10px;
 
-                </span>
+    font-weight: 600;
 
-                <span class="experience-arrow">
-                    →
-                </span>
+    letter-spacing: .13em;
 
-            </button>
+    margin-bottom: 9px;
 
+}
 
-        </div>
 
-    </section>
+.today-text h2 {
 
+    font-size: 21px;
 
+    font-weight: 600;
 
-    <!-- ==============================
-         CIERRE
-    =============================== -->
+    letter-spacing: -.025em;
 
-    <section class="closing-message">
+}
 
-        <div class="closing-line"></div>
 
-        <p>
-            No hay una forma correcta de recorrer
-            estos 30 días.
-        </p>
+.today-text p {
 
-        <span>
-            Puedes avanzar a tu ritmo, cambiar de
-            recorrido o volver a una experiencia.
-        </span>
+    margin-top: 6px;
 
-    </section>
+    color: var(--text-soft);
 
+    font-size: 12px;
 
+}
 
-    <!-- ==============================
-         FOOTER
-    =============================== -->
 
-    <footer>
+.surprise-button {
 
-        <span>
-            Temple
-        </span>
+    border: none;
 
-        <span>
-            ·
-        </span>
+    background: var(--temple-blue);
 
-        <span>
-            30 Días
-        </span>
+    color: white;
 
-    </footer>
+    border-radius: 100px;
 
+    padding:
+        13px
+        17px;
 
-</main>
+    font-family: inherit;
 
+    font-size: 11px;
 
-<script src="app.js"></script>
+    font-weight: 600;
 
-</body>
+    display: flex;
 
-</html>
+    align-items: center;
+
+    gap: 10px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.surprise-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px
+        rgba(76,103,137,.20);
+
+}
+
+
+.surprise-symbol {
+
+    font-size: 15px;
+
+}
+
+
+.surprise-arrow {
+
+    font-size: 16px;
+
+    margin-left: 3px;
+
+}
+
+
+.surprise-result {
+
+    display: none;
+
+    margin-top: 12px;
+
+}
+
+
+.surprise-result.visible {
+
+    display: block;
+
+}
+
+
+.surprise-card {
+
+    padding: 21px 24px;
+
+    border-radius: 19px;
+
+    background: white;
+
+    border:
+        1px solid
+        var(--line);
+
+}
+
+
+.surprise-card small {
+
+    color: var(--temple-blue);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+}
+
+
+.surprise-card h3 {
+
+    margin-top: 6px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+.surprise-card p {
+
+    margin-top: 4px;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   CALENDARIO
+========================================================= */
+
+.calendar-container {
+
+    background:
+        rgba(255,255,255,.58);
+
+    border:
+        1px solid
+        rgba(71,106,145,.08);
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 7px 25px
+        rgba(63,88,110,.045);
+
+}
+
+
+.calendar-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 26px;
+
+}
+
+
+.calendar-month {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+}
+
+
+.calendar-month strong {
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+}
+
+
+.calendar-month span {
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+}
+
+
+.calendar-arrow {
+
+    width: 34px;
+
+    height: 34px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.72);
+
+    color: var(--temple-blue);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.calendar-arrow:hover {
+
+    background: white;
+
+}
+
+
+/* =========================================================
+   DÍAS
+========================================================= */
+
+.calendar-weekdays,
+.calendar-days {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+}
+
+
+.calendar-weekdays {
+
+    margin-bottom: 9px;
+
+}
+
+
+.calendar-weekdays span {
+
+    text-align: center;
+
+    color:
+        rgba(71,106,145,.55);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+}
+
+
+.calendar-day {
+
+    min-height: 63px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.calendar-day:hover {
+
+    background:
+        rgba(255,255,255,.75);
+
+}
+
+
+.calendar-day.empty {
+
+    cursor: default;
+
+}
+
+
+.day-number {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.calendar-day.today .day-number {
+
+    border:
+        1px solid
+        var(--temple-blue);
+
+}
+
+
+.calendar-day.has-activity .day-number {
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   PUNTOS DE ACTIVIDAD
+========================================================= */
+
+.activity-dots {
+
+    position: absolute;
+
+    bottom: 7px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    gap: 3px;
+
+}
+
+
+.activity-dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+}
+
+
+.dot-green {
+
+    background: #759C7B;
+
+}
+
+
+.dot-blue {
+
+    background: #708EAE;
+
+}
+
+
+.dot-orange {
+
+    background: #B58A73;
+
+}
+
+
+.dot-purple {
+
+    background: #8582A8;
+
+}
+
+
+.dot-sage {
+
+    background: #819580;
+
+}
+
+
+/* =========================================================
+   LEYENDA
+========================================================= */
+
+.calendar-legend {
+
+    margin-top: 23px;
+
+    padding-top: 19px;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
+
+}
+
+
+.calendar-legend span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+
+}
+
+
+.legend-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+}
+
+
+.legend-dot.green {
+
+    background: #759C7B;
+
+}
+
+
+.legend-dot.blue {
+
+    background: #708EAE;
+
+}
+
+
+.legend-dot.orange {
+
+    background: #B58A73;
+
+}
+
+
+.legend-dot.purple {
+
+    background: #8582A8;
+
+}
+
+
+.legend-dot.sage {
+
+    background: #819580;
+
+}
+
+
+/* =========================================================
+   DETALLE DEL DÍA
+========================================================= */
+
+.day-detail {
+
+    margin-top: 12px;
+
+    min-height: 82px;
+
+    padding:
+        19px
+        21px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.38);
+
+}
+
+
+.day-detail-placeholder span {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.day-detail-placeholder p {
+
+    margin-top: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.day-detail-title {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+.day-detail-item {
+
+    margin-top: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+
+}
+
+
+.detail-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   EXPERIENCIAS
+========================================================= */
+
+.experience-links {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.experience-link {
+
+    border:
+        1px solid
+        rgba(71,106,145,.09);
+
+    background:
+        rgba(255,255,255,.52);
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+.experience-link:hover {
+
+    background:
+        rgba(255,255,255,.82);
+
+    transform: translateY(-2px);
+
+}
+
+
+.experience-icon {
+
+    width: 39px;
+
+    height: 39px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.80);
+
+    color: var(--temple-blue);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 17px;
+
+}
+
+
+.experience-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.experience-text strong {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.experience-text small {
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+
+}
+
+
+.experience-arrow {
+
+    margin-left: auto;
+
+    color: var(--temple-blue);
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   CIERRE
+========================================================= */
+
+.closing-message {
+
+    max-width: 620px;
+
+    margin: 0 auto;
+
+    padding:
+        5px
+        0
+        70px;
+
+    text-align: center;
+
+}
+
+
+.closing-line {
+
+    width: 34px;
+
+    height: 1px;
+
+    margin:
+        0 auto
+        22px;
+
+    background:
+        rgba(71,106,145,.22);
+
+}
+
+
+.closing-message p {
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+}
+
+
+.closing-message span {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        28px
+        0
+        40px;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    display: flex;
+
+    gap: 8px;
+
+    color:
+        rgba(71,106,145,.55);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   MENSAJE TEMPORAL
+========================================================= */
+
+.temporary-message {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform:
+        translate(-50%, 20px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 100;
+
+    background: #304A62;
+
+    color: white;
+
+    padding:
+        12px
+        18px;
+
+    border-radius: 100px;
+
+    font-size: 11px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(30,50,70,.18);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+
+.temporary-message.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .today-box {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .surprise-button {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .app {
+
+        width: 90%;
+
+    }
+
+
+    .hero {
+
+        padding:
+            65px
+            0
+            65px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 53px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .journeys-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .journey-card {
+
+        min-height: 300px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    .today-box {
+
+        padding: 24px;
+
+    }
+
+
+    .calendar-container {
+
+        padding: 18px;
+
+    }
+
+
+    .calendar-day {
+
+        min-height: 52px;
+
+    }
+
+
+    .calendar-legend {
+
+        gap: 10px 13px;
+
+    }
+
+
+    .experience-links {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .closing-message {
+
+        padding-bottom: 55px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .calendar-day {
+
+        min-height: 47px;
+
+    }
+
+
+    .calendar-weekdays span {
+
+        font-size: 9px;
+
+    }
+
+
+    .calendar-month strong {
+
+        font-size: 15px;
+
+    }
+
+}
