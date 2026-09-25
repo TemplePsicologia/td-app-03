@@ -1417,3 +1417,247 @@ footer {
     }
 
 }
+
+/* =========================================================
+   DETALLE DE DÍA · VISTA MEJORADA
+========================================================= */
+
+.day-detail {
+    margin-top: 14px;
+    padding: 25px;
+    border-radius: 22px;
+
+    background: #FFFFFF;
+
+    border: 1px solid rgba(71, 106, 145, 0.08);
+
+    box-shadow:
+        0 8px 25px rgba(63, 88, 110, 0.055);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+
+.day-detail > div {
+    width: 100%;
+}
+
+
+.day-detail-date {
+    margin-bottom: 18px;
+
+    color: #4C6789;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: .11em;
+
+    text-transform: uppercase;
+}
+
+
+/* Cada experiencia */
+
+.day-detail-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px 15px;
+
+    border-radius: 16px;
+
+    background: #F7F7F4;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.day-detail-item:hover {
+    background: #F2F3EF;
+
+    transform: translateY(-1px);
+}
+
+
+.day-detail-item + .day-detail-item {
+    margin-top: 9px;
+
+    border-top: none;
+}
+
+
+/* Emoji */
+
+.detail-emoji {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+
+    box-shadow:
+        0 3px 10px rgba(63, 88, 110, 0.05);
+}
+
+
+/* Información */
+
+.detail-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.detail-journey {
+    color: #71808B;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: .09em;
+
+    text-transform: uppercase;
+}
+
+
+.detail-title {
+    color: #293A49;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+.detail-day {
+    color: #8A969E;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* Estado */
+
+.day-detail-item::after {
+
+    content: "✓";
+
+    margin-left: auto;
+
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #E4EEE3;
+
+    color: #638269;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 600;
+
+}
+
+
+/* Sin actividad */
+
+.day-detail-placeholder {
+
+    padding: 7px 2px;
+}
+
+
+.day-detail-placeholder span {
+
+    display: block;
+
+    color: #293A49;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.day-detail-placeholder p {
+
+    margin-top: 6px;
+
+    color: #71808B;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+}
+
+
+/* Móvil */
+
+@media (max-width: 650px) {
+
+    .day-detail {
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .day-detail-item {
+
+        padding: 14px 12px;
+
+    }
+
+
+    .detail-emoji {
+
+        width: 39px;
+        height: 39px;
+
+        font-size: 17px;
+
+    }
+
+
+    .detail-title {
+
+        font-size: 12px;
+
+    }
+
+}
