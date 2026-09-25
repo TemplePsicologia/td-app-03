@@ -731,20 +731,19 @@ function renderJourneyView(journey) {
                 isCompleted(experience.id);
 
             daysHTML += `
-                <button
-                    type="button"
-                    class="journey-day-card ${completed ? "is-completed" : ""}"
-                    onclick="openExperienceFromJourney('${experience.id}')"
-                    style="--journey-color:${data.color};"
-                >
-                    <div class="journey-day-number">
-                        Día ${day}
-                    </div>
+<button
+    type="button"
+    class="journey-day-card ${completed ? "is-completed" : ""}"
+    onclick="openExperienceFromJourney('${experience.id}')"
+    style="--journey-color:${data.color};"
+>
+    <div class="journey-day-number">
+        Día ${day}
+    </div>
 
-                    <div class="journey-day-emoji">
-                        ${data.emoji}
-                    </div>
-
+    <div class="journey-day-emoji">
+        ${data.emoji}
+    </div>
                     <div class="journey-day-content">
                         <div class="journey-day-title">
                             ${experience.title}
@@ -977,9 +976,14 @@ function renderJourneyView(journey) {
 
 function openExperienceFromJourney(id) {
 
-    currentJourney =
-        getExperience(id)?.journey || currentJourney;
+    const experience = getExperience(id);
 
+    if (!experience) {
+        alert("No se encontró la experiencia: " + id);
+        return;
+    }
+
+    currentExperience = experience;
     returnView = "journey";
 
     openExperience(id);
