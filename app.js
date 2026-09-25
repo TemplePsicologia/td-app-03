@@ -746,46 +746,48 @@ function showDayActivities(
     `;
 
 
-    activities.forEach(
-        activity => {
+   activities.forEach(
+    activity => {
 
-            const selected =
-                journeys[
-                    activity.journey
-                ];
+        const selected =
+            journeys[
+                activity.journey
+            ];
 
+        html += `
 
-            html += `
+            <div class="day-detail-item">
 
-                <div class="day-detail-item">
+                <div class="detail-emoji">
+                    ${selected.emoji}
+                </div>
 
-                    <div class="detail-emoji">
-                        ${selected.emoji}
-                    </div>
+                <div class="detail-info">
 
+                    <span class="detail-journey">
+                        ${selected.name}
+                    </span>
 
-                    <div class="detail-info">
+                    <span class="detail-title">
+                        ${activity.title}
+                    </span>
 
-                        <span class="detail-journey">
-                            ${selected.name}
-                        </span>
-
-                        <span class="detail-title">
-                            ${activity.title}
-                        </span>
-
-                        <span class="detail-day">
-                            Día ${activity.day} de 30
-                        </span>
-
-                    </div>
+                    <span class="detail-day">
+                        Día ${activity.day} de 30
+                    </span>
 
                 </div>
 
-            `;
+                <div class="detail-check">
+                    ✓
+                </div>
 
-        }
-    );
+            </div>
+
+        `;
+
+    }
+);
 
 
     html += `
