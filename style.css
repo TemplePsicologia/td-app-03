@@ -1,43 +1,36 @@
-/* =========================================================
+/* =====================================================
    TEMPLE · 30 DÍAS
-   ESTILO VISUAL
-========================================================= */
+   ESTILO CALMO / LIMPIO / PREMIUM
+===================================================== */
 
 
-/* =========================================================
+/* =========================
    VARIABLES
-========================================================= */
+========================= */
 
 :root {
 
-    /* Azul principal de Temple */
-    --temple-blue: #263F68;
-    --temple-blue-dark: #1D3152;
-    --temple-blue-light: #38557E;
+    --sky: #E8F3FA;
 
-    /* Fondo */
-    --background: #EEF3F8;
+    --text: #26394A;
 
-    /* Texto */
-    --text: #1E2A3A;
-    --text-soft: #647286;
+    --text-soft: #687989;
 
-    /* Blanco */
+    --temple-blue: #476A91;
+
     --white: #FFFFFF;
-
-    /* Bordes */
-    --border: rgba(255, 255, 255, 0.32);
 
 }
 
 
-/* =========================================================
+/* =========================
    RESET
-========================================================= */
+========================= */
 
 * {
 
     margin: 0;
+
     padding: 0;
 
     box-sizing: border-box;
@@ -56,291 +49,161 @@ body {
 
     min-height: 100vh;
 
-    font-family: "DM Sans", sans-serif;
-
-    background:
-        linear-gradient(
-            145deg,
-            #263F68 0%,
-            #314E78 34%,
-            #EEF3F8 34.1%,
-            #EEF3F8 100%
-        );
+    background: var(--sky);
 
     color: var(--text);
 
-    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
 
 }
 
 
-/* =========================================================
-   FONDO DECORATIVO
-========================================================= */
-
-.background-glow {
-
-    position: fixed;
-
-    width: 420px;
-
-    height: 420px;
-
-    border-radius: 50%;
-
-    pointer-events: none;
-
-    filter: blur(80px);
-
-    opacity: 0.22;
-
-    z-index: -1;
-
-}
-
-
-.glow-one {
-
-    background: #7E9CC3;
-
-    top: -180px;
-
-    right: -120px;
-
-}
-
-
-.glow-two {
-
-    background: #A9BDD6;
-
-    bottom: -220px;
-
-    left: -160px;
-
-}
-
-
-/* =========================================================
+/* =========================
    CONTENEDOR
-========================================================= */
+========================= */
 
 .app {
 
-    width: min(1180px, 91%);
+    width: min(1080px, 90%);
 
     margin: 0 auto;
 
 }
 
 
-/* =========================================================
-   TOPBAR
-========================================================= */
+/* =========================
+   TEMPLE
+========================= */
 
 .topbar {
 
-    height: 86px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
+    padding-top: 30px;
 
 }
 
 
 .temple-brand {
 
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 
-    color: white;
+    color: var(--temple-blue);
 
     text-decoration: none;
 
+    font-size: 15px;
+
+    font-weight: 600;
+
 }
 
 
-.temple-mark {
+.temple-dot {
 
-    width: 30px;
+    width: 9px;
 
-    height: 30px;
-
-    border: 1px solid rgba(255,255,255,0.65);
+    height: 9px;
 
     border-radius: 50%;
 
-    display: flex;
+    background: var(--temple-blue);
 
-    align-items: center;
-
-    justify-content: center;
-
-    font-family: "Manrope", sans-serif;
-
-    font-size: 13px;
-
-    font-weight: 600;
+    display: inline-block;
 
 }
 
 
-.temple-name {
-
-    font-family: "Manrope", sans-serif;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.02em;
-
-}
-
-
-.collection-label {
-
-    color: rgba(255,255,255,0.68);
-
-    font-size: 10px;
-
-    letter-spacing: 0.16em;
-
-    font-weight: 600;
-
-}
-
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
 
     padding:
 
-        82px
+        90px
 
         0
 
-        110px;
+        85px;
 
-    max-width: 820px;
+    max-width: 680px;
 
 }
 
 
-.hero-kicker {
+.hero-label {
 
-    color: rgba(255,255,255,0.68);
+    color: var(--temple-blue);
 
     font-size: 10px;
 
-    letter-spacing: 0.18em;
-
     font-weight: 600;
 
-    margin-bottom: 22px;
+    letter-spacing: 0.13em;
+
+    margin-bottom: 18px;
 
 }
 
 
 .hero h1 {
 
-    font-family: "Manrope", sans-serif;
+    font-size: clamp(52px, 8vw, 76px);
 
-    font-size: clamp(48px, 7vw, 82px);
-
-    line-height: 0.98;
+    line-height: 1;
 
     letter-spacing: -0.055em;
 
-    color: white;
-
     font-weight: 600;
 
-}
-
-
-.hero h1 span {
-
-    color: rgba(255,255,255,0.72);
+    color: var(--text);
 
 }
 
 
 .hero-description {
 
-    max-width: 570px;
+    margin-top: 25px;
 
-    margin-top: 30px;
+    color: var(--text-soft);
 
-    color: rgba(255,255,255,0.74);
-
-    font-size: 17px;
+    font-size: 16px;
 
     line-height: 1.7;
+
+    max-width: 560px;
 
 }
 
 
-/* =========================================================
-   SECCIONES
-========================================================= */
+/* =========================
+   ENCABEZADOS
+========================= */
 
 .journeys-section,
 .my-journeys {
 
-    padding-bottom: 105px;
+    padding-bottom: 95px;
 
 }
 
 
-.section-header {
+.section-heading {
 
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    gap: 30px;
-
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 
 }
 
 
-.section-number {
+.section-heading h2 {
 
-    display: block;
-
-    color: var(--text-soft);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.16em;
-
-    margin-bottom: 9px;
-
-}
-
-
-.section-header h2 {
-
-    font-family: "Manrope", sans-serif;
-
-    font-size: 34px;
-
-    line-height: 1.1;
+    font-size: 27px;
 
     letter-spacing: -0.035em;
 
@@ -351,7 +214,9 @@ body {
 }
 
 
-.section-header > p {
+.section-heading p {
+
+    margin-top: 8px;
 
     color: var(--text-soft);
 
@@ -359,14 +224,14 @@ body {
 
     line-height: 1.6;
 
-    text-align: right;
+    max-width: 520px;
 
 }
 
 
-/* =========================================================
+/* =========================
    GRID
-========================================================= */
+========================= */
 
 .journeys-grid {
 
@@ -374,24 +239,24 @@ body {
 
     grid-template-columns:
 
-        repeat(2, minmax(0, 1fr));
+        repeat(2, 1fr);
 
     gap: 18px;
 
 }
 
 
-/* =========================================================
+/* =========================
    TARJETAS
-========================================================= */
+========================= */
 
 .journey-card {
 
-    min-height: 355px;
+    min-height: 335px;
 
-    border-radius: 26px;
+    padding: 28px;
 
-    padding: 30px;
+    border-radius: 25px;
 
     display: flex;
 
@@ -399,124 +264,84 @@ body {
 
     justify-content: space-between;
 
-    position: relative;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(255,255,255,0.42);
+    border: 1px solid rgba(255,255,255,0.55);
 
     box-shadow:
 
-        0 12px 35px rgba(31,52,79,0.07);
+        0 8px 25px rgba(63,88,110,0.06);
 
     transition:
 
-        transform 0.3s ease,
+        transform .25s ease,
 
-        box-shadow 0.3s ease;
-
-}
-
-
-.journey-card::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 190px;
-
-    height: 190px;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.26);
-
-    right: -90px;
-
-    top: -90px;
+        box-shadow .25s ease;
 
 }
 
 
 .journey-card:hover {
 
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 
     box-shadow:
 
-        0 20px 45px rgba(31,52,79,0.13);
+        0 14px 32px rgba(63,88,110,0.10);
 
 }
 
 
-/* =========================================================
+/* =========================
    COLORES
-========================================================= */
+========================= */
 
 .conocerme {
 
-    background: #DCE9DF;
+    background: #DCEBDD;
 
 }
 
 
 .conectar {
 
-    background: #DCE5F1;
+    background: #DCE7F2;
 
 }
 
 
 .limites {
 
-    background: #E9DED7;
+    background: #E9DDD6;
 
 }
 
 
 .elegir {
 
-    background: #D8E2EF;
+    background: #D9E4F0;
 
 }
 
 
 .soltar {
 
-    background: #DDE4DC;
+    background: #DFE7DE;
 
 }
 
 
-/* =========================================================
-   PARTE SUPERIOR TARJETA
-========================================================= */
+/* =========================
+   ICONOS
+========================= */
 
-.card-top {
+.journey-icon {
 
-    display: flex;
+    width: 44px;
 
-    align-items: center;
-
-    justify-content: space-between;
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-.journey-symbol {
-
-    width: 40px;
-
-    height: 40px;
+    height: 44px;
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,0.48);
+    background: rgba(255,255,255,0.52);
 
     display: flex;
 
@@ -524,215 +349,163 @@ body {
 
     justify-content: center;
 
-}
-
-
-.journey-symbol span {
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    color: rgba(30,42,58,0.7);
+    font-size: 21px;
 
 }
 
 
-.journey-duration {
-
-    font-size: 9px;
-
-    letter-spacing: 0.14em;
-
-    font-weight: 700;
-
-    color: rgba(30,42,58,0.55);
-
-}
-
-
-/* =========================================================
+/* =========================
    CONTENIDO
-========================================================= */
+========================= */
 
-.card-middle {
+.journey-content {
 
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 440px;
+    max-width: 390px;
 
 }
 
 
-.card-middle h3 {
+.journey-content h3 {
 
-    font-family: "Manrope", sans-serif;
-
-    font-size: 38px;
-
-    line-height: 1;
+    font-size: 31px;
 
     letter-spacing: -0.045em;
 
+    line-height: 1.1;
+
     font-weight: 600;
 
-    color: #203047;
+    color: #293D4E;
 
 }
 
 
-.card-middle p {
+.journey-content p {
 
-    margin-top: 15px;
+    margin-top: 12px;
 
-    max-width: 400px;
+    color: rgba(41,61,78,0.68);
 
-    color: rgba(30,42,58,0.68);
-
-    font-size: 14px;
+    font-size: 13px;
 
     line-height: 1.7;
 
 }
 
 
-/* =========================================================
-   BOTÓN
-========================================================= */
+/* =========================
+   BOTONES
+========================= */
 
 .start-button {
 
-    position: relative;
-
-    z-index: 3;
-
     border: none;
 
-    background: rgba(255,255,255,0.62);
+    background: rgba(255,255,255,0.68);
 
-    color: #23364F;
-
-    padding: 13px 15px 13px 17px;
+    color: #304A62;
 
     border-radius: 100px;
 
-    font-family: "DM Sans", sans-serif;
+    padding: 11px 13px 11px 16px;
+
+    font-family: inherit;
 
     font-size: 12px;
 
     font-weight: 600;
 
-    cursor: pointer;
-
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
-
-    gap: 25px;
+    gap: 18px;
 
     width: fit-content;
 
-    min-width: 174px;
+    cursor: pointer;
 
     transition:
 
-        background 0.2s ease,
+        background .2s ease,
 
-        transform 0.2s ease;
+        transform .2s ease;
+
+}
+
+
+.start-button span {
+
+    font-size: 17px;
+
+    line-height: 1;
 
 }
 
 
 .start-button:hover {
 
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.95);
 
     transform: translateX(2px);
 
 }
 
 
-.arrow {
-
-    width: 27px;
-
-    height: 27px;
-
-    border-radius: 50%;
-
-    background: rgba(255,255,255,0.72);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 15px;
-
-}
-
-
-/* =========================================================
+/* =========================
    QUINTA TARJETA
-========================================================= */
+========================= */
 
 .journey-card:last-child {
 
     grid-column: span 2;
 
-    min-height: 285px;
+    min-height: 270px;
 
 }
 
 
-/* =========================================================
-   MIS RECORRIDOS
-========================================================= */
+/* =========================
+   TUS RECORRIDOS
+========================= */
 
 .my-journeys {
 
-    padding-bottom: 90px;
+    padding-bottom: 80px;
 
 }
 
 
 .empty-state {
 
-    min-height: 170px;
+    background: rgba(255,255,255,0.52);
 
-    border-radius: 24px;
+    border: 1px solid rgba(71,106,145,0.10);
 
-    border: 1px solid rgba(47,68,93,0.12);
+    border-radius: 23px;
 
-    background: rgba(255,255,255,0.62);
-
-    backdrop-filter: blur(10px);
+    padding: 32px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 25px;
-
-    padding: 30px;
+    gap: 22px;
 
 }
 
 
-.empty-icon {
+.empty-symbol {
 
-    width: 55px;
+    width: 50px;
 
-    height: 55px;
+    height: 50px;
 
     border-radius: 50%;
 
-    border: 1px solid rgba(47,68,93,0.16);
+    background: rgba(255,255,255,0.75);
+
+    color: var(--temple-blue);
 
     display: flex;
 
@@ -740,27 +513,21 @@ body {
 
     justify-content: center;
 
-    font-size: 28px;
-
-    color: var(--temple-blue);
+    font-size: 18px;
 
 }
 
 
-.empty-state h3 {
+.empty-content h3 {
 
-    font-family: "Manrope", sans-serif;
-
-    font-size: 18px;
+    font-size: 16px;
 
     font-weight: 600;
 
-    color: var(--text);
-
 }
 
 
-.empty-state p {
+.empty-content p {
 
     margin-top: 6px;
 
@@ -768,141 +535,143 @@ body {
 
     font-size: 13px;
 
+    line-height: 1.6;
+
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* =========================
+   NOTA INFERIOR
+========================= */
 
-footer {
+.journey-note {
 
-    padding: 30px 0 45px;
+    margin-top: 14px;
+
+    padding: 20px 23px;
+
+    border-radius: 19px;
+
+    background: rgba(255,255,255,0.28);
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
     gap: 14px;
 
-    color: rgba(30,42,58,0.48);
+}
+
+
+.note-icon {
+
+    color: var(--temple-blue);
+
+    font-size: 18px;
+
+    line-height: 1.2;
 
 }
 
 
-.footer-brand {
+.journey-note strong {
 
-    font-family: "Manrope", sans-serif;
+    font-size: 12px;
 
-    font-size: 13px;
-
-    font-weight: 700;
+    font-weight: 600;
 
 }
 
 
-.footer-line {
+.journey-note p {
 
-    width: 28px;
+    margin-top: 4px;
 
-    height: 1px;
+    color: var(--text-soft);
 
-    background: rgba(30,42,58,0.18);
+    font-size: 12px;
+
+    line-height: 1.6;
 
 }
 
 
-.footer-text {
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding:
+
+        28px
+
+        0
+
+        40px;
+
+    border-top:
+
+        1px solid rgba(71,106,145,0.10);
+
+    display: flex;
+
+    gap: 8px;
+
+    color: rgba(71,106,145,0.55);
 
     font-size: 11px;
 
 }
 
 
-/* =========================================================
+/* =========================
    TABLET
-========================================================= */
+========================= */
 
-@media (max-width: 850px) {
+@media (max-width: 760px) {
 
     .hero {
 
-        padding-top: 65px;
-
-        padding-bottom: 80px;
+        padding-top: 75px;
 
     }
 
 
     .journeys-grid {
 
-        gap: 14px;
+        grid-template-columns: 1fr;
 
     }
 
 
-    .journey-card {
+    .journey-card:last-child {
 
-        min-height: 330px;
+        grid-column: auto;
 
-        padding: 25px;
-
-    }
-
-
-    .card-middle h3 {
-
-        font-size: 32px;
+        min-height: 335px;
 
     }
 
 }
 
 
-/* =========================================================
+/* =========================
    CELULAR
-========================================================= */
+========================= */
 
-@media (max-width: 680px) {
-
-    body {
-
-        background:
-
-            linear-gradient(
-
-                155deg,
-
-                #263F68 0%,
-
-                #314E78 28%,
-
-                #EEF3F8 28.1%,
-
-                #EEF3F8 100%
-
-            );
-
-    }
-
+@media (max-width: 520px) {
 
     .app {
 
-        width: min(92%, 520px);
+        width: 90%;
 
     }
 
 
     .topbar {
 
-        height: 72px;
-
-    }
-
-
-    .collection-label {
-
-        font-size: 9px;
+        padding-top: 23px;
 
     }
 
@@ -915,143 +684,75 @@ footer {
 
             0
 
-            70px;
-
-    }
-
-
-    .hero-kicker {
-
-        font-size: 9px;
+            65px;
 
     }
 
 
     .hero h1 {
 
-        font-size: clamp(43px, 13vw, 62px);
-
-        letter-spacing: -0.06em;
+        font-size: 53px;
 
     }
 
 
     .hero-description {
 
-        font-size: 15px;
+        font-size: 14px;
 
-        line-height: 1.65;
-
-        margin-top: 23px;
+        line-height: 1.7;
 
     }
 
 
-    .section-header {
+    .section-heading h2 {
 
-        display: block;
-
-    }
-
-
-    .section-header h2 {
-
-        font-size: 29px;
-
-    }
-
-
-    .section-header > p {
-
-        text-align: left;
-
-        margin-top: 10px;
-
-    }
-
-
-    .journeys-grid {
-
-        grid-template-columns: 1fr;
+        font-size: 24px;
 
     }
 
 
     .journey-card {
 
-        min-height: 330px;
-
-        border-radius: 23px;
+        min-height: 320px;
 
         padding: 24px;
 
-    }
-
-
-    .journey-card:last-child {
-
-        grid-column: auto;
-
-        min-height: 330px;
+        border-radius: 22px;
 
     }
 
 
-    .card-middle h3 {
+    .journey-content h3 {
 
-        font-size: 34px;
-
-    }
-
-
-    .card-middle p {
-
-        font-size: 13px;
-
-        line-height: 1.65;
-
-    }
-
-
-    .start-button {
-
-        width: 100%;
+        font-size: 29px;
 
     }
 
 
     .empty-state {
 
+        padding: 25px;
+
         align-items: flex-start;
 
-        padding: 24px;
+    }
+
+
+    .empty-symbol {
+
+        min-width: 45px;
+
+        width: 45px;
+
+        height: 45px;
 
     }
 
 
-    .empty-icon {
+    .journey-note {
 
-        min-width: 48px;
-
-        width: 48px;
-
-        height: 48px;
-
-    }
-
-
-    footer {
-
-        flex-wrap: wrap;
-
-        padding-bottom: 30px;
-
-    }
-
-
-    .desktop-only {
-
-        display: none;
+        padding: 18px;
 
     }
 
