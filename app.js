@@ -12,54 +12,49 @@ const journeys = {
 
     conocerme: {
         name: "Conocerme",
-        fullName: "30 Días para Conocerme",
         emoji: "🌱",
         color: "#759C7B",
         description:
-            "Un recorrido para comenzar a explorar quién eres, qué quieres y cómo te relacionas contigo."
+            "Experiencias para volver la mirada hacia ti y descubrirte desde la acción."
     },
 
     conectar: {
         name: "Conectar",
-        fullName: "30 Días para Conectar",
         emoji: "🤍",
         color: "#A785B0",
         description:
-            "Un recorrido para crear momentos de presencia, atención y conexión con tu pareja."
+            "Experiencias para crear momentos diferentes y volver a encontrarse."
     },
 
     limites: {
         name: "Poner límites",
-        fullName: "30 Días para Poner Límites",
         emoji: "🪴",
         color: "#B58A73",
         description:
-            "Un recorrido para explorar tus necesidades, preferencias y la manera en que expresas tus límites."
+            "Experiencias para practicar nuevas formas de expresar lo que necesitas."
     },
 
     elegir: {
         name: "Elegir",
-        fullName: "30 Días para Elegir",
         emoji: "🧭",
         color: "#708EAE",
         description:
-            "Un recorrido para experimentar diferentes formas de tomar decisiones y darte espacio para elegir por ti."
+            "Experiencias para darte espacio para decidir desde lo que quieres."
     },
 
     soltar: {
         name: "Soltar",
-        fullName: "30 Días para Soltar",
         emoji: "🍃",
         color: "#819580",
         description:
-            "Un recorrido para experimentar qué ocurre cuando permites que algunas cosas dejen de ocupar tanto espacio."
+            "Experiencias para dejar ir y hacer espacio para algo nuevo."
     }
 
 };
 
 
 /* =========================================================
-   10 EXPERIENCIAS REALES
+   10 EXPERIENCIAS DE PRUEBA
 ========================================================= */
 
 const experiences = [
@@ -519,12 +514,1363 @@ try {
 
 
 /* =========================================================
+   ESTILOS PARA LA VISTA DE TOMO
+   Se generan desde JS para que funcione sin modificar
+   todavía el style.css.
+========================================================= */
+
+function injectJourneyStyles() {
+
+    if (
+        document.getElementById(
+            "temple-journey-dynamic-styles"
+        )
+    ) {
+        return;
+    }
+
+
+    const style =
+        document.createElement("style");
+
+
+    style.id =
+        "temple-journey-dynamic-styles";
+
+
+    style.textContent = `
+
+        .journey-view {
+            min-height: 100vh;
+            background: #F7F7F4;
+            padding: 0 20px 60px;
+        }
+
+        .journey-view-inner {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .journey-view-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 22px 0 34px;
+        }
+
+        .journey-view-back {
+            border: 0;
+            background: transparent;
+            padding: 8px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #71808B;
+            font: 500 13px/1 "Inter", sans-serif;
+            cursor: pointer;
+        }
+
+        .journey-view-back:hover {
+            color: #293A49;
+        }
+
+        .journey-view-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #293A49;
+            font: 600 13px/1 "Inter", sans-serif;
+        }
+
+        .journey-view-hero {
+            text-align: center;
+            padding: 18px 0 30px;
+        }
+
+        .journey-view-emoji {
+            width: 66px;
+            height: 66px;
+            margin: 0 auto 18px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--journey-soft, #E8EEE8);
+            font-size: 29px;
+        }
+
+        .journey-view-label {
+            margin: 0 0 7px;
+            color: var(--journey-color, #759C7B);
+            font: 600 10px/1.2 "Inter", sans-serif;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .journey-view-title {
+            margin: 0;
+            color: #293A49;
+            font: 700 clamp(27px, 6vw, 38px)/1.1 "Inter", sans-serif;
+            letter-spacing: -.04em;
+        }
+
+        .journey-view-description {
+            max-width: 510px;
+            margin: 13px auto 0;
+            color: #71808B;
+            font: 400 14px/1.65 "Inter", sans-serif;
+        }
+
+        .journey-progress-card {
+            margin: 8px 0 30px;
+            padding: 21px;
+            border-radius: 22px;
+            background: #FFFFFF;
+            border: 1px solid rgba(41,58,73,.07);
+            box-shadow: 0 8px 28px rgba(41,58,73,.045);
+        }
+
+        .journey-progress-top {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .journey-progress-label {
+            color: #71808B;
+            font: 600 10px/1.2 "Inter", sans-serif;
+            letter-spacing: .11em;
+            text-transform: uppercase;
+        }
+
+        .journey-progress-count {
+            color: #293A49;
+            font: 600 13px/1.2 "Inter", sans-serif;
+        }
+
+        .journey-progress-count strong {
+            font-size: 20px;
+        }
+
+        .journey-progress-track {
+            height: 7px;
+            border-radius: 99px;
+            overflow: hidden;
+            background: #EDF0EC;
+        }
+
+        .journey-progress-fill {
+            height: 100%;
+            width: 0;
+            border-radius: inherit;
+            background: var(--journey-color, #759C7B);
+            transition: width .35s ease;
+        }
+
+        .journey-progress-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: #8A969E;
+            font: 400 10px/1.3 "Inter", sans-serif;
+        }
+
+        .journey-continue {
+            width: 100%;
+            min-height: 51px;
+            margin-top: 17px;
+            border: 0;
+            border-radius: 15px;
+            background: var(--journey-color, #759C7B);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            cursor: pointer;
+            font: 600 13px/1 "Inter", sans-serif;
+            transition: transform .15s ease, opacity .15s ease;
+        }
+
+        .journey-continue:hover {
+            transform: translateY(-1px);
+        }
+
+        .journey-continue:active {
+            transform: translateY(0);
+        }
+
+        .journey-days-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        .journey-days-heading h2 {
+            margin: 0;
+            color: #293A49;
+            font: 600 17px/1.25 "Inter", sans-serif;
+            letter-spacing: -.02em;
+        }
+
+        .journey-days-heading p {
+            margin: 4px 0 0;
+            color: #8A969E;
+            font: 400 11px/1.4 "Inter", sans-serif;
+        }
+
+        .journey-days-legend {
+            color: #8A969E;
+            font: 400 10px/1.3 "Inter", sans-serif;
+            white-space: nowrap;
+        }
+
+        .journey-days-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 9px;
+        }
+
+        .journey-day {
+            min-height: 69px;
+            padding: 9px 7px;
+            border: 1px solid #E7EAE6;
+            border-radius: 15px;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            color: #293A49;
+            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+
+        .journey-day:hover:not(.locked) {
+            transform: translateY(-1px);
+            border-color: var(--journey-color, #759C7B);
+            box-shadow: 0 6px 18px rgba(41,58,73,.06);
+        }
+
+        .journey-day-number {
+            font: 600 13px/1 "Inter", sans-serif;
+        }
+
+        .journey-day-status {
+            min-height: 12px;
+            color: #8A969E;
+            font: 400 9px/1.2 "Inter", sans-serif;
+        }
+
+        .journey-day.available {
+            border-color: color-mix(
+                in srgb,
+                var(--journey-color, #759C7B) 25%,
+                #FFFFFF
+            );
+        }
+
+        .journey-day.completed {
+            background: var(--journey-soft, #EEF3ED);
+            border-color: transparent;
+        }
+
+        .journey-day.completed .journey-day-status {
+            color: var(--journey-color, #759C7B);
+            font-weight: 600;
+        }
+
+        .journey-day.current {
+            box-shadow: inset 0 0 0 1.5px var(--journey-color, #759C7B);
+        }
+
+        .journey-day.locked {
+            background: #F2F3F1;
+            color: #A5ADB2;
+            cursor: default;
+        }
+
+        .journey-day.locked .journey-day-status {
+            color: #B0B7BB;
+        }
+
+        .journey-available-note {
+            margin: 17px 0 0;
+            padding: 13px 15px;
+            border-radius: 14px;
+            background: #EFF2EE;
+            color: #71808B;
+            font: 400 11px/1.55 "Inter", sans-serif;
+        }
+
+        .journey-available-note strong {
+            color: #52636D;
+            font-weight: 600;
+        }
+
+        .journey-footer-note {
+            margin: 38px 0 0;
+            padding-top: 24px;
+            border-top: 1px solid #E4E7E3;
+            text-align: center;
+            color: #8A969E;
+            font: 400 11px/1.6 "Inter", sans-serif;
+        }
+
+        @media (max-width: 480px) {
+
+            .journey-view {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .journey-view-topbar {
+                padding-top: 18px;
+                padding-bottom: 24px;
+            }
+
+            .journey-view-hero {
+                padding-top: 10px;
+            }
+
+            .journey-progress-card {
+                padding: 18px;
+                border-radius: 19px;
+            }
+
+            .journey-days-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 7px;
+            }
+
+            .journey-day {
+                min-height: 62px;
+                border-radius: 13px;
+            }
+
+            .journey-days-heading {
+                display: block;
+            }
+
+            .journey-days-legend {
+                display: block;
+                margin-top: 5px;
+            }
+
+        }
+
+    `;
+
+
+    document.head.appendChild(style);
+
+}
+
+
+/* =========================================================
+   CREAR VISTA DE TOMO
+========================================================= */
+
+function createJourneyView() {
+
+    if (
+        document.getElementById(
+            "journey-view"
+        )
+    ) {
+        return;
+    }
+
+
+    const app =
+        document.querySelector(".app");
+
+
+    if (!app) {
+        return;
+    }
+
+
+    const view =
+        document.createElement("div");
+
+
+    view.id =
+        "journey-view";
+
+
+    view.className =
+        "journey-view";
+
+
+    view.style.display =
+        "none";
+
+
+    view.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    view.innerHTML = `
+
+        <div class="journey-view-inner">
+
+            <header class="journey-view-topbar">
+
+                <button
+                    type="button"
+                    class="journey-view-back"
+                    id="journey-view-back"
+                >
+                    <span>←</span>
+                    <span>Volver</span>
+                </button>
+
+                <div class="journey-view-brand">
+                    <span class="temple-symbol"></span>
+                    <span>Temple</span>
+                </div>
+
+            </header>
+
+
+            <section class="journey-view-hero">
+
+                <div
+                    class="journey-view-emoji"
+                    id="journey-view-emoji"
+                >
+                    🌱
+                </div>
+
+                <p
+                    class="journey-view-label"
+                    id="journey-view-label"
+                >
+                    TU RECORRIDO
+                </p>
+
+                <h1
+                    class="journey-view-title"
+                    id="journey-view-title"
+                >
+                    Conocerme
+                </h1>
+
+                <p
+                    class="journey-view-description"
+                    id="journey-view-description"
+                ></p>
+
+            </section>
+
+
+            <section class="journey-progress-card">
+
+                <div class="journey-progress-top">
+
+                    <div class="journey-progress-label">
+                        TU PROGRESO
+                    </div>
+
+                    <div
+                        class="journey-progress-count"
+                        id="journey-progress-count"
+                    >
+                        <strong>0</strong> de 30
+                    </div>
+
+                </div>
+
+
+                <div class="journey-progress-track">
+
+                    <div
+                        class="journey-progress-fill"
+                        id="journey-progress-fill"
+                    ></div>
+
+                </div>
+
+
+                <div class="journey-progress-footer">
+
+                    <span id="journey-progress-message">
+                        Comienza cuando quieras.
+                    </span>
+
+                    <span id="journey-progress-percent">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="journey-continue"
+                    id="journey-continue"
+                >
+                    <span id="journey-continue-text">
+                        Comenzar recorrido
+                    </span>
+                    <span>→</span>
+                </button>
+
+            </section>
+
+
+            <section class="journey-days-section">
+
+                <div class="journey-days-heading">
+
+                    <div>
+
+                        <h2>
+                            Tus 30 días
+                        </h2>
+
+                        <p>
+                            Puedes elegir el día que quieras.
+                        </p>
+
+                    </div>
+
+                    <span class="journey-days-legend">
+                        ✓ completado
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="journey-days-grid"
+                    id="journey-days-grid"
+                ></div>
+
+
+                <div
+                    class="journey-available-note"
+                    id="journey-available-note"
+                ></div>
+
+            </section>
+
+
+            <p class="journey-footer-note">
+                No necesitas avanzar en orden. Puedes elegir
+                una experiencia según el momento en el que estés.
+            </p>
+
+        </div>
+
+    `;
+
+
+    app.appendChild(view);
+
+
+    document
+        .getElementById("journey-view-back")
+        .addEventListener(
+            "click",
+            closeJourney
+        );
+
+
+    document
+        .getElementById("journey-continue")
+        .addEventListener(
+            "click",
+            continueJourney
+        );
+
+}
+
+
+/* =========================================================
+   ABRIR TOMO
+========================================================= */
+
+function openJourney(journeyKey) {
+
+    const journey =
+        journeys[journeyKey];
+
+
+    if (!journey) {
+        return;
+    }
+
+
+    const availableExperiences =
+        experiences
+            .filter(
+                function (experience) {
+                    return experience.journey === journeyKey;
+                }
+            )
+            .sort(
+                function (a, b) {
+                    return a.day - b.day;
+                }
+            );
+
+
+    if (
+        availableExperiences.length === 0
+    ) {
+        return;
+    }
+
+
+    currentJourney =
+        journeyKey;
+
+
+    createJourneyView();
+
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    const experienceView =
+        document.getElementById(
+            "experience-view"
+        );
+
+
+    if (
+        !dashboard ||
+        !journeyView
+    ) {
+        return;
+    }
+
+
+    const emoji =
+        document.getElementById(
+            "journey-view-emoji"
+        );
+
+
+    const label =
+        document.getElementById(
+            "journey-view-label"
+        );
+
+
+    const title =
+        document.getElementById(
+            "journey-view-title"
+        );
+
+
+    const description =
+        document.getElementById(
+            "journey-view-description"
+        );
+
+
+    if (emoji) {
+        emoji.textContent =
+            journey.emoji;
+    }
+
+
+    if (label) {
+
+        label.textContent =
+            "RECORRIDO · 30 DÍAS";
+
+        label.style.color =
+            journey.color;
+
+    }
+
+
+    if (title) {
+
+        title.textContent =
+            journey.name;
+
+        title.style.color =
+            "#293A49";
+
+    }
+
+
+    if (description) {
+
+        description.textContent =
+            journey.description;
+
+    }
+
+
+    dashboard.style.display =
+        "none";
+
+
+    if (experienceView) {
+
+        experienceView.style.display =
+            "none";
+
+        experienceView.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+    }
+
+
+    journeyView.style.display =
+        "block";
+
+
+    journeyView.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    document.body.classList.add(
+        "journey-open"
+    );
+
+
+    renderJourneyProgress(
+        journeyKey
+    );
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "auto"
+    });
+
+}
+
+
+/* =========================================================
+   CERRAR TOMO
+========================================================= */
+
+function closeJourney() {
+
+    const dashboard =
+        document.getElementById(
+            "dashboard-view"
+        );
+
+
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (!dashboard || !journeyView) {
+        return;
+    }
+
+
+    journeyView.style.display =
+        "none";
+
+
+    journeyView.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    dashboard.style.display =
+        "block";
+
+
+    document.body.classList.remove(
+        "journey-open"
+    );
+
+
+    currentJourney = null;
+
+
+    renderCalendar();
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "auto"
+    });
+
+}
+
+
+/* =========================================================
+   RENDERIZAR PROGRESO DEL TOMO
+========================================================= */
+
+function renderJourneyProgress(journeyKey) {
+
+    const journey =
+        journeys[journeyKey];
+
+
+    if (!journey) {
+        return;
+    }
+
+
+    const journeyExperiences =
+        experiences
+            .filter(
+                function (experience) {
+                    return experience.journey === journeyKey;
+                }
+            )
+            .sort(
+                function (a, b) {
+                    return a.day - b.day;
+                }
+            );
+
+
+    const completedCount =
+        journeyExperiences.filter(
+            function (experience) {
+
+                return completedExperiences.includes(
+                    experience.id
+                );
+
+            }
+        ).length;
+
+
+    /*
+       El progreso siempre se calcula sobre 30.
+       Así, cuando carguemos las 30 experiencias,
+       no será necesario modificar esta función.
+    */
+
+    const totalDays =
+        30;
+
+
+    const percentage =
+        Math.round(
+            (completedCount / totalDays) * 100
+        );
+
+
+    const countElement =
+        document.getElementById(
+            "journey-progress-count"
+        );
+
+
+    const fillElement =
+        document.getElementById(
+            "journey-progress-fill"
+        );
+
+
+    const percentElement =
+        document.getElementById(
+            "journey-progress-percent"
+        );
+
+
+    const messageElement =
+        document.getElementById(
+            "journey-progress-message"
+        );
+
+
+    const continueText =
+        document.getElementById(
+            "journey-continue-text"
+        );
+
+
+    const continueButton =
+        document.getElementById(
+            "journey-continue"
+        );
+
+
+    if (countElement) {
+
+        countElement.innerHTML =
+            `<strong>${completedCount}</strong> de ${totalDays}`;
+
+    }
+
+
+    if (fillElement) {
+
+        fillElement.style.width =
+            `${percentage}%`;
+
+        fillElement.style.background =
+            journey.color;
+
+    }
+
+
+    if (percentElement) {
+
+        percentElement.textContent =
+            `${percentage}%`;
+
+    }
+
+
+    if (messageElement) {
+
+        if (completedCount === 0) {
+
+            messageElement.textContent =
+                "Comienza cuando quieras.";
+
+        } else if (completedCount === 30) {
+
+            messageElement.textContent =
+                "Has completado este recorrido.";
+
+        } else {
+
+            messageElement.textContent =
+                `${completedCount} ${completedCount === 1 ? "día realizado" : "días realizados"}.`;
+
+        }
+
+    }
+
+
+    /*
+       Buscar la primera experiencia disponible
+       que todavía no esté completada.
+    */
+
+    const nextExperience =
+        journeyExperiences.find(
+            function (experience) {
+
+                return !completedExperiences.includes(
+                    experience.id
+                );
+
+            }
+        );
+
+
+    if (continueButton) {
+
+        continueButton.style.background =
+            journey.color;
+
+    }
+
+
+    if (continueText) {
+
+        if (!nextExperience) {
+
+            continueText.textContent =
+                "Volver a recorrer";
+
+        } else if (completedCount === 0) {
+
+            continueText.textContent =
+                "Comenzar recorrido";
+
+        } else {
+
+            continueText.textContent =
+                `Continuar · Día ${nextExperience.day}`;
+
+        }
+
+    }
+
+
+    renderJourneyDays(
+        journeyKey,
+        journeyExperiences
+    );
+
+
+    const availableNote =
+        document.getElementById(
+            "journey-available-note"
+        );
+
+
+    if (availableNote) {
+
+        const availableDays =
+            journeyExperiences.length;
+
+
+        const remaining =
+            totalDays - availableDays;
+
+
+        if (remaining > 0) {
+
+            availableNote.innerHTML = `
+                <strong>${availableDays} de 30 días disponibles.</strong>
+                Los demás aparecerán aquí a medida que se incorporen
+                nuevas experiencias.
+            `;
+
+        } else {
+
+            availableNote.innerHTML = `
+                <strong>Los 30 días están disponibles.</strong>
+                Puedes recorrerlos en el orden que prefieras.
+            `;
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   RENDERIZAR LOS 30 DÍAS DEL TOMO
+========================================================= */
+
+function renderJourneyDays(
+    journeyKey,
+    journeyExperiences
+) {
+
+    const grid =
+        document.getElementById(
+            "journey-days-grid"
+        );
+
+
+    if (!grid) {
+        return;
+    }
+
+
+    const journey =
+        journeys[journeyKey];
+
+
+    grid.innerHTML = "";
+
+
+    for (
+        let day = 1;
+        day <= 30;
+        day++
+    ) {
+
+        const experience =
+            journeyExperiences.find(
+                function (item) {
+                    return item.day === day;
+                }
+            );
+
+
+        const button =
+            document.createElement("button");
+
+
+        button.type =
+            "button";
+
+
+        button.className =
+            "journey-day";
+
+
+        button.style.setProperty(
+            "--journey-color",
+            journey.color
+        );
+
+
+        /*
+           Fondo suave del color del tomo.
+        */
+
+        button.style.setProperty(
+            "--journey-soft",
+            hexToSoftColor(
+                journey.color
+            )
+        );
+
+
+        const number =
+            document.createElement("span");
+
+
+        number.className =
+            "journey-day-number";
+
+
+        number.textContent =
+            `Día ${day}`;
+
+
+        const status =
+            document.createElement("span");
+
+
+        status.className =
+            "journey-day-status";
+
+
+        if (!experience) {
+
+            /*
+               Días que todavía no tienen experiencia
+               cargada.
+            */
+
+            button.classList.add(
+                "locked"
+            );
+
+
+            button.disabled =
+                true;
+
+
+            status.textContent =
+                "Próximamente";
+
+        } else {
+
+            const completed =
+                completedExperiences.includes(
+                    experience.id
+                );
+
+
+            button.classList.add(
+                "available"
+            );
+
+
+            if (completed) {
+
+                button.classList.add(
+                    "completed"
+                );
+
+
+                status.textContent =
+                    "✓ Completado";
+
+            } else {
+
+                status.textContent =
+                    "Disponible";
+
+            }
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    openExperience(
+                        experience.id
+                    );
+
+                }
+            );
+
+        }
+
+
+        button.appendChild(
+            number
+        );
+
+
+        button.appendChild(
+            status
+        );
+
+
+        grid.appendChild(
+            button
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTINUAR TOMO
+========================================================= */
+
+function continueJourney() {
+
+    if (!currentJourney) {
+        return;
+    }
+
+
+    const journeyExperiences =
+        experiences
+            .filter(
+                function (experience) {
+
+                    return (
+                        experience.journey ===
+                        currentJourney
+                    );
+
+                }
+            )
+            .sort(
+                function (a, b) {
+
+                    return a.day - b.day;
+
+                }
+            );
+
+
+    if (
+        journeyExperiences.length === 0
+    ) {
+        return;
+    }
+
+
+    let nextExperience =
+        journeyExperiences.find(
+            function (experience) {
+
+                return !completedExperiences.includes(
+                    experience.id
+                );
+
+            }
+        );
+
+
+    /*
+       Si todas las experiencias actualmente
+       disponibles están completadas,
+       volvemos a abrir la primera.
+    */
+
+    if (!nextExperience) {
+
+        nextExperience =
+            journeyExperiences[0];
+
+    }
+
+
+    openExperience(
+        nextExperience.id
+    );
+
+}
+
+
+/* =========================================================
+   COLOR SUAVE
+========================================================= */
+
+function hexToSoftColor(hex) {
+
+    const clean =
+        hex.replace(
+            "#",
+            ""
+        );
+
+
+    if (clean.length !== 6) {
+        return "#EEF2EE";
+    }
+
+
+    const r =
+        parseInt(
+            clean.substring(0, 2),
+            16
+        );
+
+
+    const g =
+        parseInt(
+            clean.substring(2, 4),
+            16
+        );
+
+
+    const b =
+        parseInt(
+            clean.substring(4, 6),
+            16
+        );
+
+
+    const mix =
+        function (value) {
+
+            return Math.round(
+                value +
+                (255 - value) * 0.88
+            );
+
+        };
+
+
+    return `rgb(${mix(r)}, ${mix(g)}, ${mix(b)})`;
+
+}
+
+
+/* =========================================================
    INICIO
 ========================================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
+
+        injectJourneyStyles();
+
+        createJourneyView();
 
         renderCalendar();
 
@@ -546,657 +1892,24 @@ function getExperience(id) {
 
     return experiences.find(
         function (experience) {
+
             return experience.id === id;
-        }
-    );
-
-}
-
-
-/* =========================================================
-   OBTENER EXPERIENCIAS DE UN TOMO
-========================================================= */
-
-function getJourneyExperiences(journeyId) {
-
-    return experiences
-        .filter(
-            function (experience) {
-                return experience.journey === journeyId;
-            }
-        )
-        .sort(
-            function (a, b) {
-                return a.day - b.day;
-            }
-        );
-
-}
-
-
-/* =========================================================
-   CONTAR PROGRESO DE UN TOMO
-========================================================= */
-
-function getJourneyProgress(journeyId) {
-
-    const journeyExperiences =
-        getJourneyExperiences(journeyId);
-
-
-    let completed = 0;
-
-
-    journeyExperiences.forEach(
-        function (experience) {
-
-            if (
-                completedExperiences.includes(
-                    experience.id
-                )
-            ) {
-
-                completed++;
-
-            }
 
         }
     );
 
-
-    return {
-        completed: completed,
-        total: 30,
-        percentage:
-            Math.round(
-                (completed / 30) * 100
-            )
-    };
-
 }
 
 
 /* =========================================================
-   ENCONTRAR PRIMER DÍA PENDIENTE
-========================================================= */
-
-function getNextJourneyExperience(journeyId) {
-
-    const journeyExperiences =
-        getJourneyExperiences(journeyId);
-
-
-    const nextExperience =
-        journeyExperiences.find(
-            function (experience) {
-
-                return !completedExperiences.includes(
-                    experience.id
-                );
-
-            }
-        );
-
-
-    return nextExperience || null;
-
-}
-
-
-/* =========================================================
-   ABRIR UN TOMO
-========================================================= */
-
-function openJourney(journey) {
-
-    if (!journeys[journey]) {
-        return;
-    }
-
-
-    currentJourney = journey;
-
-
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (!journeyView) {
-
-        /*
-           Mientras añadimos el nuevo HTML,
-           mantenemos compatibilidad con la versión anterior.
-        */
-
-        const firstExperience =
-            getJourneyExperiences(journey)[0];
-
-
-        if (firstExperience) {
-
-            openExperience(
-                firstExperience.id
-            );
-
-        }
-
-        return;
-
-    }
-
-
-    renderJourneyView(journey);
-
-
-    if (dashboard) {
-
-        dashboard.style.display =
-            "none";
-
-    }
-
-
-    hideExperienceView();
-
-
-    journeyView.style.display =
-        "block";
-
-
-    journeyView.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-
-    document.body.classList.add(
-        "journey-open"
-    );
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}
-
-
-/* =========================================================
-   RENDERIZAR PANTALLA DEL TOMO
-========================================================= */
-
-function renderJourneyView(journeyId) {
-
-    const journey =
-        journeys[journeyId];
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (!journey || !journeyView) {
-        return;
-    }
-
-
-    const progress =
-        getJourneyProgress(
-            journeyId
-        );
-
-
-    const journeyExperiences =
-        getJourneyExperiences(
-            journeyId
-        );
-
-
-    const nextExperience =
-        getNextJourneyExperience(
-            journeyId
-        );
-
-
-    /* =====================================================
-       IDENTIDAD
-    ===================================================== */
-
-    const emoji =
-        document.getElementById(
-            "journey-view-emoji"
-        );
-
-
-    const name =
-        document.getElementById(
-            "journey-view-name"
-        );
-
-
-    const description =
-        document.getElementById(
-            "journey-view-description"
-        );
-
-
-    if (emoji) {
-
-        emoji.textContent =
-            journey.emoji;
-
-    }
-
-
-    if (name) {
-
-        name.textContent =
-            journey.fullName;
-
-        name.style.color =
-            journey.color;
-
-    }
-
-
-    if (description) {
-
-        description.textContent =
-            journey.description;
-
-    }
-
-
-    /* =====================================================
-       PROGRESO
-    ===================================================== */
-
-    const progressNumber =
-        document.getElementById(
-            "journey-progress-number"
-        );
-
-
-    const progressText =
-        document.getElementById(
-            "journey-progress-text"
-        );
-
-
-    const progressBar =
-        document.getElementById(
-            "journey-progress-bar"
-        );
-
-
-    if (progressNumber) {
-
-        progressNumber.textContent =
-            `${progress.completed} / 30`;
-
-    }
-
-
-    if (progressText) {
-
-        if (progress.completed === 0) {
-
-            progressText.textContent =
-                "Aún no has realizado experiencias";
-
-        } else if (
-            progress.completed === 30
-        ) {
-
-            progressText.textContent =
-                "Has completado este recorrido";
-
-        } else {
-
-            progressText.textContent =
-                `Has explorado ${progress.completed} de 30 experiencias`;
-
-        }
-
-    }
-
-
-    if (progressBar) {
-
-        progressBar.style.width =
-            `${progress.percentage}%`;
-
-    }
-
-
-    /* =====================================================
-       BOTÓN CONTINUAR
-    ===================================================== */
-
-    const continueButton =
-        document.getElementById(
-            "journey-continue-button"
-        );
-
-
-    const continueDay =
-        document.getElementById(
-            "journey-continue-day"
-        );
-
-
-    if (continueButton) {
-
-        if (nextExperience) {
-
-            continueButton.style.display =
-                "flex";
-
-            continueButton.onclick =
-                function () {
-
-                    openExperience(
-                        nextExperience.id
-                    );
-
-                };
-
-        } else {
-
-            continueButton.style.display =
-                "none";
-
-        }
-
-    }
-
-
-    if (continueDay) {
-
-        if (nextExperience) {
-
-            continueDay.textContent =
-                `Día ${nextExperience.day} · ${nextExperience.title}`;
-
-        } else {
-
-            continueDay.textContent =
-                "Recorrido completado";
-
-        }
-
-    }
-
-
-    /* =====================================================
-       BOTÓN SORPRÉNDEME
-    ===================================================== */
-
-    const surpriseButton =
-        document.getElementById(
-            "journey-surprise-button"
-        );
-
-
-    if (surpriseButton) {
-
-        surpriseButton.onclick =
-            function () {
-
-                surpriseJourney(
-                    journeyId
-                );
-
-            };
-
-    }
-
-
-    /* =====================================================
-       LOS 30 DÍAS
-    ===================================================== */
-
-    const daysContainer =
-        document.getElementById(
-            "journey-days"
-        );
-
-
-    if (!daysContainer) {
-        return;
-    }
-
-
-    daysContainer.innerHTML = "";
-
-
-    for (
-        let day = 1;
-        day <= 30;
-        day++
-    ) {
-
-        const experience =
-            journeyExperiences.find(
-                function (item) {
-                    return item.day === day;
-                }
-            );
-
-
-        const completed =
-            experience
-                ? completedExperiences.includes(
-                    experience.id
-                )
-                : false;
-
-
-        const dayButton =
-            document.createElement(
-                "button"
-            );
-
-
-        dayButton.type =
-            "button";
-
-
-        dayButton.className =
-            "journey-day";
-
-
-        if (completed) {
-
-            dayButton.classList.add(
-                "completed"
-            );
-
-        }
-
-
-        if (
-            experience &&
-            experience.id ===
-                (
-                    nextExperience
-                        ? nextExperience.id
-                        : null
-                )
-        ) {
-
-            dayButton.classList.add(
-                "next"
-            );
-
-        }
-
-
-        if (!experience) {
-
-            dayButton.classList.add(
-                "unavailable"
-            );
-
-        }
-
-
-        const dayNumber =
-            document.createElement(
-                "span"
-            );
-
-
-        dayNumber.className =
-            "journey-day-number";
-
-
-        dayNumber.textContent =
-            String(day).padStart(
-                2,
-                "0"
-            );
-
-
-        dayButton.appendChild(
-            dayNumber
-        );
-
-
-        const status =
-            document.createElement(
-                "span"
-            );
-
-
-        status.className =
-            "journey-day-status";
-
-
-        if (completed) {
-
-            status.textContent =
-                "✓";
-
-        } else if (experience) {
-
-            status.textContent =
-                "○";
-
-        } else {
-
-            status.textContent =
-                "·";
-
-        }
-
-
-        dayButton.appendChild(
-            status
-        );
-
-
-        if (experience) {
-
-            dayButton.addEventListener(
-                "click",
-                function () {
-
-                    openExperience(
-                        experience.id
-                    );
-
-                }
-            );
-
-        } else {
-
-            dayButton.addEventListener(
-                "click",
-                function () {
-
-                    showTemporaryMessage(
-                        `El Día ${day} estará disponible próximamente.`
-                    );
-
-                }
-            );
-
-        }
-
-
-        daysContainer.appendChild(
-            dayButton
-        );
-
-    }
-
-}
-
-
-/* =========================================================
-   SORPRÉNDEME DENTRO DE UN TOMO
-========================================================= */
-
-function surpriseJourney(journeyId) {
-
-    const journeyExperiences =
-        getJourneyExperiences(
-            journeyId
-        );
-
-
-    if (
-        journeyExperiences.length === 0
-    ) {
-
-        showTemporaryMessage(
-            "Todavía no hay experiencias disponibles en este recorrido."
-        );
-
-        return;
-
-    }
-
-
-    const randomIndex =
-        Math.floor(
-            Math.random() *
-            journeyExperiences.length
-        );
-
-
-    const randomExperience =
-        journeyExperiences[
-            randomIndex
-        ];
-
-
-    openExperience(
-        randomExperience.id
-    );
-
-}
-
-
-/* =========================================================
-   SORPRÉNDEME GENERAL
+   SORPRÉNDEME
 ========================================================= */
 
 function surpriseMe() {
 
-    if (experiences.length === 0) {
+    if (
+        experiences.length === 0
+    ) {
         return;
     }
 
@@ -1259,10 +1972,13 @@ function openExperience(id) {
         );
 
 
-    if (!experienceView) {
+    if (
+        !dashboard ||
+        !experienceView
+    ) {
 
         console.error(
-            "No se encontró experience-view."
+            "No se encontró una de las vistas necesarias."
         );
 
         return;
@@ -1274,14 +1990,26 @@ function openExperience(id) {
         experience;
 
 
-    currentJourney =
-        experience.journey;
-
-
     const journey =
         journeys[
             experience.journey
         ];
+
+
+    /*
+       Si venimos desde un tomo,
+       mantenemos el tomo actual.
+    */
+
+    if (
+        !currentJourney ||
+        currentJourney !== experience.journey
+    ) {
+
+        currentJourney =
+            experience.journey;
+
+    }
 
 
     /* =====================================================
@@ -1495,22 +2223,18 @@ function openExperience(id) {
 
 
     /* =====================================================
-       COMPLETADA
+       ESTADO COMPLETADA
     ===================================================== */
 
     updateCompleteButton();
 
 
     /* =====================================================
-       OCULTAR OTRAS VISTAS
+       MOSTRAR EXPERIENCIA
     ===================================================== */
 
-    if (dashboard) {
-
-        dashboard.style.display =
-            "none";
-
-    }
+    dashboard.style.display =
+        "none";
 
 
     if (journeyView) {
@@ -1526,10 +2250,6 @@ function openExperience(id) {
     }
 
 
-    /* =====================================================
-       MOSTRAR EXPERIENCIA
-    ===================================================== */
-
     experienceView.style.display =
         "block";
 
@@ -1540,15 +2260,19 @@ function openExperience(id) {
     );
 
 
+    document.body.classList.remove(
+        "journey-open"
+    );
+
+
     document.body.classList.add(
         "experience-open"
     );
 
 
-    document.body.classList.remove(
-        "journey-open"
-    );
-
+    /*
+       Transición.
+    */
 
     experienceView.classList.remove(
         "experience-enter"
@@ -1565,7 +2289,7 @@ function openExperience(id) {
 
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "auto"
     });
 
 }
@@ -1583,19 +2307,22 @@ function closeExperience() {
         );
 
 
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
     const experienceView =
         document.getElementById(
             "experience-view"
         );
 
 
-    if (!experienceView) {
+    const journeyView =
+        document.getElementById(
+            "journey-view"
+        );
+
+
+    if (
+        !dashboard ||
+        !experienceView
+    ) {
         return;
     }
 
@@ -1620,12 +2347,13 @@ function closeExperience() {
     );
 
 
-    currentExperience = null;
+    currentExperience =
+        null;
 
 
     /*
-       Si veníamos de un tomo,
-       volvemos al tomo.
+       Si la experiencia fue abierta desde
+       un tomo, volvemos al tomo.
     */
 
     if (
@@ -1633,17 +2361,8 @@ function closeExperience() {
         journeyView
     ) {
 
-        renderJourneyView(
-            currentJourney
-        );
-
-
-        if (dashboard) {
-
-            dashboard.style.display =
-                "none";
-
-        }
+        dashboard.style.display =
+            "none";
 
 
         journeyView.style.display =
@@ -1661,23 +2380,11 @@ function closeExperience() {
         );
 
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        renderJourneyProgress(
+            currentJourney
+        );
 
-
-        return;
-
-    }
-
-
-    /*
-       Si no había un tomo,
-       volvemos al dashboard.
-    */
-
-    if (dashboard) {
+    } else {
 
         dashboard.style.display =
             "block";
@@ -1687,71 +2394,14 @@ function closeExperience() {
 
     window.scrollTo({
         top: 0,
-        behavior: "smooth"
+        behavior: "auto"
     });
 
 }
 
 
 /* =========================================================
-   CERRAR TOMO
-========================================================= */
-
-function closeJourney() {
-
-    const dashboard =
-        document.getElementById(
-            "dashboard-view"
-        );
-
-
-    const journeyView =
-        document.getElementById(
-            "journey-view"
-        );
-
-
-    if (!journeyView) {
-        return;
-    }
-
-
-    journeyView.style.display =
-        "none";
-
-
-    journeyView.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-
-    document.body.classList.remove(
-        "journey-open"
-    );
-
-
-    currentJourney = null;
-
-
-    if (dashboard) {
-
-        dashboard.style.display =
-            "block";
-
-    }
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}
-
-
-/* =========================================================
-   OCULTAR EXPERIENCIA AL INICIAR
+   OCULTAR EXPERIENCIA
 ========================================================= */
 
 function hideExperienceView() {
@@ -1780,7 +2430,7 @@ function hideExperienceView() {
 
 
 /* =========================================================
-   OCULTAR TOMO AL INICIAR
+   OCULTAR VISTA DE TOMO
 ========================================================= */
 
 function hideJourneyView() {
@@ -1999,6 +2649,20 @@ function toggleComplete() {
 
     renderCalendar();
 
+
+    /*
+       Si estamos trabajando dentro de un tomo,
+       actualizamos también su progreso.
+    */
+
+    if (currentJourney) {
+
+        renderJourneyProgress(
+            currentJourney
+        );
+
+    }
+
 }
 
 
@@ -2052,8 +2716,10 @@ function updateCompleteButton() {
             "completed"
         );
 
+
         icon.textContent =
             "✓";
+
 
         text.textContent =
             "Experiencia completada";
@@ -2064,8 +2730,10 @@ function updateCompleteButton() {
             "completed"
         );
 
+
         icon.textContent =
             "○";
+
 
         text.textContent =
             "Marcar como completada";
@@ -2352,6 +3020,13 @@ function getActivitiesForDate(
     dateKey
 ) {
 
+    /*
+       Por ahora mantenemos las fechas de prueba.
+       Más adelante podemos hacer que estas fechas
+       se creen automáticamente cuando el usuario
+       complete una experiencia.
+    */
+
     const demoDates = {
 
         "2026-09-03": "conocerme-1",
@@ -2391,13 +3066,6 @@ function getActivitiesForDate(
         }
 
     }
-
-
-    /*
-       Cuando carguemos las 150 experiencias,
-       aquí podremos conectar automáticamente
-       las experiencias completadas con sus fechas.
-    */
 
 
     return activities;
@@ -2504,6 +3172,7 @@ function showDayActivities(
             </div>
 
         `;
+
 
         return;
 
@@ -2638,9 +3307,7 @@ function changeMonth(
    GUARDADAS / REALIZADAS
 ========================================================= */
 
-function showFeature(
-    type
-) {
+function showFeature(type) {
 
     if (
         type === "guardadas"
@@ -2686,10 +3353,14 @@ function goHome() {
         );
 
 
+    /*
+       Si estamos dentro de una experiencia,
+       primero volvemos al tomo.
+    */
+
     if (
         experienceView &&
-        experienceView.style.display !==
-            "none"
+        experienceView.style.display !== "none"
     ) {
 
         closeExperience();
@@ -2699,10 +3370,14 @@ function goHome() {
     }
 
 
+    /*
+       Si estamos dentro de un tomo,
+       volvemos al dashboard.
+    */
+
     if (
         journeyView &&
-        journeyView.style.display !==
-            "none"
+        journeyView.style.display !== "none"
     ) {
 
         closeJourney();
