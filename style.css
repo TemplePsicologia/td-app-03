@@ -2196,3 +2196,643 @@ footer {
     }
 
 }
+
+/* =========================================================
+   30 DÍAS · EXPERIENCIA
+   DISEÑO DE EXPERIENCIA
+========================================================= */
+
+#experience-view {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255,255,255,.95) 0%,
+            rgba(247,247,244,.92) 42%,
+            #F7F7F4 100%
+        );
+
+    min-height: 100vh;
+    color: var(--text, #26332D);
+}
+
+/* ---------------------------------------------------------
+   CONTENEDOR GENERAL
+--------------------------------------------------------- */
+
+#experience-view .experience-page {
+    width: min(820px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 72px 0 100px;
+}
+
+/* ---------------------------------------------------------
+   BARRA SUPERIOR
+--------------------------------------------------------- */
+
+#experience-view .experience-topbar {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 28px 0;
+}
+
+#experience-view .experience-back {
+    color: #65716B;
+    font-size: 13px;
+    transition: .2s ease;
+}
+
+#experience-view .experience-back:hover {
+    color: #476253;
+    transform: translateX(-2px);
+}
+
+#experience-view .experience-temple {
+    color: #476253;
+    font-size: 13px;
+    letter-spacing: .02em;
+}
+
+/* ---------------------------------------------------------
+   IDENTIDAD DEL RECORRIDO
+--------------------------------------------------------- */
+
+#experience-view .experience-route {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+#experience-view .experience-route-emoji {
+    width: 42px;
+    height: 42px;
+
+    background: rgba(255,255,255,.85);
+
+    border: 1px solid rgba(71,98,83,.08);
+
+    box-shadow:
+        0 8px 24px rgba(50,70,60,.06);
+
+    font-size: 19px;
+}
+
+#experience-view .experience-route-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    color: #476253;
+}
+
+/* ---------------------------------------------------------
+   DÍA
+--------------------------------------------------------- */
+
+#experience-view .experience-day {
+    margin-bottom: 15px;
+
+    color: #8A958F;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: .08em;
+}
+
+/* ---------------------------------------------------------
+   TÍTULO
+--------------------------------------------------------- */
+
+#experience-view .experience-title {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: #26332D;
+
+    /*
+       Una serif suave hace que el título
+       se sienta menos como una interfaz
+       y más como una experiencia editorial.
+    */
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(46px, 7vw, 76px);
+
+    font-weight: 400;
+
+    line-height: .98;
+
+    letter-spacing: -.045em;
+}
+
+/* ---------------------------------------------------------
+   DATOS RÁPIDOS
+--------------------------------------------------------- */
+
+#experience-view .experience-meta {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-top: 34px;
+    margin-bottom: 38px;
+}
+
+#experience-view .experience-meta-item {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px 18px;
+
+    background: rgba(255,255,255,.72);
+
+    border: 1px solid rgba(71,98,83,.08);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(40,55,48,.045);
+}
+
+#experience-view .meta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #EEF1EC;
+
+    color: #476253;
+
+    font-size: 16px;
+}
+
+#experience-view .meta-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #919B96;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .14em;
+}
+
+#experience-view .experience-meta-item strong {
+    color: #35443C;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   DESCRIPCIÓN
+--------------------------------------------------------- */
+
+#experience-view .experience-description {
+    margin: 0 0 58px;
+
+    max-width: 700px;
+}
+
+#experience-view .experience-description p {
+    margin: 0;
+
+    color: #53615A;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+
+    letter-spacing: -.01em;
+}
+
+/* ---------------------------------------------------------
+   ETIQUETAS DE SECCIÓN
+--------------------------------------------------------- */
+
+#experience-view .experience-section-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #8A958F;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .16em;
+}
+
+/* ---------------------------------------------------------
+   EXPERIENCIA · PASOS
+--------------------------------------------------------- */
+
+#experience-view .experience-steps-section {
+    margin-top: 0;
+}
+
+#experience-view .experience-steps {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+#experience-view .experience-step {
+    display: grid;
+
+    grid-template-columns: 42px 1fr;
+
+    gap: 18px;
+
+    padding: 22px 24px;
+
+    background: rgba(255,255,255,.78);
+
+    border: 1px solid rgba(71,98,83,.075);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 28px rgba(45,60,52,.04);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+#experience-view .experience-step:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 32px rgba(45,60,52,.07);
+}
+
+#experience-view .step-number {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+
+    background: #EEF1EC;
+
+    color: #476253;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+#experience-view .step-title {
+    margin-bottom: 7px;
+
+    color: #34423B;
+
+    font-size: 15px;
+
+    font-weight: 650;
+
+    line-height: 1.4;
+}
+
+#experience-view .step-title span {
+    margin-right: 5px;
+}
+
+#experience-view .step-content p {
+    margin: 0;
+
+    color: #65716B;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   PREGUNTA FINAL
+--------------------------------------------------------- */
+
+#experience-view .experience-reflection {
+    margin-top: 62px;
+}
+
+#experience-view .reflection-card {
+    position: relative;
+
+    padding: 32px 34px 34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F0F3EE,
+            #E9EEE9
+        );
+
+    border: 1px solid rgba(71,98,83,.08);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+}
+
+#experience-view .reflection-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -80px;
+    top: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.35);
+}
+
+#experience-view .reflection-symbol {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #476253;
+
+    font-size: 20px;
+}
+
+#experience-view .reflection-card p {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 620px;
+
+    margin: 0;
+
+    color: #34423B;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(22px, 3vw, 29px);
+
+    line-height: 1.35;
+
+    letter-spacing: -.025em;
+}
+
+/* ---------------------------------------------------------
+   VALORACIÓN
+--------------------------------------------------------- */
+
+#experience-view .experience-rating {
+    margin-top: 58px;
+
+    padding: 34px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.62);
+
+    border: 1px solid rgba(71,98,83,.07);
+
+    border-radius: 22px;
+}
+
+#experience-view .experience-rating
+.experience-section-label {
+    margin-bottom: 20px;
+}
+
+/* ESTRELLAS GRANDES */
+
+#experience-view .rating-stars {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin: 4px 0 15px;
+}
+
+#experience-view .rating-stars button {
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #A7B1AB;
+
+    font-family: inherit;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        transform .18s ease,
+        color .18s ease;
+}
+
+#experience-view .rating-stars button:hover {
+    color: #476253;
+
+    transform: scale(1.12);
+}
+
+#experience-view .rating-message {
+    margin: 0;
+
+    color: #929C97;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+/* ---------------------------------------------------------
+   COMPLETAR
+--------------------------------------------------------- */
+
+#experience-view .experience-complete {
+    margin-top: 34px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+#experience-view .complete-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 240px;
+
+    padding: 14px 22px;
+
+    border: 1px solid #476253;
+
+    border-radius: 999px;
+
+    background: #476253;
+
+    color: white;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(71,98,83,.16);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+#experience-view .complete-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(71,98,83,.21);
+}
+
+#experience-view .complete-button span:first-child {
+    font-size: 18px;
+}
+
+/* ---------------------------------------------------------
+   FOOTER
+--------------------------------------------------------- */
+
+#experience-view .experience-footer {
+    padding: 34px 20px 60px;
+
+    text-align: center;
+
+    color: #9AA39E;
+
+    font-size: 11px;
+
+    letter-spacing: .08em;
+}
+
+/* ---------------------------------------------------------
+   MÓVIL
+--------------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    #experience-view .experience-topbar {
+        width: calc(100% - 28px);
+        padding-top: 20px;
+    }
+
+    #experience-view .experience-page {
+        width: calc(100% - 30px);
+
+        padding-top: 48px;
+        padding-bottom: 70px;
+    }
+
+    #experience-view .experience-title {
+        font-size: clamp(42px, 14vw, 58px);
+
+        line-height: .98;
+    }
+
+    #experience-view .experience-meta {
+        grid-template-columns: 1fr;
+
+        margin-top: 28px;
+        margin-bottom: 32px;
+    }
+
+    #experience-view .experience-description p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    #experience-view .experience-step {
+        grid-template-columns: 34px 1fr;
+
+        gap: 13px;
+
+        padding: 19px 17px;
+    }
+
+    #experience-view .reflection-card {
+        padding: 27px 23px 29px;
+    }
+
+    #experience-view .reflection-card p {
+        font-size: 23px;
+    }
+
+    #experience-view .experience-rating {
+        padding: 30px 16px;
+    }
+
+    #experience-view .rating-stars {
+        gap: 3px;
+    }
+
+    #experience-view .rating-stars button {
+        width: 49px;
+        height: 49px;
+
+        font-size: 34px;
+    }
+
+    #experience-view .complete-button {
+        width: 100%;
+    }
+}
