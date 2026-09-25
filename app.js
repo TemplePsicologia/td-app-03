@@ -1010,6 +1010,7 @@ function closeJourneyView() {
    ========================================================= */
 
 function openExperience(id) {
+     alert("ABRIENDO: " + id);
 
     const experience =
         getExperience(id);
