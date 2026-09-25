@@ -465,6 +465,7 @@ let returnView = "dashboard";
 let completedExperiences = [];
 let ratings = {};
 let completionDates = {};
+let feelings = {};
 
 
 /* =========================================================
@@ -474,10 +475,12 @@ let completionDates = {};
 const STORAGE_COMPLETED = "temple30_completed";
 const STORAGE_RATINGS = "temple30_ratings";
 const STORAGE_DATES = "temple30_completion_dates";
+const STORAGE_FEELINGS = "temple30_feelings";
 
 
 function loadState() {
     try {
+
         const savedCompleted =
             localStorage.getItem(STORAGE_COMPLETED);
 
@@ -486,6 +489,10 @@ function loadState() {
 
         const savedDates =
             localStorage.getItem(STORAGE_DATES);
+
+        const savedFeelings =
+            localStorage.getItem(STORAGE_FEELINGS);
+
 
         completedExperiences =
             savedCompleted
@@ -502,6 +509,12 @@ function loadState() {
                 ? JSON.parse(savedDates)
                 : {};
 
+        feelings =
+            savedFeelings
+                ? JSON.parse(savedFeelings)
+                : {};
+
+
         if (!Array.isArray(completedExperiences)) {
             completedExperiences = [];
         }
@@ -514,17 +527,27 @@ function loadState() {
             completionDates = {};
         }
 
+        if (!feelings || typeof feelings !== "object") {
+            feelings = {};
+        }
+
     } catch (error) {
-        console.warn("No se pudo cargar el progreso:", error);
+
+        console.warn(
+            "No se pudo cargar el progreso:",
+            error
+        );
 
         completedExperiences = [];
         ratings = {};
         completionDates = {};
+        feelings = {};
     }
 }
 
 
 function saveState() {
+
     localStorage.setItem(
         STORAGE_COMPLETED,
         JSON.stringify(completedExperiences)
@@ -539,8 +562,12 @@ function saveState() {
         STORAGE_DATES,
         JSON.stringify(completionDates)
     );
-}
 
+    localStorage.setItem(
+        STORAGE_FEELINGS,
+        JSON.stringify(feelings)
+    );
+}
 
 /* =========================================================
    INICIO
@@ -1145,6 +1172,72 @@ function openExperience(id) {
             experience.question || "";
     }
 
+   /* =========================================================
+   CÓMO SE SINTIÓ
+   ========================================================= */
+
+function setupFeelingButtons() {
+
+    const buttons =
+        document.querySelectorAll(".feeling-option");
+
+    buttons.forEach(button => {
+
+        button.onclick = () => {
+
+            if (!currentExperience) {
+                return;
+            }
+
+            const feeling =
+                button.dataset.feeling;
+
+            if (!feeling) {
+                return;
+            }
+
+            feelings[currentExperience.id] =
+                feeling;
+
+            localStorage.setItem(
+                STORAGE_FEELINGS,
+                JSON.stringify(feelings)
+            );
+
+            updateFeelingUI();
+        };
+    });
+}
+
+
+function updateFeelingUI() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const selectedFeeling =
+        feelings[currentExperience.id];
+
+    const buttons =
+        document.querySelectorAll(".feeling-option");
+
+    buttons.forEach(button => {
+
+        const selected =
+            button.dataset.feeling === selectedFeeling;
+
+        button.classList.toggle(
+            "is-selected",
+            selected
+        );
+
+        button.setAttribute(
+            "aria-pressed",
+            selected ? "true" : "false"
+        );
+    });
+}
 
     /* =========================================
        VALORACIÓN
@@ -1276,32 +1369,26 @@ function setupRatingButtons() {
 
     stars.forEach(star => {
 
-        star.addEventListener(
-            "click",
-            () => {
+        star.onclick = () => {
 
-                if (!currentExperience) {
-                    return;
-                }
-
-                const value =
-                    Number(
-                        star.dataset.rating ||
-                        star.getAttribute("data-rating")
-                    );
-
-                if (!value) {
-                    return;
-                }
-
-                ratings[currentExperience.id] =
-                    value;
-
-                saveState();
-
-                updateRatingUI();
+            if (!currentExperience) {
+                return;
             }
-        );
+
+            const value =
+                Number(star.dataset.rating);
+
+            if (!value) {
+                return;
+            }
+
+            ratings[currentExperience.id] =
+                value;
+
+            saveState();
+
+            updateRatingUI();
+        };
     });
 }
 
@@ -1323,14 +1410,18 @@ function updateRatingUI() {
     stars.forEach(star => {
 
         const value =
-            Number(
-                star.dataset.rating ||
-                star.getAttribute("data-rating")
-            );
+            Number(star.dataset.rating);
+
+        const selected =
+            value <= currentRating;
+
+        /* Rellenar visualmente las estrellas */
+        star.textContent =
+            selected ? "★" : "☆";
 
         star.classList.toggle(
             "selected",
-            value <= currentRating
+            selected
         );
 
         star.setAttribute(
@@ -1349,10 +1440,11 @@ function updateRatingUI() {
         return;
     }
 
+
     if (currentRating === 0) {
 
         message.textContent =
-            "¿Cómo fue esta experiencia para ti?";
+            "Puedes valorar la experiencia cuando termines.";
 
     } else {
 
@@ -1369,7 +1461,6 @@ function updateRatingUI() {
             "Gracias por registrar tu experiencia.";
     }
 }
-
 
 /* =========================================================
    COMPLETAR EXPERIENCIA
