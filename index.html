@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -21,8 +22,15 @@
 
     <title>30 Días · Temple</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
     <link
         rel="preconnect"
@@ -35,15 +43,21 @@
         rel="stylesheet"
     >
 
-    <!-- Estilos -->
+
+    <!-- =====================================================
+         ESTILOS
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="style.css"
     >
+
 </head>
 
 
 <body>
+
 
     <main class="app">
 
@@ -55,11 +69,14 @@
         <div id="dashboard-view">
 
 
-            <!-- TOPBAR -->
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
 
             <header class="topbar">
 
                 <button
+                    type="button"
                     class="temple-brand"
                     onclick="goHome()"
                     aria-label="Volver al inicio"
@@ -123,9 +140,9 @@
                 <div class="journeys-grid">
 
 
-                    <!-- ===============================
+                    <!-- =================================================
                          CONOCERME
-                    ================================ -->
+                    ================================================== -->
 
                     <article class="journey-card conocerme">
 
@@ -155,6 +172,7 @@
 
 
                             <button
+                                type="button"
                                 class="start-button"
                                 onclick="openJourney('conocerme')"
                             >
@@ -174,9 +192,9 @@
                     </article>
 
 
-                    <!-- ===============================
+                    <!-- =================================================
                          CONECTAR
-                    ================================ -->
+                    ================================================== -->
 
                     <article class="journey-card conectar">
 
@@ -206,6 +224,7 @@
 
 
                             <button
+                                type="button"
                                 class="start-button"
                                 onclick="openJourney('conectar')"
                             >
@@ -225,9 +244,9 @@
                     </article>
 
 
-                    <!-- ===============================
+                    <!-- =================================================
                          PONER LÍMITES
-                    ================================ -->
+                    ================================================== -->
 
                     <article class="journey-card limites">
 
@@ -257,6 +276,7 @@
 
 
                             <button
+                                type="button"
                                 class="start-button"
                                 onclick="openJourney('limites')"
                             >
@@ -276,9 +296,9 @@
                     </article>
 
 
-                    <!-- ===============================
+                    <!-- =================================================
                          ELEGIR
-                    ================================ -->
+                    ================================================== -->
 
                     <article class="journey-card elegir">
 
@@ -308,6 +328,7 @@
 
 
                             <button
+                                type="button"
                                 class="start-button"
                                 onclick="openJourney('elegir')"
                             >
@@ -327,9 +348,9 @@
                     </article>
 
 
-                    <!-- ===============================
+                    <!-- =================================================
                          SOLTAR
-                    ================================ -->
+                    ================================================== -->
 
                     <article class="journey-card soltar">
 
@@ -359,6 +380,7 @@
 
 
                             <button
+                                type="button"
                                 class="start-button"
                                 onclick="openJourney('soltar')"
                             >
@@ -412,6 +434,7 @@
 
 
                     <button
+                        type="button"
                         class="surprise-button"
                         onclick="surpriseMe()"
                     >
@@ -464,11 +487,14 @@
                 <div class="calendar-container">
 
 
-                    <!-- CABECERA DEL CALENDARIO -->
+                    <!-- =================================================
+                         CABECERA DEL CALENDARIO
+                    ================================================== -->
 
                     <div class="calendar-header">
 
                         <button
+                            type="button"
                             class="calendar-arrow"
                             onclick="changeMonth(-1)"
                             aria-label="Mes anterior"
@@ -491,6 +517,7 @@
 
 
                         <button
+                            type="button"
                             class="calendar-arrow"
                             onclick="changeMonth(1)"
                             aria-label="Mes siguiente"
@@ -501,7 +528,9 @@
                     </div>
 
 
-                    <!-- DÍAS DE LA SEMANA -->
+                    <!-- =================================================
+                         DÍAS DE LA SEMANA
+                    ================================================== -->
 
                     <div class="calendar-weekdays">
 
@@ -516,7 +545,9 @@
                     </div>
 
 
-                    <!-- DÍAS -->
+                    <!-- =================================================
+                         DÍAS
+                    ================================================== -->
 
                     <div
                         class="calendar-days"
@@ -524,7 +555,9 @@
                     ></div>
 
 
-                    <!-- LEYENDA -->
+                    <!-- =================================================
+                         LEYENDA
+                    ================================================== -->
 
                     <div class="calendar-legend">
 
@@ -553,7 +586,9 @@
                 </div>
 
 
-                <!-- DETALLE DEL DÍA -->
+                <!-- =================================================
+                     DETALLE DEL DÍA
+                ================================================== -->
 
                 <div
                     class="day-detail"
@@ -603,9 +638,12 @@
                 <div class="experience-links">
 
 
-                    <!-- GUARDADAS -->
+                    <!-- =================================================
+                         GUARDADAS
+                    ================================================== -->
 
                     <button
+                        type="button"
                         class="experience-link"
                         onclick="showFeature('guardadas')"
                     >
@@ -633,9 +671,12 @@
                     </button>
 
 
-                    <!-- REALIZADAS -->
+                    <!-- =================================================
+                         REALIZADAS
+                    ================================================== -->
 
                     <button
+                        type="button"
                         class="experience-link"
                         onclick="showFeature('realizadas')"
                     >
@@ -689,7 +730,7 @@
 
 
             <!-- =================================================
-                 FOOTER DEL DASHBOARD
+                 FOOTER
             ================================================== -->
 
             <footer>
@@ -723,11 +764,14 @@
         >
 
 
-            <!-- TOPBAR DE EXPERIENCIA -->
+            <!-- =================================================
+                 TOPBAR DE EXPERIENCIA
+            ================================================== -->
 
             <header class="experience-topbar">
 
                 <button
+                    type="button"
                     class="experience-back"
                     onclick="closeExperience()"
                 >
@@ -744,6 +788,7 @@
 
 
                 <button
+                    type="button"
                     class="experience-temple"
                     onclick="goHome()"
                 >
@@ -759,12 +804,16 @@
             </header>
 
 
-            <!-- CONTENIDO DE EXPERIENCIA -->
+            <!-- =================================================
+                 CONTENIDO DE EXPERIENCIA
+            ================================================== -->
 
             <article class="experience-page">
 
 
-                <!-- IDENTIDAD DEL RECORRIDO -->
+                <!-- =================================================
+                     IDENTIDAD DEL RECORRIDO
+                ================================================== -->
 
                 <div class="experience-route">
 
@@ -785,7 +834,9 @@
                 </div>
 
 
-                <!-- DÍA -->
+                <!-- =================================================
+                     DÍA
+                ================================================== -->
 
                 <div
                     class="experience-day"
@@ -795,7 +846,9 @@
                 </div>
 
 
-                <!-- TÍTULO -->
+                <!-- =================================================
+                     TÍTULO
+                ================================================== -->
 
                 <h1
                     class="experience-title"
@@ -805,7 +858,9 @@
                 </h1>
 
 
-                <!-- DATOS RÁPIDOS -->
+                <!-- =================================================
+                     DATOS RÁPIDOS
+                ================================================== -->
 
                 <div class="experience-meta">
 
@@ -855,11 +910,12 @@
 
                     </div>
 
-
                 </div>
 
 
-                <!-- DESCRIPCIÓN -->
+                <!-- =================================================
+                     DESCRIPCIÓN
+                ================================================== -->
 
                 <div class="experience-description">
 
@@ -869,7 +925,7 @@
 
 
                 <!-- =================================================
-                     PASOS DE LA EXPERIENCIA
+                     PASOS
                 ================================================== -->
 
                 <section class="experience-steps-section">
@@ -980,12 +1036,13 @@
 
 
                 <!-- =================================================
-                     COMPLETAR EXPERIENCIA
+                     COMPLETAR
                 ================================================== -->
 
                 <div class="experience-complete">
 
                     <button
+                        type="button"
                         class="complete-button"
                         id="complete-button"
                         onclick="toggleComplete()"
@@ -1007,7 +1064,9 @@
             </article>
 
 
-            <!-- FOOTER DE EXPERIENCIA -->
+            <!-- =================================================
+                 FOOTER DE EXPERIENCIA
+            ================================================== -->
 
             <footer class="experience-footer">
 
@@ -1032,7 +1091,9 @@
     </main>
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="app.js"></script>
 
