@@ -1418,13 +1418,14 @@ footer {
 
 }
 
-/* =========================================================
-   DETALLE DE DÍA · VISTA MEJORADA
-========================================================= */
+ /* =========================================================
+    DETALLE DEL DÍA · EXPERIENCIA
+ ========================================================= */
 
 .day-detail {
     margin-top: 14px;
     padding: 25px;
+
     border-radius: 22px;
 
     background: #FFFFFF;
@@ -1434,21 +1435,18 @@ footer {
     box-shadow:
         0 8px 25px rgba(63, 88, 110, 0.055);
 
-    transition:
-        opacity .2s ease,
-        transform .2s ease;
+    font-family: "Inter", sans-serif;
 }
 
 
-.day-detail > div {
-    width: 100%;
-}
-
+/* Fecha seleccionada */
 
 .day-detail-date {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 
     color: #4C6789;
+
+    font-family: "Inter", sans-serif;
 
     font-size: 10px;
     font-weight: 600;
@@ -1459,39 +1457,28 @@ footer {
 }
 
 
-/* Cada experiencia */
+/* Experiencia */
 
 .day-detail-item {
-    position: relative;
-
     display: flex;
     align-items: center;
 
     gap: 14px;
 
-    padding: 16px 15px;
+    padding: 16px;
 
-    border-radius: 16px;
+    border-radius: 17px;
 
     background: #F7F7F4;
 
-    transition:
-        background .2s ease,
-        transform .2s ease;
+    font-family: "Inter", sans-serif;
 }
 
 
-.day-detail-item:hover {
-    background: #F2F3EF;
-
-    transform: translateY(-1px);
-}
-
+/* Cuando hay más de una experiencia */
 
 .day-detail-item + .day-detail-item {
     margin-top: 9px;
-
-    border-top: none;
 }
 
 
@@ -1518,7 +1505,7 @@ footer {
 }
 
 
-/* Información */
+/* Contenido */
 
 .detail-info {
     min-width: 0;
@@ -1527,11 +1514,17 @@ footer {
     flex-direction: column;
 
     gap: 3px;
+
+    font-family: "Inter", sans-serif;
 }
 
 
+/* Nombre del tomo */
+
 .detail-journey {
     color: #71808B;
+
+    font-family: "Inter", sans-serif;
 
     font-size: 9px;
     font-weight: 600;
@@ -1542,8 +1535,12 @@ footer {
 }
 
 
+/* Nombre de la experiencia */
+
 .detail-title {
     color: #293A49;
+
+    font-family: "Inter", sans-serif;
 
     font-size: 13px;
     font-weight: 600;
@@ -1552,27 +1549,34 @@ footer {
 }
 
 
+/* Día del recorrido */
+
 .detail-day {
     color: #8A969E;
 
+    font-family: "Inter", sans-serif;
+
     font-size: 10px;
+    font-weight: 400;
+
+    line-height: 1.4;
 
     margin-top: 2px;
 }
 
 
-/* Estado */
+/* Experiencia completada */
 
 .day-detail-item::after {
 
     content: "✓";
 
-    margin-left: auto;
-
     width: 25px;
     height: 25px;
 
     flex-shrink: 0;
+
+    margin-left: auto;
 
     border-radius: 50%;
 
@@ -1584,80 +1588,76 @@ footer {
     align-items: center;
     justify-content: center;
 
+    font-family: "Inter", sans-serif;
+
     font-size: 11px;
     font-weight: 600;
-
 }
 
 
-/* Sin actividad */
+/* =========================================================
+   DÍA SIN EXPERIENCIA
+ ========================================================= */
 
 .day-detail-placeholder {
+    padding: 4px 2px;
 
-    padding: 7px 2px;
+    font-family: "Inter", sans-serif;
 }
 
 
 .day-detail-placeholder span {
-
     display: block;
 
     color: #293A49;
 
-    font-size: 13px;
+    font-family: "Inter", sans-serif;
 
+    font-size: 12px;
     font-weight: 600;
 
+    line-height: 1.5;
 }
 
 
 .day-detail-placeholder p {
-
     margin-top: 6px;
 
     color: #71808B;
 
+    font-family: "Inter", sans-serif;
+
     font-size: 11px;
+    font-weight: 400;
 
     line-height: 1.6;
-
 }
 
 
-/* Móvil */
+/* =========================================================
+   MÓVIL
+ ========================================================= */
 
 @media (max-width: 650px) {
 
     .day-detail {
-
         padding: 20px;
-
         border-radius: 20px;
-
     }
-
 
     .day-detail-item {
-
         padding: 14px 12px;
-
     }
 
-
     .detail-emoji {
-
         width: 39px;
         height: 39px;
 
         font-size: 17px;
-
     }
 
-
     .detail-title {
-
         font-size: 12px;
-
     }
 
 }
