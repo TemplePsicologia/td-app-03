@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#DCEBF5">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#F7F7F4"
+    >
+
+    <meta
+        name="description"
+        content="30 Días · Una colección de experiencias de Temple"
+    >
 
     <title>30 Días · Temple</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
     <main class="app">
 
+
         <!-- CABECERA -->
 
         <header class="topbar">
 
-            <a href="#" class="temple-brand" onclick="goHome(event)">
-                <span class="temple-dot"></span>
-                <span>Temple</span>
+            <a
+                href="#"
+                class="temple-brand"
+                onclick="goHome(event)"
+                aria-label="Volver al inicio"
+            >
+
+                <span class="temple-symbol"></span>
+
+                <span class="temple-name">
+                    Temple
+                </span>
+
             </a>
 
         </header>
 
 
-        <!-- PRESENTACIÓN -->
+
+        <!-- HERO -->
 
         <section class="hero">
 
@@ -55,22 +91,31 @@
         </section>
 
 
+
         <!-- RECORRIDOS -->
 
-        <section class="journeys-section">
+        <section
+            class="section journeys-section"
+            id="recorridos"
+        >
 
             <div class="section-heading">
 
-                <h2>
-                    ¿Qué quieres explorar hoy?
-                </h2>
+                <div>
 
-                <p>
-                    Elige un recorrido para comenzar.
-                    Puedes cambiar de recorrido cuando quieras.
-                </p>
+                    <h2>
+                        ¿Qué quieres explorar hoy?
+                    </h2>
+
+                    <p>
+                        Elige un recorrido para comenzar.
+                        Puedes cambiar de recorrido cuando quieras.
+                    </p>
+
+                </div>
 
             </div>
+
 
 
             <div class="journeys-grid">
@@ -78,11 +123,15 @@
 
                 <!-- CONOCERME -->
 
-                <article class="journey-card conocerme">
+                <article
+                    class="journey-card conocerme"
+                    data-journey="conocerme"
+                >
 
                     <div class="journey-icon">
                         🌱
                     </div>
+
 
                     <div class="journey-content">
 
@@ -97,12 +146,21 @@
 
                     </div>
 
+
                     <button
                         class="start-button"
-                        onclick="openJourney('conocerme')"
+                        type="button"
+                        onclick="selectJourney('conocerme')"
                     >
-                        Comenzar
-                        <span>→</span>
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
                     </button>
 
                 </article>
@@ -111,11 +169,15 @@
 
                 <!-- CONECTAR -->
 
-                <article class="journey-card conectar">
+                <article
+                    class="journey-card conectar"
+                    data-journey="conectar"
+                >
 
                     <div class="journey-icon">
                         🤍
                     </div>
+
 
                     <div class="journey-content">
 
@@ -130,12 +192,21 @@
 
                     </div>
 
+
                     <button
                         class="start-button"
-                        onclick="openJourney('conectar')"
+                        type="button"
+                        onclick="selectJourney('conectar')"
                     >
-                        Comenzar
-                        <span>→</span>
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
                     </button>
 
                 </article>
@@ -144,11 +215,15 @@
 
                 <!-- PONER LÍMITES -->
 
-                <article class="journey-card limites">
+                <article
+                    class="journey-card limites"
+                    data-journey="limites"
+                >
 
                     <div class="journey-icon">
                         🪴
                     </div>
+
 
                     <div class="journey-content">
 
@@ -163,12 +238,21 @@
 
                     </div>
 
+
                     <button
                         class="start-button"
-                        onclick="openJourney('limites')"
+                        type="button"
+                        onclick="selectJourney('limites')"
                     >
-                        Comenzar
-                        <span>→</span>
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
                     </button>
 
                 </article>
@@ -177,11 +261,15 @@
 
                 <!-- ELEGIR -->
 
-                <article class="journey-card elegir">
+                <article
+                    class="journey-card elegir"
+                    data-journey="elegir"
+                >
 
                     <div class="journey-icon">
                         🧭
                     </div>
+
 
                     <div class="journey-content">
 
@@ -196,12 +284,21 @@
 
                     </div>
 
+
                     <button
                         class="start-button"
-                        onclick="openJourney('elegir')"
+                        type="button"
+                        onclick="selectJourney('elegir')"
                     >
-                        Comenzar
-                        <span>→</span>
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
                     </button>
 
                 </article>
@@ -210,11 +307,15 @@
 
                 <!-- SOLTAR -->
 
-                <article class="journey-card soltar">
+                <article
+                    class="journey-card soltar"
+                    data-journey="soltar"
+                >
 
                     <div class="journey-icon">
                         🍃
                     </div>
+
 
                     <div class="journey-content">
 
@@ -229,12 +330,21 @@
 
                     </div>
 
+
                     <button
                         class="start-button"
-                        onclick="openJourney('soltar')"
+                        type="button"
+                        onclick="selectJourney('soltar')"
                     >
-                        Comenzar
-                        <span>→</span>
+
+                        <span>
+                            Comenzar
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
                     </button>
 
                 </article>
@@ -246,9 +356,284 @@
 
 
 
+        <!-- PARA HOY -->
+
+        <section
+            class="section today-section"
+            id="para-hoy"
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    Para hoy
+                </h2>
+
+                <p>
+                    No siempre necesitas seguir un orden.
+                    Elige lo que tenga sentido para ti hoy.
+                </p>
+
+            </div>
+
+
+
+            <div class="today-grid">
+
+
+                <button
+                    class="today-card today-green"
+                    type="button"
+                    onclick="todayChoice('conocerme')"
+                >
+
+                    <span class="today-icon">
+                        🌱
+                    </span>
+
+                    <span class="today-title">
+                        Quiero explorarme
+                    </span>
+
+                    <span class="today-description">
+                        Una experiencia de Conocerme
+                    </span>
+
+                    <span class="today-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="today-card today-blue"
+                    type="button"
+                    onclick="todayChoice('conectar')"
+                >
+
+                    <span class="today-icon">
+                        🤍
+                    </span>
+
+                    <span class="today-title">
+                        Quiero conectar
+                    </span>
+
+                    <span class="today-description">
+                        Una experiencia para compartir
+                    </span>
+
+                    <span class="today-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="today-card today-sand"
+                    type="button"
+                    onclick="todayChoice('elegir')"
+                >
+
+                    <span class="today-icon">
+                        🧭
+                    </span>
+
+                    <span class="today-title">
+                        Tengo algo en mente
+                    </span>
+
+                    <span class="today-description">
+                        Una experiencia de Elegir
+                    </span>
+
+                    <span class="today-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <div class="surprise-container">
+
+                <button
+                    class="surprise-button"
+                    type="button"
+                    onclick="surpriseMe()"
+                >
+
+                    <span class="surprise-star">
+                        ✦
+                    </span>
+
+                    <span>
+                        Sorpréndeme
+                    </span>
+
+                </button>
+
+                <p id="surprise-message"></p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACTIVIDAD -->
+
+        <section
+            class="section activity-section"
+            id="actividad"
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    Tu actividad
+                </h2>
+
+                <p>
+                    Un pequeño registro de las experiencias
+                    que vas realizando.
+                </p>
+
+            </div>
+
+
+
+            <div class="calendar-container">
+
+                <div class="calendar-header">
+
+                    <button
+                        class="calendar-arrow"
+                        type="button"
+                        aria-label="Mes anterior"
+                        onclick="changeMonth(-1)"
+                    >
+                        ‹
+                    </button>
+
+
+                    <div class="calendar-month">
+
+                        <strong id="calendar-month">
+                            Septiembre
+                        </strong>
+
+                        <span id="calendar-year">
+                            2026
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="calendar-arrow"
+                        type="button"
+                        aria-label="Mes siguiente"
+                        onclick="changeMonth(1)"
+                    >
+                        ›
+                    </button>
+
+                </div>
+
+
+
+                <div class="calendar-weekdays">
+
+                    <span>L</span>
+                    <span>M</span>
+                    <span>X</span>
+                    <span>J</span>
+                    <span>V</span>
+                    <span>S</span>
+                    <span>D</span>
+
+                </div>
+
+
+
+                <div
+                    class="calendar-days"
+                    id="calendar-days"
+                ></div>
+
+
+
+                <div class="calendar-legend">
+
+                    <span>
+                        <i class="legend-dot green"></i>
+                        Conocerme
+                    </span>
+
+                    <span>
+                        <i class="legend-dot blue"></i>
+                        Conectar
+                    </span>
+
+                    <span>
+                        <i class="legend-dot orange"></i>
+                        Poner límites
+                    </span>
+
+                    <span>
+                        <i class="legend-dot purple"></i>
+                        Elegir
+                    </span>
+
+                    <span>
+                        <i class="legend-dot sage"></i>
+                        Soltar
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="day-detail"
+                id="day-detail"
+            >
+
+                <div class="day-detail-placeholder">
+
+                    <span>
+                        Selecciona un día
+                    </span>
+
+                    <p>
+                        Aquí podrás ver las experiencias
+                        realizadas en esa fecha.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
         <!-- TUS RECORRIDOS -->
 
-        <section class="my-journeys">
+        <section
+            class="section my-journeys-section"
+            id="mis-recorridos"
+        >
 
             <div class="section-heading">
 
@@ -263,11 +648,13 @@
             </div>
 
 
+
             <div class="empty-state">
 
                 <div class="empty-symbol">
                     ✦
                 </div>
+
 
                 <div class="empty-content">
 
@@ -285,13 +672,13 @@
             </div>
 
 
-            <!-- PEQUEÑA INFORMACIÓN -->
 
             <div class="journey-note">
 
                 <div class="note-icon">
                     ☁
                 </div>
+
 
                 <div>
 
@@ -312,17 +699,133 @@
 
 
 
+        <!-- EXPERIENCIAS -->
+
+        <section
+            class="section experiences-section"
+            id="experiencias"
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    Tus experiencias
+                </h2>
+
+                <p>
+                    Guarda las que quieras volver a encontrar.
+                </p>
+
+            </div>
+
+
+
+            <div class="experience-links">
+
+
+                <button
+                    class="experience-link"
+                    type="button"
+                    onclick="showFeature('guardadas')"
+                >
+
+                    <span class="experience-link-icon">
+                        ♡
+                    </span>
+
+                    <span class="experience-link-text">
+
+                        <strong>
+                            Guardadas
+                        </strong>
+
+                        <small>
+                            0 experiencias
+                        </small>
+
+                    </span>
+
+                    <span class="experience-link-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    class="experience-link"
+                    type="button"
+                    onclick="showFeature('realizadas')"
+                >
+
+                    <span class="experience-link-icon">
+                        ✓
+                    </span>
+
+                    <span class="experience-link-text">
+
+                        <strong>
+                            Realizadas
+                        </strong>
+
+                        <small>
+                            0 experiencias
+                        </small>
+
+                    </span>
+
+                    <span class="experience-link-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CIERRE -->
+
+        <section class="closing-message">
+
+            <div class="closing-line"></div>
+
+            <p>
+                No hay una forma correcta de recorrer
+                estos 30 días.
+            </p>
+
+            <span>
+                Puedes avanzar a tu ritmo, cambiar de recorrido
+                o volver a una experiencia cuando quieras.
+            </span>
+
+        </section>
+
+
+
         <!-- FOOTER -->
 
         <footer>
 
-            <span>Temple</span>
+            <span>
+                Temple
+            </span>
 
-            <span>·</span>
+            <span>
+                ·
+            </span>
 
-            <span>30 Días</span>
+            <span>
+                30 Días
+            </span>
 
         </footer>
+
 
     </main>
 
@@ -330,4 +833,5 @@
     <script src="app.js"></script>
 
 </body>
+
 </html>
