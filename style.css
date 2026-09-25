@@ -715,6 +715,9 @@ footer {
     display: none;
 }
 
+#experience-view[aria-hidden="false"] {
+    display: block;
+}
 .experience-view {
     width: 100%;
     min-height: 100vh;
@@ -723,10 +726,6 @@ footer {
 
 .experience-view[aria-hidden="true"] {
     display: none;
-}
-
-.experience-view[aria-hidden="false"] {
-    display: block !important;
 }
 
 
