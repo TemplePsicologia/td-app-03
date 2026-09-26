@@ -6155,6 +6155,74 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
     }
 
+   /* =========================================
+   RECUPERAR CONTRASEÑA
+   ========================================= */
+
+const forgotPasswordButton =
+    document.getElementById("forgot-password-button");
+
+if (forgotPasswordButton) {
+
+    forgotPasswordButton.addEventListener(
+        "click",
+        async () => {
+
+            const emailInput =
+                document.getElementById("login-email");
+
+            const email =
+                emailInput
+                    ? emailInput.value.trim()
+                    : "";
+
+            if (!email) {
+
+                alert(
+                    "Escribe primero tu correo electrónico y luego selecciona “¿Olvidaste tu contraseña?”."
+                );
+
+                if (emailInput) {
+                    emailInput.focus();
+                }
+
+                return;
+            }
+
+
+            const { error } =
+                await supabaseClient.auth
+                    .resetPasswordForEmail(
+                        email,
+                        {
+                            redirectTo: window.location.origin + window.location.pathname
+                        }
+                    );
+
+
+            if (error) {
+
+                console.error(
+                    "Error al recuperar contraseña:",
+                    error
+                );
+
+                alert(
+                    "No pudimos enviar el correo de recuperación. Inténtalo nuevamente."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Te enviamos un enlace para restablecer tu contraseña. Revisa tu correo."
+            );
+
+        }
+    );
+}
+
 
     /* =========================================
        CERRAR SESIÓN
