@@ -3953,3 +3953,26 @@ footer {
 #experiences-panel[aria-hidden="false"] {
     display: block;
 }
+
+/* =========================================================
+   CONTROL DE VISTAS
+   ========================================================= */
+
+/* La vista de experiencia permanece oculta mientras está cerrada */
+#experience-view[aria-hidden="true"] {
+    display: none !important;
+}
+
+/* La vista de experiencia se muestra al abrirla */
+#experience-view[aria-hidden="false"] {
+    display: block;
+}
+
+/* El panel de Guardadas / Realizadas permanece oculto al cerrarse */
+#experiences-panel[aria-hidden="true"] {
+    display: none !important;
+}
+
+#experiences-panel[aria-hidden="false"] {
+    display: block;
+}
