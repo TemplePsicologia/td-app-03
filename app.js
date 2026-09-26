@@ -2265,12 +2265,341 @@ function showFeature(feature) {
         return;
     }
 
+function showFeature(feature) {
+
+    const panel =
+        document.getElementById("experiences-panel");
+
+    const label =
+        document.getElementById("experiences-panel-label");
+
+    const title =
+        document.getElementById("experiences-panel-title");
+
+    const description =
+        document.getElementById("experiences-panel-description");
+
+    const list =
+        document.getElementById("experiences-panel-list");
+
+
+    if (
+        !panel ||
+        !label ||
+        !title ||
+        !description ||
+        !list
+    ) {
+        return;
+    }
+
+
+    /* =========================================
+       GUARDADAS
+    ========================================= */
+
+    if (feature === "guardadas") {
+
+        const savedExperiences =
+            experiences.filter(
+                experience =>
+                    favorites.includes(experience.id)
+            );
+
+
+        label.textContent =
+            `GUARDADAS · ${savedExperiences.length}`;
+
+        title.textContent =
+            "Experiencias para volver";
+
+        description.textContent =
+            "Las experiencias que quisiste conservar para volver a ellas cuando quieras.";
+
+
+        if (!savedExperiences.length) {
+
+            list.innerHTML = `
+                <div class="experiences-empty">
+
+                    <span class="experiences-empty-icon">
+                        ♡
+                    </span>
+
+                    <strong>
+                        Aún no has guardado ninguna experiencia.
+                    </strong>
+
+                    <p>
+                        Cuando encuentres una experiencia a la que quieras volver,
+                        pulsa el corazón junto a su nombre.
+                    </p>
+
+                </div>
+            `;
+
+        } else {
+
+            list.innerHTML =
+                savedExperiences
+                    .map(
+                        experience =>
+                            createExperiencePanelCard(
+                                experience,
+                                "guardadas"
+                            )
+                    )
+                    .join("");
+        }
+
+
+        openExperiencesPanel();
+
+        return;
+    }
+
+
+    /* =========================================
+       REALIZADAS
+    ========================================= */
+
+    if (feature === "realizadas") {
+
+        const completed =
+            experiences.filter(
+                experience =>
+                    isCompleted(experience.id)
+            );
+
+
+        label.textContent =
+            `REALIZADAS · ${completed.length}`;
+
+        title.textContent =
+            "Tu recorrido hasta ahora";
+
+        description.textContent =
+            "Las experiencias que ya realizaste y que forman parte de tu recorrido.";
+
+
+        if (!completed.length) {
+
+            list.innerHTML = `
+                <div class="experiences-empty">
+
+                    <span class="experiences-empty-icon">
+                        ✓
+                    </span>
+
+                    <strong>
+                        Aún no has realizado ninguna experiencia.
+                    </strong>
+
+                    <p>
+                        Cuando marques una experiencia como completada,
+                        aparecerá aquí.
+                    </p>
+
+                </div>
+            `;
+
+        } else {
+
+            list.innerHTML =
+                completed
+                    .map(
+                        experience =>
+                            createExperiencePanelCard(
+                                experience,
+                                "realizadas"
+                            )
+                    )
+                    .join("");
+        }
+
+
+        openExperiencesPanel();
+
+        return;
+    }
+
 
     showTemporaryMessage(
         "Esta sección estará disponible próximamente."
     );
 }
 
+   /* =========================================================
+   PANEL DE EXPERIENCIAS
+   ========================================================= */
+
+function openExperiencesPanel() {
+
+    const panel =
+        document.getElementById("experiences-panel");
+
+    if (!panel) {
+        return;
+    }
+
+    panel.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+    panel.classList.add(
+        "is-open"
+    );
+}
+
+
+function closeExperiencesPanel() {
+
+    const panel =
+        document.getElementById("experiences-panel");
+
+    if (!panel) {
+        return;
+    }
+
+    panel.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+    panel.classList.remove(
+        "is-open"
+    );
+}
+
+
+/* =========================================================
+   TARJETA DE EXPERIENCIA
+   ========================================================= */
+
+function createExperiencePanelCard(
+    experience,
+    type
+) {
+
+    const journey =
+        journeys[experience.journey];
+
+    if (!journey) {
+        return "";
+    }
+
+
+    let extraHTML = "";
+
+
+    /* GUARDADAS */
+
+    if (type === "guardadas") {
+
+        extraHTML = `
+            <span class="panel-card-status saved">
+                ♥ Guardada
+            </span>
+        `;
+    }
+
+
+    /* REALIZADAS */
+
+    if (type === "realizadas") {
+
+        const date =
+            completionDates[experience.id];
+
+        extraHTML = `
+            <span class="panel-card-status completed">
+                ✓ Realizada${date ? ` · ${formatCompletionDate(date)}` : ""}
+            </span>
+        `;
+    }
+
+
+    return `
+        <button
+            type="button"
+            class="experiences-panel-card"
+            onclick="openExperienceFromPanel('${experience.id}')"
+        >
+
+            <div class="panel-card-identity">
+
+                <span class="panel-card-emoji">
+                    ${journey.emoji}
+                </span>
+
+                <div class="panel-card-content">
+
+                    <span class="panel-card-journey">
+                        ${journey.shortName || journey.name}
+                    </span>
+
+                    <span class="panel-card-day">
+                        Día ${experience.day}
+                    </span>
+
+                    <strong class="panel-card-title">
+                        ${experience.title}
+                    </strong>
+
+                    ${extraHTML}
+
+                </div>
+
+            </div>
+
+
+            <span class="panel-card-arrow">
+                →
+            </span>
+
+        </button>
+    `;
+}
+
+
+/* =========================================================
+   ABRIR DESDE EL PANEL
+   ========================================================= */
+
+function openExperienceFromPanel(id) {
+
+    returnView = "dashboard";
+
+    openExperience(id);
+}
+
+
+/* =========================================================
+   FECHA DE REALIZACIÓN
+   ========================================================= */
+
+function formatCompletionDate(dateValue) {
+
+    if (!dateValue) {
+        return "";
+    }
+
+    const date =
+        new Date(dateValue);
+
+    if (Number.isNaN(date.getTime())) {
+        return "";
+    }
+
+    return date.toLocaleDateString(
+        "es-PE",
+        {
+            day: "numeric",
+            month: "short"
+        }
+    );
+}
 
 function showTemporaryMessage(message) {
 
