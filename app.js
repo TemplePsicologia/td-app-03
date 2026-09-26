@@ -1249,6 +1249,1042 @@ const experiences = [
             "¿Qué notaste al compartir una conversación teniendo toda tu atención en tu pareja?"
     },
 
+   {
+    id: "conectar-3",
+    journey: "conectar",
+    day: 3,
+    title: "DESCUBRIR ALGO NUEVO DEL OTRO",
+    duration: "15–20 min",
+    moment: "En casa, durante una tarde o noche tranquila en la que puedan conversar sin interrupciones.",
+    description:
+        "Conocer a alguien no significa dejar de descubrirlo. Incluso cuando llevamos tiempo compartiendo con una persona, todavía existen gustos, ideas, recuerdos o pequeñas experiencias que no conocemos.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elegir",
+            text: "Cada persona piensa en algo sobre sí misma que crea que su pareja probablemente no conoce."
+        },
+        {
+            emoji: "💬",
+            title: "Compartir",
+            text: "Cuéntale aquello que elegiste. Puede ser algo pequeño: una preferencia, una experiencia, una idea, un recuerdo o algo que hayas descubierto recientemente."
+        },
+        {
+            emoji: "👂",
+            title: "Preguntar",
+            text: "Quien escucha puede hacer una o dos preguntas para conocer un poco más sobre aquello que acaba de descubrir."
+        },
+        {
+            emoji: "🌿",
+            title: "Guardar",
+            text: "Al terminar, cada persona puede decir qué fue lo que más le sorprendió o interesó conocer del otro."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste hoy de tu pareja que no conocías o que nunca habían conversado de esa manera?"
+},
+
+   {
+    id: "conectar-4",
+    journey: "conectar",
+    day: 4,
+    title: "RECORDAR NUESTRO COMIENZO",
+    duration: "20–30 min",
+    moment: "En un lugar cómodo y tranquilo, durante un momento en el que puedan recordar juntos sin tener que atender otras actividades.",
+    description:
+        "Nuestra historia está hecha de momentos que quizá no hemos vuelto a mirar desde que ocurrieron. Hoy van a regresar juntos a uno de esos momentos y descubrir qué aparece al recordarlo desde el presente.",
+
+    steps: [
+        {
+            emoji: "💭",
+            title: "Elegir",
+            text: "Cada persona piensa en un momento de los primeros tiempos de la relación que recuerde de manera especial."
+        },
+        {
+            emoji: "🕰️",
+            title: "Volver",
+            text: "Cuéntenle a su pareja cómo recuerdan ese momento: qué estaba ocurriendo, qué sintieron o qué recuerdan especialmente de aquella etapa."
+        },
+        {
+            emoji: "👀",
+            title: "Mirar",
+            text: "Escuchen la versión de la otra persona y observen qué detalles recuerdan de manera diferente."
+        },
+        {
+            emoji: "🤍",
+            title: "Compartir",
+            text: "Elijan un recuerdo que ambos quieran conservar especialmente y dediquen unos minutos a volver a vivirlo a través de la conversación."
+        }
+    ],
+
+    question:
+        "¿Qué sentiste al volver juntos a un momento de su historia?"
+},
+
+{
+    id: "conectar-5",
+    journey: "conectar",
+    day: 5,
+    title: "ESCUCHAR SIN INTERRUMPIR",
+    duration: "10–15 min",
+    moment: "En casa o en un espacio tranquilo, durante un momento en el que puedan escucharse sin interrupciones.",
+    description:
+        "A veces escuchamos mientras pensamos qué vamos a responder. Hoy van a experimentar qué ocurre cuando una persona tiene la oportunidad de hablar y la otra simplemente permanece disponible para escuchar.",
+
+    steps: [
+        {
+            emoji: "💬",
+            title: "Compartir",
+            text: "Una persona comienza contando algo que tenga presente últimamente. Puede ser algo que haya vivido, pensado, sentido o simplemente algo que quiera compartir."
+        },
+        {
+            emoji: "👂",
+            title: "Escuchar",
+            text: "Mientras habla, la otra persona escucha hasta el final sin interrumpir, completar frases ni llevar la conversación hacia su propia experiencia."
+        },
+        {
+            emoji: "🌿",
+            title: "Recibir",
+            text: "Cuando termine, quien escuchó puede decir brevemente qué comprendió de lo que la otra persona quiso compartir, sin interpretar ni buscar una solución."
+        },
+        {
+            emoji: "🔄",
+            title: "Cambiar",
+            text: "Después cambien los roles y permitan que la otra persona tenga el mismo espacio para hablar y ser escuchada."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la experiencia de escuchar cuando no necesitabas preparar una respuesta?"
+},
+
+{
+    id: "conectar-6",
+    journey: "conectar",
+    day: 6,
+    title: "DAR ESPACIO PARA HABLAR",
+    duration: "10–15 min",
+    moment: "En casa o en un espacio tranquilo, durante un momento en el que puedan escucharse sin interrupciones.",
+    description:
+        "Escuchar no siempre significa estar esperando nuestro turno para responder. Hoy van a practicar una forma de escucha en la que cada persona pueda expresarse sin ser interrumpida.",
+
+    steps: [
+        {
+            emoji: "💬",
+            title: "Hablar",
+            text: "Una persona tendrá unos minutos para compartir algo que quiera contar. Puede hablar sobre cómo se ha sentido, algo que le ha ocurrido o algo que tenga presente últimamente."
+        },
+        {
+            emoji: "👂",
+            title: "Escuchar",
+            text: "Mientras habla, la otra persona escucha sin interrumpir, completar frases ni preparar una respuesta."
+        },
+        {
+            emoji: "🔄",
+            title: "Cambiar",
+            text: "Después cambien los roles y permitan que la otra persona tenga el mismo espacio para expresarse."
+        },
+        {
+            emoji: "🤍",
+            title: "Cerrar",
+            text: "Al terminar, cada persona puede decir brevemente cómo se sintió al tener ese espacio para hablar y escuchar."
+        }
+    ],
+
+    question:
+        "¿Qué notaste sobre tu manera de escuchar cuando no necesitabas responder inmediatamente?"
+},
+
+{
+    id: "conectar-7",
+    journey: "conectar",
+    day: 7,
+    title: "DECIR LO QUE APRECIO DE TI",
+    duration: "10–15 min",
+    moment: "En casa o en un lugar tranquilo que ambos disfruten, durante un momento en el que puedan prestarse atención.",
+    description:
+        "Hay cosas que valoramos de nuestra pareja y que quizá damos por sentadas con el paso del tiempo. Hoy van a detenerse en aquello que reconocen y disfrutan del otro para expresarlo de una manera concreta.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Cada persona piensa en algo que su pareja haya hecho, dicho o mostrado recientemente y que haya significado algo para ella."
+        },
+        {
+            emoji: "💬",
+            title: "Contar",
+            text: "Compartan qué fue aquello y expliquen qué hizo que fuera importante para ustedes."
+        },
+        {
+            emoji: "👂",
+            title: "Recibir",
+            text: "Escuchen lo que la otra persona quiere reconocer de ustedes sin minimizarlo, rechazarlo ni responder inmediatamente con otro reconocimiento."
+        },
+        {
+            emoji: "💛",
+            title: "Devolver",
+            text: "Después, cada persona puede compartir algo que también quiera reconocer de la otra persona en este momento."
+        }
+    ],
+
+    question:
+        "¿Qué cambió cuando pusieron en palabras algo que normalmente dan por sentado?"
+},
+
+{
+    id: "conectar-8",
+    journey: "conectar",
+    day: 8,
+    title: "MOSTRAR CÓMO ESTOY HOY",
+    duration: "10–15 min",
+    moment: "En casa, al final del día o durante un momento tranquilo en el que puedan estar juntos sin interrupciones.",
+    description:
+        "Podemos compartir el mismo día y, aun así, no saber realmente cómo está la persona que tenemos al lado. Hoy van a hacer una pausa para encontrarse con cómo llega cada persona a este momento.",
+
+    steps: [
+        {
+            emoji: "🌿",
+            title: "Pausar",
+            text: "Antes de comenzar, cada persona se toma unos instantes para reconocer cómo se siente hoy."
+        },
+        {
+            emoji: "💬",
+            title: "Mostrar",
+            text: "Compartan cómo están realmente en este momento. Pueden hablar de algo que les haya ocurrido, algo que estén pensando, una emoción presente o simplemente de cómo se sienten."
+        },
+        {
+            emoji: "👂",
+            title: "Recibir",
+            text: "Escucha lo que tu pareja comparte sin intentar cambiar lo que siente, minimizarlo o encontrar inmediatamente una solución."
+        },
+        {
+            emoji: "🤍",
+            title: "Acompañar",
+            text: "Después de escucharse, pregunten qué necesita cada persona ahora: ser escuchada, compañía, espacio, afecto o simplemente saber que la otra persona está ahí."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste al detenerte a conocer cómo estaba realmente tu pareja hoy?"
+},
+
+{
+    id: "conectar-9",
+    journey: "conectar",
+    day: 9,
+    title: "CAMBIAR NUESTRA RUTINA",
+    duration: "20–40 min",
+    moment: "En casa o durante una actividad cotidiana que suelan compartir, en un día en el que puedan modificarla sin prisas.",
+    description:
+        "Las rutinas pueden hacer que compartamos momentos sin prestar demasiada atención a cómo los estamos viviendo. Hoy van a cambiar deliberadamente una pequeña parte de una rutina compartida.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elegir",
+            text: "Identifiquen una actividad que suelen hacer de manera habitual: comer, salir, conversar, descansar o pasar tiempo juntos."
+        },
+        {
+            emoji: "🔄",
+            title: "Cambiar",
+            text: "Modifiquen una parte sencilla de esa rutina. Pueden cambiar el lugar, el momento, la forma de hacerlo o incorporar algo que normalmente no hacen."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Presten atención a cómo se siente realizar algo conocido de una manera diferente."
+        },
+        {
+            emoji: "💬",
+            title: "Compartir",
+            text: "Al terminar, comenten qué les resultó diferente y si hubo algo que disfrutaron especialmente."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste al cambiar algo pequeño de una rutina que comparten?"
+},
+
+{
+    id: "conectar-10",
+    journey: "conectar",
+    day: 10,
+    title: "CREAR UN MOMENTO SOLO NUESTRO",
+    duration: "20–30 min",
+    moment: "En casa o en un lugar que ambos disfruten, durante un momento que puedan reservar exclusivamente para compartir.",
+    description:
+        "El tiempo compartido no siempre significa tiempo conectado. Hoy van a crear un momento que tenga una condición sencilla: durante unos minutos, nada más necesita ocupar su atención.",
+
+    steps: [
+        {
+            emoji: "⏰",
+            title: "Reservar",
+            text: "Elijan un momento y acuerden dejar fuera durante ese tiempo las tareas pendientes, los dispositivos y otras actividades que puedan esperar."
+        },
+        {
+            emoji: "🤝",
+            title: "Decidir",
+            text: "Piensen juntos qué quieren hacer durante ese espacio. Puede ser algo que disfruten, algo que quieran probar o simplemente una forma de estar juntos."
+        },
+        {
+            emoji: "🌿",
+            title: "Compartir",
+            text: "Realicen aquello que eligieron prestando atención a la experiencia de estar juntos, sin convertir ese momento en otra obligación."
+        },
+        {
+            emoji: "🤍",
+            title: "Permanecer",
+            text: "Antes de terminar, quédense unos instantes juntos y observen cómo se siente haber creado intencionalmente ese espacio para ustedes."
+        }
+    ],
+
+    question:
+        "¿Qué hizo que este momento se sintiera realmente diferente de otros momentos que comparten?"
+},
+
+{
+    id: "conectar-11",
+    journey: "conectar",
+    day: 11,
+    title: "HACERNOS PREGUNTAS DIFERENTES",
+    duration: "10–15 min",
+    moment: "En casa o en un lugar tranquilo, durante un momento en el que puedan compartir tiempo sin interrupciones.",
+    description:
+        "Con el tiempo, muchas conversaciones de pareja terminan siguiendo los mismos caminos. Hoy van a crear un pequeño juego para salir de esos temas habituales y descubrir nuevas partes de la persona que tienen delante.",
+
+    steps: [
+        {
+            emoji: "📝",
+            title: "Crear",
+            text: "Cada persona escribe tres preguntas que realmente le dé curiosidad conocer de su pareja. Pueden ser sobre gustos, experiencias, ideas, recuerdos, deseos o cualquier cosa que normalmente no conversen."
+        },
+        {
+            emoji: "🔀",
+            title: "Mezclar",
+            text: "Junten todas las preguntas y mézclenlas. Después, cada persona toma una pregunta al azar."
+        },
+        {
+            emoji: "💬",
+            title: "Responder",
+            text: "Lean la pregunta en voz alta y respondan desde lo que realmente piensan o sienten, sin preocuparse por dar una respuesta perfecta."
+        },
+        {
+            emoji: "👀",
+            title: "Descubrir",
+            text: "Después de cada respuesta, observen qué apareció en la conversación que normalmente no surge entre ustedes."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste al conversar sobre algo que normalmente no forma parte de sus conversaciones?"
+},
+
+{
+    id: "conectar-12",
+    journey: "conectar",
+    day: 12,
+    title: "COMPARTIR ALGO QUE CASI NUNCA CUENTO",
+    duration: "10–15 min",
+    moment: "En un lugar cómodo y privado, durante un momento en el que puedan estar tranquilos y escucharse.",
+    description:
+        "La cercanía también puede aparecer cuando mostramos partes de nuestra historia que normalmente quedan fuera de las conversaciones. Hoy cada persona elegirá algo que quiera permitir que su pareja conozca un poco mejor.",
+
+    steps: [
+        {
+            emoji: "🧩",
+            title: "Elegir",
+            text: "Cada persona piensa en algo propio que casi nunca cuenta. Puede ser un recuerdo, una experiencia, una ilusión, una preocupación, una etapa de su vida o algo que haya influido en quién es actualmente."
+        },
+        {
+            emoji: "💬",
+            title: "Abrir",
+            text: "Compártanlo a su propio ritmo. No es necesario contar todo ni explicar aquello que todavía no quieran compartir."
+        },
+        {
+            emoji: "👂",
+            title: "Recibir",
+            text: "Mientras una persona habla, la otra escucha sin intentar completar la historia, compararla con la propia o buscar una solución."
+        },
+        {
+            emoji: "🤍",
+            title: "Acercarse",
+            text: "Al terminar, quien escuchó puede decir qué parte de lo compartido le permitió conocer un poco más a su pareja."
+        }
+    ],
+
+    question:
+        "¿Qué significó para ti permitir que tu pareja conociera una parte de ti que normalmente no compartes?"
+},
+
+{
+    id: "conectar-13",
+    journey: "conectar",
+    day: 13,
+    title: "HACER ALGO QUE LE GUSTA AL OTRO",
+    duration: "20–30 min",
+    moment: "En casa o en un lugar donde puedan realizar una actividad que disfrute una de las dos personas.",
+    description:
+        "Conocer lo que disfruta nuestra pareja también puede implicar acercarnos a aquello que forma parte de su mundo. Hoy cada persona va a participar en algo que normalmente disfruta más la otra.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Cada persona propone una actividad sencilla que disfrute especialmente y que pueda compartir con su pareja."
+        },
+        {
+            emoji: "🔄",
+            title: "Intercambiar",
+            text: "Elijan una de las propuestas y realícenla juntos, procurando que durante este momento la actividad esté guiada por lo que disfruta la persona que la propuso."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Quien acompaña presta atención a qué hace que esa actividad resulte agradable o significativa para su pareja."
+        },
+        {
+            emoji: "🌿",
+            title: "Compartir",
+            text: "Al terminar, comenten qué descubrieron al entrar durante un momento en algo que forma parte del mundo de la otra persona."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste al acercarte a algo que disfruta especialmente tu pareja?"
+},
+
+{
+    id: "conectar-14",
+    journey: "conectar",
+    day: 14,
+    title: "CAMBIAR DE LUGAR POR UN MOMENTO",
+    duration: "15–20 min",
+    moment: "En casa, durante un momento tranquilo en el que puedan observar una situación cotidiana que ambos conozcan.",
+    description:
+        "Podemos conocer muy bien una situación desde nuestra propia experiencia y, aun así, pasar por alto cómo la vive la otra persona. Hoy van a mirar una situación conocida desde un lugar diferente.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Piensen en una situación cotidiana que ambos conozcan bien: preparar algo juntos, organizar una salida, decidir qué hacer o cualquier otra actividad habitual."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Cada persona identifica qué suele notar, necesitar o tener en cuenta cuando ocurre esa situación."
+        },
+        {
+            emoji: "🔄",
+            title: "Intercambiar",
+            text: "Durante unos minutos, intenten explicar la situación desde la perspectiva de su pareja, procurando describirla según lo que creen que ella experimenta."
+        },
+        {
+            emoji: "💬",
+            title: "Descubrir",
+            text: "Después, cada persona cuenta qué coincidió con su experiencia real y qué aspecto había entendido de una manera diferente."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste al mirar una situación cotidiana desde la experiencia de tu pareja?"
+},
+
+{
+    id: "conectar-15",
+    journey: "conectar",
+    day: 15,
+    title: "DECIR LO QUE NECESITO",
+    duration: "10–15 min",
+    moment: "En un lugar tranquilo, durante un momento en el que ninguno de los dos esté intentando resolver una situación urgente.",
+    description:
+        "Las necesidades no siempre se expresan claramente. A veces esperamos que la otra persona las descubra, las interpretamos de manera diferente o dejamos que aparezcan únicamente cuando ya estamos molestos. Hoy van a practicar una forma más directa de acercarse a ellas.",
+
+    steps: [
+        {
+            emoji: "🌿",
+            title: "Reconocer",
+            text: "Cada persona identifica una necesidad concreta que tenga actualmente dentro de la relación."
+        },
+        {
+            emoji: "💬",
+            title: "Expresar",
+            text: "Digan qué necesitan utilizando una petición clara y concreta. Hablen de aquello que les ayudaría, evitando convertir la petición en una explicación de todo lo que la otra persona debería cambiar."
+        },
+        {
+            emoji: "👂",
+            title: "Recibir",
+            text: "Quien escucha intenta comprender qué está pidiendo su pareja antes de responder. Puede preguntar qué significaría concretamente para ella sentirse atendida en esa necesidad."
+        },
+        {
+            emoji: "🤝",
+            title: "Probar",
+            text: "Elijan una pequeña acción posible que permita poner esa necesidad en práctica durante los próximos días."
+        }
+    ],
+
+    question:
+        "¿Qué cambió cuando convertiste una necesidad en una petición concreta?"
+},
+
+{
+    id: "conectar-16",
+    journey: "conectar",
+    day: 16,
+    title: "APRENDER A RECIBIR",
+    duration: "10–15 min",
+    moment: "En casa o en un lugar tranquilo, durante un momento en el que puedan prestarse atención.",
+    description:
+        "Dar y recibir forman parte de cualquier relación. A veces resulta más fácil ofrecer algo que permitirnos recibirlo. Hoy van a practicar únicamente esta segunda parte.",
+
+    steps: [
+        {
+            emoji: "🎁",
+            title: "Ofrecer",
+            text: "Una persona elige un gesto sencillo para ofrecer a su pareja: una ayuda, un reconocimiento, preparar algo, acercarse, escuchar o hacer algo que pueda resultarle agradable."
+        },
+        {
+            emoji: "🤲",
+            title: "Recibir",
+            text: "Quien recibe intenta aceptar el gesto sin rechazarlo, restarle importancia ni responder inmediatamente ofreciendo algo a cambio."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Presta atención a lo que ocurre internamente al recibir: comodidad, incomodidad, ganas de devolverlo, pensamientos o cualquier otra reacción."
+        },
+        {
+            emoji: "🔄",
+            title: "Cambiar",
+            text: "Después cambien los roles y permitan que ambas personas experimenten tanto ofrecer como recibir."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de recibir algo de tu pareja?"
+},
+
+{
+    id: "conectar-17",
+    journey: "conectar",
+    day: 17,
+    title: "RECONOCER LO QUE HACEMOS POR NOSOTROS",
+    duration: "15–20 min",
+    moment: "En casa, durante un momento tranquilo en el que puedan observar algunos aspectos de su vida cotidiana como pareja.",
+    description:
+        "Muchas cosas que sostienen una relación ocurren sin que nadie las anuncie. Hoy van a mirar su vida cotidiana con más atención para descubrir qué acciones pequeñas ayudan a que la relación funcione.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Recorrer",
+            text: "Piensen en un día habitual de ustedes y recorran mentalmente algunos momentos: despertar, organizarse, trabajar, estudiar, comer, descansar o terminar el día."
+        },
+        {
+            emoji: "🧩",
+            title: "Detectar",
+            text: "Cada persona identifica acciones concretas que la otra realiza y que facilitan, acompañan o hacen más agradable la vida que comparten."
+        },
+        {
+            emoji: "💬",
+            title: "Mostrar",
+            text: "Compartan esas acciones y expliquen qué efecto tienen en su experiencia cotidiana, aunque parezcan pequeñas o habituales."
+        },
+        {
+            emoji: "🤍",
+            title: "Añadir",
+            text: "Cada persona puede mencionar una acción que realiza por la relación y que quizá su pareja no había notado."
+        }
+    ],
+
+    question:
+        "¿Qué acción cotidiana descubriste que también forma parte de la manera en que construyen su relación?"
+},
+
+{
+    id: "conectar-18",
+    journey: "conectar",
+    day: 18,
+    title: "SORPRENDERNOS",
+    duration: "20–30 min",
+    moment: "En casa o durante un momento cotidiano que puedan transformar con un gesto inesperado.",
+    description:
+        "La conexión también puede aparecer cuando dejamos espacio para la espontaneidad. Hoy cada persona va a preparar una pequeña sorpresa para la otra sin necesidad de hacer algo grande.",
+
+    steps: [
+        {
+            emoji: "💡",
+            title: "Pensar",
+            text: "Cada persona elige algo sencillo que crea que podría sorprender o agradar a su pareja."
+        },
+        {
+            emoji: "🤫",
+            title: "Preparar",
+            text: "Preparen su gesto sin revelar qué están haciendo. Puede ser una actividad, una nota, algo que hayan preparado, una propuesta inesperada o cualquier detalle que tenga sentido para la otra persona."
+        },
+        {
+            emoji: "✨",
+            title: "Sorprender",
+            text: "Entréguenlo o realicen aquello que prepararon y observen la reacción del otro sin esperar una respuesta determinada."
+        },
+        {
+            emoji: "💬",
+            title: "Compartir",
+            text: "Después, cuenten qué los llevó a elegir esa sorpresa y qué sintieron al prepararla."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu pareja al pensar en algo que pudiera sorprenderla?"
+},
+
+{
+    id: "conectar-19",
+    journey: "conectar",
+    day: 19,
+    title: "DEJARNOS CUIDAR",
+    duration: "10–15 min",
+    moment: "En casa o en un espacio cómodo, durante un momento en el que ambos puedan bajar el ritmo y estar disponibles.",
+    description:
+        "Permitir que otra persona nos cuide también puede ser una forma de cercanía. Hoy van a practicar recibir un gesto de cuidado sin dirigir cómo debe hacerse.",
+
+    steps: [
+        {
+            emoji: "🤍",
+            title: "Elegir",
+            text: "Una persona propone hacer algo concreto para cuidar a su pareja durante este momento: preparar algo, ayudar con una tarea, acercarse, escuchar, acompañar o facilitarle algo que necesite."
+        },
+        {
+            emoji: "🌿",
+            title: "Permitir",
+            text: "Quien recibe permite que la otra persona realice ese gesto sin corregir innecesariamente cómo lo hace ni asumir inmediatamente la tarea."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Presta atención a cómo se siente recibir cuidado y a cualquier impulso de rechazarlo, devolverlo o tomar nuevamente el control."
+        },
+        {
+            emoji: "🔄",
+            title: "Cambiar",
+            text: "Después intercambien los roles y permitan que la otra persona experimente también recibir."
+        }
+    ],
+
+    question:
+        "¿Qué notaste cuando permitiste que tu pareja hiciera algo por ti?"
+},
+
+{
+    id: "conectar-20",
+    journey: "conectar",
+    day: 20,
+    title: "DESCUBRIR CÓMO LE GUSTA SER CUIDADO AL OTRO",
+    duration: "15–20 min",
+    moment: "En casa o en un lugar cómodo, durante un momento en el que puedan realizar juntos una pequeña experiencia de cuidado.",
+    description:
+        "Cuidar a alguien no siempre significa hacer lo que nosotros creemos que necesita. Hoy van a descubrir una forma de cuidado que tenga sentido para la otra persona y llevarla inmediatamente a la práctica.",
+
+    steps: [
+        {
+            emoji: "🧠",
+            title: "Recordar",
+            text: "Cada persona piensa en un momento reciente en el que necesitó sentirse acompañada, ayudada o cuidada."
+        },
+        {
+            emoji: "💬",
+            title: "Elegir",
+            text: "En lugar de explicar solamente qué habría necesitado, elijan una acción concreta que hubiera representado para ustedes una forma de cuidado en ese momento."
+        },
+        {
+            emoji: "🤍",
+            title: "Practicar",
+            text: "Realicen ahora una versión sencilla de esa acción para su pareja. Puede ser escucharla, acompañarla, ayudarla con algo, darle espacio, acercarse o facilitarle algo que necesite."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Quien recibe presta atención a cómo se siente experimentar ese gesto. Después cambien los roles y permitan que ambas personas tengan la oportunidad de dar y recibir."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la manera en que tu pareja se siente cuidada cuando llevaste esa forma de cuidado a la práctica?"
+},
+
+{
+    id: "conectar-21",
+    journey: "conectar",
+    day: 21,
+    title: "HACER ALGO SIN HABLAR",
+    duration: "15–20 min",
+    moment: "En casa o en un lugar tranquilo, durante un momento en el que puedan realizar una actividad sencilla juntos.",
+    description:
+        "Podemos acostumbrarnos a explicar todo con palabras. Hoy van a experimentar otra forma de comunicarse mientras hacen algo juntos, prestando atención a los gestos, las acciones y las señales que aparecen entre ustedes.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Elijan una actividad sencilla que requiera cierta coordinación: preparar algo, armar un objeto, ordenar un espacio, dibujar juntos o realizar cualquier otra tarea compartida."
+        },
+        {
+            emoji: "🤫",
+            title: "Comenzar",
+            text: "Durante unos minutos, realicen la actividad sin hablar. Utilicen únicamente gestos, miradas o acciones para coordinarse cuando sea necesario."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Presten atención a cómo intentan comprenderse, cómo responden a las señales del otro y qué ocurre cuando no pueden explicar inmediatamente lo que quieren hacer."
+        },
+        {
+            emoji: "🔄",
+            title: "Continuar",
+            text: "Después de unos minutos, pueden volver a hablar y terminar la actividad de la manera que prefieran."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la manera en que se comunican cuando las palabras dejan de estar disponibles?"
+},
+
+{
+    id: "conectar-22",
+    journey: "conectar",
+    day: 22,
+    title: "COMPARTIR UN SILENCIO",
+    duration: "10–15 min",
+    moment: "En un lugar cómodo que ambos disfruten, durante un momento tranquilo en el que puedan permanecer juntos sin otras actividades pendientes.",
+    description:
+        "A veces sentimos la necesidad de llenar los silencios. Hoy van a compartir un momento en el que no necesitan conversar ni hacer algo específico para estar juntos.",
+
+    steps: [
+        {
+            emoji: "🪑",
+            title: "Ubicarse",
+            text: "Elijan un lugar cómodo y siéntense juntos de una manera que resulte natural para ambos."
+        },
+        {
+            emoji: "🤍",
+            title: "Permanecer",
+            text: "Durante unos minutos, permanezcan juntos sin buscar un tema de conversación ni realizar otra actividad."
+        },
+        {
+            emoji: "🌿",
+            title: "Notar",
+            text: "Observen qué ocurre durante el silencio: comodidad, ganas de hablar, pensamientos, sensaciones o simplemente la presencia de la otra persona."
+        },
+        {
+            emoji: "👀",
+            title: "Mirarse",
+            text: "Antes de terminar, pueden mirarse durante unos instantes y reconocer que han compartido ese tiempo sin necesidad de llenarlo."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre compartir silencio con tu pareja?"
+},
+
+{
+    id: "conectar-23",
+    journey: "conectar",
+    day: 23,
+    title: "REPARAR UN PEQUEÑO DESENCUENTRO",
+    duration: "15–20 min",
+    moment: "En casa o en un lugar tranquilo, durante un momento en el que ambos estén disponibles para acercarse después de una pequeña fricción.",
+    description:
+        "Reparar no siempre significa resolver completamente un desacuerdo. A veces comienza con reconocer lo ocurrido y realizar un gesto que permita volver a acercarse.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elegir",
+            text: "Piensen en un pequeño desencuentro reciente que ya haya pasado y que puedan recordar sin volver a entrar en una discusión."
+        },
+        {
+            emoji: "🌿",
+            title: "Reconocer",
+            text: "Cada persona identifica qué podría haber hecho diferente para cuidar mejor ese momento."
+        },
+        {
+            emoji: "💬",
+            title: "Acercarse",
+            text: "Cada persona expresa brevemente aquello que reconoce y, si corresponde, ofrece una disculpa concreta o un gesto de reparación."
+        },
+        {
+            emoji: "🤝",
+            title: "Hacer",
+            text: "Elijan una pequeña acción que represente ese acercamiento: retomar una actividad juntos, darse un abrazo, preparar algo, acompañarse o simplemente permanecer juntos unos minutos."
+        }
+    ],
+
+    question:
+        "¿Qué notaste cuando intentaron acercarse después de un pequeño desencuentro?"
+},
+
+{
+    id: "conectar-24",
+    journey: "conectar",
+    day: 24,
+    title: "PEDIR ALGO Y ESCUCHAR LA RESPUESTA",
+    duration: "15–20 min",
+    moment: "En un espacio tranquilo, durante un momento en el que puedan hacer una petición sencilla sin que exista presión por resolverla inmediatamente.",
+    description:
+        "Pedir algo a nuestra pareja también implica permitir que responda desde sus propias posibilidades y necesidades. Hoy van a practicar ambas partes sin asumir de antemano cuál será la respuesta.",
+
+    steps: [
+        {
+            emoji: "💡",
+            title: "Elegir",
+            text: "Cada persona piensa en una petición pequeña que le gustaría hacerle a su pareja y que pueda plantearse en este momento."
+        },
+        {
+            emoji: "💬",
+            title: "Pedir",
+            text: "Una persona realiza su petición de manera clara y concreta, sin anticipar cómo debería responder la otra."
+        },
+        {
+            emoji: "👂",
+            title: "Recibir",
+            text: "Quien recibe escucha la petición y responde con honestidad. Puede aceptar, proponer una alternativa o decir que en este momento no puede hacerlo."
+        },
+        {
+            emoji: "🔄",
+            title: "Negociar",
+            text: "Si la respuesta no coincide con lo esperado, intenten encontrar juntos una alternativa que ambos puedan asumir. Después cambien los roles."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre pedir algo cuando permites que la otra persona responda con libertad?"
+},
+
+{
+    id: "conectar-25",
+    journey: "conectar",
+    day: 25,
+    title: "REÍRNOS JUNTOS",
+    duration: "10–20 min",
+    moment: "En casa o en un lugar donde puedan relajarse y hacer algo divertido sin interrupciones.",
+    description:
+        "El juego y el humor también forman parte de la conexión. Hoy van a buscar un momento de diversión compartida sin convertirlo en una actividad que tenga que salir perfecta.",
+
+    steps: [
+        {
+            emoji: "🎲",
+            title: "Elegir",
+            text: "Elijan algo que pueda resultarles divertido a ambos: un juego, un reto sencillo, recordar una situación graciosa, hacer algo absurdo o inventar una pequeña competencia."
+        },
+        {
+            emoji: "😄",
+            title: "Jugar",
+            text: "Dedíquense unos minutos a hacerlo sin preocuparse por quién gana, quién lo hace mejor o si resulta realmente gracioso."
+        },
+        {
+            emoji: "🙃",
+            title: "Soltar",
+            text: "Permítanse hacer algo diferente a lo habitual y observar qué ocurre cuando dejan espacio para la espontaneidad."
+        },
+        {
+            emoji: "🤍",
+            title: "Guardar",
+            text: "Al terminar, elijan qué momento de la experiencia les gustaría recordar."
+        }
+    ],
+
+    question:
+        "¿Qué ocurrió entre ustedes cuando dejaron espacio para jugar y divertirse?"
+},
+
+{
+    id: "conectar-26",
+    journey: "conectar",
+    day: 26,
+    title: "CREAR ALGO ENTRE LOS DOS",
+    duration: "20–30 min",
+    moment: "En casa o en un espacio donde tengan materiales sencillos para crear algo durante un momento sin prisas.",
+    description:
+        "Crear algo juntos permite que cada persona aporte ideas, tome decisiones y descubra cómo funciona la colaboración entre ustedes.",
+
+    steps: [
+        {
+            emoji: "💡",
+            title: "Imaginar",
+            text: "Elijan algo que puedan crear juntos con lo que tengan disponible: una receta, un dibujo, una playlist, una decoración, una fotografía, un pequeño proyecto o cualquier otra creación."
+        },
+        {
+            emoji: "🤝",
+            title: "Construir",
+            text: "Empiecen a hacerlo sin decidir de antemano cada detalle. Permitan que las ideas de una persona modifiquen o amplíen las de la otra."
+        },
+        {
+            emoji: "🔄",
+            title: "Adaptar",
+            text: "Si aparecen diferencias en la manera de hacerlo, busquen una forma de incorporarlas en lugar de decidir inmediatamente cuál propuesta debe ganar."
+        },
+        {
+            emoji: "✨",
+            title: "Terminar",
+            text: "Cuando hayan terminado, observen qué construyeron a partir de las ideas de ambos."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la manera en que construyen algo cuando cada persona aporta su propia forma de hacerlo?"
+},
+
+{
+    id: "conectar-27",
+    journey: "conectar",
+    day: 27,
+    title: "DAR ESPACIO Y VOLVER A ENCONTRARNOS",
+    duration: "20–30 min",
+    moment: "Durante un momento del día en el que cada persona pueda disponer de un pequeño espacio propio y después reencontrarse.",
+    description:
+        "La conexión no requiere estar juntos todo el tiempo. También puede existir cuando cada persona tiene espacio para sí y después vuelve a encontrarse con la otra.",
+
+    steps: [
+        {
+            emoji: "🌿",
+            title: "Elegir",
+            text: "Cada persona decide una actividad breve que quiera realizar por su cuenta durante este momento."
+        },
+        {
+            emoji: "🚶",
+            title: "Separarse",
+            text: "Tómense un tiempo para hacer cada uno aquello que eligió, sin necesidad de mantenerse en contacto durante ese intervalo."
+        },
+        {
+            emoji: "🤍",
+            title: "Volver",
+            text: "Después del tiempo acordado, vuelvan a encontrarse y permanezcan unos minutos juntos."
+        },
+        {
+            emoji: "💬",
+            title: "Compartir",
+            text: "Cuéntenle brevemente a la otra persona cómo se sintió tener ese espacio propio y después volver a encontrarse."
+        }
+    ],
+
+    question:
+        "¿Qué notaste sobre la conexión entre ustedes después de tener un momento para cada persona?"
+},
+
+{
+    id: "conectar-28",
+    journey: "conectar",
+    day: 28,
+    title: "ELEGIR ALGO JUNTOS",
+    duration: "20–30 min",
+    moment: "En casa o en un lugar donde puedan realizar una actividad compartida durante un momento sin prisas.",
+    description:
+        "Hacer algo juntos implica más que llegar a una decisión. También supone escuchar propuestas, incorporar preferencias diferentes y construir una opción que tenga algo de cada persona.",
+
+    steps: [
+        {
+            emoji: "💡",
+            title: "Proponer",
+            text: "Elijan algo que puedan hacer juntos durante los próximos días: preparar una comida, elegir un lugar, planear una salida, organizar un espacio o crear un pequeño plan compartido."
+        },
+        {
+            emoji: "🧩",
+            title: "Aportar",
+            text: "Cada persona propone qué le gustaría incluir en ese plan y qué considera importante."
+        },
+        {
+            emoji: "🔄",
+            title: "Combinar",
+            text: "Busquen una manera de incorporar elementos de ambas propuestas, aunque tengan que modificar parte de cada una."
+        },
+        {
+            emoji: "🤝",
+            title: "Concretar",
+            text: "Lleguen a una propuesta que ambos puedan asumir y definan cómo la llevarán a cabo."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la manera en que construyen algo cuando las preferencias de ambos tienen un lugar?"
+},
+
+{
+    id: "conectar-29",
+    journey: "conectar",
+    day: 29,
+    title: "RECONOCER LO QUE HEMOS CONSTRUIDO",
+    duration: "15–20 min",
+    moment: "En un lugar que tenga algún significado para ustedes, durante un momento tranquilo en el que puedan recordar su historia.",
+    description:
+        "Una relación no solo está formada por los momentos que recuerdan, sino también por aquello que han ido creando con el tiempo: lugares, costumbres, decisiones, experiencias y maneras propias de compartir la vida.",
+
+    steps: [
+        {
+            emoji: "🕰️",
+            title: "Recorrer",
+            text: "Cada persona piensa en diferentes etapas o momentos de la historia que han compartido."
+        },
+        {
+            emoji: "📸",
+            title: "Elegir",
+            text: "Elijan tres momentos que representen algo importante de lo que han construido como pareja. Pueden ser momentos grandes o experiencias aparentemente pequeñas."
+        },
+        {
+            emoji: "💬",
+            title: "Contar",
+            text: "Compartan por qué eligieron esos momentos y qué representan para ustedes actualmente."
+        },
+        {
+            emoji: "🌱",
+            title: "Proyectar",
+            text: "Para terminar, cada persona elige algo de su historia que le gustaría seguir construyendo o creando en el futuro."
+        }
+    ],
+
+    question:
+        "¿Qué parte de la historia que han construido juntos adquirió un significado diferente al volver a mirarla desde el presente?"
+},
+
+{
+    id: "conectar-30",
+    journey: "conectar",
+    day: 30,
+    title: "CREAR NUESTRO MOMENTO DE CONEXIÓN",
+    duration: "20–30 min",
+    moment: "En un lugar que ambos elijan, durante un momento que puedan reservar especialmente para compartir.",
+    description:
+        "Después de experimentar diferentes formas de acercarse, ahora van a crear una experiencia que tenga sentido para ustedes. No existe una única manera de conectar; cada pareja puede descubrir la suya.",
+
+    steps: [
+        {
+            emoji: "💡",
+            title: "Recordar",
+            text: "Piensen en alguna de las experiencias de este recorrido que les haya permitido sentirse especialmente conectados."
+        },
+        {
+            emoji: "🧩",
+            title: "Elegir",
+            text: "Identifiquen qué elemento hizo diferente ese momento: conversar, jugar, hacer algo juntos, escucharse, estar en silencio, cuidarse, compartir tiempo o cualquier otra cosa."
+        },
+        {
+            emoji: "🤝",
+            title: "Crear",
+            text: "Utilicen ese elemento para diseñar ahora un momento propio de conexión. Pueden repetir algo que funcionó, combinar varias ideas o inventar una experiencia completamente nueva."
+        },
+        {
+            emoji: "🌿",
+            title: "Vivir",
+            text: "Realicen el momento que crearon sin convertirlo en una tarea por completar. Permanezcan atentos a cómo se sienten al compartirlo."
+        }
+    ],
+
+    question:
+        "¿Qué forma de conexión quieren seguir creando y cuidando en su relación?"
+},
+
 
     /* -----------------------------------------------------
        LÍMITES
