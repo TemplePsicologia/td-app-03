@@ -5643,6 +5643,174 @@ const supabaseClient = supabase.createClient(
 );
 
 /* =========================================================
+   AUTENTICACIÓN · CAMBIAR ENTRE LOGIN Y REGISTRO
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const registerButton =
+        document.getElementById("show-register-button");
+
+    const loginForm =
+        document.getElementById("login-form");
+
+    if (!registerButton || !loginForm) {
+        return;
+    }
+
+    registerButton.addEventListener("click", () => {
+
+        const card =
+            document.querySelector(".auth-card");
+
+        card.innerHTML = `
+            <span class="auth-card-label">
+                30 DÍAS · TEMPLE
+            </span>
+
+            <h2>
+                Crea tu cuenta.
+            </h2>
+
+            <p class="auth-card-description">
+                Crea tu acceso para guardar tu recorrido
+                y volver cuando quieras.
+            </p>
+
+            <form id="register-form">
+
+                <label class="auth-field">
+                    <span>Correo electrónico</span>
+
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="tu@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </label>
+
+                <label class="auth-field">
+                    <span>Contraseña</span>
+
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Mínimo 8 caracteres"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </label>
+
+                <label class="auth-field">
+                    <span>Confirmar contraseña</span>
+
+                    <input
+                        type="password"
+                        id="register-password-confirm"
+                        placeholder="Repite tu contraseña"
+                        autocomplete="new-password"
+                        minlength="8"
+                        required
+                    >
+                </label>
+
+                <button
+                    type="submit"
+                    class="auth-primary-button"
+                >
+                    Crear mi cuenta
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <div class="auth-divider">
+                <span></span>
+                <small>o</small>
+                <span></span>
+            </div>
+
+            <p class="auth-register-text">
+                ¿Ya tienes una cuenta?
+            </p>
+
+            <button
+                type="button"
+                class="auth-secondary-button"
+                id="back-to-login-button"
+            >
+                Iniciar sesión
+            </button>
+        `;
+
+        setupRegisterForm();
+    });
+
+});
+
+function setupRegisterForm() {
+
+    const form =
+        document.getElementById("register-form");
+
+    const backButton =
+        document.getElementById("back-to-login-button");
+
+    if (form) {
+
+        form.addEventListener("submit", async (event) => {
+
+            event.preventDefault();
+
+            const email =
+                document.getElementById("register-email").value.trim();
+
+            const password =
+                document.getElementById("register-password").value;
+
+            const confirmation =
+                document.getElementById("register-password-confirm").value;
+
+
+            if (password !== confirmation) {
+                alert("Las contraseñas no coinciden.");
+                return;
+            }
+
+
+            const { error } =
+                await supabaseClient.auth.signUp({
+                    email,
+                    password
+                });
+
+
+            if (error) {
+                alert(error.message);
+                return;
+            }
+
+
+            alert(
+                "Tu cuenta fue creada. Revisa tu correo para confirmar tu dirección antes de iniciar sesión."
+            );
+        });
+    }
+
+
+    if (backButton) {
+
+        backButton.addEventListener("click", () => {
+            window.location.reload();
+        });
+
+    }
+}
+
+/* =========================================================
    ESTADO DE LA APLICACIÓN
    ========================================================= */
 
