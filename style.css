@@ -4918,3 +4918,23 @@ body.auth-loading .auth-view,
 body.auth-loading > .app {
     visibility: hidden;
 }
+
+/* =========================================================
+   RESTABLECER CONTRASEÑA
+   ========================================================= */
+
+#reset-password-view {
+    display: none;
+}
+
+body.password-recovery #auth-view {
+    display: none !important;
+}
+
+body.password-recovery #reset-password-view {
+    display: block !important;
+}
+
+body.password-recovery > .app {
+    display: none !important;
+}
