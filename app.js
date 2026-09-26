@@ -5825,6 +5825,91 @@ if (data.session) {
     }
 }
 
+    if (backButton) {
+
+        backButton.addEventListener("click", () => {
+            window.location.reload();
+        });
+
+    }
+}
+
+
+/* =========================================================
+   RECORDAR UBICACIÓN EN LA APP
+   ========================================================= */
+
+const LAST_VIEW_KEY = "temple_30dias_last_view";
+
+
+function saveCurrentView(view, data = {}) {
+
+    localStorage.setItem(
+        LAST_VIEW_KEY,
+        JSON.stringify({
+            view,
+            ...data
+        })
+    );
+}
+
+
+function restoreCurrentView() {
+
+    const saved =
+        localStorage.getItem(LAST_VIEW_KEY);
+
+    if (!saved) {
+        return;
+    }
+
+    try {
+
+        const location =
+            JSON.parse(saved);
+
+
+        if (
+            location.view === "experience" &&
+            location.experienceId
+        ) {
+
+            openExperience(
+                location.experienceId
+            );
+
+            return;
+        }
+
+
+        if (
+            location.view === "journey" &&
+            location.journey
+        ) {
+
+            openJourney(
+                location.journey
+            );
+
+            return;
+        }
+
+
+        showDashboard();
+
+    } catch (error) {
+
+        localStorage.removeItem(
+            LAST_VIEW_KEY
+        );
+    }
+}
+
+
+/* =========================================================
+   ESTADO DE LA APLICACIÓN
+   ========================================================= */
+
 /* =========================================================
    ESTADO DE LA APLICACIÓN
    ========================================================= */
@@ -5974,20 +6059,22 @@ document.addEventListener("DOMContentLoaded", async () => {
        ========================================= */
 
     const { data } =
-        await supabaseClient.auth.getSession();
+    await supabaseClient.auth.getSession();
 
-    if (data.session) {
+if (data.session) {
 
-        document.body.classList.add(
-            "user-authenticated"
-        );
+    document.body.classList.add(
+        "user-authenticated"
+    );
 
-    } else {
+    restoreCurrentView();
 
-        document.body.classList.remove(
-            "user-authenticated"
-        );
-    }
+} else {
+
+    document.body.classList.remove(
+        "user-authenticated"
+    );
+}
 
 
     /* =========================================
@@ -6119,6 +6206,13 @@ function openJourney(journey) {
 
     currentJourney = journey;
     returnView = "journey";
+
+   saveCurrentView(
+    "journey",
+    {
+        journey: journey
+    }
+);
 
     hideDashboard();
 
@@ -6510,6 +6604,13 @@ function openExperience(id) {
     }
 
     currentExperience = experience;
+
+   saveCurrentView(
+    "experience",
+    {
+        experienceId: experience.id
+    }
+);
       
    /* Cerrar panel de Guardadas / Realizadas */
     closeExperiencesPanel();
@@ -7610,6 +7711,7 @@ function surpriseMe() {
     currentJourney = null;
 
     returnView = "dashboard";
+   saveCurrentView("dashboard");
 
     openExperience(
         randomExperience.id
@@ -7660,6 +7762,8 @@ function goHome() {
     currentJourney = null;
 
     returnView = "dashboard";
+
+    saveCurrentView("dashboard");
 
     hideExperienceView();
 
