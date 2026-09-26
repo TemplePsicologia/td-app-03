@@ -3822,3 +3822,79 @@ footer {
         width: min(100% - 30px, 680px);
     }
 }
+
+/* =========================================================
+   FAVORITO DE LA EXPERIENCIA
+   ========================================================= */
+
+#experience-view .experience-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#experience-view .experience-title-row .experience-title {
+    flex: 1;
+    min-width: 0;
+}
+
+
+/* CORAZÓN */
+
+#experience-view .favorite-button {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 4px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #9AA5A0;
+
+    font-family: "Inter", sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color .18s ease,
+        transform .18s ease;
+}
+
+
+/* AL PASAR EL CURSOR */
+
+#experience-view .favorite-button:hover {
+    color: #759C7B;
+    transform: scale(1.08);
+}
+
+
+/* CUANDO ESTÁ GUARDADO */
+
+#experience-view .favorite-button.is-favorite {
+    color: #759C7B;
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+    #experience-view .experience-title-row {
+        gap: 14px;
+    }
+
+    #experience-view .favorite-button {
+        font-size: 27px;
+    }
+}
