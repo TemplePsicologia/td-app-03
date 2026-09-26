@@ -6076,7 +6076,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 document.body.classList.remove(
     "auth-loading"
 );
-    }
 
 
     /* =========================================
