@@ -1194,6 +1194,12 @@ function openExperience(id) {
 
     updateCompleteButton();
 
+   /* =========================================
+   NAVEGACIÓN ENTRE DÍAS
+========================================= */
+
+updateDayNavigation();
+
     /* =========================================
        CAMBIAR DE VISTA
     ========================================= */
@@ -1296,6 +1302,111 @@ function updateFeelingUI() {
             selected ? "true" : "false"
         );
     });
+}
+
+/* =========================================================
+   NAVEGACIÓN ENTRE DÍAS
+   ========================================================= */
+
+function openPreviousExperience() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const previousDay =
+        currentExperience.day - 1;
+
+    if (previousDay < 1) {
+        return;
+    }
+
+    const previousExperience =
+        getJourneyExperience(
+            currentExperience.journey,
+            previousDay
+        );
+
+    if (!previousExperience) {
+        return;
+    }
+
+    openExperience(
+        previousExperience.id
+    );
+}
+
+
+function openNextExperience() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const nextDay =
+        currentExperience.day + 1;
+
+    if (nextDay > 30) {
+        return;
+    }
+
+    const nextExperience =
+        getJourneyExperience(
+            currentExperience.journey,
+            nextDay
+        );
+
+    if (!nextExperience) {
+        return;
+    }
+
+    openExperience(
+        nextExperience.id
+    );
+}
+
+function updateDayNavigation() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const previousButton =
+        document.getElementById(
+            "previous-day-button"
+        );
+
+    const nextButton =
+        document.getElementById(
+            "next-day-button"
+        );
+
+
+    const previousExperience =
+        getJourneyExperience(
+            currentExperience.journey,
+            currentExperience.day - 1
+        );
+
+    const nextExperience =
+        getJourneyExperience(
+            currentExperience.journey,
+            currentExperience.day + 1
+        );
+
+
+    if (previousButton) {
+
+        previousButton.disabled =
+            !previousExperience;
+    }
+
+
+    if (nextButton) {
+
+        nextButton.disabled =
+            !nextExperience;
+    }
 }
 
 function closeExperience() {
