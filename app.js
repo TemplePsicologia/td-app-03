@@ -466,6 +466,7 @@ let completedExperiences = [];
 let ratings = {};
 let completionDates = {};
 let feelings = {};
+let favorites = [];
 
 
 /* =========================================================
@@ -476,6 +477,7 @@ const STORAGE_COMPLETED = "temple30_completed";
 const STORAGE_RATINGS = "temple30_ratings";
 const STORAGE_DATES = "temple30_completion_dates";
 const STORAGE_FEELINGS = "temple30_feelings";
+const STORAGE_FAVORITES = "temple30_favorites";
 
 
 function loadState() {
@@ -492,6 +494,8 @@ function loadState() {
 
         const savedFeelings =
             localStorage.getItem(STORAGE_FEELINGS);
+       const savedFavorites =
+          localStorage.getItem(STORAGE_FAVORITES);
 
 
         completedExperiences =
@@ -513,6 +517,10 @@ function loadState() {
             savedFeelings
                 ? JSON.parse(savedFeelings)
                 : {};
+       favorites =
+          savedFavorites
+          ? JSON.parse(savedFavorites)
+          : [];
 
 
         if (!Array.isArray(completedExperiences)) {
@@ -530,6 +538,9 @@ function loadState() {
         if (!feelings || typeof feelings !== "object") {
             feelings = {};
         }
+       if (!Array.isArray(favorites)) {
+    favorites = [];
+       }
 
     } catch (error) {
 
@@ -542,6 +553,7 @@ function loadState() {
         ratings = {};
         completionDates = {};
         feelings = {};
+       favorites = [];
     }
 }
 
@@ -567,6 +579,10 @@ function saveState() {
         STORAGE_FEELINGS,
         JSON.stringify(feelings)
     );
+   localStorage.setItem(
+    STORAGE_FAVORITES,
+    JSON.stringify(favorites)
+   );
 }
 
 /* =========================================================
