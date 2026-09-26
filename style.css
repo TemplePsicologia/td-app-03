@@ -4857,3 +4857,8 @@ footer {
     }
 
 }
+
+/* Mientras el usuario no haya iniciado sesión */
+body:not(.user-authenticated) > .app {
+    display: none;
+}
