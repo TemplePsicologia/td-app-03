@@ -2221,52 +2221,6 @@ function goHome() {
 
 function showFeature(feature) {
 
-    if (feature === "realizadas") {
-
-        const completed =
-            experiences.filter(
-                experience =>
-                    isCompleted(
-                        experience.id
-                    )
-            );
-
-        if (!completed.length) {
-
-            showTemporaryMessage(
-                "Todavía no has realizado ninguna experiencia."
-            );
-
-            return;
-        }
-
-        const names =
-            completed
-                .map(
-                    experience =>
-                        `• ${experience.title}`
-                )
-                .join("\n");
-
-        showTemporaryMessage(
-            `Tus experiencias realizadas:\n\n${names}`
-        );
-
-        return;
-    }
-
-
-    if (feature === "guardadas") {
-
-        showTemporaryMessage(
-            "Todavía no tienes experiencias guardadas."
-        );
-
-        return;
-    }
-
-function showFeature(feature) {
-
     const panel =
         document.getElementById("experiences-panel");
 
