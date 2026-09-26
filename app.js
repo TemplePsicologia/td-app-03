@@ -6046,13 +6046,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     hideExperienceView();
 
 
-    /* =========================================
-       COMPROBAR SESIÓN DE SUPABASE
-       ========================================= */
+  /* =========================================
+   DETECTAR RECUPERACIÓN DE CONTRASEÑA
+   ========================================= */
 
-    const { data: sessionData, error: sessionError } =
-        await supabaseClient.auth.getSession();
+let isPasswordRecovery = false;
 
+const hashParams =
+    new URLSearchParams(
+        window.location.hash.substring(1)
+    );
+
+const queryParams =
+    new URLSearchParams(
+        window.location.search
+    );
+
+if (
+    hashParams.get("type") === "recovery" ||
+    queryParams.get("type") === "recovery"
+) {
+    isPasswordRecovery = true;
+}
+
+
+/* =========================================
+   COMPROBAR SESIÓN DE SUPABASE
+   ========================================= */
+
+const { data: sessionData, error: sessionError } =
+    await supabaseClient.auth.getSession();
     if (sessionError) {
         console.error(
             "Error al comprobar la sesión:",
@@ -6060,7 +6083,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
     }
 
-    if (sessionData && sessionData.session) {
+    if (isPasswordRecovery) {
+
+    document.body.classList.remove(
+        "user-authenticated"
+    );
+
+    document.body.classList.add(
+        "password-recovery"
+    );
+
+} else if (sessionData && sessionData.session) {
 
     document.body.classList.add(
         "user-authenticated"
@@ -6070,10 +6103,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 } else {
 
-        document.body.classList.remove(
-            "user-authenticated"
-        );
-    }
+    document.body.classList.remove(
+        "user-authenticated"
+    );
+}
 
     document.body.classList.remove(
         "auth-loading"
@@ -6223,7 +6256,97 @@ if (forgotPasswordButton) {
     );
 }
 
+/* =========================================
+   GUARDAR NUEVA CONTRASEÑA
+   ========================================= */
 
+const resetPasswordForm =
+    document.getElementById("reset-password-form");
+
+if (resetPasswordForm) {
+
+    resetPasswordForm.addEventListener(
+        "submit",
+        async (event) => {
+
+            event.preventDefault();
+
+            const password =
+                document.getElementById(
+                    "new-password"
+                ).value;
+
+            const confirmation =
+                document.getElementById(
+                    "confirm-new-password"
+                ).value;
+
+
+            if (password !== confirmation) {
+
+                alert(
+                    "Las contraseñas no coinciden."
+                );
+
+                return;
+            }
+
+
+            if (password.length < 8) {
+
+                alert(
+                    "La contraseña debe tener al menos 8 caracteres."
+                );
+
+                return;
+            }
+
+
+            const { error } =
+                await supabaseClient.auth.updateUser({
+                    password: password
+                });
+
+
+            if (error) {
+
+                console.error(
+                    "Error al actualizar contraseña:",
+                    error
+                );
+
+                alert(
+                    "No pudimos actualizar tu contraseña. Solicita un nuevo enlace e inténtalo nuevamente."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Tu contraseña fue actualizada correctamente."
+            );
+
+            document.body.classList.remove(
+                "password-recovery"
+            );
+
+            document.body.classList.add(
+                "user-authenticated"
+            );
+
+            window.history.replaceState(
+                {},
+                document.title,
+                window.location.pathname
+            );
+
+            goHome();
+
+        }
+    );
+}
+   
     /* =========================================
        CERRAR SESIÓN
        ========================================= */
