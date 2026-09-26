@@ -5782,36 +5782,37 @@ function setupRegisterForm() {
 
 
             const { data, error } =
-    await supabaseClient.auth.signUp({
-        email,
-        password
-    });
+                await supabaseClient.auth.signUp({
+                    email,
+                    password
+                });
 
 
-if (error) {
-    alert(error.message);
-    return;
-}
+            if (error) {
+                alert(error.message);
+                return;
+            }
 
 
-if (data.session) {
+            if (data.session) {
 
-    document.body.classList.add(
-        "user-authenticated"
-    );
+                document.body.classList.add(
+                    "user-authenticated"
+                );
 
-    window.scrollTo({
-        top: 0,
-        behavior: "auto"
-    });
+                window.scrollTo({
+                    top: 0,
+                    behavior: "auto"
+                });
 
-} else {
+            } else {
 
-    alert(
-        "Tu cuenta fue creada correctamente. Ya puedes iniciar sesión."
-    );
+                alert(
+                    "Tu cuenta fue creada correctamente. Ya puedes iniciar sesión."
+                );
 
-}
+            }
+
         });
     }
 
@@ -5824,16 +5825,6 @@ if (data.session) {
 
     }
 }
-
-    if (backButton) {
-
-        backButton.addEventListener("click", () => {
-            window.location.reload();
-        });
-
-    }
-}
-
 
 /* =========================================================
    RECORDAR UBICACIÓN EN LA APP
