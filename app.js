@@ -1062,6 +1062,9 @@ function openExperience(id) {
     }
 
     currentExperience = experience;
+      
+   /* Cerrar panel de Guardadas / Realizadas */
+    closeExperiencesPanel();
 
     /* =========================================
        DATOS DEL RECORRIDO
