@@ -2364,6 +2364,1041 @@ const experiences = [
             "¿Qué notaste cuando tomaste en cuenta primero lo que tú querías?"
     },
 
+    {
+        id: "limites-3",
+        journey: "limites",
+        day: 3,
+        title: "PEDIR ALGO QUE NECESITO",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que otra persona pueda ayudarte con algo concreto.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas directamente algo que necesitas en lugar de esperar a que la otra persona lo adivine.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en algo sencillo que necesites de otra persona y que sea apropiado pedir."
+            },
+            {
+                emoji: "🗣️",
+                title: "Pide",
+                text: "Exprésalo de manera clara y concreta, diciendo qué necesitas y, si corresponde, cómo podría ayudarte."
+            },
+            {
+                emoji: "⏸️",
+                title: "Espera",
+                text: "Después de pedirlo, permite que la otra persona responda sin adelantarte a su respuesta."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre en ti mientras haces la petición y después de escuchar la respuesta."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al pedir directamente algo que necesitabas?"
+    },
+
+    {
+        id: "limites-4",
+        journey: "limites",
+        day: 4,
+        title: "DECIR CÓMO QUIERO QUE SEA",
+        duration: "10–15 min",
+        moment: "En una situación cotidiana en la que puedas expresar cómo prefieres que se haga algo.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas de manera clara cómo quieres que sea una situación, en lugar de adaptarte automáticamente a la forma de otra persona.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Busca una situación sencilla en la que tengas una preferencia sobre cómo quieres que se haga algo."
+            },
+            {
+                emoji: "💭",
+                title: "Define",
+                text: "Antes de adaptarte a la propuesta de otra persona, identifica qué forma te resulta más cómoda o adecuada."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Comunica tu preferencia de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al expresar lo que quieres y qué ocurre si la otra persona tiene una preferencia diferente."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando expresaste cómo querías que fuera algo?"
+    },
+
+    {
+        id: "limites-5",
+        journey: "limites",
+        day: 5,
+        title: "NO ACEPTAR SOLO POR QUEDAR BIEN",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que puedas aceptar o rechazar algo sin consecuencias importantes.",
+        description:
+            "Hoy vas a observar qué ocurre cuando tienes la posibilidad de aceptar algo, pero eliges hacerlo solo si realmente quieres.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Presta atención a alguna propuesta, invitación o petición que recibas durante el día."
+            },
+            {
+                emoji: "⏸️",
+                title: "Detente",
+                text: "Antes de responder, pregúntate si quieres aceptar o si estás pensando hacerlo únicamente para evitar incomodar a la otra persona."
+            },
+            {
+                emoji: "🎯",
+                title: "Decide",
+                text: "Si realmente no quieres aceptar y la situación lo permite, recházalo de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Después, fíjate en qué pensamientos o sensaciones aparecen al haber respondido de acuerdo con lo que realmente querías."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al diferenciar entre aceptar porque quieres y aceptar solo para quedar bien?"
+    },
+
+    {
+        id: "limites-6",
+        journey: "limites",
+        day: 6,
+        title: "PEDIR MÁS TIEMPO",
+        duration: "10–15 min",
+        moment: "Ante una situación cotidiana en la que alguien espere una respuesta, una decisión o una acción de tu parte.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando reconoces que necesitas más tiempo antes de responder o actuar.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Identifica",
+                text: "Piensa en una situación sencilla en la que puedas necesitar unos minutos, unas horas o más tiempo para responder."
+            },
+            {
+                emoji: "⏸️",
+                title: "Reconoce",
+                text: "Antes de dar una respuesta inmediata, observa si realmente estás preparado para hacerlo."
+            },
+            {
+                emoji: "🗣️",
+                title: "Pide",
+                text: "Si lo necesitas, expresa que prefieres contar con más tiempo y, si es posible, indica cuándo podrás responder."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre después de pedir ese tiempo: qué sientes, qué piensas y qué haces con ese espacio."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al darte permiso para no responder inmediatamente?"
+    },
+
+    {
+        id: "limites-7",
+        journey: "limites",
+        day: 7,
+        title: "DECIDIR CUÁNDO QUIERO RESPONDER",
+        duration: "10–20 min",
+        moment: "Durante un día en el que recibas mensajes, llamadas o solicitudes que no requieran una respuesta inmediata.",
+        description:
+            "Hoy vas a observar qué ocurre cuando eliges conscientemente cuándo responder en lugar de hacerlo automáticamente.",
+
+        steps: [
+            {
+                emoji: "📱",
+                title: "Detecta",
+                text: "Cuando recibas un mensaje, llamada o solicitud, observa si aparece la necesidad de responder inmediatamente."
+            },
+            {
+                emoji: "⏸️",
+                title: "Pausa",
+                text: "Si no necesitas responder en ese momento, deja pasar unos minutos y continúa con lo que estabas haciendo."
+            },
+            {
+                emoji: "🧭",
+                title: "Elige",
+                text: "Decide cuándo quieres responder, teniendo en cuenta lo que necesitas hacer y el tiempo que tienes disponible."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece durante la espera y cómo te sientes cuando respondes en el momento que tú elegiste."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al elegir cuándo responder en lugar de hacerlo automáticamente?"
+    },
+
+    {
+        id: "limites-8",
+        journey: "limites",
+        day: 8,
+        title: "GUARDAR TIEMPO PARA MÍ",
+        duration: "15–30 min",
+        moment: "En un momento del día en el que puedas disponer de un espacio personal sin descuidar una responsabilidad necesaria.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando reservas intencionalmente un momento para ti y proteges ese espacio de otras actividades.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Busca un momento disponible de tu día que puedas dedicarte a ti."
+            },
+            {
+                emoji: "🎯",
+                title: "Reserva",
+                text: "Decide qué quieres hacer durante ese tiempo y procura mantenerlo libre de otras tareas."
+            },
+            {
+                emoji: "🚫",
+                title: "Protege",
+                text: "Si aparece una actividad que puede esperar, permite que espere y conserva el espacio que habías reservado."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al permitir que un momento de tu día esté destinado a ti."
+            }
+        ],
+
+        question:
+            "¿Qué cambió cuando reservaste un espacio de tu día para ti y decidiste mantenerlo?"
+    },
+
+    {
+        id: "limites-9",
+        journey: "limites",
+        day: 9,
+        title: "DECIR QUE AHORA NO PUEDO",
+        duration: "10–20 min",
+        moment: "Ante una petición o propuesta cotidiana que llegue en un momento en el que realmente no puedas atenderla.",
+        description:
+            "Hoy vas a practicar responder de acuerdo con lo que puedes hacer en ese momento, sin asumir automáticamente una nueva tarea.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Durante el día, presta atención a alguna petición que llegue cuando estés ocupado o cuando no tengas disponibilidad para atenderla."
+            },
+            {
+                emoji: "🧭",
+                title: "Comprueba",
+                text: "Antes de responder, observa si realmente tienes tiempo, energía o disponibilidad para hacerte cargo en ese momento."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Si no puedes, comunícalo de forma clara. Puedes indicar que ahora no puedes hacerlo y, si corresponde, proponer otro momento."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Después de responder, fíjate en qué ocurre en ti y si aparece la necesidad de cambiar tu respuesta."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al reconocer y expresar que en ese momento no podías?"
+    },
+
+    {
+        id: "limites-10",
+        journey: "limites",
+        day: 10,
+        title: "CAMBIAR DE OPINIÓN",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que todavía puedas modificar una decisión o preferencia.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando reconoces que ya no quieres lo mismo que habías elegido anteriormente.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Detecta",
+                text: "Piensa en alguna elección reciente que hayas hecho y pregúntate si todavía estás de acuerdo con ella."
+            },
+            {
+                emoji: "💭",
+                title: "Revisa",
+                text: "Observa si tus preferencias, necesidades o circunstancias han cambiado desde que tomaste esa decisión."
+            },
+            {
+                emoji: "🔄",
+                title: "Cambia",
+                text: "Si todavía tienes posibilidad de hacerlo y realmente quieres otra cosa, modifica tu elección."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al permitirte cambiar de opinión y qué pensamientos aparecen después."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando te permitiste cambiar de opinión porque ya no querías lo mismo?"
+    },
+
+    {
+        id: "limites-11",
+        journey: "limites",
+        day: 11,
+        title: "DECIR LO QUE NO ME GUSTA",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que algo que hace o propone otra persona no te resulte agradable.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas algo que no te gusta en lugar de adaptarte automáticamente.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Durante el día, presta atención a alguna situación sencilla en la que algo no te resulte agradable."
+            },
+            {
+                emoji: "⏸️",
+                title: "Reconoce",
+                text: "Antes de responder, identifica qué es exactamente lo que no te gusta de esa situación."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Si es apropiado, comunícalo de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Después, fíjate en cómo te sientes al haber expresado lo que no te gusta y qué pensamientos aparecen."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando expresaste algo que no te gustaba?"
+    },
+
+    {
+        id: "limites-12",
+        journey: "limites",
+        day: 12,
+        title: "PEDIR QUE CAMBIEN ALGO",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que otra persona haga algo que podría modificar sin que ello implique un riesgo para nadie.",
+        description:
+            "Hoy vas a practicar pedir un cambio concreto cuando una situación no te resulta adecuada.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Identifica una situación sencilla en la que te gustaría que otra persona hiciera algo de una manera diferente."
+            },
+            {
+                emoji: "💭",
+                title: "Define",
+                text: "Piensa qué cambio concreto quieres pedir, evitando convertirlo en una crítica general."
+            },
+            {
+                emoji: "🗣️",
+                title: "Pide",
+                text: "Expresa de manera clara qué te gustaría que cambiara."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre después de hacer la petición y cómo te sientes al haberla expresado."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al pedir directamente un cambio que necesitabas?"
+    },
+
+    {
+        id: "limites-13",
+        journey: "limites",
+        day: 13,
+        title: "DECIR HASTA DÓNDE PUEDO LLEGAR",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que otra persona pueda pedirte más tiempo, esfuerzo o disponibilidad de la que quieres ofrecer.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando decides cuánto estás dispuesto a ofrecer y lo comunicas de manera clara.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Presta atención a una petición o situación en la que puedas elegir cuánto tiempo, esfuerzo o disponibilidad quieres dedicar."
+            },
+            {
+                emoji: "🧭",
+                title: "Decide",
+                text: "Antes de responder, identifica qué estás dispuesto a ofrecer y qué prefieres dejar fuera."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Comunica con claridad hasta dónde quieres llegar en esa situación."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece después de expresar tu límite: tranquilidad, incomodidad, culpa, duda u otra sensación."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al decidir cuánto querías ofrecer y expresarlo?"
+    },
+
+    {
+        id: "limites-14",
+        journey: "limites",
+        day: 14,
+        title: "DEJAR DE JUSTIFICARME DE MÁS",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que tengas que rechazar algo o expresar que no puedes hacerlo.",
+        description:
+            "Hoy vas a observar qué ocurre cuando das una respuesta clara sin sentir que necesitas explicar cada detalle.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Cuando tengas que rechazar una petición o explicar que no puedes hacer algo, presta atención a las razones que empiezas a dar."
+            },
+            {
+                emoji: "⏸️",
+                title: "Pausa",
+                text: "Pregúntate qué parte de tu explicación es realmente necesaria para comunicar tu respuesta."
+            },
+            {
+                emoji: "🗣️",
+                title: "Responde",
+                text: "Da una respuesta clara y suficiente, evitando añadir explicaciones únicamente para conseguir que la otra persona la acepte."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en qué sientes después de responder de esta manera."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando dejaste de explicar tu decisión más de lo necesario?"
+    },
+
+    {
+        id: "limites-15",
+        journey: "limites",
+        day: 15,
+        title: "NO RESPONDER ENSEGUIDA",
+        duration: "10–20 min",
+        moment: "Ante un mensaje, llamada o petición que no requiera una respuesta inmediata.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando dejas pasar un tiempo antes de responder a algo que podría esperar.",
+
+        steps: [
+            {
+                emoji: "📱",
+                title: "Detecta",
+                text: "Cuando recibas un mensaje o petición, observa si aparece automáticamente la necesidad de responder."
+            },
+            {
+                emoji: "⏸️",
+                title: "Espera",
+                text: "Si la situación lo permite, deja pasar un momento antes de contestar y continúa con lo que estabas haciendo."
+            },
+            {
+                emoji: "🧭",
+                title: "Elige",
+                text: "Decide cuándo quieres responder, teniendo en cuenta tus actividades y disponibilidad."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué pensamientos o sensaciones aparecen durante ese intervalo."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al permitirte responder en el momento que tú elegiste?"
+    },
+
+    {
+        id: "limites-16",
+        journey: "limites",
+        day: 16,
+        title: "PEDIR UN POCO DE ESPACIO",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que necesites disponer de un momento o lugar para ti.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas que necesitas un poco de espacio antes de esperar a que la otra persona lo note.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Identifica un momento en el que prefieras tener un poco de espacio para ti."
+            },
+            {
+                emoji: "💭",
+                title: "Reconoce",
+                text: "Observa qué necesitas concretamente: unos minutos a solas, tranquilidad, distancia o simplemente menos interacción."
+            },
+            {
+                emoji: "🗣️",
+                title: "Pide",
+                text: "Si es apropiado, comunícalo de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Después, fíjate en cómo te sientes al haber pedido ese espacio y qué ocurre mientras lo tienes."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando pediste un poco de espacio antes de necesitar alejarte por completo?"
+    },
+
+    {
+        id: "limites-17",
+        journey: "limites",
+        day: 17,
+        title: "DECIR QUE NECESITO ESTAR SOLO",
+        duration: "10–20 min",
+        moment: "En un momento en el que necesites un tiempo personal y puedas tomarlo sin descuidar una responsabilidad necesaria.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas directamente que necesitas pasar un momento a solas.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Identifica si durante el día aparece un momento en el que realmente quieras estar solo."
+            },
+            {
+                emoji: "⏸️",
+                title: "Comprueba",
+                text: "Observa si puedes disponer de ese tiempo sin dejar de atender algo que requiera tu atención."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Si es apropiado, comunica a la otra persona que necesitas un momento a solas."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al pedir ese espacio y qué ocurre cuando finalmente dispones de él."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al expresar directamente que necesitabas estar solo?"
+    },
+
+    {
+        id: "limites-18",
+        journey: "limites",
+        day: 18,
+        title: "DEJAR QUE ME AYUDEN",
+        duration: "10–20 min",
+        moment: "Ante una tarea o situación cotidiana en la que otra persona pueda ayudarte.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando permites que otra persona se haga cargo de una parte, en lugar de asumir que tienes que hacerlo todo por tu cuenta.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Identifica una tarea concreta en la que otra persona pueda colaborar contigo."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Antes de hacerlo todo por tu cuenta, fíjate si aparece la idea de que deberías encargarte tú de todo."
+            },
+            {
+                emoji: "🗣️",
+                title: "Permite",
+                text: "Si la situación lo permite, acepta la ayuda o deja que la otra persona se haga cargo de una parte."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué sientes al dejar de hacerte cargo de todo y permitir que otra persona participe."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al permitir que otra persona se hiciera cargo de una parte?"
+    },
+
+    {
+        id: "limites-19",
+        journey: "limites",
+        day: 19,
+        title: "DEJAR UNA CONVERSACIÓN PARA DESPUÉS",
+        duration: "10–20 min",
+        moment: "Durante una conversación que pueda continuar en otro momento sin dejar una situación urgente sin atender.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando reconoces que una conversación puede esperar y decides retomarla después.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Presta atención a una conversación en la que notes que necesitas parar, tomar distancia o disponer de más tiempo antes de continuar."
+            },
+            {
+                emoji: "⏸️",
+                title: "Reconoce",
+                text: "Observa qué en ti antes de seguir hablando y pregúntate si realmente necesitas continuar en ese momento."
+            },
+            {
+                emoji: "🗣️",
+                title: "Propón",
+                text: "Si es apropiado, comunica que prefieres continuar la conversación en otro momento y, si es posible, acuerda cuándo retomarla."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes después de haber puesto una pausa a la conversación."
+            }
+        ],
+
+        question:
+            "¿Qué cambió cuando te permitiste dejar una conversación para después?"
+    },
+
+    {
+        id: "limites-20",
+        journey: "limites",
+        day: 20,
+        title: "DECIRLO ANTES DE MOLESTARME",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que algo pueda empezar a incomodarte antes de convertirse en un conflicto.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas una molestia mientras todavía puedes comunicarla con claridad.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Durante el día, presta atención a una situación que empiece a incomodarte."
+            },
+            {
+                emoji: "⏸️",
+                title: "Reconoce",
+                text: "Antes de acumular más molestia, detente y observa qué está ocurriendo y qué necesitas que cambie."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Si la situación lo permite, comunica lo que te incomoda de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Después, fíjate en qué ocurre al haberlo expresado antes de que la molestia aumentara."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al expresar una molestia antes de que se acumulara?"
+    },
+
+    {
+        id: "limites-21",
+        journey: "limites",
+        day: 21,
+        title: "REPETIR UN NO",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que alguien insista después de que ya hayas expresado que no quieres algo.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando mantienes una respuesta que ya has expresado, aunque la otra persona vuelva a preguntar o insistir.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Durante el día, presta atención a alguna situación en la que ya hayas dicho que no y aparezca nuevamente la petición o propuesta."
+            },
+            {
+                emoji: "⏸️",
+                title: "Recuerda",
+                text: "Antes de cambiar tu respuesta, pregúntate si realmente has cambiado de opinión o si estás reaccionando a la insistencia."
+            },
+            {
+                emoji: "🗣️",
+                title: "Repite",
+                text: "Si sigues sin quererlo y la situación lo permite, vuelve a expresar tu “no” de manera clara y respetuosa."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en qué ocurre dentro de ti al mantener tu respuesta: pensamientos, emociones, sensaciones o ganas de ceder."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al mantener tu respuesta aunque la otra persona insistiera?"
+    },
+
+    {
+        id: "limites-22",
+        journey: "limites",
+        day: 22,
+        title: "MANTENER UN LÍMITE",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que hayas expresado un límite y tengas la posibilidad de mantenerlo.",
+        description:
+            "Hoy vas a observar qué ocurre cuando mantienes un límite que ya has expresado, incluso si después aparece la duda o la tentación de modificarlo.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Piensa en una situación reciente en la que hayas dicho qué quieres, qué no quieres o qué estás dispuesto a hacer."
+            },
+            {
+                emoji: "💭",
+                title: "Revisa",
+                text: "Pregúntate si ese límite sigue teniendo sentido para ti en este momento."
+            },
+            {
+                emoji: "🧭",
+                title: "Mantén",
+                text: "Si continúa siendo adecuado para ti, actúa de acuerdo con él cuando vuelva a presentarse una situación similar."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece al mantenerlo: tranquilidad, incomodidad, culpa, duda, seguridad u otra sensación."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al mantener un límite que seguía siendo importante para ti?"
+    },
+
+    {
+        id: "limites-23",
+        journey: "limites",
+        day: 23,
+        title: "NO CEDER POR PRESIÓN",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que puedas mantener una preferencia sin que hacerlo implique un riesgo para ti o para otra persona.",
+        description:
+            "Hoy vas a observar qué ocurre cuando reconoces una presión para cambiar de postura y decides si realmente quieres hacerlo.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Presta atención a una situación en la que alguien intente convencerte, insista o espere que aceptes algo."
+            },
+            {
+                emoji: "⏸️",
+                title: "Pausa",
+                text: "Antes de responder, pregúntate si quieres cambiar de opinión o si estás pensando hacerlo solamente para dejar de sentir la presión."
+            },
+            {
+                emoji: "🧭",
+                title: "Decide",
+                text: "Si sigues queriendo lo mismo y la situación lo permite, mantén tu postura."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre después: qué sientes, qué piensas y cómo respondes ante la presión."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste sobre tu forma de responder cuando sentiste presión para ceder?"
+    },
+
+    {
+        id: "limites-24",
+        journey: "limites",
+        day: 24,
+        title: "TOLERAR LA REACCIÓN DE OTRA PERSONA",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que puedas expresar un límite y la otra persona pueda reaccionar de una manera que no controles.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando expresas un límite y permites que la otra persona tenga su propia reacción sin modificar inmediatamente lo que necesitas.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Identifica una situación sencilla en la que necesites expresar una preferencia, un límite o una negativa."
+            },
+            {
+                emoji: "🗣️",
+                title: "Exprésalo",
+                text: "Comunica lo que necesitas de manera clara y respetuosa."
+            },
+            {
+                emoji: "⏸️",
+                title: "Permite",
+                text: "Si la otra persona muestra molestia, desacuerdo o incomodidad, deja que esa reacción ocurra sin intentar resolverla inmediatamente."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en qué aparece en ti y si surge la necesidad de cambiar lo que dijiste para evitar la reacción de la otra persona."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al expresar un límite sin intentar controlar la reacción de la otra persona?"
+    },
+
+    {
+        id: "limites-25",
+        journey: "limites",
+        day: 25,
+        title: "ACEPTAR UN NO",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que otra persona pueda rechazar una propuesta, petición o invitación tuya.",
+        description:
+            "Hoy vas a experimentar qué ocurre cuando recibes un “no” y respetas la decisión de la otra persona.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Durante el día, identifica alguna situación en la que hagas una propuesta, petición o invitación y exista la posibilidad de recibir una respuesta negativa."
+            },
+            {
+                emoji: "⏸️",
+                title: "Escucha",
+                text: "Cuando la otra persona responda, presta atención a su respuesta sin intentar anticiparla ni modificarla."
+            },
+            {
+                emoji: "🧭",
+                title: "Acepta",
+                text: "Si responde que no, permite que esa respuesta sea suficiente sin insistir, presionar o buscar una explicación adicional."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre dentro de ti al recibir un “no” y respetarlo."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al recibir un “no” y permitir que la otra persona mantuviera su decisión?"
+    },
+
+    {
+        id: "limites-26",
+        journey: "limites",
+        day: 26,
+        title: "RESPETAR EL ESPACIO DE OTRA PERSONA",
+        duration: "10–20 min",
+        moment: "Durante un momento en el que otra persona necesite tiempo, distancia o privacidad.",
+        description:
+            "Hoy vas a practicar reconocer el espacio que otra persona necesita y observar qué ocurre cuando decides respetarlo.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Presta atención a alguna situación en la que otra persona necesite estar sola, concentrarse, descansar o disponer de un momento propio."
+            },
+            {
+                emoji: "⏸️",
+                title: "Reconoce",
+                text: "Observa si aparece la necesidad de acercarte, preguntar, insistir o intervenir."
+            },
+            {
+                emoji: "🧭",
+                title: "Respeta",
+                text: "Si la situación lo permite, deja que la otra persona tenga ese espacio sin intentar ocuparlo inmediatamente."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al respetar el límite de otra persona y qué pensamientos aparecen."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al respetar el espacio que otra persona necesitaba?"
+    },
+
+    {
+        id: "limites-27",
+        journey: "limites",
+        day: 27,
+        title: "DEJAR DE HACER ALGO QUE YA NO QUIERO HACER",
+        duration: "15–30 min",
+        moment: "Ante una actividad, compromiso o hábito cotidiano que ya no quieras mantener y que puedas modificar sin consecuencias importantes.",
+        description:
+            "Hoy vas a explorar qué ocurre cuando reconoces que ya no quieres continuar con algo y te permites dejarlo.",
+
+        steps: [
+            {
+                emoji: "👀",
+                title: "Detecta",
+                text: "Piensa en algo que continúas haciendo principalmente porque ya estás acostumbrado, porque lo asumiste como compromiso o porque te cuesta dejarlo."
+            },
+            {
+                emoji: "💭",
+                title: "Revisa",
+                text: "Pregúntate si todavía quieres seguir haciéndolo y qué te lleva a mantenerlo."
+            },
+            {
+                emoji: "🎯",
+                title: "Decide",
+                text: "Si puedes hacerlo sin perjudicarte ni perjudicar a otra persona, elige qué quieres dejar de hacer o reducir."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en qué aparece al tomar distancia de algo que ya no quieres mantener."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al reconocer que ya no querías seguir haciendo algo?"
+    },
+
+    {
+        id: "limites-28",
+        journey: "limites",
+        day: 28,
+        title: "CAMBIAR UN LÍMITE QUE YA NO ME SIRVE",
+        duration: "15–30 min",
+        moment: "En una situación cotidiana en la que exista una regla personal o límite que hayas establecido y que puedas revisar.",
+        description:
+            "Hoy vas a observar que tus límites también pueden cambiar cuando cambian tus necesidades o circunstancias.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Identifica",
+                text: "Piensa en un límite que hayas establecido para ti y que actualmente quizá ya no necesites mantener de la misma manera."
+            },
+            {
+                emoji: "💭",
+                title: "Revisa",
+                text: "Observa qué ha cambiado desde que estableciste ese límite y cómo te relacionas actualmente con esa situación."
+            },
+            {
+                emoji: "🔄",
+                title: "Ajusta",
+                text: "Si realmente ya no te resulta útil y puedes hacerlo de forma segura, modifica ese límite de una manera que se ajuste mejor a lo que necesitas ahora."
+            },
+            {
+                emoji: "🧭",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al permitir que un límite también pueda cambiar."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al reconocer que un límite también puede cambiar?"
+    },
+
+    {
+        id: "limites-29",
+        journey: "limites",
+        day: 29,
+        title: "ACTUAR DE ACUERDO CON MI LÍMITE",
+        duration: "10–20 min",
+        moment: "En una situación cotidiana en la que necesites poner en práctica un límite que ya has reconocido.",
+        description:
+            "Hoy vas a llevar un límite de las palabras a una acción concreta, observando qué ocurre cuando actúas de acuerdo con lo que has decidido cuidar.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Identifica",
+                text: "Piensa en un límite que tengas claro y en una situación cotidiana en la que puedas ponerlo en práctica."
+            },
+            {
+                emoji: "🧭",
+                title: "Decide",
+                text: "Reconoce qué necesitas hacer tú para actuar de acuerdo con ese límite."
+            },
+            {
+                emoji: "🎯",
+                title: "Hazlo",
+                text: "Cuando se presente la situación, realiza esa acción de manera clara y respetuosa."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en cómo te sientes al actuar de acuerdo con tu límite y qué ocurre después."
+            }
+        ],
+
+        question:
+            "¿Qué cambió cuando llevaste un límite que tenías claro a una acción concreta?"
+    },
+
+    {
+        id: "limites-30",
+        journey: "limites",
+        day: 30,
+        title: "ELEGIR QUÉ QUIERO PERMITIR A PARTIR DE AHORA",
+        duration: "20–30 min",
+        moment: "En un momento tranquilo en el que puedas revisar algunas situaciones habituales de tu vida.",
+        description:
+            "Hoy vas a cerrar este recorrido observando qué quieres permitir, qué quieres limitar y qué quieres cuidar de una manera diferente a partir de ahora.",
+
+        steps: [
+            {
+                emoji: "🪞",
+                title: "Revisa",
+                text: "Piensa en las experiencias de estos días y reconoce alguna situación en la que hayas descubierto algo importante sobre tus límites."
+            },
+            {
+                emoji: "💭",
+                title: "Pregúntate",
+                text: "¿Qué quiero seguir permitiendo en mi vida? ¿Qué quiero limitar? ¿Qué quiero dejar de aceptar?"
+            },
+            {
+                emoji: "🎯",
+                title: "Elige",
+                text: "Escoge un límite concreto que quieras empezar a expresar, mantener o cuidar de una manera diferente."
+            },
+            {
+                emoji: "🌱",
+                title: "Llévalo contigo",
+                text: "Piensa en una situación cotidiana en la que puedas ponerlo en práctica y observa qué ocurre cuando llegue ese momento."
+            }
+        ],
+
+        question:
+            "¿Qué límite quieres cuidar de una manera diferente a partir de ahora?"
+    },
 
     /* -----------------------------------------------------
        ELEGIR
