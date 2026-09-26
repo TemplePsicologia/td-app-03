@@ -6045,33 +6045,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupRatingButtons();
     hideExperienceView();
 
+
     /* =========================================
        COMPROBAR SESIÓN DE SUPABASE
        ========================================= */
 
-    const { data } =
-    await supabaseClient.auth.getSession();
+    const { data: sessionData, error: sessionError } =
+        await supabaseClient.auth.getSession();
 
-if (data.session) {
+    if (sessionError) {
+        console.error(
+            "Error al comprobar la sesión:",
+            sessionError
+        );
+    }
 
-    document.body.classList.add(
-        "user-authenticated"
-    );
+    if (sessionData && sessionData.session) {
 
-} else {
+        document.body.classList.add(
+            "user-authenticated"
+        );
 
-    document.body.classList.remove(
-        "user-authenticated"
-    );
-}
+    } else {
+
+        document.body.classList.remove(
+            "user-authenticated"
+        );
+    }
 
 
-/* =========================================
-   INICIAR SESIÓN
-   ========================================= */
+    /* =========================================
+       INICIAR SESIÓN
+       ========================================= */
 
-const loginForm =
-    document.getElementById("login-form");
+    const loginForm =
+        document.getElementById("login-form");
 
     if (loginForm) {
 
@@ -6081,27 +6089,41 @@ const loginForm =
 
                 event.preventDefault();
 
+                const emailInput =
+                    document.getElementById(
+                        "login-email"
+                    );
+
+                const passwordInput =
+                    document.getElementById(
+                        "login-password"
+                    );
+
+                if (!emailInput || !passwordInput) {
+                    return;
+                }
+
                 const email =
-                    document
-                        .getElementById("login-email")
-                        .value
-                        .trim();
+                    emailInput.value.trim();
 
                 const password =
-                    document
-                        .getElementById("login-password")
-                        .value;
+                    passwordInput.value;
 
 
-                const { data, error } =
+                const { data: loginData, error: loginError } =
                     await supabaseClient.auth
                         .signInWithPassword({
-                            email,
-                            password
+                            email: email,
+                            password: password
                         });
 
 
-                if (error) {
+                if (loginError) {
+
+                    console.error(
+                        "Error al iniciar sesión:",
+                        loginError
+                    );
 
                     alert(
                         "No pudimos iniciar sesión. Revisa tu correo y contraseña."
@@ -6111,7 +6133,7 @@ const loginForm =
                 }
 
 
-                if (data.session) {
+                if (loginData && loginData.session) {
 
                     document.body.classList.add(
                         "user-authenticated"
@@ -6122,12 +6144,12 @@ const loginForm =
                         behavior: "auto"
                     });
                 }
+
             }
         );
     }
 
 });
-
 
 /* =========================================================
    UTILIDADES
