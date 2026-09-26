@@ -5781,22 +5781,37 @@ function setupRegisterForm() {
             }
 
 
-            const { error } =
-                await supabaseClient.auth.signUp({
-                    email,
-                    password
-                });
+            const { data, error } =
+    await supabaseClient.auth.signUp({
+        email,
+        password
+    });
 
 
-            if (error) {
-                alert(error.message);
-                return;
-            }
+if (error) {
+    alert(error.message);
+    return;
+}
 
 
-            alert(
-                "Tu cuenta fue creada. Revisa tu correo para confirmar tu dirección antes de iniciar sesión."
-            );
+if (data.session) {
+
+    document.body.classList.add(
+        "user-authenticated"
+    );
+
+    window.scrollTo({
+        top: 0,
+        behavior: "auto"
+    });
+
+} else {
+
+    alert(
+        "Tu cuenta fue creada correctamente. Ya puedes iniciar sesión."
+    );
+
+}
         });
     }
 
