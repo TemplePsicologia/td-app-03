@@ -6888,16 +6888,6 @@ function toggleComplete() {
     saveState();
 
     updateCompleteButton();
-
-    renderCalendar();
-
-
-    if (
-        returnView === "journey" &&
-        currentJourney
-    ) {
-        renderJourneyView(currentJourney);
-    }
 }
 
 
@@ -6949,7 +6939,6 @@ function updateCompleteButton() {
         completed ? "true" : "false"
     );
 }
-
 
 /* =========================================================
    CALENDARIO
