@@ -3898,3 +3898,44 @@ footer {
         font-size: 27px;
     }
 }
+
+/* =========================================================
+   CORRECCIÓN DESCRIPCIÓN EN CELULAR
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    #experience-view .experience-description {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 26px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    #experience-view .experience-description::before,
+    #experience-view .experience-description::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    #experience-view .experience-description p {
+        position: relative;
+        z-index: 2;
+
+        margin: 0;
+
+        font-size: 13px;
+        line-height: 1.75;
+
+        border: none;
+        text-decoration: none;
+    }
+}
