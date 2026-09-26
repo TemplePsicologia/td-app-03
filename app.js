@@ -2973,10 +2973,10 @@ const experiences = [
                 text: "Presta atención a una conversación en la que notes que necesitas parar, tomar distancia o disponer de más tiempo antes de continuar."
             },
             {
-                emoji: "⏸️",
-                title: "Reconoce",
-                text: "Observa qué en ti antes de seguir hablando y pregúntate si realmente necesitas continuar en ese momento."
-            },
+    emoji: "⏸️",
+    title: "Reconoce",
+    text: "Observa qué ocurre en ti antes de seguir hablando y pregúntate si realmente necesitas continuar en ese momento."
+},
             {
                 emoji: "🗣️",
                 title: "Propón",
@@ -3478,6 +3478,1041 @@ const experiences = [
             "¿Qué descubriste sobre ti cuando tuviste que elegir sin que hubiera una opción claramente mejor?"
     },
 
+   {
+    id: "elegir-3",
+    journey: "elegir",
+    day: 3,
+    title: "ELEGIR QUÉ PRIORIZAR",
+    duration: "10–20 minutos",
+    moment: "En un momento del día en el que tengas varias cosas pendientes.",
+    description:
+        "Hoy vas a practicar elegir qué merece tu atención primero. No se trata de hacer más cosas, sino de observar qué decides colocar en primer lugar cuando no puedes atenderlo todo al mismo tiempo.",
+
+    steps: [
+        {
+            emoji: "📋",
+            title: "Observa",
+            text: "Mira qué cosas tienes pendientes o disponibles para hacer."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Decide cuál quieres colocar primero y continúa con esa elección."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué aparece al dejar otras cosas para después."
+        },
+        {
+            emoji: "🧭",
+            title: "Revisa",
+            text: "Pregúntate si elegiste por urgencia, costumbre, presión, importancia o porque realmente lo preferías."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la manera en que decides qué merece tu atención primero?"
+},
+
+{
+    id: "elegir-4",
+    journey: "elegir",
+    day: 4,
+    title: "ELEGIR SIN BUSCAR LA OPCIÓN PERFECTA",
+    duration: "10–20 minutos",
+    moment: "Ante una decisión cotidiana que puedas resolver sin necesidad de encontrar la alternativa ideal.",
+    description:
+        "Algunas decisiones pueden alargarse cuando intentamos encontrar la mejor opción posible. Hoy vas a practicar una elección suficientemente adecuada, sin dedicar más tiempo del necesario a buscar una alternativa perfecta.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Identifica una decisión cotidiana que estés postergando porque sigues comparando posibilidades."
+        },
+        {
+            emoji: "⏳",
+            title: "Pon un límite",
+            text: "Date un tiempo breve para considerar las opciones disponibles."
+        },
+        {
+            emoji: "🧭",
+            title: "Decide",
+            text: "Cuando termine ese tiempo, elige la alternativa que consideres suficientemente adecuada."
+        },
+        {
+            emoji: "👀",
+            title: "Continúa",
+            text: "Después de decidir, sigue con tu día sin volver inmediatamente a comparar las opciones descartadas."
+        }
+    ],
+
+    question:
+        "¿Qué ocurrió cuando elegiste sin esperar encontrar la opción perfecta?"
+},
+
+{
+    id: "elegir-5",
+    journey: "elegir",
+    day: 5,
+    title: "ELEGIR QUÉ DEJAR PARA DESPUÉS",
+    duration: "10–20 minutos",
+    moment: "En un momento en el que tengas varias tareas, planes o cosas que podrías hacer.",
+    description:
+        "Elegir también implica decidir qué no vas a hacer ahora. Hoy vas a observar qué ocurre cuando conscientemente dejas algo para después, en lugar de intentar atender todo al mismo tiempo.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Elige dos o más cosas que podrías hacer en este momento."
+        },
+        {
+            emoji: "🧭",
+            title: "Decide",
+            text: "Escoge una para realizar ahora y otra para dejar para después."
+        },
+        {
+            emoji: "⏸️",
+            title: "Déjala",
+            text: "Permite que la segunda permanezca pendiente sin intentar resolverla inmediatamente."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué aparece: tranquilidad, incomodidad, urgencia, culpa, alivio o cualquier otra reacción."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre cuando eliges no hacer algo todavía?"
+},
+
+{
+    id: "elegir-6",
+    journey: "elegir",
+    day: 6,
+    title: "ELEGIR CÓMO HACERLO",
+    duration: "10–20 min",
+    moment: "Durante una tarea cotidiana que pueda realizarse de diferentes maneras.",
+    description:
+        "Incluso cuando sabemos qué tenemos que hacer, todavía existen muchas decisiones sobre cómo hacerlo. Hoy vas a prestar atención a esas pequeñas elecciones que normalmente haces de manera automática.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elige una tarea",
+            text: "Busca una actividad cotidiana que puedas realizar de varias maneras."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Antes de empezar, identifica algunas formas posibles de hacerla."
+        },
+        {
+            emoji: "🎯",
+            title: "Decide",
+            text: "Escoge conscientemente una manera de realizarla, aunque no sea la que utilizas habitualmente."
+        },
+        {
+            emoji: "🧭",
+            title: "Experimenta",
+            text: "Haz la actividad de esa manera y observa qué cambia en tu experiencia."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tus preferencias al elegir conscientemente cómo hacer una tarea?"
+},
+
+{
+    id: "elegir-7",
+    journey: "elegir",
+    day: 7,
+    title: "PAUSAR ANTES DE ELEGIR",
+    duration: "5–10 minutos",
+    moment: "Antes de una elección cotidiana que suelas hacer rápidamente.",
+    description:
+        "Algunas elecciones aparecen tan rápido que apenas notamos que estamos decidiendo. Hoy vas a crear un pequeño espacio antes de responder para observar cómo eliges.",
+
+    steps: [
+        {
+            emoji: "⏸️",
+            title: "Detente",
+            text: "Cuando aparezca una elección sencilla, evita responder inmediatamente."
+        },
+        {
+            emoji: "🌿",
+            title: "Espera",
+            text: "Permanece unos segundos sin decidir."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué opciones aparecen, qué quieres hacer y qué pensamientos o sensaciones acompañan el momento."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Después de esa pausa, toma la decisión que consideres adecuada."
+        }
+    ],
+
+    question:
+        "¿Qué cambió en tu experiencia cuando dejaste un espacio antes de elegir?"
+},
+
+{
+    id: "elegir-8",
+    journey: "elegir",
+    day: 8,
+    title: "NOTAR QUÉ INFLUYE EN MI DECISIÓN",
+    duration: "10–20 minutos",
+    moment: "Durante una decisión cotidiana que tenga más de un factor en juego.",
+    description:
+        "Nuestras elecciones pueden estar influidas por muchas cosas: tiempo, comodidad, costumbre, opinión de otras personas, miedo a equivocarnos, necesidades del momento u otras circunstancias. Hoy vas a observar qué está presente cuando decides.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige una decisión",
+            text: "Busca una elección cotidiana que tengas que realizar."
+        },
+        {
+            emoji: "🔎",
+            title: "Observa",
+            text: "Antes de decidir, identifica qué factores están influyendo en tu elección."
+        },
+        {
+            emoji: "🧭",
+            title: "Decide",
+            text: "Toma la decisión teniendo presentes esos factores, sin intentar eliminar ninguno."
+        },
+        {
+            emoji: "👀",
+            title: "Revisa",
+            text: "Después, observa cuál de ellos tuvo mayor peso en tu decisión."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre aquello que suele influir en tus decisiones?"
+},
+
+{
+    id: "elegir-9",
+    journey: "elegir",
+    day: 9,
+    title: "DIFERENCIAR QUIERO DEBO",
+    duration: "10–20 minutos",
+    moment: "En una situación cotidiana en la que sientas que tienes que elegir entre lo que quieres y lo que consideras que deberías hacer.",
+    description:
+        "A veces una elección está acompañada por deseos y también por obligaciones, expectativas o reglas personales. Hoy vas a observar cómo se relacionan esas dos voces cuando decides.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Encuentra una situación cotidiana en la que aparezca un “quiero” y un “debo”."
+        },
+        {
+            emoji: "💭",
+            title: "Escucha",
+            text: "Reconoce qué te dice cada uno sin decidir todavía cuál debería ganar."
+        },
+        {
+            emoji: "⚖️",
+            title: "Compara",
+            text: "Observa qué hay detrás de cada opción y qué consecuencias tendría elegirla."
+        },
+        {
+            emoji: "🎯",
+            title: "Decide",
+            text: "Toma la decisión que corresponda a la situación y observa cómo te sientes al hacerlo."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la diferencia entre lo que quieres y lo que sientes que debes hacer?"
+},
+
+{
+    id: "elegir-10",
+    journey: "elegir",
+    day: 10,
+    title: "ELEGIR AUN CON DUDAS",
+    duration: "10–20 minutos",
+    moment: "Ante una decisión cotidiana en la que no puedas tener certeza completa sobre el resultado.",
+    description:
+        "No todas las decisiones vienen acompañadas de seguridad. A veces podemos tener dudas y, aun así, necesitamos elegir. Hoy vas a experimentar cómo es tomar una decisión sin esperar a sentirte completamente seguro.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Encuentra",
+            text: "Identifica una decisión cotidiana que puedas tomar aunque no tengas toda la información."
+        },
+        {
+            emoji: "👀",
+            title: "Reconoce",
+            text: "Observa qué dudas aparecen y qué te gustaría saber antes de decidir."
+        },
+        {
+            emoji: "⏳",
+            title: "Decide",
+            text: "Cuando tengas información suficiente para actuar, toma una decisión sin esperar a eliminar todas las dudas."
+        },
+        {
+            emoji: "🧭",
+            title: "Continúa",
+            text: "Sigue con lo que hayas elegido y observa qué ocurre después."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de elegir cuando no puedes tener certeza completa?"
+},
+
+{
+    id: "elegir-11",
+    journey: "elegir",
+    day: 11,
+    title: "CAMBIAR DE OPINIÓN",
+    duration: "10–20 min",
+    moment: "En un momento tranquilo en el que puedas recordar una opinión que hayas cambiado con el tiempo.",
+    description:
+        "Cambiar de opinión también forma parte de elegir. Hoy vas a explorar una idea sobre la que antes pensabas de una manera diferente y reconocer qué ocurrió entre aquella decisión y la que tienes actualmente.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Recuerda",
+            text: "Piensa en algo sobre lo que antes tenías una opinión diferente."
+        },
+        {
+            emoji: "🧭",
+            title: "Compara",
+            text: "Observa qué pensabas entonces y qué piensas ahora."
+        },
+        {
+            emoji: "💭",
+            title: "Explora",
+            text: "Reconoce qué experiencias, información o cambios influyeron en esa transformación."
+        },
+        {
+            emoji: "🌱",
+            title: "Reconoce",
+            text: "Permite que ambas versiones formen parte de tu historia sin tener que decidir cuál era la “correcta”."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de elegir cuando reconoces que también puedes cambiar de opinión?"
+},
+
+{
+    id: "elegir-12",
+    journey: "elegir",
+    day: 12,
+    title: "DECIDIR SIN DAR EXPLICACIONES DE MÁS",
+    duration: "10–20 min",
+    moment: "En una situación cotidiana en la que tengas que comunicar una elección a otra persona.",
+    description:
+        "Algunas decisiones pueden sentirse más difíciles cuando pensamos que necesitamos justificarlas completamente. Hoy vas a practicar expresar una elección de manera clara, sin añadir explicaciones innecesarias para conseguir aprobación.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Identifica una decisión sencilla que quieras tomar por ti."
+        },
+        {
+            emoji: "💬",
+            title: "Exprésala",
+            text: "Comunica lo que has decidido de manera clara y respetuosa."
+        },
+        {
+            emoji: "⏸️",
+            title: "Detente",
+            text: "Evita añadir explicaciones que no sean realmente necesarias."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué ocurre en ti cuando permites que tu elección se sostenga por sí misma."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu necesidad de explicar tus decisiones?"
+},
+
+{
+    id: "elegir-13",
+    journey: "elegir",
+    day: 13,
+    title: "ELEGIR AUNQUE NO TODOS ESTÉN DE ACUERDO",
+    duration: "10–20 min",
+    moment: "En una situación cotidiana en la que tu elección pueda ser diferente a la de otra persona.",
+    description:
+        "A veces sabemos qué queremos elegir, pero la posibilidad de que alguien no esté de acuerdo puede hacernos dudar. Hoy vas a practicar reconocer tu elección aunque otra persona pueda preferir algo diferente.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Piensa en una situación sencilla en la que tú y otra persona tengan preferencias diferentes."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Reconoce qué prefieres tú y toma tu decisión desde esa elección."
+        },
+        {
+            emoji: "💬",
+            title: "Comunica",
+            text: "Si es necesario, expresa tu decisión de manera clara y respetuosa."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué ocurre en ti al sostener una elección que no coincide con la de otra persona."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al sostener una elección aunque otra persona pudiera preferir algo diferente?"
+},
+
+{
+    id: "elegir-14",
+    journey: "elegir",
+    day: 14,
+    title: "DEJAR DE DELEGAR UNA DECISIÓN",
+    duration: "10–20 min",
+    moment: "Ante una decisión cotidiana que suelas dejar en manos de otra persona.",
+    description:
+        "Algunas decisiones pueden terminar en manos de otros porque resulta más fácil que elegir por nosotros mismos. Hoy vas a reconocer una decisión que normalmente delegas y darte la oportunidad de tomarla tú.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconoce",
+            text: "Identifica una decisión sencilla que normalmente dejas que otra persona tome por ti."
+        },
+        {
+            emoji: "⏸️",
+            title: "Detente",
+            text: "Antes de preguntar qué haría alguien más, observa qué piensas tú."
+        },
+        {
+            emoji: "🎯",
+            title: "Decide",
+            text: "Elige una opción que consideres adecuada para ti."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué aparece al asumir directamente esa elección."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al tomar una decisión que normalmente dejabas en manos de otra persona?"
+},
+
+{
+    id: "elegir-15",
+    journey: "elegir",
+    day: 15,
+    title: "RECONOCER CUANDO YA NO QUIERO LO MISMO",
+    duration: "15–30 min",
+    moment: "En un momento tranquilo en el que puedas revisar una elección, preferencia o decisión que haya cambiado con el tiempo.",
+    description:
+        "Lo que queremos no permanece necesariamente igual. Hoy vas a explorar si existe algo que elegiste o quisiste durante un tiempo y que actualmente ya no representa lo mismo para ti.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Recuerda",
+            text: "Piensa en algo que durante un tiempo hayas elegido, querido o considerado importante."
+        },
+        {
+            emoji: "🧭",
+            title: "Compara",
+            text: "Observa qué relación tienes actualmente con aquello."
+        },
+        {
+            emoji: "💭",
+            title: "Reconoce",
+            text: "Pregúntate si todavía lo quieres, si ha cambiado o si ya no forma parte de lo que buscas."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Si corresponde, decide qué quieres hacer ahora con esa elección."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu capacidad de reconocer cuando algo que antes querías ya no representa lo que quieres hoy?"
+},
+
+{
+    id: "elegir-16",
+    journey: "elegir",
+    day: 16,
+    title: "DAR UN PASO DESPUÉS DE ELEGIR",
+    duration: "15–30 min",
+    moment: "Ante una decisión cotidiana que ya hayas tomado pero que todavía no hayas llevado a la práctica.",
+    description:
+        "Elegir y actuar no siempre ocurren al mismo tiempo. Hoy vas a tomar una decisión que ya tienes clara y convertirla en un paso concreto.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Piensa en una elección que ya hayas tomado pero que todavía no hayas puesto en práctica."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Confirma qué quieres hacer."
+        },
+        {
+            emoji: "👣",
+            title: "Actúa",
+            text: "Da un primer paso concreto que acerque esa decisión a la realidad."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Nota qué ocurre cuando dejas de pensar en la elección y comienzas a llevarla a cabo."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al pasar de una elección a una acción concreta?"
+},
+
+{
+    id: "elegir-17",
+    journey: "elegir",
+    day: 17,
+    title: "ELEGIR CON MIS RECURSOS ACTUALES",
+    duration: "15–30 min",
+    moment: "Ante una decisión cotidiana que tengas pendiente.",
+    description:
+        "No siempre elegimos desde las condiciones ideales. A veces necesitamos decidir teniendo en cuenta el tiempo, dinero, energía, conocimientos o posibilidades que realmente tenemos disponibles.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Elige una decisión cotidiana que tengas delante."
+        },
+        {
+            emoji: "📦",
+            title: "Observa",
+            text: "Reconoce con qué recursos cuentas realmente en este momento."
+        },
+        {
+            emoji: "🎯",
+            title: "Ajusta",
+            text: "Explora qué opciones son posibles teniendo en cuenta esas condiciones."
+        },
+        {
+            emoji: "🧭",
+            title: "Decide",
+            text: "Elige una alternativa que sea coherente con lo que tienes disponible ahora."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de elegir cuando tienes en cuenta tus recursos reales?"
+},
+
+{
+    id: "elegir-18",
+    journey: "elegir",
+    day: 18,
+    title: "ELEGIR DESDE LO QUE NECESITO",
+    duration: "10–20 min",
+    moment: "En una situación cotidiana en la que tengas varias maneras posibles de responder.",
+    description:
+        "A veces elegimos guiándonos principalmente por lo que queremos en el momento. Hoy vas a explorar qué ocurre cuando también tienes en cuenta aquello que necesitas para estar bien o funcionar de una manera sostenible.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identifica",
+            text: "Encuentra una situación en la que tengas más de una opción posible."
+        },
+        {
+            emoji: "💭",
+            title: "Pregúntate",
+            text: "Observa qué quieres y qué necesitas en esa situación."
+        },
+        {
+            emoji: "⚖️",
+            title: "Compara",
+            text: "Reconoce si ambas cosas coinciden o si existe alguna diferencia entre ellas."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Toma una decisión teniendo en cuenta aquello que necesitas actualmente."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tus decisiones cuando tienes en cuenta no solo lo que quieres, sino también lo que necesitas?"
+},
+
+{
+    id: "elegir-19",
+    journey: "elegir",
+    day: 19,
+    title: "ELEGIR SIN CONTROLAR EL RESULTADO",
+    duration: "15–30 min",
+    moment: "Ante una elección cotidiana cuyo resultado no puedas conocer completamente de antemano.",
+    description:
+        "Podemos tomar una decisión sin poder controlar exactamente lo que ocurrirá después. Hoy vas a practicar elegir teniendo en cuenta lo que sabes ahora, sin intentar asegurar por completo el resultado.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Encuentra una decisión cotidiana cuyo resultado no dependa completamente de ti."
+        },
+        {
+            emoji: "🔎",
+            title: "Observa",
+            text: "Reconoce qué puedes considerar antes de decidir y qué queda fuera de tu control."
+        },
+        {
+            emoji: "🧭",
+            title: "Decide",
+            text: "Haz tu elección con la información y los recursos que tienes actualmente."
+        },
+        {
+            emoji: "👀",
+            title: "Suelta",
+            text: "Después de decidir, observa si aparece la necesidad de revisar, anticipar o controlar lo que ocurrirá."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de elegir cuando no puedes controlar completamente lo que sucederá?"
+},
+
+{
+    id: "elegir-20",
+    journey: "elegir",
+    day: 20,
+    title: "SOSTENER UNA ELECCIÓN",
+    duration: "15–30 min",
+    moment: "Después de haber tomado una decisión cotidiana.",
+    description:
+        "Tomar una decisión no siempre termina cuando elegimos. A veces aparecen dudas, opiniones externas o ganas de volver a revisar lo decidido. Hoy vas a observar qué ocurre cuando permaneces con una elección durante un tiempo antes de volver a cuestionarla.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Toma una decisión cotidiana que consideres suficientemente clara."
+        },
+        {
+            emoji: "🧭",
+            title: "Sostén",
+            text: "Durante un periodo acordado contigo, evita volver a revisarla innecesariamente."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Registra si aparecen dudas, ganas de cambiar, buscar confirmación o imaginar otras opciones."
+        },
+        {
+            emoji: "🔎",
+            title: "Revisa",
+            text: "Al finalizar, observa cómo fue permanecer con tu elección y decide si quieres mantenerla o modificarla."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre después de tomar una decisión y permanecer con ella durante un tiempo?"
+},
+
+{
+    id: "elegir-21",
+    journey: "elegir",
+    day: 21,
+    title: "TOMAR UNA DECISIÓN QUE SIGO EVITANDO",
+    duration: "15–30 min",
+    moment: "En un momento tranquilo en el que puedas pensar sin interrupciones.",
+    description:
+        "Hay decisiones que no necesariamente son difíciles por sus opciones, sino porque llevamos tiempo evitando tomarlas. Hoy vas a acercarte a una decisión que sigue pendiente y observar qué ocurre cuando dejas de mantenerla en pausa.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Identificar",
+            text: "Piensa en una decisión cotidiana que lleves algún tiempo evitando. No tiene que ser una decisión importante ni definitiva."
+        },
+        {
+            emoji: "🌿",
+            title: "Acercarte",
+            text: "Observa qué has estado evitando al no decidir: una conversación, un cambio, una respuesta, una acción o simplemente elegir entre alternativas."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Decide cuál sería el siguiente paso posible, aunque todavía no tengas resuelto todo lo demás."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Nota qué aparece al acercarte a esa decisión: dudas, alivio, resistencia, preocupación, claridad o cualquier otra experiencia."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre cuando te acercas a una decisión que llevabas tiempo evitando?"
+},
+
+{
+    id: "elegir-22",
+    journey: "elegir",
+    day: 22,
+    title: "ELEGIR AUNQUE PUEDA EQUIVOCARME",
+    duration: "10–20 min",
+    moment: "Ante una decisión cotidiana en la que ninguna opción pueda garantizarte un resultado completamente favorable.",
+    description:
+        "Algunas elecciones implican aceptar que podemos equivocarnos o que el resultado no sea el que esperábamos. Hoy vas a practicar tomar una decisión sin exigir que el resultado confirme que elegiste correctamente.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Identifica una decisión sencilla en la que exista la posibilidad de que el resultado no sea como esperas."
+        },
+        {
+            emoji: "💭",
+            title: "Explorar",
+            text: "Observa qué te hace difícil elegir cuando existe la posibilidad de equivocarte."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Toma una decisión utilizando la información y las posibilidades que tienes ahora."
+        },
+        {
+            emoji: "🚶",
+            title: "Continuar",
+            text: "Después de elegir, continúa con lo que corresponda sin intentar comprobar inmediatamente si tomaste la decisión correcta."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de elegir cuando existe la posibilidad de equivocarte?"
+},
+
+{
+    id: "elegir-23",
+    journey: "elegir",
+    day: 23,
+    title: "ESCUCHAR UNA OPINIÓN DIFERENTE",
+    duration: "15–30 min",
+    moment: "En una conversación tranquila con alguien cuya manera de pensar sea diferente a la tuya.",
+    description:
+        "Escuchar una opinión diferente no significa tener que adoptarla. Hoy vas a observar qué ocurre cuando permites que otra perspectiva esté presente antes de decidir qué piensas tú.",
+
+    steps: [
+        {
+            emoji: "💬",
+            title: "Elegir",
+            text: "Piensa en un tema cotidiano sobre el que tengas una opinión y conversa con alguien que piense diferente."
+        },
+        {
+            emoji: "👂",
+            title: "Escuchar",
+            text: "Permite que la otra persona explique su punto de vista sin intentar convencerla ni preparar inmediatamente una respuesta."
+        },
+        {
+            emoji: "🔎",
+            title: "Explorar",
+            text: "Observa qué parte de lo que escuchas comprendes, cuestionas o simplemente puedes considerar."
+        },
+        {
+            emoji: "🧭",
+            title: "Decidir",
+            text: "Después de escuchar, decide qué quieres mantener de tu propia posición y qué podrías reconsiderar."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de decidir qué pensar cuando escuchas una perspectiva diferente?"
+},
+
+{
+    id: "elegir-24",
+    journey: "elegir",
+    day: 24,
+    title: "ELEGIR ENTRE LO QUE QUIERO AHORA Y LO QUE QUIERO DESPUÉS",
+    duration: "10–20 min",
+    moment: "Ante una situación cotidiana en la que una opción resulte atractiva ahora, pero otra pueda ser más importante para ti a más largo plazo.",
+    description:
+        "A veces lo que queremos en este momento no coincide con aquello que también queremos conseguir o cuidar después. Hoy vas a observar esa diferencia y decidir teniendo en cuenta ambas partes.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Encuentra una situación en la que lo que quieres hacer ahora entre en conflicto con algo que también consideras importante para después."
+        },
+        {
+            emoji: "⚖️",
+            title: "Comparar",
+            text: "Observa qué te ofrece cada opción y qué implica elegir cada una."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Decide cuál quieres priorizar esta vez, teniendo en cuenta tanto el momento actual como aquello que quieres cuidar después."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Nota qué ocurre cuando una elección implica dejar temporalmente en segundo plano algo que también deseas."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tus decisiones cuando lo que quieres ahora y lo que quieres después no coinciden?"
+},
+
+{
+    id: "elegir-25",
+    journey: "elegir",
+    day: 25,
+    title: "ELEGIR QUÉ MERECE UNA RESPUESTA",
+    duration: "10–20 min",
+    moment: "Durante un momento del día en el que recibas mensajes, solicitudes o situaciones que reclamen tu atención.",
+    description:
+        "No todo lo que llega hasta ti necesita una respuesta inmediata. Hoy vas a practicar distinguir entre aquello que realmente quieres responder y aquello que puedes dejar pasar, responder después o no responder.",
+
+    steps: [
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Presta atención a las diferentes cosas que durante el día parecen pedir una respuesta de tu parte."
+        },
+        {
+            emoji: "🔎",
+            title: "Distinguir",
+            text: "Pregúntate cuáles necesitan realmente una respuesta y cuáles simplemente generan la sensación de que deberías responder."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Decide conscientemente qué vas a responder, qué dejarás para después y qué no necesita una respuesta."
+        },
+        {
+            emoji: "🌿",
+            title: "Observar",
+            text: "Nota qué ocurre cuando permites que algunas cosas no reciban tu respuesta inmediata."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre aquello que decides que merece una respuesta?"
+},
+
+{
+    id: "elegir-26",
+    journey: "elegir",
+    day: 26,
+    title: "HACERME CARGO DE UNA ELECCIÓN",
+    duration: "15–30 min",
+    moment: "Ante una decisión cotidiana que hayas tomado recientemente.",
+    description:
+        "Elegir también implica reconocer que nuestras decisiones tienen consecuencias. Hoy vas a observar una elección propia y qué significa hacerte cargo de ella sin convertirla en una evaluación sobre ti.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Recordar",
+            text: "Piensa en una decisión reciente que hayas tomado por ti."
+        },
+        {
+            emoji: "👀",
+            title: "Reconocer",
+            text: "Observa qué ocurrió como consecuencia de esa elección, tanto si salió como esperabas como si no."
+        },
+        {
+            emoji: "⚖️",
+            title: "Distinguir",
+            text: "Reconoce qué parte de lo ocurrido depende de tu decisión y qué parte estaba fuera de tu control."
+        },
+        {
+            emoji: "🧭",
+            title: "Continuar",
+            text: "Decide qué quieres hacer ahora con aquello que ocurrió, sin necesidad de juzgarte por haber elegido."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que significa hacerte cargo de una elección?"
+},
+
+{
+    id: "elegir-27",
+    journey: "elegir",
+    day: 27,
+    title: "ELEGIR QUÉ HACER CON UNA OPORTUNIDAD",
+    duration: "15–30 min",
+    moment: "Ante una oportunidad cotidiana que aparezca y que tengas libertad para aceptar, rechazar o dejar para otro momento.",
+    description:
+        "No todas las oportunidades necesitan ser aprovechadas. Hoy vas a practicar elegir qué hacer cuando aparece una posibilidad que podría resultarte interesante, pero que no necesariamente necesitas aceptar.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Identifica una oportunidad concreta que haya aparecido recientemente o que tengas disponible ahora."
+        },
+        {
+            emoji: "⚖️",
+            title: "Explorar",
+            text: "Observa qué te atrae de ella y qué factores te hacen dudar o considerar otras opciones."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Decide si quieres aprovecharla, dejarla para otro momento o no tomarla."
+        },
+        {
+            emoji: "🌿",
+            title: "Sostener",
+            text: "Permite que tu elección sea suficiente por ahora, sin necesidad de convertirla en una oportunidad perdida o en una obligación."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de decidir qué oportunidades quieres aprovechar?"
+},
+
+{
+    id: "elegir-28",
+    journey: "elegir",
+    day: 28,
+    title: "ELEGIR Y ACEPTAR LO QUE QUEDA FUERA",
+    duration: "15–30 min",
+    moment: "Ante una situación en la que tengas varias opciones y no puedas elegirlas todas.",
+    description:
+        "Toda elección deja algo fuera. Hoy vas a experimentar qué ocurre cuando eliges una opción y permites que las demás no formen parte de esa decisión.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Encuentra una situación en la que tengas varias opciones que te resulten interesantes."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Escoge una de ellas sabiendo que, por ahora, las demás quedarán fuera."
+        },
+        {
+            emoji: "👀",
+            title: "Observar",
+            text: "Nota qué aparece al dejar las otras posibilidades: duda, curiosidad, tranquilidad, miedo a perderte algo o cualquier otra experiencia."
+        },
+        {
+            emoji: "🚶",
+            title: "Continuar",
+            text: "Dedica un tiempo a la opción elegida sin intentar recuperar inmediatamente las que descartaste."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre cuando elegir una cosa implica dejar otras fuera?"
+},
+
+{
+    id: "elegir-29",
+    journey: "elegir",
+    day: 29,
+    title: "ELEGIR QUÉ QUIERO CAMBIAR A PARTIR DE AHORA",
+    duration: "15–30 min",
+    moment: "En un momento tranquilo en el que puedas revisar algunas de las elecciones que haces actualmente.",
+    description:
+        "Conocer nuestra manera de elegir también puede llevarnos a reconocer que algunas elecciones ya no queremos mantenerlas de la misma forma. Hoy vas a identificar una elección cotidiana que quieras empezar a hacer de manera diferente.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconocer",
+            text: "Piensa en una elección que haces actualmente y que ya no quieres seguir realizando exactamente de la misma manera."
+        },
+        {
+            emoji: "💭",
+            title: "Explorar",
+            text: "Observa qué te ha llevado a mantenerla hasta ahora y qué ha cambiado para ti."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Decide qué quieres hacer diferente a partir de ahora."
+        },
+        {
+            emoji: "👣",
+            title: "Empezar",
+            text: "Realiza hoy una acción concreta que represente esa nueva elección."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu capacidad de cambiar una elección cuando reconoces que ya no quieres mantenerla igual?"
+},
+
+{
+    id: "elegir-30",
+    journey: "elegir",
+    day: 30,
+    title: "ELEGIR CON INTENCIÓN",
+    duration: "20–30 min",
+    moment: "Al finalizar estos 30 días, en un momento tranquilo y sin interrupciones.",
+    description:
+        "Durante estos días has explorado diferentes maneras de elegir. Hoy vas a llevar lo que descubriste a una decisión concreta de tu vida actual.",
+
+    steps: [
+        {
+            emoji: "🧠",
+            title: "Reconocer",
+            text: "Piensa en algo que hayas descubierto sobre tu manera de elegir durante estos 30 días."
+        },
+        {
+            emoji: "🔎",
+            title: "Identificar",
+            text: "Encuentra una situación real de tu vida actual en la que quieras tomar una decisión de manera diferente."
+        },
+        {
+            emoji: "🎯",
+            title: "Elegir",
+            text: "Toma esa decisión teniendo en cuenta lo que ahora sabes sobre ti, tus necesidades, tus posibilidades y aquello que consideras importante."
+        },
+        {
+            emoji: "👣",
+            title: "Llevarlo",
+            text: "Realiza hoy un primer paso relacionado con esa elección y observa qué ocurre al actuar desde una decisión tomada con intención."
+        }
+    ],
+
+    question:
+        "¿Qué quieres empezar a elegir de manera más consciente a partir de ahora?"
+},
 
     /* -----------------------------------------------------
        SOLTAR
@@ -3555,9 +4590,1045 @@ const experiences = [
 
         question:
             "¿Qué ocurrió cuando dejaste de comprobar algo que normalmente vuelves a revisar?"
-    }
-];
+    },
 
+       {
+        id: "soltar-3",
+        journey: "soltar",
+        day: 3,
+        title: "DESHACERME DE ALGO QUE YA NO USO",
+        duration: "15–30 min",
+        moment: "En casa o en un espacio donde tengas objetos que ya no utilizas.",
+        description:
+            "A veces seguimos conservando cosas que ya no forman parte de nuestra vida. Hoy vas a elegir algo que ya no utilizas y experimentar qué ocurre cuando decides dejarlo ir.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Busca",
+                text: "Recorre un espacio y encuentra un objeto que lleves tiempo sin utilizar y que puedas dejar ir sin necesitarlo después."
+            },
+            {
+                emoji: "🧩",
+                title: "Elige",
+                text: "Tómalo durante unos momentos y observa qué aparece al pensar en desprenderte de él. Puede haber indiferencia, duda, recuerdos o ganas de conservarlo."
+            },
+            {
+                emoji: "📦",
+                title: "Suelta",
+                text: "Si decides que ya no necesitas conservarlo, déjalo fuera de tu espacio habitual. Puedes donarlo, reciclarlo, desecharlo o entregarlo, según corresponda."
+            },
+            {
+                emoji: "🌿",
+                title: "Observa",
+                text: "Vuelve a mirar el lugar que ocupaba y nota qué se siente tener ese espacio disponible."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al dejar ir algo que ya no utilizabas?"
+    },
+
+    {
+        id: "soltar-4",
+        journey: "soltar",
+        day: 4,
+        title: "DEJAR DE HACERLO COMO SIEMPRE",
+        duration: "15–30 min",
+        moment: "En casa o durante una actividad cotidiana que realices habitualmente de una misma manera.",
+        description:
+            "Hay formas de hacer las cosas que repetimos casi sin pensarlo. Hoy vas a dejar de lado, por un momento, una manera habitual de hacer algo y permitirte probar otra.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Busca una actividad cotidiana que conozcas bien y que puedas realizar de diferentes maneras."
+            },
+            {
+                emoji: "🔄",
+                title: "Cambia",
+                text: "Elige una parte concreta que normalmente haces de la misma forma y hazla de otra manera."
+            },
+            {
+                emoji: "👀",
+                title: "Experimenta",
+                text: "Continúa con la actividad sin intentar volver inmediatamente a tu forma habitual de hacerlo."
+            },
+            {
+                emoji: "🌿",
+                title: "Observa",
+                text: "Fíjate en qué apareció al hacerlo diferente: comodidad, resistencia, curiosidad, incomodidad, facilidad o cualquier otra experiencia."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando dejaste de hacerlo como siempre?"
+    },
+
+    {
+        id: "soltar-5",
+        journey: "soltar",
+        day: 5,
+        title: "DEJAR DE INSISTIR",
+        duration: "10–20 min",
+        moment: "Durante un momento en el que estés intentando conseguir algo que puedas dejar temporalmente sin resolver.",
+        description:
+            "Hay situaciones en las que seguimos intentando conseguir una respuesta, cambiar algo o hacer que ocurra de determinada manera. Hoy vas a experimentar qué ocurre cuando dejas de insistir durante un tiempo.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Identifica algo pequeño en lo que hayas estado insistiendo y que puedas dejar en pausa sin perjudicarte ni perjudicar a otra persona."
+            },
+            {
+                emoji: "⏸️",
+                title: "Detén",
+                text: "Durante este momento, deja de realizar la acción con la que normalmente intentas conseguir que aquello cambie."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Nota qué aparece al dejar de insistir: frustración, alivio, preocupación, ganas de volver a intentarlo o cualquier otra sensación."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Continúa con otra actividad y permite que aquello permanezca sin resolver durante un tiempo."
+            }
+        ],
+
+        question:
+            "¿Qué cambió en tu experiencia cuando dejaste de insistir?"
+    },
+
+    {
+        id: "soltar-6",
+        journey: "soltar",
+        day: 6,
+        title: "HACER ALGO SIN CONTROLAR CÓMO SALE",
+        duration: "15–30 min",
+        moment: "En casa o en un lugar donde puedas realizar una actividad sencilla cuyo resultado no dependa completamente de ti.",
+        description:
+            "Podemos dedicar mucha energía a intentar que las cosas ocurran exactamente como las imaginamos. Hoy vas a participar en una actividad dejando espacio para que el resultado se construya sin intentar controlarlo por completo.",
+
+        steps: [
+            {
+                emoji: "🎯",
+                title: "Elige",
+                text: "Escoge una actividad cuyo resultado dependa al menos en parte de factores que no puedas controlar: cocinar algo sencillo, dibujar, crear algo o realizar una actividad compartida."
+            },
+            {
+                emoji: "🚶",
+                title: "Empieza",
+                text: "Realiza la actividad prestando atención a lo que haces, sin intentar anticipar o corregir continuamente cómo debería terminar."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Cuando aparezca la necesidad de controlar, corregir o asegurar el resultado, reconoce ese impulso y vuelve a la actividad."
+            },
+            {
+                emoji: "🌿",
+                title: "Permite",
+                text: "Deja que el resultado sea el que sea. Cuando termines, obsérvalo sin compararlo inmediatamente con lo que habías imaginado."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al hacer algo sin intentar controlar completamente cómo terminaría?"
+    },
+
+    {
+        id: "soltar-7",
+        journey: "soltar",
+        day: 7,
+        title: "DEJAR UN ESPACIO SIN LLENAR",
+        duration: "10–15 min",
+        moment: "En casa, en una sala de espera o en cualquier lugar tranquilo donde puedas permanecer unos minutos sin otra actividad pendiente.",
+        description:
+            "No todos los espacios necesitan estar ocupados. Hoy vas a dejar deliberadamente unos minutos sin llenarlos con el teléfono, una tarea, entretenimiento o cualquier otra actividad.",
+
+        steps: [
+            {
+                emoji: "⏸️",
+                title: "Reserva",
+                text: "Elige entre cinco y diez minutos en los que no tengas que hacer nada urgente."
+            },
+            {
+                emoji: "📵",
+                title: "Aparta",
+                text: "Deja el teléfono y evita buscar inmediatamente otra actividad para ocupar ese momento."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece cuando surge ese espacio: aburrimiento, inquietud, tranquilidad, ganas de hacer algo, pensamientos o cualquier otra experiencia."
+            },
+            {
+                emoji: "🌿",
+                title: "Permanece",
+                text: "Permite que el espacio siga vacío durante esos minutos sin convertirlo en otra tarea que tengas que completar."
+            }
+        ],
+
+        question:
+            "¿Qué apareció cuando dejaste un espacio sin llenarlo?"
+    },
+
+    {
+        id: "soltar-8",
+        journey: "soltar",
+        day: 8,
+        title: "DEJAR PASAR ALGO",
+        duration: "10–20 min",
+        moment: "Durante una situación cotidiana pequeña que despierte en ti ganas de responder, corregir o intervenir.",
+        description:
+            "Hay momentos en los que sentimos que tenemos que decir algo, corregir lo ocurrido o hacer que una situación sea diferente. Hoy vas a experimentar qué ocurre cuando eliges dejar pasar una situación pequeña que no necesita de tu intervención.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Detecta",
+                text: "Durante el día, presta atención a una situación pequeña que despierte en ti ganas de intervenir y que puedas dejar pasar sin consecuencias importantes."
+            },
+            {
+                emoji: "⏸️",
+                title: "Espera",
+                text: "Cuando aparezca el impulso de responder o intervenir, haz una pausa y observa qué ocurre antes de hacer algo."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Si sigue siendo apropiado no intervenir, permite que la situación continúe sin hacer nada al respecto."
+            },
+            {
+                emoji: "👀",
+                title: "Continúa",
+                text: "Vuelve a lo que estabas haciendo y observa si la situación sigue ocupando tu atención o comienza a quedar atrás."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al permitir que una situación pequeña pasara sin intervenir?"
+    },
+
+    {
+        id: "soltar-9",
+        journey: "soltar",
+        day: 9,
+        title: "DEJAR QUE UN PLAN CAMBIE",
+        duration: "15–30 min",
+        moment: "Durante un día en el que tengas algún plan flexible que pueda modificarse sin generar un problema importante.",
+        description:
+            "Cuando imaginamos cómo debería desarrollarse un día, un cambio puede hacernos querer recuperar inmediatamente lo que habíamos previsto. Hoy vas a permitir una modificación pequeña y observar qué ocurre cuando dejas que el plan tome otra forma.",
+
+        steps: [
+            {
+                emoji: "🎯",
+                title: "Elige",
+                text: "Piensa en un plan sencillo que tengas para hoy y que pueda modificarse sin afectar algo importante."
+            },
+            {
+                emoji: "🔄",
+                title: "Cambia",
+                text: "Introduce una pequeña modificación en el orden, el momento, el lugar o la manera de realizarlo."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en tu reacción ante el cambio y en cualquier impulso de volver inmediatamente al plan original."
+            },
+            {
+                emoji: "🌿",
+                title: "Continúa",
+                text: "Sigue con la nueva versión del plan sin dedicar el resto del momento a reconstruir cómo habría sido el anterior."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al permitir que un plan cambiara sin intentar recuperar inmediatamente lo que habías previsto?"
+    },
+
+    {
+        id: "soltar-10",
+        journey: "soltar",
+        day: 10,
+        title: "DEJAR DE ESPERAR LO MISMO",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, al pensar en una persona o situación de la que suelas esperar algo determinado.",
+        description:
+            "A veces seguimos esperando que alguien actúe de una manera concreta, que una situación cambie o que algo ocurra como imaginamos. Hoy vas a observar qué sucede cuando dejas de sostener por un momento esa expectativa.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Piensa en una situación cotidiana o en algo que esperas de otra persona."
+            },
+            {
+                emoji: "💭",
+                title: "Observa",
+                text: "Identifica qué esperas que ocurra y qué has imaginado que debería pasar."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Durante unos minutos, deja de intentar anticipar o construir mentalmente ese resultado. Permite que la situación sea como es en este momento."
+            },
+            {
+                emoji: "👀",
+                title: "Vuelve",
+                text: "Dirige nuevamente tu atención hacia lo que está ocurriendo ahora, sin buscar señales de que aquello que esperas vaya a suceder."
+            }
+        ],
+
+        question:
+            "¿Qué notaste cuando dejaste de sostener por un momento una expectativa?"
+    },
+
+    {
+        id: "soltar-11",
+        journey: "soltar",
+        day: 11,
+        title: "DEJAR QUE OTRA PERSONA LO HAGA A SU MANERA",
+        duration: "15–30 min",
+        moment: "En casa o durante una actividad compartida en la que otra persona pueda encargarse de algo.",
+        description:
+            "A veces sabemos cómo nos gustaría que otra persona hiciera algo y sentimos la necesidad de indicarle, corregirla o intervenir. Hoy vas a experimentar qué ocurre cuando dejas que alguien haga algo a su propia manera.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Identifica una tarea sencilla que otra persona pueda realizar sin que necesites supervisarla o corregirla."
+            },
+            {
+                emoji: "🤲",
+                title: "Suelta",
+                text: "Permite que la otra persona se encargue de ella de la manera que considere adecuada."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué ocurre dentro de ti mientras no intervienes: ganas de corregir, preocupación, incomodidad, curiosidad, tranquilidad u otra experiencia."
+            },
+            {
+                emoji: "🌿",
+                title: "Permite",
+                text: "Cuando termine, recibe el resultado sin compararlo inmediatamente con la forma en que tú lo habrías hecho."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al dejar que otra persona hiciera algo a su manera?"
+    },
+
+    {
+        id: "soltar-12",
+        journey: "soltar",
+        day: 12,
+        title: "DEJAR UN PENDIENTE PEQUEÑO",
+        duration: "10–20 min",
+        moment: "En casa, en el trabajo o en otro espacio donde tengas varias tareas pendientes.",
+        description:
+            "No todo lo pendiente necesita resolverse en cuanto aparece. Hoy vas a elegir algo pequeño que pueda esperar y experimentar qué ocurre cuando permites que permanezca pendiente.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Busca una tarea sencilla que puedas realizar más adelante sin que genere un problema por esperar."
+            },
+            {
+                emoji: "⏸️",
+                title: "Deja",
+                text: "Decide conscientemente no hacerla todavía, aunque tengas la posibilidad de resolverla ahora."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Presta atención a lo que aparece al verla pendiente: urgencia, incomodidad, alivio, pensamientos o ganas de terminarla."
+            },
+            {
+                emoji: "🌿",
+                title: "Continúa",
+                text: "Haz otra actividad y permite que esa tarea permanezca pendiente hasta el momento que hayas elegido para retomarla."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando permitiste que un pendiente pequeño esperara?"
+    },
+
+    {
+        id: "soltar-13",
+        journey: "soltar",
+        day: 13,
+        title: "DEJAR DE BUSCAR UNA EXPLICACIÓN",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, cuando estés pensando en una situación cotidiana que no comprendes completamente.",
+        description:
+            "Cuando algo no tiene una explicación clara, podemos seguir pensando, preguntando o buscando respuestas hasta sentir que todo encaja. Hoy vas a experimentar qué ocurre cuando dejas una situación sin encontrarle una explicación definitiva.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en una situación pequeña sobre la que todavía tengas preguntas, pero cuya explicación no necesites resolver ahora."
+            },
+            {
+                emoji: "🧠",
+                title: "Reconoce",
+                text: "Observa qué explicación has intentado encontrar o qué preguntas siguen apareciendo."
+            },
+            {
+                emoji: "⏸️",
+                title: "Suelta",
+                text: "Durante unos minutos, deja de buscar información, imaginar respuestas o reconstruir mentalmente lo ocurrido."
+            },
+            {
+                emoji: "🌿",
+                title: "Continúa",
+                text: "Dirige tu atención hacia otra actividad y permite que esa situación permanezca sin una explicación completa por ahora."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al permitir que algo quedara sin una explicación definitiva?"
+    },
+
+    {
+        id: "soltar-14",
+        journey: "soltar",
+        day: 14,
+        title: "DEJAR DE HACERLO PERFECTO",
+        duration: "15–30 min",
+        moment: "En casa, en el trabajo o durante una actividad cotidiana en la que puedas aceptar un resultado suficientemente bueno.",
+        description:
+            "A veces seguimos corrigiendo algo incluso cuando ya cumple su propósito. Hoy vas a experimentar qué ocurre cuando decides detenerte sin buscar que el resultado sea perfecto.",
+
+        steps: [
+            {
+                emoji: "🎯",
+                title: "Elige",
+                text: "Busca una actividad sencilla en la que suelas dedicar tiempo a revisar, corregir o mejorar pequeños detalles."
+            },
+            {
+                emoji: "🛑",
+                title: "Detente",
+                text: "Realiza la actividad hasta alcanzar un resultado adecuado y decide conscientemente no continuar perfeccionándolo."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece cuando sabes que todavía podrías modificar algo: ganas de corregir, duda, incomodidad, alivio u otra experiencia."
+            },
+            {
+                emoji: "🌿",
+                title: "Déjalo así",
+                text: "Continúa con tu día y permite que el resultado permanezca tal como quedó."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando decidiste dejar algo suficientemente bien sin seguir perfeccionándolo?"
+    },
+
+    {
+        id: "soltar-15",
+        journey: "soltar",
+        day: 15,
+        title: "NO DARLE MÁS VUELTAS",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo en el que notes que estás pensando repetidamente en una misma situación.",
+        description:
+            "Hay situaciones a las que volvemos mentalmente una y otra vez intentando resolverlas, entenderlas o encontrar una respuesta diferente. Hoy vas a experimentar qué ocurre cuando dejas de volver a ellas durante un tiempo.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Detecta",
+                text: "Cuando notes que estás repitiendo mentalmente una situación, reconoce que estás volviendo a ella."
+            },
+            {
+                emoji: "⏸️",
+                title: "Interrumpe",
+                text: "En lugar de continuar reconstruyéndola, haz una pausa y deja la situación tal como está en tu mente."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Nota si aparecen ganas de seguir pensando, nuevas preguntas, incomodidad o cualquier otro impulso."
+            },
+            {
+                emoji: "🌿",
+                title: "Vuelve",
+                text: "Dirige tu atención hacia algo que esté ocurriendo ahora y permite que la situación quede fuera de tu pensamiento durante unos minutos."
+            }
+        ],
+
+        question:
+            "¿Qué cambió cuando dejaste de darle vueltas a una situación durante un momento?"
+    },
+
+    {
+        id: "soltar-16",
+        journey: "soltar",
+        day: 16,
+        title: "DEJAR DE ANTICIPAR",
+        duration: "10–20 min",
+        moment: "Antes de una actividad cotidiana que todavía no haya comenzado.",
+        description:
+            "Podemos pasar tiempo imaginando cómo será algo antes de que ocurra: qué diremos, qué pasará o cómo nos sentiremos. Hoy vas a experimentar qué sucede cuando dejas de preparar mentalmente una situación que todavía no ha ocurrido.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Detecta",
+                text: "Piensa en una actividad próxima sobre la que ya estés imaginando diferentes posibilidades."
+            },
+            {
+                emoji: "👀",
+                title: "Reconoce",
+                text: "Observa qué estás anticipando y cómo tu mente intenta adelantarse a lo que todavía no ha ocurrido."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Durante unos minutos, deja de construir escenarios sobre esa situación. No necesitas encontrar una forma correcta de prepararte."
+            },
+            {
+                emoji: "📍",
+                title: "Vuelve",
+                text: "Dirige tu atención hacia lo que estás haciendo ahora y permite que la situación futura llegue cuando corresponda."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al dejar de adelantarte mentalmente a algo que todavía no ocurría?"
+    },
+
+    {
+        id: "soltar-17",
+        journey: "soltar",
+        day: 17,
+        title: "DEJAR DE COMPARAR",
+        duration: "10–20 min",
+        moment: "Durante una actividad cotidiana en la que notes que estás comparando tu experiencia con la de otra persona o con una versión anterior de ti.",
+        description:
+            "Compararnos puede llevarnos a mirar constantemente lo que tenemos, hacemos o somos en relación con algo diferente. Hoy vas a experimentar qué ocurre cuando dejas esa comparación durante un momento.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Detecta",
+                text: "Presta atención a una situación cotidiana en la que aparezca una comparación espontánea."
+            },
+            {
+                emoji: "👀",
+                title: "Reconoce",
+                text: "Observa qué estás comparando y hacia dónde dirige tu atención esa comparación."
+            },
+            {
+                emoji: "⏸️",
+                title: "Suelta",
+                text: "Cuando aparezca nuevamente, reconoce que está ahí y deja de continuar con ella."
+            },
+            {
+                emoji: "🌿",
+                title: "Vuelve",
+                text: "Regresa tu atención a tu propia experiencia: lo que estás haciendo, sintiendo o viviendo en ese momento."
+            }
+        ],
+
+        question:
+            "¿Qué cambió cuando dejaste de comparar por un momento?"
+    },
+
+    {
+        id: "soltar-18",
+        journey: "soltar",
+        day: 18,
+        title: "DEJAR DE BUSCAR EL MOMENTO PERFECTO",
+        duration: "15–30 min",
+        moment: "En un momento del día en el que tengas algo sencillo que quieras empezar, pero hayas estado esperando una ocasión ideal.",
+        description:
+            "A veces esperamos tener más tiempo, más energía, más motivación o mejores condiciones antes de empezar algo. Hoy vas a soltar la búsqueda del momento perfecto y comenzar con lo que tienes disponible.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en algo pequeño que llevas tiempo posponiendo porque estás esperando un momento mejor para hacerlo."
+            },
+            {
+                emoji: "🎯",
+                title: "Empieza",
+                text: "Dedícale unos minutos utilizando las condiciones que tienes hoy, sin esperar a que sean ideales."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en qué aparece al empezar sin sentir que todo está preparado: resistencia, dudas, alivio, motivación, incomodidad u otra experiencia."
+            },
+            {
+                emoji: "🌿",
+                title: "Continúa",
+                text: "Haz lo que puedas durante el tiempo disponible y permite que sea suficiente por hoy."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando dejaste de esperar el momento perfecto y empezaste con lo que tenías?"
+    },
+
+    {
+        id: "soltar-19",
+        journey: "soltar",
+        day: 19,
+        title: "DEJAR UNA DECISIÓN ATRÁS",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, al recordar una decisión pasada sobre la que todavía vuelves a pensar.",
+        description:
+            "Algunas decisiones siguen ocupando espacio incluso después de haber sido tomadas. Hoy vas a experimentar qué ocurre cuando dejas de revisar una decisión pasada y permites que permanezca en el lugar de la historia en el que ocurrió.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en una decisión pasada que ya no necesites modificar y que todavía aparezca ocasionalmente en tus pensamientos."
+            },
+            {
+                emoji: "🧠",
+                title: "Reconoce",
+                text: "Observa qué sueles pensar cuando vuelves a ella: qué habría ocurrido, qué habrías hecho diferente o qué resultado te habría gustado obtener."
+            },
+            {
+                emoji: "⏸️",
+                title: "Suelta",
+                text: "Cuando aparezca nuevamente durante este momento, reconoce el pensamiento sin volver a reconstruir la decisión."
+            },
+            {
+                emoji: "🌿",
+                title: "Regresa",
+                text: "Dirige tu atención hacia algo que forma parte de tu vida actual y permite que aquella decisión permanezca en el pasado."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al dejar de revisar una decisión que ya forma parte de tu pasado?"
+    },
+
+    {
+        id: "soltar-20",
+        journey: "soltar",
+        day: 20,
+        title: "PERMITIR QUE ALGO TERMINE",
+        duration: "15–30 min",
+        moment: "En casa o en un lugar tranquilo, durante un momento en el que puedas cerrar una actividad, etapa o experiencia cotidiana que ya haya llegado a su final.",
+        description:
+            "A veces continuamos alargando algo incluso cuando ya terminó o cuando sabemos que ha llegado el momento de cerrarlo. Hoy vas a experimentar qué ocurre cuando reconoces un final y permites que algo termine.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Identifica algo pequeño que ya haya llegado a su final: una actividad, un proyecto, una etapa, una rutina o una experiencia."
+            },
+            {
+                emoji: "🚪",
+                title: "Cierra",
+                text: "Realiza una acción concreta que marque su final: guardar lo necesario, retirar algo de tu espacio, cerrar una carpeta, terminar una actividad o dejar de dedicarle tiempo."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Después de cerrarlo, evita volver inmediatamente a revisarlo, modificarlo o prolongarlo."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Permanece unos momentos con la experiencia de haber terminado y nota qué aparece al dejar que ese final sea un final."
+            }
+        ],
+
+        question:
+            "¿Qué sentiste al permitir que algo terminara sin prolongarlo?"
+    },
+
+    {
+        id: "soltar-21",
+        journey: "soltar",
+        day: 21,
+        title: "ACEPTAR QUE YA CAMBIÓ",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, al pensar en una situación, etapa o relación que haya cambiado con el tiempo.",
+        description:
+            "A veces seguimos relacionándonos con algo desde la forma en que era antes, aunque las circunstancias hayan cambiado. Hoy vas a experimentar qué ocurre cuando dejas de intentar recuperar lo que ya cambió y te acercas a cómo es ahora.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Piensa en algo que haya cambiado con el tiempo y que todavía te cueste reconocer tal como es actualmente."
+            },
+            {
+                emoji: "💭",
+                title: "Observa",
+                text: "Fíjate en qué parte de aquello anterior sigues esperando, buscando o intentando mantener."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Durante unos minutos, deja de comparar el presente con lo que era antes y permite que la situación sea como es ahora."
+            },
+            {
+                emoji: "👀",
+                title: "Mira",
+                text: "Observa qué aparece cuando dejas de intentar recuperar aquello que cambió."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al permitir que algo fuera diferente de como era antes?"
+    },
+
+    {
+        id: "soltar-22",
+        journey: "soltar",
+        day: 22,
+        title: "DESPEDIRME DE UNA ETAPA",
+        duration: "15–30 min",
+        moment: "En un lugar tranquilo, al pensar en una etapa, experiencia, costumbre o situación que haya llegado a su fin.",
+        description:
+            "Hay etapas que terminan, pero seguimos llevándolas con nosotros de diferentes maneras. Hoy vas a realizar un pequeño gesto para reconocer que algo terminó y permitirte dejarlo atrás.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en una etapa, experiencia, costumbre o situación que haya tenido significado para ti y que ya no forme parte de tu vida de la misma manera."
+            },
+            {
+                emoji: "💭",
+                title: "Recuerda",
+                text: "Dedica unos minutos a reconocer qué significó para ti y qué lugar ocupó en tu historia."
+            },
+            {
+                emoji: "🤍",
+                title: "Despídete",
+                text: "Realiza un gesto que represente el cierre de esa etapa: guardar algo, escribir unas líneas, retirar un objeto de tu espacio o simplemente reconocer en voz alta que ha terminado."
+            },
+            {
+                emoji: "🌿",
+                title: "Continúa",
+                text: "Después del gesto, vuelve a tu presente y permite que aquello quede como parte de tu historia sin necesidad de seguir sosteniéndolo de la misma manera."
+            }
+        ],
+
+        question:
+            "¿Qué significó para ti reconocer el final de una etapa y permitirte continuar?"
+    },
+
+    {
+        id: "soltar-23",
+        journey: "soltar",
+        day: 23,
+        title: "DEJAR ATRÁS UNA EXPECTATIVA",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, cuando puedas pensar en algo que esperabas que ocurriera de una manera determinada.",
+        description:
+            "Algunas expectativas nos acompañan durante mucho tiempo y pueden mantenernos pendientes de un resultado que quizá nunca llegue de la forma que imaginamos. Hoy vas a experimentar qué ocurre cuando dejas espacio para que esa expectativa cambie.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Identifica",
+                text: "Piensa en algo que esperabas que ocurriera de determinada manera y que no sucedió así."
+            },
+            {
+                emoji: "🧠",
+                title: "Reconoce",
+                text: "Observa qué imaginabas que ocurriría y qué significado tenía para ti que sucediera de esa forma."
+            },
+            {
+                emoji: "🌿",
+                title: "Afloja",
+                text: "Permítete reconocer que esa expectativa existió sin necesitar mantenerla como una condición para estar bien con lo que ocurre ahora."
+            },
+            {
+                emoji: "📍",
+                title: "Vuelve",
+                text: "Dirige tu atención hacia aquello que sí forma parte de tu realidad actual y observa qué posibilidades aparecen cuando dejas de sostener aquella expectativa."
+            }
+        ],
+
+        question:
+            "¿Qué espacio apareció al dejar de sostener una expectativa que ya no corresponde a tu realidad?"
+    },
+
+    {
+        id: "soltar-24",
+        journey: "soltar",
+        day: 24,
+        title: "ACEPTAR QUE NO PUEDO CAMBIARLO",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, pensando en una situación pasada o presente sobre la que ya no tengas capacidad de intervenir.",
+        description:
+            "Hay situaciones sobre las que podemos seguir pensando aunque ya no exista una acción que pueda modificarlas. Hoy vas a practicar reconocer ese límite y dejar de dedicarle energía durante un momento.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en algo que haya ocurrido o esté ocurriendo y sobre lo que actualmente no puedas realizar una acción que lo cambie."
+            },
+            {
+                emoji: "🧭",
+                title: "Distingue",
+                text: "Pregúntate qué parte está realmente bajo tu control y qué parte ya no depende de ti."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Durante unos minutos, deja de buscar mentalmente una manera de cambiar aquello que no puedes modificar."
+            },
+            {
+                emoji: "🎯",
+                title: "Vuelve",
+                text: "Dirige tu atención hacia algo sobre lo que sí puedas actuar ahora y realiza una pequeña acción relacionada con ello."
+            }
+        ],
+
+        question:
+            "¿Qué notaste al distinguir entre aquello que puedes cambiar y aquello que no depende de ti?"
+    },
+
+    {
+        id: "soltar-25",
+        journey: "soltar",
+        day: 25,
+        title: "DEJAR DE SER QUIEN ERA",
+        duration: "15–30 min",
+        moment: "En un momento tranquilo, cuando puedas recordar una etapa anterior de tu vida.",
+        description:
+            "A veces seguimos midiéndonos con una versión anterior de nosotros mismos: cómo éramos, qué hacíamos, qué queríamos o cómo respondíamos. Hoy vas a experimentar qué ocurre cuando dejas de exigirte seguir siendo esa persona.",
+
+        steps: [
+            {
+                emoji: "💭",
+                title: "Recuerda",
+                text: "Piensa en una versión anterior de ti que haya sido importante en alguna etapa de tu vida."
+            },
+            {
+                emoji: "🔎",
+                title: "Reconoce",
+                text: "Observa qué características, hábitos, intereses o expectativas de aquella etapa ya no forman parte de quien eres actualmente."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Elige una de esas características que ya no necesitas mantener y permítete reconocer que puedes haber cambiado."
+            },
+            {
+                emoji: "✨",
+                title: "Continúa",
+                text: "Piensa en algo que sí forma parte de quién eres hoy y dedica unos momentos a reconocerlo."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando te permitiste dejar atrás una versión anterior de ti?"
+    },
+
+    {
+        id: "soltar-26",
+        journey: "soltar",
+        day: 26,
+        title: "SOLTAR LO QUE YA NO ME REPRESENTA",
+        duration: "15–30 min",
+        moment: "En casa o en un lugar donde puedas revisar algo que forme parte de tu vida cotidiana.",
+        description:
+            "Con el tiempo podemos mantener objetos, actividades, costumbres o formas de presentarnos que ya no reflejan quiénes somos. Hoy vas a identificar algo que ya no sientas propio.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Busca",
+                text: "Recorre un espacio o piensa en alguna parte de tu vida y encuentra algo que ya no sientas que te representa."
+            },
+            {
+                emoji: "💭",
+                title: "Reconoce",
+                text: "Pregúntate qué significado tenía para ti antes y qué ha cambiado desde entonces."
+            },
+            {
+                emoji: "🌿",
+                title: "Suelta",
+                text: "Elige qué hacer con ello: retirarlo de tu espacio, dejar de utilizarlo, modificarlo o simplemente reconocer que ya no necesitas mantenerlo de la misma manera."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Fíjate en cómo se siente dejar espacio para algo que representa mejor quién eres actualmente."
+            }
+        ],
+
+        question:
+            "¿Qué descubriste al dejar espacio para algo que representa mejor quién eres hoy?"
+    },
+
+    {
+        id: "soltar-27",
+        journey: "soltar",
+        day: 27,
+        title: "PERMITIRME NO TENER UNA RESPUESTA",
+        duration: "10–20 min",
+        moment: "En un momento tranquilo, cuando tengas alguna pregunta o situación que todavía no puedas resolver.",
+        description:
+            "No siempre podemos saber qué ocurrirá, por qué ocurrió algo o qué decisión será la correcta. Hoy vas a practicar dejar una pregunta abierta sin intentar resolverla inmediatamente.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en una pregunta que tengas actualmente y cuya respuesta no necesites encontrar hoy."
+            },
+            {
+                emoji: "🧠",
+                title: "Observa",
+                text: "Fíjate en qué hace tu mente cuando intenta encontrar una respuesta: buscar posibilidades, imaginar escenarios, revisar información o repetir la pregunta."
+            },
+            {
+                emoji: "🌿",
+                title: "Permite",
+                text: "Durante unos minutos, deja la pregunta abierta. No busques una respuesta nueva ni intentes llegar a una conclusión."
+            },
+            {
+                emoji: "📍",
+                title: "Continúa",
+                text: "Haz algo que forme parte de tu día y permite que la pregunta permanezca sin resolver por ahora."
+            }
+        ],
+
+        question:
+            "¿Qué ocurrió cuando permitiste no tener una respuesta por un momento?"
+    },
+
+    {
+        id: "soltar-28",
+        journey: "soltar",
+        day: 28,
+        title: "LLEVARME LO QUE SÍ QUIERO CONSERVAR",
+        duration: "15–30 min",
+        moment: "En un momento tranquilo, al pensar en una experiencia, etapa o situación que estés dejando atrás.",
+        description:
+            "Soltar no significa perderlo todo. A veces podemos dejar atrás una etapa y conservar aquello que aprendimos, disfrutamos o queremos seguir llevando con nosotros.",
+
+        steps: [
+            {
+                emoji: "🔎",
+                title: "Elige",
+                text: "Piensa en algo que estés dejando atrás o que ya haya cambiado y que haya tenido significado para ti."
+            },
+            {
+                emoji: "🌿",
+                title: "Separa",
+                text: "Distingue entre aquello que quieres dejar en esa etapa y aquello que sí quieres conservar."
+            },
+            {
+                emoji: "📝",
+                title: "Nombra",
+                text: "Escribe o expresa brevemente qué quieres llevarte contigo: un aprendizaje, una experiencia, una habilidad, un recuerdo, un valor o algo que haya sido importante."
+            },
+            {
+                emoji: "🎒",
+                title: "Continúa",
+                text: "Después, piensa en una manera concreta de incorporar aquello que quieres conservar a tu vida actual."
+            }
+        ],
+
+        question:
+            "¿Qué elegiste conservar de aquello que estás dejando atrás?"
+    },
+
+    {
+        id: "soltar-29",
+        journey: "soltar",
+        day: 29,
+        title: "HACER ESPACIO PARA LO NUEVO",
+        duration: "15–30 min",
+        moment: "En casa o durante un momento en el que puedas liberar un pequeño espacio físico o de tiempo.",
+        description:
+            "Cuando dejamos algo atrás también podemos crear espacio para aquello que todavía no conocemos. Hoy vas a experimentar qué ocurre cuando liberas deliberadamente un pequeño espacio en tu vida.",
+
+        steps: [
+            {
+                emoji: "🧹",
+                title: "Libera",
+                text: "Elige un pequeño espacio físico, de tiempo o de atención que actualmente esté ocupado y que puedas dejar disponible."
+            },
+            {
+                emoji: "🌿",
+                title: "Deja",
+                text: "Retira, termina o aparta aquello que ya no necesites mantener allí, sin reemplazarlo inmediatamente por otra cosa."
+            },
+            {
+                emoji: "👀",
+                title: "Observa",
+                text: "Permanece unos momentos con ese espacio disponible y fíjate en qué sensación produce no tener que llenarlo enseguida."
+            },
+            {
+                emoji: "✨",
+                title: "Imagina",
+                text: "Piensa brevemente en qué te gustaría que pudiera ocupar ese espacio en el futuro, sin decidir todavía qué será."
+            }
+        ],
+
+        question:
+            "¿Qué sentiste al crear un espacio que todavía no necesitaba ser llenado?"
+    },
+
+    {
+        id: "soltar-30",
+        journey: "soltar",
+        day: 30,
+        title: "EMPEZAR CON MENOS",
+        duration: "15–30 min",
+        moment: "En un momento tranquilo, al cerrar este recorrido y pensar en lo que quieres llevar contigo hacia adelante.",
+        description:
+            "Soltar también puede significar continuar con menos peso, menos exigencias y menos cosas que ya no necesitas sostener. Hoy vas a cerrar este recorrido eligiendo conscientemente qué quieres dejar atrás y con qué quieres continuar.",
+
+        steps: [
+            {
+                emoji: "🧭",
+                title: "Revisar",
+                text: "Piensa en las experiencias de estos días y reconoce qué cosas has experimentado que te gustaría dejar de sostener."
+            },
+            {
+                emoji: "🔎",
+                title: "Elegir",
+                text: "Identifica una carga, expectativa, hábito, pensamiento o forma de hacer las cosas que ya no quieras llevar contigo de la misma manera."
+            },
+            {
+                emoji: "🌿",
+                title: "Soltar",
+                text: "Formula una acción concreta que represente que estás dejando eso atrás y, si es posible, realízala hoy."
+            },
+            {
+                emoji: "🎒",
+                title: "Llevar",
+                text: "Después, identifica algo que sí quieras conservar de este recorrido y piensa en cómo puedes incorporarlo a tu vida cotidiana."
+            }
+        ],
+
+        question:
+            "¿Qué quieres dejar atrás y qué eliges llevar contigo a partir de ahora?"
+    }
+   
+];
 
 /* =========================================================
    ESTADO DE LA APLICACIÓN
