@@ -5961,17 +5961,94 @@ function saveState() {
    INICIO
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
 
     loadState();
-
     injectJourneyStyles();
-
     renderCalendar();
-
     setupRatingButtons();
-
     hideExperienceView();
+
+    /* =========================================
+       COMPROBAR SESIÓN DE SUPABASE
+       ========================================= */
+
+    const { data } =
+        await supabaseClient.auth.getSession();
+
+    if (data.session) {
+
+        document.body.classList.add(
+            "user-authenticated"
+        );
+
+    } else {
+
+        document.body.classList.remove(
+            "user-authenticated"
+        );
+    }
+
+
+    /* =========================================
+       INICIAR SESIÓN
+       ========================================= */
+
+    const loginForm =
+        document.getElementById("login-form");
+
+    if (loginForm) {
+
+        loginForm.addEventListener(
+            "submit",
+            async (event) => {
+
+                event.preventDefault();
+
+                const email =
+                    document
+                        .getElementById("login-email")
+                        .value
+                        .trim();
+
+                const password =
+                    document
+                        .getElementById("login-password")
+                        .value;
+
+
+                const { data, error } =
+                    await supabaseClient.auth
+                        .signInWithPassword({
+                            email,
+                            password
+                        });
+
+
+                if (error) {
+
+                    alert(
+                        "No pudimos iniciar sesión. Revisa tu correo y contraseña."
+                    );
+
+                    return;
+                }
+
+
+                if (data.session) {
+
+                    document.body.classList.add(
+                        "user-authenticated"
+                    );
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "auto"
+                    });
+                }
+            }
+        );
+    }
 
 });
 
