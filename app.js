@@ -2171,10 +2171,12 @@ function hideDashboard() {
         return;
     }
 
+    /* Cerrar Guardadas / Realizadas al salir del dashboard */
+    closeExperiencesPanel();
+
     dashboard.style.display =
         "none";
 }
-
 
 function showDashboard() {
 
