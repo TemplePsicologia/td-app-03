@@ -2140,14 +2140,35 @@ function surpriseMe() {
         return;
     }
 
+    /* Solo experiencias que todavía no se han realizado */
+    const pendingExperiences =
+        experiences.filter(
+            experience =>
+                !isCompleted(experience.id)
+        );
+
+
+    /* Si ya se realizaron todas */
+    if (!pendingExperiences.length) {
+
+        showTemporaryMessage(
+            "Ya realizaste todas las experiencias de 30 Días ✨"
+        );
+
+        return;
+    }
+
+
+    /* Elegir una experiencia pendiente al azar */
     const randomIndex =
         Math.floor(
             Math.random() *
-            experiences.length
+            pendingExperiences.length
         );
 
     const randomExperience =
-        experiences[randomIndex];
+        pendingExperiences[randomIndex];
+
 
     currentJourney = null;
 
@@ -2157,8 +2178,6 @@ function surpriseMe() {
         randomExperience.id
     );
 }
-
-
 /* =========================================================
    NAVEGACIÓN PRINCIPAL
    ========================================================= */
