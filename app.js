@@ -135,6 +135,43 @@ const experiences = [
             "¿Qué notaste sobre la forma en que eliges cuando das espacio a lo que tú quieres?"
     },
 
+   {
+    id: "conocerme-3",
+    journey: "conocerme",
+    day: 3,
+    title: "PROBAR ALGO NUEVO",
+    duration: "20–60 min",
+    moment: "En un momento disponible y en un lugar donde puedas probar algo diferente de forma segura.",
+    description:
+        "Hoy vas a salir de una elección habitual para descubrir qué ocurre cuando haces algo que normalmente no harías.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Busca",
+            text: "Elige algo nuevo que puedas probar hoy: una actividad, un lugar, una comida, una ruta, una forma diferente de hacer algo o cualquier experiencia que te genere curiosidad."
+        },
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "No necesitas que sea algo grande ni extraordinario. Busca algo que realmente tengas ganas de experimentar."
+        },
+        {
+            emoji: "🚶",
+            title: "Pruébalo",
+            text: "Hazlo sin exigirte que te guste. Permítete simplemente descubrir cómo es."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué te sorprendió, qué disfrutaste, qué no te gustó o qué volverías a probar."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tus gustos o intereses al probar algo diferente?"
+},
+
 
     /* -----------------------------------------------------
        CONECTAR
