@@ -6067,9 +6067,12 @@ if (data.session) {
         "user-authenticated"
     );
 
-    restoreCurrentView();
-
 } else {
+
+    document.body.classList.remove(
+        "user-authenticated"
+    );
+}
 
     document.body.classList.remove(
         "user-authenticated"
