@@ -6066,6 +6066,20 @@ if (
     hashParams.get("type") === "recovery" ||
     queryParams.get("type") === "recovery"
 ) {
+
+    isPasswordRecovery = true;
+
+    sessionStorage.setItem(
+        "temple_password_recovery",
+        "true"
+    );
+
+} else if (
+    sessionStorage.getItem(
+        "temple_password_recovery"
+    ) === "true"
+) {
+
     isPasswordRecovery = true;
 }
 
@@ -6326,6 +6340,10 @@ if (resetPasswordForm) {
             alert(
                 "Tu contraseña fue actualizada correctamente."
             );
+
+           sessionStorage.removeItem(
+    "temple_password_recovery"
+);
 
             document.body.classList.remove(
                 "password-recovery"
