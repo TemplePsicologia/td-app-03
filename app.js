@@ -7469,24 +7469,33 @@ function closeExperience() {
 
 
     if (
-        returnView === "journey" &&
-        currentJourney
-    ) {
+    returnView === "journey" &&
+    currentJourney
+) {
 
-        renderJourneyView(currentJourney);
+    saveCurrentView(
+        "journey",
+        {
+            journey: currentJourney
+        }
+    );
 
-        hideDashboard();
+    renderJourneyView(currentJourney);
 
-        showJourneyView();
+    hideDashboard();
 
-    } else {
+    showJourneyView();
 
-        currentJourney = null;
+} else {
 
-        showDashboard();
+    currentJourney = null;
 
-        renderCalendar();
-    }
+    saveCurrentView("dashboard");
+
+    showDashboard();
+
+    renderCalendar();
+}
 
 
     window.scrollTo({
