@@ -4237,3 +4237,623 @@ footer {
         font-size: 18px;
     }
 }
+
+/* =========================================================
+   TEMPLE · 30 DÍAS
+   PANTALLA DE ACCESO
+   ========================================================= */
+
+.auth-view {
+    min-height: 100vh;
+    width: 100%;
+    background:
+        radial-gradient(
+            circle at 12% 12%,
+            rgba(159, 184, 207, .22),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 88% 85%,
+            rgba(98, 90, 120, .12),
+            transparent 32%
+        ),
+        #F8F9FA;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 24px;
+
+    font-family: "Inter", sans-serif;
+}
+
+
+.auth-shell {
+    width: min(1100px, 100%);
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+
+    background: rgba(255, 255, 255, .78);
+
+    border: 1px solid rgba(76, 90, 137, .10);
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(38, 58, 90, .09);
+}
+
+
+/* =========================================================
+   LADO IZQUIERDO · IDENTIDAD TEMPLE
+   ========================================================= */
+
+.auth-brand {
+    position: relative;
+
+    padding: 48px 54px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(159, 184, 207, .20),
+            rgba(255, 255, 255, .65) 48%,
+            rgba(98, 90, 120, .09)
+        );
+}
+
+
+.auth-brand::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: -120px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(159, 184, 207, .15);
+
+    pointer-events: none;
+}
+
+
+.auth-temple {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #4C5A89;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.auth-temple .temple-symbol {
+    width: 9px;
+    height: 9px;
+
+    background: #4C5A89;
+}
+
+
+.auth-intro {
+    position: relative;
+    z-index: 1;
+
+    max-width: 470px;
+
+    padding: 80px 0 50px;
+}
+
+
+.auth-label {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #4C5A89;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: .17em;
+}
+
+
+.auth-intro h1 {
+    margin: 0;
+
+    color: #263A5A;
+
+    font-size: clamp(58px, 7vw, 82px);
+    line-height: .96;
+
+    font-weight: 600;
+
+    letter-spacing: -.055em;
+}
+
+
+.auth-intro p {
+    max-width: 420px;
+
+    margin-top: 25px;
+
+    color: #657386;
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+
+.auth-journeys {
+    margin-top: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+
+.auth-journeys span {
+    padding: 9px 13px;
+
+    background: rgba(255, 255, 255, .72);
+
+    border: 1px solid rgba(76, 90, 137, .08);
+
+    border-radius: 100px;
+
+    color: #52627A;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   LADO DERECHO · INICIO DE SESIÓN
+   ========================================================= */
+
+.auth-panel {
+    padding: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, .92);
+}
+
+
+.auth-card {
+    width: min(380px, 100%);
+}
+
+
+.auth-card-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #9FB8CF;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .17em;
+}
+
+
+.auth-card h2 {
+    margin: 0;
+
+    color: #263A5A;
+
+    font-size: 32px;
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -.035em;
+}
+
+
+.auth-card-description {
+    margin: 13px 0 31px;
+
+    color: #7A8796;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.auth-field {
+    display: block;
+
+    margin-bottom: 17px;
+}
+
+
+.auth-field > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #52627A;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.auth-field input {
+    width: 100%;
+    height: 49px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(76, 90, 137, .15);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background: #F9FAFB;
+
+    color: #263A5A;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.auth-field input::placeholder {
+    color: #A6AFBA;
+}
+
+
+.auth-field input:focus {
+    background: #FFFFFF;
+
+    border-color: #9FB8CF;
+
+    box-shadow:
+        0 0 0 4px rgba(159, 184, 207, .14);
+}
+
+
+/* =========================================================
+   BOTÓN PRINCIPAL
+   ========================================================= */
+
+.auth-primary-button {
+    width: 100%;
+    min-height: 50px;
+
+    margin-top: 5px;
+
+    padding: 0 18px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #4C5A89;
+
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 24px rgba(76, 90, 137, .17);
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.auth-primary-button:hover {
+    background: #263A5A;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 12px 28px rgba(38, 58, 90, .19);
+}
+
+
+.auth-primary-button span {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   RECUPERAR CONTRASEÑA
+   ========================================================= */
+
+.auth-link {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 4px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #625A78;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   SEPARADOR
+   ========================================================= */
+
+.auth-divider {
+    margin: 26px 0 21px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.auth-divider span {
+    height: 1px;
+
+    background:
+        rgba(76, 90, 137, .11);
+}
+
+
+.auth-divider small {
+    color: #A0A9B3;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   CREAR CUENTA
+   ========================================================= */
+
+.auth-register-text {
+    margin-bottom: 11px;
+
+    color: #84909C;
+
+    font-size: 10px;
+
+    text-align: center;
+}
+
+
+.auth-secondary-button {
+    width: 100%;
+    min-height: 47px;
+
+    border: 1px solid rgba(76, 90, 137, .18);
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    color: #4C5A89;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.auth-secondary-button:hover {
+    background: rgba(159, 184, 207, .09);
+
+    border-color: rgba(76, 90, 137, .28);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .auth-view {
+        padding: 25px;
+    }
+
+
+    .auth-shell {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        width: min(650px, 100%);
+    }
+
+
+    .auth-brand {
+        min-height: 390px;
+
+        padding: 35px 40px;
+    }
+
+
+    .auth-intro {
+        padding: 55px 0 20px;
+    }
+
+
+    .auth-intro h1 {
+        font-size: 65px;
+    }
+
+
+    .auth-panel {
+        padding: 48px 40px 55px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .auth-view {
+        padding: 0;
+
+        align-items: stretch;
+
+        background: #FFFFFF;
+    }
+
+
+    .auth-shell {
+        width: 100%;
+
+        border: none;
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+
+    .auth-brand {
+        min-height: 330px;
+
+        padding: 28px 24px;
+
+        border-radius: 0 0 28px 28px;
+    }
+
+
+    .auth-intro {
+        padding: 47px 0 10px;
+    }
+
+
+    .auth-label {
+        font-size: 9px;
+    }
+
+
+    .auth-intro h1 {
+        font-size: 56px;
+    }
+
+
+    .auth-intro p {
+        margin-top: 18px;
+
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+
+    .auth-journeys {
+        margin-top: 23px;
+
+        gap: 7px;
+    }
+
+
+    .auth-journeys span {
+        padding: 7px 10px;
+
+        font-size: 9px;
+    }
+
+
+    .auth-panel {
+        padding: 40px 24px 55px;
+    }
+
+
+    .auth-card h2 {
+        font-size: 28px;
+    }
+
+
+    .auth-field input {
+        height: 51px;
+    }
+
+
+    .auth-primary-button {
+        min-height: 52px;
+    }
+
+}
