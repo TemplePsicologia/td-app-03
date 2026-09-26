@@ -172,6 +172,1004 @@ const experiences = [
         "¿Qué descubriste sobre tus gustos o intereses al probar algo diferente?"
 },
 
+   {
+    id: "conocerme-4",
+    journey: "conocerme",
+    day: 4,
+    title: "LO QUE SÍ ME GUSTA",
+    duration: "15–30 min",
+    moment: "Durante un momento cotidiano en el que puedas elegir libremente qué hacer.",
+    description:
+        "Hoy vas a prestar atención a esas cosas que disfrutas y que quizá haces sin detenerte a reconocer que realmente te gustan.",
+
+    steps: [
+        {
+            emoji: "👀",
+            title: "Detecta",
+            text: "A lo largo del día, presta atención a momentos que te resulten agradables: una canción, un lugar, una conversación, una comida, una actividad, una sensación o cualquier otro detalle."
+        },
+        {
+            emoji: "💭",
+            title: "Detente",
+            text: "Cuando algo te guste, quédate unos segundos con esa experiencia en lugar de pasar inmediatamente a lo siguiente."
+        },
+        {
+            emoji: "🧭",
+            title: "Explora",
+            text: "Pregúntate qué es exactamente lo que disfrutas de ese momento."
+        },
+        {
+            emoji: "✨",
+            title: "Elige",
+            text: "Si puedes, date permiso para repetir o prolongar una de esas experiencias."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste que disfrutas más de lo que sueles reconocer?"
+},
+
+{
+    id: "conocerme-5",
+    journey: "conocerme",
+    day: 5,
+    title: "CAMBIAR DE RUTA",
+    duration: "15–30 min",
+    moment: "Durante un recorrido o rutina que realices habitualmente.",
+    description:
+        "Hoy vas a modificar una pequeña parte de tu rutina para observar qué ocurre cuando haces algo de una manera diferente.",
+
+    steps: [
+        {
+            emoji: "🧭",
+            title: "Cambia",
+            text: "Elige una parte de tu recorrido o rutina que puedas modificar sin complicarte el día."
+        },
+        {
+            emoji: "🚶",
+            title: "Prueba",
+            text: "Toma otra ruta, cambia el orden de una actividad, utiliza otro espacio o haz de otra manera algo que normalmente realizas igual."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Presta atención a lo que aparece cuando cambias lo habitual: curiosidad, incomodidad, interés, resistencia, disfrute u otra sensación."
+        },
+        {
+            emoji: "💭",
+            title: "Descubre",
+            text: "Fíjate en qué parte del cambio te resultó agradable y cuál preferirías mantener como antes."
+        }
+    ],
+
+    question:
+        "¿Qué aprendiste sobre tu forma de relacionarte con lo conocido y lo diferente?"
+},
+
+{
+    id: "conocerme-6",
+    journey: "conocerme",
+    day: 6,
+    title: "DECIR QUE NO",
+    duration: "10–20 min",
+    moment: "En una situación cotidiana en la que puedas rechazar algo sin poner en riesgo tu bienestar ni el de otra persona.",
+    description:
+        "Hoy vas a observar qué ocurre cuando reconoces que algo no quieres y respondes de acuerdo con esa preferencia.",
+
+    steps: [
+        {
+            emoji: "👀",
+            title: "Detecta",
+            text: "Durante el día, identifica una situación sencilla en la que realmente no quieras hacer, aceptar o elegir algo."
+        },
+        {
+            emoji: "💭",
+            title: "Reconoce",
+            text: "Antes de responder, observa qué quieres tú, sin decidir todavía en función de lo que la otra persona pueda esperar."
+        },
+        {
+            emoji: "🗣️",
+            title: "Expresa",
+            text: "Si es apropiado, responde con un “no” claro y respetuoso, sin necesidad de justificarte más de lo necesario."
+        },
+        {
+            emoji: "🧭",
+            title: "Observa",
+            text: "Después, presta atención a cómo te sientes con tu decisión y qué pensamientos aparecen."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre dentro de ti cuando reconoces y expresas lo que no quieres?"
+},
+
+{
+    id: "conocerme-7",
+    journey: "conocerme",
+    day: 7,
+    title: "CUANDO NADIE ME MIRA",
+    duration: "15–30 min",
+    moment: "En un momento del día en el que puedas estar a solas y sin tener que responder a nadie.",
+    description:
+        "Hoy vas a observar cómo eres cuando no estás pendiente de cómo te ven los demás.",
+
+    steps: [
+        {
+            emoji: "🚪",
+            title: "Quédate contigo",
+            text: "Busca un momento en el que nadie necesite nada de ti y puedas hacer lo que quieras."
+        },
+        {
+            emoji: "🎭",
+            title: "Suelta el papel",
+            text: "Durante un rato, no intentes actuar como esperas que los demás te vean."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué haces, cómo te mueves, qué eliges o qué te interesa cuando no estás tratando de cumplir ninguna expectativa."
+        },
+        {
+            emoji: "💭",
+            title: "Descubre",
+            text: "Presta atención a alguna característica tuya que aparezca con más libertad en esos momentos."
+        }
+    ],
+
+    question:
+        "¿Qué parte de ti aparece cuando no estás pendiente de cómo te ven los demás?"
+},
+
+{
+    id: "conocerme-8",
+    journey: "conocerme",
+    day: 8,
+    title: "UNA PARTE DE MÍ QUE CASI NO MUESTRO",
+    duration: "20–40 min",
+    moment: "En un momento tranquilo y en un contexto en el que te sientas cómodo/a.",
+    description:
+        "Hoy vas a acercarte a una parte de ti que existe, pero que no siempre tiene espacio para mostrarse.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Reconoce",
+            text: "Piensa en una característica tuya que sueles mantener más reservada: puede ser una afición, una forma de pensar, un sentido del humor, una sensibilidad o algo que te importa."
+        },
+        {
+            emoji: "💭",
+            title: "Acércate",
+            text: "Busca una manera sencilla de darle espacio durante el día."
+        },
+        {
+            emoji: "💬",
+            title: "Compártela",
+            text: "Si te resulta natural y seguro, permite que alguien conozca un poco más de esa parte de ti."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en cómo se siente mostrar algo que normalmente mantienes más privado."
+        }
+    ],
+
+    question:
+        "¿Qué notaste al darle un poco más de espacio a una parte de ti que sueles mostrar poco?"
+},
+
+{
+    id: "conocerme-9",
+    journey: "conocerme",
+    day: 9,
+    title: "ANTES Y AHORA",
+    duration: "20–40 min",
+    moment: "En un momento tranquilo en el que puedas recordar experiencias de otras etapas de tu vida.",
+    description:
+        "Hoy vas a mirar hacia atrás para reconocer aspectos de ti que han cambiado con el tiempo.",
+
+    steps: [
+        {
+            emoji: "🕰️",
+            title: "Recuerda",
+            text: "Piensa en cómo eras hace algunos años: qué te gustaba, qué te importaba, cómo te relacionabas o qué cosas hacías de otra manera."
+        },
+        {
+            emoji: "🔎",
+            title: "Compara",
+            text: "Observa una diferencia concreta entre aquella versión de ti y la persona que eres ahora."
+        },
+        {
+            emoji: "💭",
+            title: "Explora",
+            text: "Pregúntate qué pudo haber influido en ese cambio: experiencias, personas, decisiones, aprendizajes o simplemente el paso del tiempo."
+        },
+        {
+            emoji: "🌱",
+            title: "Reconoce",
+            text: "También identifica algo que, a pesar de los cambios, sigue formando parte de ti."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la persona que eras y la persona que eres ahora?"
+},
+
+{
+    id: "conocerme-10",
+    journey: "conocerme",
+    day: 10,
+    title: "LO QUE ES IMPORTANTE PARA MÍ",
+    duration: "20–40 min",
+    moment: "En un momento tranquilo, preferiblemente sin interrupciones.",
+    description:
+        "Hoy vas a observar qué cosas tienen un valor especial para ti a través de una situación real, no solo de lo que crees que debería importarte.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Observa",
+            text: "Piensa en una decisión, actividad o momento reciente que haya sido importante para ti."
+        },
+        {
+            emoji: "💭",
+            title: "Pregúntate",
+            text: "¿Qué había detrás de esa importancia? ¿Qué estabas intentando cuidar, conseguir, mantener o expresar?"
+        },
+        {
+            emoji: "🧭",
+            title: "Conecta",
+            text: "Busca qué valor personal aparece detrás de esa experiencia: libertad, seguridad, conexión, aprendizaje, tranquilidad, creatividad, justicia u otro."
+        },
+        {
+            emoji: "👀",
+            title: "Llévalo al presente",
+            text: "Durante el día, observa una oportunidad sencilla de actuar de acuerdo con ese valor."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que realmente es importante para ti?"
+},
+
+{
+    id: "conocerme-11",
+    journey: "conocerme",
+    day: 11,
+    title: "DARME TIEMPO",
+    duration: "20–40 min",
+    moment: "En un momento del día que normalmente ocupas con tareas, pantallas u otras obligaciones.",
+    description:
+        "Hoy vas a experimentar qué ocurre cuando dejas un espacio de tiempo sin llenarlo inmediatamente con algo productivo.",
+
+    steps: [
+        {
+            emoji: "⏸️",
+            title: "Haz una pausa",
+            text: "Reserva un momento para ti y decide no utilizarlo para adelantar tareas pendientes."
+        },
+        {
+            emoji: "📵",
+            title: "Desconecta",
+            text: "Durante ese tiempo, deja a un lado el teléfono y otras distracciones."
+        },
+        {
+            emoji: "🌿",
+            title: "Permanece",
+            text: "Puedes descansar, caminar, mirar por la ventana o simplemente estar. No necesitas convertir este momento en otra actividad."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué aparece cuando no tienes que estar haciendo algo: tranquilidad, inquietud, aburrimiento, disfrute u otra experiencia."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu relación con los momentos que no tienen una tarea asignada?"
+},
+
+{
+    id: "conocerme-12",
+    journey: "conocerme",
+    day: 12,
+    title: "CUANDO CAMBIO DE PLANES",
+    duration: "15–30 min",
+    moment: "Durante una situación cotidiana en la que un plan pueda cambiar de manera inesperada.",
+    description:
+        "Hoy vas a observar cómo reaccionas cuando algo no ocurre como lo habías imaginado.",
+
+    steps: [
+        {
+            emoji: "🔄",
+            title: "Déjalo cambiar",
+            text: "Cuando un plan cotidiano cambie, evita intentar recuperar inmediatamente la situación original."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en tu primera reacción: molestia, preocupación, indiferencia, curiosidad, alivio u otra."
+        },
+        {
+            emoji: "💭",
+            title: "Explora",
+            text: "Observa qué era lo que esperabas que ocurriera y qué significaba para ti."
+        },
+        {
+            emoji: "🧭",
+            title: "Adáptate",
+            text: "Cuando sea posible, decide cómo continuar con lo que tienes disponible ahora."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti cuando algo no salió como lo habías previsto?"
+},
+
+{
+    id: "conocerme-13",
+    journey: "conocerme",
+    day: 13,
+    title: "MI ENERGÍA A LO LARGO DEL DÍA",
+    duration: "10–15 min",
+    moment: "A lo largo de un día cotidiano.",
+    description:
+        "Hoy vas a observar cómo cambia tu energía durante el día y qué actividades o momentos parecen relacionarse con esos cambios.",
+
+    steps: [
+        {
+            emoji: "🌅",
+            title: "Observa",
+            text: "Al comenzar el día, presta atención a cómo se siente tu nivel de energía."
+        },
+        {
+            emoji: "🔎",
+            title: "Compara",
+            text: "Vuelve a observarlo en diferentes momentos: después de una tarea, una conversación, una comida, un descanso o un desplazamiento."
+        },
+        {
+            emoji: "🧭",
+            title: "Detecta",
+            text: "Fíjate en qué momentos sientes más disposición y cuáles parecen agotarte."
+        },
+        {
+            emoji: "💭",
+            title: "Descubre",
+            text: "No busques una explicación definitiva. Solo reconoce qué patrones empiezas a notar."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre los momentos en los que tu energía cambia?"
+},
+
+{
+    id: "conocerme-14",
+    journey: "conocerme",
+    day: 14,
+    title: "CUANDO ME SIENTO MÁS YO",
+    duration: "30–60 min",
+    moment: "En un lugar, actividad o situación donde suelas sentirte cómodo/a siendo tú mismo/a.",
+    description:
+        "Hoy vas a acercarte a una experiencia en la que puedas observar qué condiciones hacen que te sientas más conectado/a contigo.",
+
+    steps: [
+        {
+            emoji: "🌿",
+            title: "Elige",
+            text: "Piensa en un momento, lugar o actividad en el que puedas expresarte con naturalidad."
+        },
+        {
+            emoji: "🚶",
+            title: "Acércate",
+            text: "Si es posible, busca hoy una experiencia similar."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en cómo actúas, qué expresas y qué partes de ti aparecen con mayor libertad."
+        },
+        {
+            emoji: "💭",
+            title: "Descubre",
+            text: "Presta atención a qué condiciones hacen posible esa sensación de estar más tú."
+        }
+    ],
+
+    question:
+        "¿Qué condiciones parecen ayudarte a sentirte más tú?"
+},
+
+{
+    id: "conocerme-15",
+    journey: "conocerme",
+    day: 15,
+    title: "RECIBIR SIN DEVOLVER",
+    duration: "10–20 min",
+    moment: "En una interacción cotidiana en la que alguien te ofrezca algo de manera genuina.",
+    description:
+        "Hoy vas a experimentar qué ocurre cuando recibes algo sin sentir que tienes que compensarlo inmediatamente.",
+
+    steps: [
+        {
+            emoji: "🎁",
+            title: "Recibe",
+            text: "Si alguien te ofrece ayuda, un cumplido, un detalle, tiempo o atención, permite que llegue a ti."
+        },
+        {
+            emoji: "⏸️",
+            title: "Haz una pausa",
+            text: "Antes de responder automáticamente, observa qué aparece dentro de ti."
+        },
+        {
+            emoji: "💬",
+            title: "Agradece",
+            text: "Puedes simplemente reconocer el gesto y decir gracias."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate si aparece comodidad, incomodidad, necesidad de devolver el gesto, vergüenza, alegría u otra reacción."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu forma de recibir de los demás?"
+},
+
+{
+    id: "conocerme-16",
+    journey: "conocerme",
+    day: 16,
+    title: "HACER ALGO QUE HE POSPUESTO",
+    duration: "20–40 min",
+    moment: "En un momento del día en el que puedas dedicar tiempo a algo que llevas postergando.",
+    description:
+        "Hoy vas a acercarte a algo que llevas tiempo dejando para después y observar qué ocurre cuando finalmente das el primer paso.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elige",
+            text: "Piensa en una tarea o actividad pendiente que puedas comenzar sin necesidad de terminarla hoy."
+        },
+        {
+            emoji: "⏳",
+            title: "Empieza",
+            text: "Dedica unos minutos a dar el primer paso."
+        },
+        {
+            emoji: "🚶",
+            title: "Continúa",
+            text: "Avanza hasta donde puedas sin exigirte completar todo."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué aparecía antes de comenzar y qué ocurre una vez que ya estás en movimiento."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que ocurre cuando dejas de esperar el momento perfecto para empezar?"
+},
+
+{
+    id: "conocerme-17",
+    journey: "conocerme",
+    day: 17,
+    title: "UNA CONVERSACIÓN DIFERENTE",
+    duration: "20–40 min",
+    moment: "En una conversación con alguien con quien tengas suficiente confianza.",
+    description:
+        "Hoy vas a salir de las conversaciones habituales para descubrir qué aparece cuando compartes algo más personal o significativo.",
+
+    steps: [
+        {
+            emoji: "💬",
+            title: "Pregunta",
+            text: "Haz una pregunta que normalmente no harías y que realmente tengas interés en conocer."
+        },
+        {
+            emoji: "👂",
+            title: "Escucha",
+            text: "Presta atención a la respuesta sin preparar inmediatamente la tuya."
+        },
+        {
+            emoji: "💭",
+            title: "Comparte",
+            text: "Cuando sea natural, comparte también algo propio relacionado con la conversación."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en cómo te sientes al escuchar, compartir y mostrar una parte diferente de ti."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al tener una conversación fuera de lo habitual?"
+},
+
+{
+    id: "conocerme-18",
+    journey: "conocerme",
+    day: 18,
+    title: "CUANDO ALGO ME SALE MAL",
+    duration: "15–30 min",
+    moment: "Después de una situación cotidiana en la que algo no haya salido como esperabas.",
+    description:
+        "Hoy vas a observar cómo te tratas cuando cometes un error o algo no resulta como querías.",
+
+    steps: [
+        {
+            emoji: "🛑",
+            title: "Detente",
+            text: "Cuando ocurra un error o algo salga mal, evita corregirte o juzgarte inmediatamente."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Presta atención a las primeras palabras que aparecen en tu mente."
+        },
+        {
+            emoji: "💭",
+            title: "Escucha",
+            text: "Fíjate en el tono con el que te hablas y en lo que esperas de ti en ese momento."
+        },
+        {
+            emoji: "🌿",
+            title: "Prueba otra respuesta",
+            text: "Después, háblate de una manera que describa lo ocurrido sin convertir un error puntual en una definición de quién eres."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la forma en que te tratas cuando algo no sale bien?"
+},
+
+{
+    id: "conocerme-19",
+    journey: "conocerme",
+    day: 19,
+    title: "DEJAR QUE ME SORPRENDAN",
+    duration: "20–40 min",
+    moment: "En una actividad o situación cotidiana en la que puedas permitir cierta espontaneidad.",
+    description:
+        "Hoy vas a dejar un pequeño espacio para no decidirlo todo de antemano y observar qué ocurre cuando algo diferente tiene la oportunidad de aparecer.",
+
+    steps: [
+        {
+            emoji: "🎲",
+            title: "Suelta una decisión",
+            text: "Elige una parte sencilla de tu día que puedas dejar abierta: qué ruta tomar, qué lugar visitar, qué actividad hacer o qué pedir."
+        },
+        {
+            emoji: "🧭",
+            title: "Permite",
+            text: "En lugar de planificar cada detalle, deja que una opción surja en el momento."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué sientes al tener menos control sobre lo que ocurrirá."
+        },
+        {
+            emoji: "✨",
+            title: "Experimenta",
+            text: "Permite que la experiencia se desarrolle sin intentar que sea exactamente como la imaginabas."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al dejar un espacio para la espontaneidad?"
+},
+
+{
+    id: "conocerme-20",
+    journey: "conocerme",
+    day: 20,
+    title: "LO QUE QUIERO CONSERVAR DE MÍ",
+    duration: "20–40 min",
+    moment: "En un momento tranquilo en el que puedas estar a solas.",
+    description:
+        "Hoy vas a mirar hacia lo que ya forma parte de ti y reconocer aquello que valoras y quieres seguir conservando.",
+
+    steps: [
+        {
+            emoji: "🕰️",
+            title: "Recuerda",
+            text: "Piensa en una característica, forma de relacionarte, interés, costumbre o manera de vivir que haya sido importante para ti."
+        },
+        {
+            emoji: "👀",
+            title: "Reconoce",
+            text: "Busca una experiencia reciente en la que esa parte de ti haya estado presente."
+        },
+        {
+            emoji: "💭",
+            title: "Observa",
+            text: "Fíjate qué valor tiene para ti y qué aporta a tu manera de vivir."
+        },
+        {
+            emoji: "🌱",
+            title: "Elige cuidarlo",
+            text: "Durante los próximos días, busca una oportunidad sencilla para darle espacio nuevamente."
+        }
+    ],
+
+    question:
+        "¿Qué parte de ti reconociste que quieres seguir conservando?"
+},
+
+{
+    id: "conocerme-21",
+    journey: "conocerme",
+    day: 21,
+    title: "MI ESPACIO, MI HUELLA",
+    duration: "20–40 min",
+    moment: "En un espacio personal que utilices con frecuencia.",
+    description:
+        "Hoy vas a observar cuánto de ti está presente en los espacios que habitas y qué ocurre cuando haces un pequeño cambio para que se sientan más tuyos.",
+
+    steps: [
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Mira con atención un espacio que forme parte de tu vida cotidiana. Fíjate en los objetos, la distribución, los colores y aquello que has elegido tener cerca."
+        },
+        {
+            emoji: "🔎",
+            title: "Reconoce",
+            text: "Identifica algo de ese espacio que sientas especialmente tuyo y algo que simplemente está allí por costumbre."
+        },
+        {
+            emoji: "🪴",
+            title: "Cambia",
+            text: "Haz un pequeño ajuste que represente mejor cómo quieres sentirte o qué te gusta actualmente."
+        },
+        {
+            emoji: "🌿",
+            title: "Permanece",
+            text: "Después de hacerlo, permanece unos momentos en el espacio y observa cómo se siente diferente."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al observar el espacio que habitas?"
+},
+
+{
+    id: "conocerme-22",
+    journey: "conocerme",
+    day: 22,
+    title: "HACERLO SIN CONTARLO",
+    duration: "20–40 min",
+    moment: "En un momento en el que puedas disfrutar de una actividad sin necesidad de compartirla.",
+    description:
+        "Hoy vas a hacer algo que disfrutas sin fotografiarlo, publicarlo ni contarle a alguien que lo estás haciendo.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Haz algo que realmente disfrutes y que normalmente podrías compartir con otras personas."
+        },
+        {
+            emoji: "📵",
+            title: "Desconecta",
+            text: "Durante la actividad, evita convertirla en una experiencia para mostrar o documentar."
+        },
+        {
+            emoji: "🌿",
+            title: "Disfruta",
+            text: "Permanece en lo que estás haciendo y permite que la experiencia sea únicamente para ti."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en qué ocurre cuando nadie más necesita saber que estás disfrutando de ese momento."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre lo que disfrutas cuando no necesitas compartirlo?"
+},
+
+{
+    id: "conocerme-23",
+    journey: "conocerme",
+    day: 23,
+    title: "CUANDO CAMBIO DE OPINIÓN",
+    duration: "15–30 min",
+    moment: "En un momento tranquilo en el que puedas pensar en una opinión o decisión que haya cambiado con el tiempo.",
+    description:
+        "Hoy vas a explorar qué ocurre cuando reconoces que tu manera de pensar puede cambiar sin que eso borre quién eres.",
+
+    steps: [
+        {
+            emoji: "🕰️",
+            title: "Recuerda",
+            text: "Piensa en algo sobre lo que antes tenías una opinión diferente."
+        },
+        {
+            emoji: "🔎",
+            title: "Compara",
+            text: "Observa qué pensabas entonces y qué piensas ahora."
+        },
+        {
+            emoji: "💭",
+            title: "Explora",
+            text: "Fíjate qué experiencias, información o cambios pudieron influir en esa transformación."
+        },
+        {
+            emoji: "🌱",
+            title: "Reconoce",
+            text: "Permite que ambas versiones formen parte de tu historia sin tener que decidir cuál era la “correcta”."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al reconocer que tu manera de pensar también puede cambiar?"
+},
+
+{
+    id: "conocerme-24",
+    journey: "conocerme",
+    day: 24,
+    title: "UN MOMENTO DE SILENCIO",
+    duration: "10–20 min",
+    moment: "En un lugar tranquilo donde puedas permanecer sin música, videos ni otras formas de entretenimiento.",
+    description:
+        "Hoy vas a experimentar qué ocurre cuando dejas un espacio sin estímulos externos y permaneces contigo durante unos minutos.",
+
+    steps: [
+        {
+            emoji: "🔇",
+            title: "Detén",
+            text: "Apaga durante un momento la música, televisión, videos o cualquier otro estímulo que estés utilizando."
+        },
+        {
+            emoji: "🪑",
+            title: "Quédate",
+            text: "Permanece sentado/a o en una posición cómoda sin buscar inmediatamente otra actividad."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Presta atención a los sonidos del entorno, tus pensamientos, sensaciones y ganas de hacer algo."
+        },
+        {
+            emoji: "🌿",
+            title: "Permite",
+            text: "Deja que el momento transcurra sin intentar llenarlo ni convertirlo en una tarea."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti cuando dejaste un espacio sin estímulos?"
+},
+
+{
+    id: "conocerme-25",
+    journey: "conocerme",
+    day: 25,
+    title: "RECONOCER ALGO QUE HICE BIEN",
+    duration: "10–20 min",
+    moment: "En un momento tranquilo al finalizar una actividad o al terminar el día.",
+    description:
+        "Hoy vas a detenerte en algo que hiciste bien, no para compararte ni para buscar aprobación, sino para reconocerlo desde tu propia mirada.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Recuerda",
+            text: "Piensa en algo concreto que hayas hecho bien recientemente."
+        },
+        {
+            emoji: "🧭",
+            title: "Detalla",
+            text: "Observa qué hiciste tú para que ese resultado fuera posible."
+        },
+        {
+            emoji: "🌿",
+            title: "Reconoce",
+            text: "Permítete valorar tu propio esfuerzo, decisión, habilidad o constancia."
+        },
+        {
+            emoji: "💬",
+            title: "Exprésalo",
+            text: "Dilo en voz alta o para ti mismo/a con una frase sencilla que reconozca lo que hiciste."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tu manera de reconocer tus propios logros?"
+},
+
+{
+    id: "conocerme-26",
+    journey: "conocerme",
+    day: 26,
+    title: "VOLVER A ALGO QUE ME REPRESENTA",
+    duration: "20–40 min",
+    moment: "En un momento en el que puedas reencontrarte con algo que haya sido significativo para ti.",
+    description:
+        "Hoy vas a volver a una experiencia, objeto, lugar, canción, actividad o costumbre que haya formado parte de ti en otro momento.",
+
+    steps: [
+        {
+            emoji: "🕰️",
+            title: "Elige",
+            text: "Busca algo que haya tenido un significado especial para ti en otra etapa de tu vida."
+        },
+        {
+            emoji: "🚶",
+            title: "Acércate",
+            text: "Vuelve a escucharlo, utilizarlo, visitarlo o realizarlo, según corresponda."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate qué permanece igual en ti y qué se siente diferente ahora."
+        },
+        {
+            emoji: "🌱",
+            title: "Reconoce",
+            text: "Permite que aparezcan tanto la continuidad como los cambios."
+        }
+    ],
+
+    question:
+        "¿Qué parte de ti reconociste al volver a algo que había sido importante para ti?"
+},
+
+{
+    id: "conocerme-27",
+    journey: "conocerme",
+    day: 27,
+    title: "MI MANERA DE HACER LAS COSAS",
+    duration: "15–30 min",
+    moment: "Durante una actividad cotidiana que conozcas bien.",
+    description:
+        "Hoy vas a prestar atención a tu manera particular de hacer algo que forma parte de tu rutina.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Selecciona una actividad cotidiana que puedas realizar de diferentes maneras."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en el orden que eliges, el ritmo que utilizas, los detalles que priorizas y aquello que prefieres hacer a tu manera."
+        },
+        {
+            emoji: "🔎",
+            title: "Reconoce",
+            text: "Observa qué parte de esa forma de hacer las cosas responde realmente a tus preferencias."
+        },
+        {
+            emoji: "✨",
+            title: "Hazlo a tu manera",
+            text: "Durante esta ocasión, permite que la actividad se ajuste a tu propia forma de hacerla, siempre que sea posible."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre tus preferencias al observar tu manera de hacer las cosas?"
+},
+
+{
+    id: "conocerme-28",
+    journey: "conocerme",
+    day: 28,
+    title: "LO QUE ME REPRESENTA HOY",
+    duration: "20–40 min",
+    moment: "En un momento tranquilo en el que puedas explorar algo que forme parte de tu identidad actual.",
+    description:
+        "Hoy vas a elegir algo que represente una parte de quién eres actualmente y observar por qué tiene sentido para ti.",
+
+    steps: [
+        {
+            emoji: "🎯",
+            title: "Elige",
+            text: "Puede ser una canción, objeto, prenda, lugar, fotografía, libro, actividad o cualquier elemento que sientas cercano a ti."
+        },
+        {
+            emoji: "👀",
+            title: "Obsérvalo",
+            text: "Permanece unos momentos con aquello que elegiste y fíjate qué relación tiene contigo."
+        },
+        {
+            emoji: "💭",
+            title: "Explora",
+            text: "Pregúntate qué parte de ti representa: una etapa, una forma de pensar, un interés, un valor, una experiencia u otra característica."
+        },
+        {
+            emoji: "🌿",
+            title: "Reconoce",
+            text: "Observa si esa parte de ti sigue teniendo el mismo significado o si ha cambiado con el tiempo."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre la persona que eres actualmente a través de aquello que elegiste?"
+},
+
+{
+    id: "conocerme-29",
+    journey: "conocerme",
+    day: 29,
+    title: "DEJARME CONOCER",
+    duration: "20–40 min",
+    moment: "En una conversación con alguien con quien tengas confianza.",
+    description:
+        "Hoy vas a compartir algo sobre ti que normalmente no aparece en las conversaciones cotidianas.",
+
+    steps: [
+        {
+            emoji: "🔎",
+            title: "Elige",
+            text: "Piensa en algo que forme parte de ti y que esa persona probablemente no conozca: una preferencia, recuerdo, interés, opinión o experiencia."
+        },
+        {
+            emoji: "💬",
+            title: "Compártelo",
+            text: "Busca un momento natural para contarlo sin preparar una explicación perfecta."
+        },
+        {
+            emoji: "👂",
+            title: "Escucha",
+            text: "Observa cómo responde la otra persona sin intentar controlar qué pensará de ti."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate en cómo te sientes al permitir que alguien conozca un poco más de ti."
+        }
+    ],
+
+    question:
+        "¿Qué descubriste sobre ti al permitir que alguien conociera una parte que normalmente no compartes?"
+},
+
+{
+    id: "conocerme-30",
+    journey: "conocerme",
+    day: 30,
+    title: "UN MOMENTO MÁS MÍO",
+    duration: "30–60 min",
+    moment: "En un momento del día que puedas reservar para hacer algo elegido conscientemente por ti.",
+    description:
+        "Para cerrar estos 30 días, vas a crear un momento que reúna algo que has descubierto sobre ti y llevarlo a una experiencia concreta.",
+
+    steps: [
+        {
+            emoji: "🧭",
+            title: "Elige",
+            text: "Piensa en algo que hayas descubierto sobre ti durante estos días y que quieras tener más presente."
+        },
+        {
+            emoji: "🎯",
+            title: "Llévalo a la práctica",
+            text: "Elige una actividad o momento cotidiano en el que puedas expresarlo."
+        },
+        {
+            emoji: "🌿",
+            title: "Hazlo",
+            text: "Vive ese momento sin intentar hacerlo perfecto. Simplemente permite que esa parte de ti tenga espacio."
+        },
+        {
+            emoji: "👀",
+            title: "Observa",
+            text: "Fíjate qué se siente diferente cuando actúas teniendo presente algo que reconoces como propio."
+        }
+    ],
+
+    question:
+        "¿Qué quieres seguir conociendo de ti después de estos 30 días?"
+},
 
     /* -----------------------------------------------------
        CONECTAR
