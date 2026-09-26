@@ -5631,6 +5631,18 @@ const experiences = [
 ];
 
 /* =========================================================
+   SUPABASE
+   ========================================================= */
+
+const SUPABASE_URL = "https://owfykdnvegptjyxnoews.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_ZO5ZHc1SKKiWFAi9oHjjGg_Opc5v_LA";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+/* =========================================================
    ESTADO DE LA APLICACIÓN
    ========================================================= */
 
