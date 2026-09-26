@@ -4871,3 +4871,28 @@ body.user-authenticated .auth-view {
 body.user-authenticated > .app {
     display: block;
 }
+
+/* =========================================================
+   CERRAR SESIÓN
+   ========================================================= */
+
+.logout-button {
+    border: none;
+    background: transparent;
+
+    color: #7A8796;
+
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    padding: 8px 0;
+
+    transition: color .2s ease;
+}
+
+.logout-button:hover {
+    color: #4C5A89;
+}
