@@ -6062,15 +6062,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (sessionData && sessionData.session) {
 
-        document.body.classList.add(
-            "user-authenticated"
-        );
+    document.body.classList.add(
+        "user-authenticated"
+    );
 
-    } else {
+} else {
 
-        document.body.classList.remove(
-            "user-authenticated"
-        );
+    document.body.classList.remove(
+        "user-authenticated"
+    );
+}
+
+document.body.classList.remove(
+    "auth-loading"
+);
     }
 
 
