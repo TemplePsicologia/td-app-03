@@ -1211,10 +1211,16 @@ function openExperience(id) {
     updateCompleteButton();
 
    /* =========================================
-   NAVEGACIÓN ENTRE DÍAS
-========================================= */
+       FAVORITO
+    ========================================= */
+   
+   updateFavoriteUI();
 
-updateDayNavigation();
+   /* =========================================
+   NAVEGACIÓN ENTRE DÍAS
+   ========================================= */
+   
+   updateDayNavigation();
 
     /* =========================================
        CAMBIAR DE VISTA
@@ -1318,6 +1324,77 @@ function updateFeelingUI() {
             selected ? "true" : "false"
         );
     });
+}
+
+/* =========================================================
+   FAVORITOS
+   ========================================================= */
+
+function toggleFavorite() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const id = currentExperience.id;
+
+    if (favorites.includes(id)) {
+
+        favorites =
+            favorites.filter(
+                favoriteId => favoriteId !== id
+            );
+
+    } else {
+
+        favorites.push(id);
+    }
+
+    saveState();
+    updateFavoriteUI();
+}
+
+
+function updateFavoriteUI() {
+
+    if (!currentExperience) {
+        return;
+    }
+
+    const button =
+        document.getElementById("favorite-button");
+
+    if (!button) {
+        return;
+    }
+
+    const isFavorite =
+        favorites.includes(currentExperience.id);
+
+    button.textContent =
+        isFavorite ? "♥" : "♡";
+
+    button.classList.toggle(
+        "is-favorite",
+        isFavorite
+    );
+
+    button.setAttribute(
+        "aria-pressed",
+        isFavorite ? "true" : "false"
+    );
+
+    button.setAttribute(
+        "aria-label",
+        isFavorite
+            ? "Quitar de guardadas"
+            : "Guardar experiencia"
+    );
+
+    button.title =
+        isFavorite
+            ? "Quitar de guardadas"
+            : "Guardar experiencia";
 }
 
 /* =========================================================
