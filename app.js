@@ -6149,6 +6149,45 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
     }
 
+       /* =========================================
+       CERRAR SESIÓN
+       ========================================= */
+
+    const logoutButton =
+        document.getElementById("logout-button");
+
+    if (logoutButton) {
+
+        logoutButton.addEventListener(
+            "click",
+            async () => {
+
+                const { error } =
+                    await supabaseClient.auth.signOut();
+
+                if (error) {
+
+                    console.error(
+                        "Error al cerrar sesión:",
+                        error
+                    );
+
+                    return;
+                }
+
+                document.body.classList.remove(
+                    "user-authenticated"
+                );
+
+                localStorage.removeItem(
+                    LAST_VIEW_KEY
+                );
+
+                window.location.reload();
+            }
+        );
+    }
+
 });
 
 /* =========================================================
