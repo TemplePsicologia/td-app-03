@@ -6005,6 +6005,123 @@ function loadState() {
     }
 }
 
+async function loadCloudProgress(userId) {
+
+    const { data, error } =
+        await supabaseClient
+            .from("user_progress")
+            .select("*")
+            .eq("user_id", userId)
+            .maybeSingle();
+
+    if (error) {
+
+        console.error(
+            "No se pudo cargar el progreso de la cuenta:",
+            error
+        );
+
+        return;
+    }
+
+    if (!data) {
+
+    completedExperiences = [];
+    completionDates = {};
+    ratings = {};
+    feelings = {};
+    favorites = [];
+
+    await saveCloudProgress();
+
+    return;
+}
+
+    completedExperiences =
+        Array.isArray(data.completed_experiences)
+            ? data.completed_experiences
+            : [];
+
+    completionDates =
+        data.completion_dates &&
+        typeof data.completion_dates === "object"
+            ? data.completion_dates
+            : {};
+
+    ratings =
+        data.ratings &&
+        typeof data.ratings === "object"
+            ? data.ratings
+            : {};
+
+    feelings =
+        data.feelings &&
+        typeof data.feelings === "object"
+            ? data.feelings
+            : {};
+
+    favorites =
+        Array.isArray(data.favorites)
+            ? data.favorites
+            : [];
+}
+
+async function saveCloudProgress() {
+
+    const { data: userData, error: userError } =
+        await supabaseClient.auth.getUser();
+
+    if (
+        userError ||
+        !userData ||
+        !userData.user
+    ) {
+        return;
+    }
+
+    const userId =
+        userData.user.id;
+
+
+    const { error } =
+        await supabaseClient
+            .from("user_progress")
+            .upsert(
+                {
+                    user_id: userId,
+
+                    completed_experiences:
+                        completedExperiences,
+
+                    completion_dates:
+                        completionDates,
+
+                    ratings:
+                        ratings,
+
+                    feelings:
+                        feelings,
+
+                    favorites:
+                        favorites,
+
+                    updated_at:
+                        new Date().toISOString()
+                },
+                {
+                    onConflict: "user_id"
+                }
+            );
+
+
+    if (error) {
+
+        console.error(
+            "No se pudo guardar el progreso en la cuenta:",
+            error
+        );
+    }
+}
 
 function saveState() {
 
@@ -6031,6 +6148,8 @@ function saveState() {
     STORAGE_FAVORITES,
     JSON.stringify(favorites)
    );
+
+   saveCloudProgress();
 }
 
 /* =========================================================
@@ -6113,6 +6232,12 @@ const { data: sessionData, error: sessionError } =
         "user-authenticated"
     );
 
+    await loadCloudProgress(
+        sessionData.session.user.id
+    );
+
+    renderCalendar();
+
     restoreCurrentView();
 
 } else {
@@ -6188,15 +6313,23 @@ const { data: sessionData, error: sessionError } =
 
                 if (loginData && loginData.session) {
 
-                    document.body.classList.add(
-                        "user-authenticated"
-                    );
+    document.body.classList.add(
+        "user-authenticated"
+    );
 
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "auto"
-                    });
-                }
+    await loadCloudProgress(
+        loginData.session.user.id
+    );
+
+    renderCalendar();
+
+    restoreCurrentView();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "auto"
+    });
+}
 
             }
         );
