@@ -6065,18 +6065,13 @@ if (data.session) {
     );
 }
 
-    document.body.classList.remove(
-        "user-authenticated"
-    );
-}
 
+/* =========================================
+   INICIAR SESIÓN
+   ========================================= */
 
-    /* =========================================
-       INICIAR SESIÓN
-       ========================================= */
-
-    const loginForm =
-        document.getElementById("login-form");
+const loginForm =
+    document.getElementById("login-form");
 
     if (loginForm) {
 
