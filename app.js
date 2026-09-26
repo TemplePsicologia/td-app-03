@@ -6978,6 +6978,8 @@ function closeJourneyView() {
 
     currentJourney = null;
 
+    saveCurrentView("dashboard");
+
     hideJourneyView();
 
     showDashboard();
@@ -6987,7 +6989,6 @@ function closeJourneyView() {
         behavior: "smooth"
     });
 }
-
 
 /* =========================================================
    EXPERIENCIA
