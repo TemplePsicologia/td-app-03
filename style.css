@@ -4862,3 +4862,12 @@ footer {
 body:not(.user-authenticated) > .app {
     display: none;
 }
+
+/* Cuando el usuario haya iniciado sesión */
+body.user-authenticated .auth-view {
+    display: none;
+}
+
+body.user-authenticated > .app {
+    display: block;
+}
