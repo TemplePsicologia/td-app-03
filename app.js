@@ -997,11 +997,10 @@ function renderJourneyView(journey) {
 
                 <span>🌿</span>
 
-                <p>
-                    No tienes que empezar por el Día 1.
-                    Puedes elegir cualquier experiencia
-                    disponible y avanzar a tu propio ritmo.
-                </p>
+            <p>
+                No tienes que seguir un orden.
+                Elige la experiencia que más te llame hoy y avanza a tu propio ritmo.
+            </p>
 
             </section>
 
