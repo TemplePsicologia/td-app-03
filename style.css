@@ -3939,3 +3939,17 @@ footer {
         text-decoration: none;
     }
 }
+
+/* =========================================================
+   PANEL GUARDADAS / REALIZADAS
+   ========================================================= */
+
+/* Cerrado por defecto */
+#experiences-panel[aria-hidden="true"] {
+    display: none;
+}
+
+/* Visible cuando se abre */
+#experiences-panel[aria-hidden="false"] {
+    display: block;
+}
